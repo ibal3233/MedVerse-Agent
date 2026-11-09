@@ -1,0 +1,70 @@
+{
+  "gate": "GATE_22B1_PRIVACY_ORACLE_SPLIT_COVERAGE_AUDIT",
+  "training_performed": false,
+  "learner_changed": false,
+  "labels_changed": false,
+  "thresholds_changed": false,
+  "gate21a_privacy_records": 120,
+  "gate21a_observed_base_templates": 8,
+  "observed_gate21a_vs_gate22a_oracle_conflicts": 0,
+  "gate21a_split_algorithm": {
+    "source_mapping": {
+      "g0": "train",
+      "g1": "train",
+      "g2": "train",
+      "g3": "dev",
+      "g4": "test"
+    },
+    "split_group_crossing_count": 0,
+    "important_correction": "Groups are disjoint, but this does NOT prevent model-visible near/exact semantic leakage because the same eight Privacy base templates are repeated in every split and request_context_index is removed before modeling."
+  },
+  "model_visible_duplicate_summary": {
+    "records": 120,
+    "unique_model_visible_signatures": 8,
+    "duplicates_beyond_unique": 112,
+    "min_multiplicity": 15,
+    "max_multiplicity": 15,
+    "multiplicity_distribution": {
+      "15": 8
+    }
+  },
+  "split_leakage": {
+    "split_group_crossing_count": 0,
+    "cleaned_feature_unique": {
+      "train": 8,
+      "dev": 8,
+      "test": 8
+    },
+    "cleaned_train_dev_overlap": 8,
+    "cleaned_train_test_overlap": 8,
+    "cleaned_dev_test_overlap": 8,
+    "core_train_dev_overlap": 8,
+    "core_train_test_overlap": 8,
+    "core_dev_test_overlap": 8
+  },
+  "gate22a_ood_records": 40,
+  "ood_oracle_classification": {
+    "undefined_by_train_oracle": 40
+  },
+  "ood_exact_core_signatures_seen_in_train": 0,
+  "gate22a_predictions_artifact_available": true,
+  "gate22a_error_partition_by_oracle_class": {
+    "undefined_by_train_oracle": {
+      "n": 40,
+      "action_accuracy": 0.5,
+      "assessment_accuracy": 0.55,
+      "action_errors": 20,
+      "assessment_errors": 18
+    }
+  },
+  "root_cause_classification": "train_oracle_underspecification_plus_semantic_split_leakage_plus_compositional_coverage_gap",
+  "scientific_interpretation": [
+    "Gate-22A's oracle agrees with all eight Gate-21A Privacy templates actually observed.",
+    "Gate-21A does not define a general precedence oracle for simultaneous violations or isolated missing fields; all 40 Gate-22A OOD cases therefore extend beyond the semantics explicitly supported by the training generator.",
+    "The original grouped split is group-disjoint but not semantic-signature-disjoint: all eight model-visible Privacy signatures occur in TRAIN, DEV, and TEST.",
+    "Perfect Gate-22 ID performance therefore demonstrates interpolation over repeated semantic templates, not independent compositional generalization.",
+    "Gate-22C augmentation labels new combinations using the Gate-22A oracle. It should be described as explicit adoption/extension of that precedence semantics plus coverage expansion, not as pure recovery of a rule already established by Gate-21A.",
+    "The opened Gate-22A 40-case benchmark remains diagnostic/development-only after any repair."
+  ],
+  "required_future_confirmation": "Create a fresh frozen Privacy benchmark after formally adopting the precedence oracle and repairing semantic split/coverage design."
+}

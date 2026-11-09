@@ -1,0 +1,100 @@
+[
+  {
+    "check": "replication_benchmark_hash_matches",
+    "pass": true,
+    "observed": "c7c0d4fc60eba832e24ea60c4d9db43654022512b83f789da5944d86cf58550d",
+    "expected": "c7c0d4fc60eba832e24ea60c4d9db43654022512b83f789da5944d86cf58550d"
+  },
+  {
+    "check": "all_diagnosed_cores_reach_support_target",
+    "pass": true,
+    "observed": {
+      "('KR', False, False, False, False)": 6,
+      "('KR', False, False, False, True)": 6,
+      "('KR', False, None, True, True)": 6,
+      "('KR', False, True, False, False)": 6,
+      "('KR', False, True, False, True)": 6,
+      "('KR', True, False, False, False)": 6,
+      "('KR', True, False, False, True)": 6
+    },
+    "expected": 6
+  },
+  {
+    "check": "one_component_intervention_action_head_only",
+    "pass": true,
+    "observed": "Only action_model replaced; four non-action heads loaded unchanged from Gate22B.3",
+    "expected": true
+  },
+  {
+    "check": "action_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.95"
+  },
+  {
+    "check": "action_macro_f1",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.90"
+  },
+  {
+    "check": "minimum_action_class_recall",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.80"
+  },
+  {
+    "check": "protected_diagnosed_core_action_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.90"
+  },
+  {
+    "check": "assessment_cumulative_threshold",
+    "pass": true,
+    "observed": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "expected": "accuracy>=0.95 and macro_f1>=0.90"
+  },
+  {
+    "check": "boundary_cumulative_threshold",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.95"
+  },
+  {
+    "check": "enforcement_cumulative_threshold",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.95"
+  },
+  {
+    "check": "evidence_cumulative_threshold",
+    "pass": true,
+    "observed": 0.9629629629629629,
+    "expected": ">=0.95"
+  },
+  {
+    "check": "unsafe_allow_execution_rate",
+    "pass": true,
+    "observed": 0.0,
+    "expected": 0.0
+  },
+  {
+    "check": "reporting_outputs",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 7,
+      "pdf": 7
+    },
+    "expected": ">=7 PNG and >=7 PDF"
+  }
+]

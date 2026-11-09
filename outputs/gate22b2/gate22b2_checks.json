@@ -1,0 +1,98 @@
+[
+  {
+    "check": "complete_factorial_context_benchmark",
+    "pass": true,
+    "observed": {
+      "records": 486,
+      "unique_core_states": 162
+    },
+    "expected": {
+      "records": 486,
+      "unique_core_states": 162
+    }
+  },
+  {
+    "check": "unique_record_ids",
+    "pass": true,
+    "observed": 486,
+    "expected": 486
+  },
+  {
+    "check": "zero_exact_model_visible_overlap",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "all_five_action_classes_present",
+    "pass": true,
+    "observed": {
+      "DENY_UNAUTHORIZED_DISCLOSURE": 348,
+      "REQUEST_ADDITIONAL_AUTHORIZATION": 120,
+      "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY": 12,
+      "PRESERVE_PRIVACY_AUDIT_LOG": 3,
+      "ALLOW_AUTHORIZED_DISCLOSURE": 3
+    },
+    "expected": 5
+  },
+  {
+    "check": "all_assessment_classes_present",
+    "pass": true,
+    "observed": {
+      "FOREIGN_POLICY_NOT_GOVERNING_AUTHORITY": 324,
+      "DISCLOSURE_AUTHORIZATION_UNKNOWN": 114,
+      "UNAUTHORIZED_OR_EXCESSIVE_DISCLOSURE_REQUEST": 42,
+      "AUTHORIZED_MINIMUM_NECESSARY_DISCLOSURE": 6
+    },
+    "expected": 4
+  },
+  {
+    "check": "fresh_contexts_balanced",
+    "pass": true,
+    "observed": {
+      "institutional_quality_review": 162,
+      "cross_institutional_referral": 162,
+      "data_governance_audit": 162
+    },
+    "expected": "162 records per context"
+  },
+  {
+    "check": "precedence_oracle_versioned",
+    "pass": true,
+    "observed": "KR-PRIVACY-PRECEDENCE-v2",
+    "expected": "KR-PRIVACY-PRECEDENCE-v2"
+  },
+  {
+    "check": "benchmark_sha256_recorded",
+    "pass": true,
+    "observed": "046ed01a9392306042ebc432f9e7dc4db05fd38f57bb7db701a50238d072a176",
+    "expected": "SHA256"
+  },
+  {
+    "check": "protocol_frozen_before_training",
+    "pass": true,
+    "observed": {
+      "status": "PRE_FROZEN_BEFORE_PRIVACY_CONFIRMATION_TRAINING",
+      "training_performed": false
+    },
+    "expected": "pre-frozen; no training"
+  },
+  {
+    "check": "reporting_contract_frozen",
+    "pass": true,
+    "observed": {
+      "hyperparameter_table_required": true,
+      "training_history_required": true
+    },
+    "expected": true
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4
+    },
+    "expected": ">=4 PNG and >=4 PDF"
+  }
+]

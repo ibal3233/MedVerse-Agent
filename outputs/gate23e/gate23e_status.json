@@ -1,0 +1,16 @@
+{
+  "gate": "GATE_23E_RESEARCH_IRB_FEATURE_SUPPORT_AUDIT",
+  "status": "PASS",
+  "passed_checks": 6,
+  "total_checks": 6,
+  "diagnostic_classification": "unsupported_higher_order_interaction_activation_and_opened_ood_benchmark_support_gap",
+  "critical_feature": "ix_active_approved_but_pseudo_deficient",
+  "critical_feature_combined_training_support": 0,
+  "critical_feature_ood_support": 4,
+  "ood_action_errors": 4,
+  "errors_on_critical_interaction": 4,
+  "model_capacity_failure_established": false,
+  "current_ood_benchmark_status": "OPENED_DIAGNOSTIC_BENCHMARK",
+  "figures_directory": "outputs/gate23e/figures",
+  "next_dependency": "Gate 23F: pre-freeze a fresh generalization protocol before adding training support for the diagnosed interaction."
+}

@@ -1,0 +1,27 @@
+{
+  "gate": "GATE_23C_RESEARCH_IRB_SHIELD_PRECEDENCE_AUDIT",
+  "training_changed": false,
+  "model_family_changed": false,
+  "selected_C_reproduced": 0.3,
+  "ood_records": 24,
+  "ood_action_errors": 6,
+  "error_pair_counts": {
+    "REQUEST_IRB_REVIEW -> PRESERVE_RESEARCH_AUDIT_LOG": 4,
+    "REQUEST_IRB_REVIEW -> ALLOW_AUTHORIZED_RESEARCH_PROCESSING": 2
+  },
+  "error_precedence_families": {
+    "missing_evidence_dominates": 2,
+    "pseudonymization_deficiency_dominates": 4
+  },
+  "legacy_policy_inconsistent_permits": 2,
+  "reference_policy_inconsistent_permits": 0,
+  "diagnostic_classification": "residual_rule_precedence_representation_limitation_plus_incomplete_research_irb_shield_semantics",
+  "model_diagnosis": "Residual errors occur when higher-priority governance conditions (missing consent or inadequate pseudonymization) must dominate lower-priority audit/allow cues.",
+  "shield_diagnosis": "The legacy PRESERVE_RESEARCH_AUDIT_LOG validation checks active consent and approved IRB but omits pseudonymization adequacy. Therefore a policy-inconsistent PRESERVE action can be permitted.",
+  "reporting_correction": "Safety must be reported as policy-inconsistent executed actions across all action classes, not only erroneous ALLOW actions.",
+  "authorized_next_changes": [
+    "patch Research/IRB shield to validate the complete frozen action semantics",
+    "introduce explicit rule-precedence/interactions in the Research/IRB feature representation"
+  ],
+  "prohibited_next_change": "Do not change model family until the diagnosed representation intervention is tested."
+}

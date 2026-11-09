@@ -1,0 +1,2287 @@
+{
+  "result": {
+    "family_id": "WF07",
+    "schedule_id": "WF07-S001",
+    "strategy": "SNAPSHOT_ONCE",
+    "historical_split": "CONFIRMATION_ALREADY_SEEN",
+    "role_order": [
+      "hospital_agent",
+      "cyber_network_agent",
+      "privacy_agent",
+      "research_irb_agent",
+      "regulator_agent"
+    ],
+    "release_first": false,
+    "events": 4,
+    "workflow_complete": true,
+    "clinical_review_requirement_met": true,
+    "telemetry_flag_requirement_met": true,
+    "release_requirement_met": true,
+    "release_required": false,
+    "required_release_deadline_cursor": null,
+    "first_release_cursor": null,
+    "committed_actions": 2,
+    "research_releases": 0,
+    "forbidden_outcomes": 0,
+    "payload_errors": 0,
+    "owner_errors": 0,
+    "prerequisite_order_errors": 0,
+    "duplicate_releases": 0,
+    "proposal_lineage_errors": 0,
+    "total_invariant_violations": 0,
+    "audit_chain_valid": true,
+    "validation_calls": 18,
+    "total_rounds": 4,
+    "max_rounds_per_event": 1,
+    "proposal_count": 13,
+    "descriptive_single_run_ms": 3.906601,
+    "effect_set_sha256": "76b6b172f23f8ea53036dcda9e9ec04169eb50802d8e856de6cd6e2cb196e4cc"
+  },
+  "input_events": [
+    {
+      "kind": "clinical",
+      "payload": {
+        "episode_code": "MODELED-ONC-042",
+        "fever_reported": true,
+        "symptom_band": "reported_concern",
+        "reported_at": "21:15",
+        "display_temperature": "38.4 °C (modeled)"
+      },
+      "title": "Patient reports a concern",
+      "id": "WF07-E1"
+    },
+    {
+      "kind": "request",
+      "payload": {
+        "id": "REQ-ONC-001",
+        "purpose": "scientific_research",
+        "data_form": "pseudonymized",
+        "fields": [
+          "episode_code",
+          "symptom_band",
+          "reported_at"
+        ],
+        "basis": "pseudonymized_research_reviewed",
+        "jurisdiction": "KR",
+        "consent": false
+      },
+      "title": "Request",
+      "id": "WF07-E2"
+    },
+    {
+      "kind": "approval",
+      "payload": {
+        "kind": "privacy",
+        "issuer": "research_agent_claim"
+      },
+      "title": "Approval",
+      "id": "WF07-E3"
+    },
+    {
+      "kind": "approval",
+      "payload": {
+        "kind": "research"
+      },
+      "title": "Research review recorded (modeled)",
+      "id": "WF07-E4"
+    }
+  ],
+  "schedule": {
+    "schedule_id": "WF07-S001",
+    "role_order": [
+      "hospital_agent",
+      "cyber_network_agent",
+      "privacy_agent",
+      "research_irb_agent",
+      "regulator_agent"
+    ],
+    "release_first": false,
+    "order_signature_sha256": "d12713d9a19c4c4bdd045e61ec4c44b532045cbb6fcb8b1c211bcb11e5e04df7",
+    "equivalent_template_count": 20
+  },
+  "cycles": [
+    {
+      "proposal_count": 1,
+      "rounds": 1,
+      "validation_calls": 2,
+      "attempts": [
+        {
+          "event_id": "WF07-E1",
+          "cursor": 1,
+          "round": 1,
+          "proposal_id": "P00001",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "PERMIT",
+          "final_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "committed": true,
+          "effect_sequence": 1
+        }
+      ],
+      "arrival_ids": [
+        "P00001"
+      ],
+      "planned_ids": [
+        "P00001"
+      ]
+    },
+    {
+      "proposal_count": 4,
+      "rounds": 1,
+      "validation_calls": 5,
+      "attempts": [
+        {
+          "event_id": "WF07-E2",
+          "cursor": 2,
+          "round": 1,
+          "proposal_id": "P00002",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "request_id": "",
+          "authorization_epoch": 1,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "NOOP",
+          "final_reason": "ALREADY_COMMITTED",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF07-E2",
+          "cursor": 2,
+          "round": 1,
+          "proposal_id": "P00003",
+          "owner": "privacy_agent",
+          "action": "ATTEST_PRIVACY_SCOPE",
+          "request_id": "REQ-ONC-001",
+          "authorization_epoch": 1,
+          "pre_status": "HUMAN_AUTHORITY_REQUIRED",
+          "pre_reason": "MISSING_PRIVACY_REVIEW",
+          "final_status": "HUMAN_AUTHORITY_REQUIRED",
+          "final_reason": "MISSING_PRIVACY_REVIEW",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF07-E2",
+          "cursor": 2,
+          "round": 1,
+          "proposal_id": "P00004",
+          "owner": "research_irb_agent",
+          "action": "ATTEST_RESEARCH_BASIS",
+          "request_id": "REQ-ONC-001",
+          "authorization_epoch": 1,
+          "pre_status": "HUMAN_AUTHORITY_REQUIRED",
+          "pre_reason": "MISSING_RESEARCH_REVIEW",
+          "final_status": "HUMAN_AUTHORITY_REQUIRED",
+          "final_reason": "MISSING_RESEARCH_REVIEW",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF07-E2",
+          "cursor": 2,
+          "round": 1,
+          "proposal_id": "P00005",
+          "owner": "research_irb_agent",
+          "action": "RELEASE_MINIMIZED_VIEW",
+          "request_id": "REQ-ONC-001",
+          "authorization_epoch": 1,
+          "pre_status": "HUMAN_AUTHORITY_REQUIRED",
+          "pre_reason": "MISSING_PRIVACY_REVIEW",
+          "final_status": "HUMAN_AUTHORITY_REQUIRED",
+          "final_reason": "MISSING_PRIVACY_REVIEW",
+          "committed": false,
+          "effect_sequence": null
+        }
+      ],
+      "arrival_ids": [
+        "P00002",
+        "P00003",
+        "P00004",
+        "P00005"
+      ],
+      "planned_ids": [
+        "P00002",
+        "P00003",
+        "P00004",
+        "P00005"
+      ]
+    },
+    {
+      "proposal_count": 4,
+      "rounds": 1,
+      "validation_calls": 5,
+      "attempts": [
+        {
+          "event_id": "WF07-E3",
+          "cursor": 3,
+          "round": 1,
+          "proposal_id": "P00006",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "request_id": "",
+          "authorization_epoch": 1,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "NOOP",
+          "final_reason": "ALREADY_COMMITTED",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF07-E3",
+          "cursor": 3,
+          "round": 1,
+          "proposal_id": "P00007",
+          "owner": "privacy_agent",
+          "action": "ATTEST_PRIVACY_SCOPE",
+          "request_id": "REQ-ONC-001",
+          "authorization_epoch": 1,
+          "pre_status": "HUMAN_AUTHORITY_REQUIRED",
+          "pre_reason": "WRONG_APPROVAL_AUTHORITY",
+          "final_status": "HUMAN_AUTHORITY_REQUIRED",
+          "final_reason": "WRONG_APPROVAL_AUTHORITY",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF07-E3",
+          "cursor": 3,
+          "round": 1,
+          "proposal_id": "P00008",
+          "owner": "research_irb_agent",
+          "action": "ATTEST_RESEARCH_BASIS",
+          "request_id": "REQ-ONC-001",
+          "authorization_epoch": 1,
+          "pre_status": "HUMAN_AUTHORITY_REQUIRED",
+          "pre_reason": "MISSING_RESEARCH_REVIEW",
+          "final_status": "HUMAN_AUTHORITY_REQUIRED",
+          "final_reason": "MISSING_RESEARCH_REVIEW",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF07-E3",
+          "cursor": 3,
+          "round": 1,
+          "proposal_id": "P00009",
+          "owner": "research_irb_agent",
+          "action": "RELEASE_MINIMIZED_VIEW",
+          "request_id": "REQ-ONC-001",
+          "authorization_epoch": 1,
+          "pre_status": "HUMAN_AUTHORITY_REQUIRED",
+          "pre_reason": "WRONG_APPROVAL_AUTHORITY",
+          "final_status": "HUMAN_AUTHORITY_REQUIRED",
+          "final_reason": "WRONG_APPROVAL_AUTHORITY",
+          "committed": false,
+          "effect_sequence": null
+        }
+      ],
+      "arrival_ids": [
+        "P00006",
+        "P00007",
+        "P00008",
+        "P00009"
+      ],
+      "planned_ids": [
+        "P00006",
+        "P00007",
+        "P00008",
+        "P00009"
+      ]
+    },
+    {
+      "proposal_count": 4,
+      "rounds": 1,
+      "validation_calls": 6,
+      "attempts": [
+        {
+          "event_id": "WF07-E4",
+          "cursor": 4,
+          "round": 1,
+          "proposal_id": "P00010",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "request_id": "",
+          "authorization_epoch": 1,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "NOOP",
+          "final_reason": "ALREADY_COMMITTED",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF07-E4",
+          "cursor": 4,
+          "round": 1,
+          "proposal_id": "P00011",
+          "owner": "privacy_agent",
+          "action": "ATTEST_PRIVACY_SCOPE",
+          "request_id": "REQ-ONC-001",
+          "authorization_epoch": 1,
+          "pre_status": "HUMAN_AUTHORITY_REQUIRED",
+          "pre_reason": "WRONG_APPROVAL_AUTHORITY",
+          "final_status": "HUMAN_AUTHORITY_REQUIRED",
+          "final_reason": "WRONG_APPROVAL_AUTHORITY",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF07-E4",
+          "cursor": 4,
+          "round": 1,
+          "proposal_id": "P00012",
+          "owner": "research_irb_agent",
+          "action": "ATTEST_RESEARCH_BASIS",
+          "request_id": "REQ-ONC-001",
+          "authorization_epoch": 1,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "PERMIT",
+          "final_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "committed": true,
+          "effect_sequence": 2
+        },
+        {
+          "event_id": "WF07-E4",
+          "cursor": 4,
+          "round": 1,
+          "proposal_id": "P00013",
+          "owner": "research_irb_agent",
+          "action": "RELEASE_MINIMIZED_VIEW",
+          "request_id": "REQ-ONC-001",
+          "authorization_epoch": 1,
+          "pre_status": "HUMAN_AUTHORITY_REQUIRED",
+          "pre_reason": "WRONG_APPROVAL_AUTHORITY",
+          "final_status": "HUMAN_AUTHORITY_REQUIRED",
+          "final_reason": "WRONG_APPROVAL_AUTHORITY",
+          "committed": false,
+          "effect_sequence": null
+        }
+      ],
+      "arrival_ids": [
+        "P00010",
+        "P00011",
+        "P00012",
+        "P00013"
+      ],
+      "planned_ids": [
+        "P00010",
+        "P00011",
+        "P00012",
+        "P00013"
+      ]
+    }
+  ],
+  "trace": {
+    "state": {
+      "revision": 4,
+      "cursor": 4,
+      "event_id": "WF07-E4",
+      "clinical": {
+        "episode_code": "MODELED-ONC-042",
+        "fever_reported": true,
+        "symptom_band": "reported_concern",
+        "reported_at": "21:15",
+        "display_temperature": "38.4 °C (modeled)"
+      },
+      "telemetry": {
+        "validity": "UNVERIFIED"
+      },
+      "dt_request": false,
+      "request": {
+        "id": "REQ-ONC-001",
+        "purpose": "scientific_research",
+        "data_form": "pseudonymized",
+        "fields": [
+          "episode_code",
+          "symptom_band",
+          "reported_at"
+        ],
+        "basis": "pseudonymized_research_reviewed",
+        "jurisdiction": "KR",
+        "consent": false
+      },
+      "authorization_epoch": 1,
+      "oversight": {},
+      "unavailable_sources": [],
+      "jurisdiction": "KR"
+    },
+    "role_views": {
+      "hospital_agent": {
+        "institution": "hospital_agent",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "cursor": 4,
+        "clinical": {
+          "episode_code": "MODELED-ONC-042",
+          "fever_reported": true,
+          "symptom_band": "reported_concern",
+          "reported_at": "21:15",
+          "display_temperature": "38.4 °C (modeled)"
+        },
+        "telemetry": {
+          "validity": "UNVERIFIED"
+        },
+        "dt_request": false
+      },
+      "cyber_network_agent": {
+        "institution": "cyber_network_agent",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "cursor": 4,
+        "telemetry": {
+          "validity": "UNVERIFIED"
+        }
+      },
+      "privacy_agent": {
+        "institution": "privacy_agent",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "cursor": 4,
+        "privacy_ticket": {
+          "present": true,
+          "valid": false
+        },
+        "authorization_epoch": 1,
+        "request": {
+          "id": "REQ-ONC-001",
+          "purpose": "scientific_research",
+          "data_form": "pseudonymized",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "basis": "pseudonymized_research_reviewed",
+          "jurisdiction": "KR",
+          "consent": false
+        }
+      },
+      "research_irb_agent": {
+        "institution": "research_irb_agent",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "cursor": 4,
+        "authorization_epoch": 1,
+        "research_ticket": {
+          "present": true,
+          "valid": true
+        },
+        "request": {
+          "id": "REQ-ONC-001",
+          "purpose": "scientific_research",
+          "data_form": "pseudonymized",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "basis": "pseudonymized_research_reviewed",
+          "jurisdiction": "KR",
+          "consent": false
+        }
+      },
+      "regulator_agent": {
+        "institution": "regulator_agent",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "cursor": 4,
+        "oversight": {}
+      }
+    },
+    "events": [
+      {
+        "id": "WF07-E1",
+        "kind": "clinical",
+        "title": "Patient reports a concern",
+        "payload": {
+          "episode_code": "MODELED-ONC-042",
+          "fever_reported": true,
+          "symptom_band": "reported_concern",
+          "reported_at": "21:15",
+          "display_temperature": "38.4 °C (modeled)"
+        }
+      },
+      {
+        "id": "WF07-E2",
+        "kind": "request",
+        "title": "Request",
+        "payload": {
+          "id": "REQ-ONC-001",
+          "purpose": "scientific_research",
+          "data_form": "pseudonymized",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "basis": "pseudonymized_research_reviewed",
+          "jurisdiction": "KR",
+          "consent": false
+        }
+      },
+      {
+        "id": "WF07-E3",
+        "kind": "approval",
+        "title": "Approval",
+        "payload": {
+          "kind": "privacy",
+          "issuer": "research_agent_claim"
+        }
+      },
+      {
+        "id": "WF07-E4",
+        "kind": "approval",
+        "title": "Research review recorded (modeled)",
+        "payload": {
+          "kind": "research"
+        }
+      }
+    ],
+    "cycle": {},
+    "effects": [
+      {
+        "sequence": 1,
+        "action": "REQUEST_CLINICAL_REVIEW",
+        "owner": "hospital_agent",
+        "event_id": "WF07-E1",
+        "cursor": 1,
+        "request_id": "",
+        "authorization_epoch": 0,
+        "proposal_id": "P00001",
+        "payload": {},
+        "simulation_only": true
+      },
+      {
+        "sequence": 2,
+        "action": "ATTEST_RESEARCH_BASIS",
+        "owner": "research_irb_agent",
+        "event_id": "WF07-E4",
+        "cursor": 4,
+        "request_id": "REQ-ONC-001",
+        "authorization_epoch": 1,
+        "proposal_id": "P00012",
+        "payload": {},
+        "simulation_only": true
+      }
+    ],
+    "receipts": [
+      {
+        "receipt_id": "R00001",
+        "event_id": "WF07-E1",
+        "owner": "hospital_agent",
+        "proposal": {
+          "proposal_id": "P00001",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF07-E1",
+          "state_revision": 1,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [],
+        "effect": {
+          "sequence": 1,
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "owner": "hospital_agent",
+          "event_id": "WF07-E1",
+          "cursor": 1,
+          "request_id": "",
+          "authorization_epoch": 0,
+          "proposal_id": "P00001",
+          "payload": {},
+          "simulation_only": true
+        },
+        "current_revision": 1,
+        "current_authorization_epoch": 0
+      },
+      {
+        "receipt_id": "R00002",
+        "event_id": "WF07-E2",
+        "owner": "hospital_agent",
+        "proposal": {
+          "proposal_id": "P00002",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF07-E2",
+          "state_revision": 2,
+          "authorization_epoch": 1,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "NOOP",
+          "reason": "ALREADY_COMMITTED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [],
+        "effect": null,
+        "current_revision": 2,
+        "current_authorization_epoch": 1
+      },
+      {
+        "receipt_id": "R00003",
+        "event_id": "WF07-E2",
+        "owner": "privacy_agent",
+        "proposal": {
+          "proposal_id": "P00003",
+          "owner": "privacy_agent",
+          "action": "ATTEST_PRIVACY_SCOPE",
+          "event_id": "WF07-E2",
+          "state_revision": 2,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Assess the requested purpose, fields and explicit institutional review record.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "MISSING_PRIVACY_REVIEW",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "MISSING_PRIVACY_REVIEW",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "effect": null,
+        "current_revision": 2,
+        "current_authorization_epoch": 1,
+        "scheduler_round": 1
+      },
+      {
+        "receipt_id": "R00004",
+        "event_id": "WF07-E2",
+        "owner": "research_irb_agent",
+        "proposal": {
+          "proposal_id": "P00004",
+          "owner": "research_irb_agent",
+          "action": "ATTEST_RESEARCH_BASIS",
+          "event_id": "WF07-E2",
+          "state_revision": 2,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "reason": "Validate the recorded research review basis; no blanket consent assumption.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "MISSING_RESEARCH_REVIEW",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "MISSING_RESEARCH_REVIEW",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "effect": null,
+        "current_revision": 2,
+        "current_authorization_epoch": 1,
+        "scheduler_round": 1
+      },
+      {
+        "receipt_id": "R00005",
+        "event_id": "WF07-E2",
+        "owner": "research_irb_agent",
+        "proposal": {
+          "proposal_id": "P00005",
+          "owner": "research_irb_agent",
+          "action": "RELEASE_MINIMIZED_VIEW",
+          "event_id": "WF07-E2",
+          "state_revision": 2,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Request only the explicitly scoped, modeled research view after both attestations.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "MISSING_PRIVACY_REVIEW",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "MISSING_PRIVACY_REVIEW",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "effect": null,
+        "current_revision": 2,
+        "current_authorization_epoch": 1,
+        "scheduler_round": 1
+      },
+      {
+        "receipt_id": "R00006",
+        "event_id": "WF07-E3",
+        "owner": "hospital_agent",
+        "proposal": {
+          "proposal_id": "P00006",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF07-E3",
+          "state_revision": 3,
+          "authorization_epoch": 1,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "NOOP",
+          "reason": "ALREADY_COMMITTED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [],
+        "effect": null,
+        "current_revision": 3,
+        "current_authorization_epoch": 1
+      },
+      {
+        "receipt_id": "R00007",
+        "event_id": "WF07-E3",
+        "owner": "privacy_agent",
+        "proposal": {
+          "proposal_id": "P00007",
+          "owner": "privacy_agent",
+          "action": "ATTEST_PRIVACY_SCOPE",
+          "event_id": "WF07-E3",
+          "state_revision": 3,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Assess the requested purpose, fields and explicit institutional review record.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "WRONG_APPROVAL_AUTHORITY",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "WRONG_APPROVAL_AUTHORITY",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "effect": null,
+        "current_revision": 3,
+        "current_authorization_epoch": 1,
+        "scheduler_round": 1
+      },
+      {
+        "receipt_id": "R00008",
+        "event_id": "WF07-E3",
+        "owner": "research_irb_agent",
+        "proposal": {
+          "proposal_id": "P00008",
+          "owner": "research_irb_agent",
+          "action": "ATTEST_RESEARCH_BASIS",
+          "event_id": "WF07-E3",
+          "state_revision": 3,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "reason": "Validate the recorded research review basis; no blanket consent assumption.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "MISSING_RESEARCH_REVIEW",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "MISSING_RESEARCH_REVIEW",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "effect": null,
+        "current_revision": 3,
+        "current_authorization_epoch": 1,
+        "scheduler_round": 1
+      },
+      {
+        "receipt_id": "R00009",
+        "event_id": "WF07-E3",
+        "owner": "research_irb_agent",
+        "proposal": {
+          "proposal_id": "P00009",
+          "owner": "research_irb_agent",
+          "action": "RELEASE_MINIMIZED_VIEW",
+          "event_id": "WF07-E3",
+          "state_revision": 3,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Request only the explicitly scoped, modeled research view after both attestations.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "WRONG_APPROVAL_AUTHORITY",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "WRONG_APPROVAL_AUTHORITY",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "effect": null,
+        "current_revision": 3,
+        "current_authorization_epoch": 1,
+        "scheduler_round": 1
+      },
+      {
+        "receipt_id": "R00010",
+        "event_id": "WF07-E4",
+        "owner": "hospital_agent",
+        "proposal": {
+          "proposal_id": "P00010",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF07-E4",
+          "state_revision": 4,
+          "authorization_epoch": 1,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "NOOP",
+          "reason": "ALREADY_COMMITTED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [],
+        "effect": null,
+        "current_revision": 4,
+        "current_authorization_epoch": 1
+      },
+      {
+        "receipt_id": "R00011",
+        "event_id": "WF07-E4",
+        "owner": "privacy_agent",
+        "proposal": {
+          "proposal_id": "P00011",
+          "owner": "privacy_agent",
+          "action": "ATTEST_PRIVACY_SCOPE",
+          "event_id": "WF07-E4",
+          "state_revision": 4,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Assess the requested purpose, fields and explicit institutional review record.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "WRONG_APPROVAL_AUTHORITY",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "WRONG_APPROVAL_AUTHORITY",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "effect": null,
+        "current_revision": 4,
+        "current_authorization_epoch": 1,
+        "scheduler_round": 1
+      },
+      {
+        "receipt_id": "R00012",
+        "event_id": "WF07-E4",
+        "owner": "research_irb_agent",
+        "proposal": {
+          "proposal_id": "P00012",
+          "owner": "research_irb_agent",
+          "action": "ATTEST_RESEARCH_BASIS",
+          "event_id": "WF07-E4",
+          "state_revision": 4,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "reason": "Validate the recorded research review basis; no blanket consent assumption.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [
+          {
+            "policy_id": "KR-BIOETHICS-ART10-IRB-001",
+            "record_sha256": "13bef150ed487b67d38fd1a3402cd846ee429af69a292428232fe1499f2b7b4a",
+            "official_url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1029630879",
+            "effective_date": "2025-10-01",
+            "interpretation_review": "PENDING_INDEPENDENT_REVIEW"
+          }
+        ],
+        "effect": {
+          "sequence": 2,
+          "action": "ATTEST_RESEARCH_BASIS",
+          "owner": "research_irb_agent",
+          "event_id": "WF07-E4",
+          "cursor": 4,
+          "request_id": "REQ-ONC-001",
+          "authorization_epoch": 1,
+          "proposal_id": "P00012",
+          "payload": {},
+          "simulation_only": true
+        },
+        "current_revision": 4,
+        "current_authorization_epoch": 1
+      },
+      {
+        "receipt_id": "R00013",
+        "event_id": "WF07-E4",
+        "owner": "research_irb_agent",
+        "proposal": {
+          "proposal_id": "P00013",
+          "owner": "research_irb_agent",
+          "action": "RELEASE_MINIMIZED_VIEW",
+          "event_id": "WF07-E4",
+          "state_revision": 4,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Request only the explicitly scoped, modeled research view after both attestations.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "WRONG_APPROVAL_AUTHORITY",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "HUMAN_AUTHORITY_REQUIRED",
+          "reason": "WRONG_APPROVAL_AUTHORITY",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "effect": null,
+        "current_revision": 4,
+        "current_authorization_epoch": 1,
+        "scheduler_round": 1
+      }
+    ],
+    "audit": [
+      {
+        "seq": 1,
+        "kind": "EVENT_RELEASED",
+        "event_id": "WF07-E1",
+        "revision": 1,
+        "payload": {
+          "kind": "clinical",
+          "publisher": "local_scenario_operator",
+          "simulation_only": true
+        },
+        "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "hash": "34f19ef6e52465e561853b83492832e016d085eed7c21836eed157ca8d28d24a"
+      },
+      {
+        "seq": 2,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E1",
+        "revision": 1,
+        "payload": {
+          "proposal_id": "P00001",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF07-E1",
+          "state_revision": 1,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "34f19ef6e52465e561853b83492832e016d085eed7c21836eed157ca8d28d24a",
+        "hash": "664da72d995916b5c05262da02ffc687287854bcd704463c5fd488a089adf742"
+      },
+      {
+        "seq": 3,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E1",
+        "revision": 1,
+        "payload": {
+          "receipt_id": "R00001",
+          "event_id": "WF07-E1",
+          "owner": "hospital_agent",
+          "proposal": {
+            "proposal_id": "P00001",
+            "owner": "hospital_agent",
+            "action": "REQUEST_CLINICAL_REVIEW",
+            "event_id": "WF07-E1",
+            "state_revision": 1,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [],
+            "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [],
+          "effect": {
+            "sequence": 1,
+            "action": "REQUEST_CLINICAL_REVIEW",
+            "owner": "hospital_agent",
+            "event_id": "WF07-E1",
+            "cursor": 1,
+            "request_id": "",
+            "authorization_epoch": 0,
+            "proposal_id": "P00001",
+            "payload": {},
+            "simulation_only": true
+          },
+          "current_revision": 1,
+          "current_authorization_epoch": 0
+        },
+        "previous_hash": "664da72d995916b5c05262da02ffc687287854bcd704463c5fd488a089adf742",
+        "hash": "ba6a79f0dee3e12024c5a1c307b2999c7af977a6091430e9024edfc518789f7e"
+      },
+      {
+        "seq": 4,
+        "kind": "COORDINATION_SCHEDULER",
+        "event_id": "WF07-E1",
+        "revision": 1,
+        "payload": {
+          "strategy": "SNAPSHOT_ONCE",
+          "arrival_ids": [
+            "P00001"
+          ],
+          "execution_order_ids": [
+            "P00001"
+          ],
+          "rounds": 1,
+          "coordinator_is_institution": false
+        },
+        "previous_hash": "ba6a79f0dee3e12024c5a1c307b2999c7af977a6091430e9024edfc518789f7e",
+        "hash": "8545ba8c1448ed9807172e79e1d8a7d71b35150eeb4899b1d9d546b0e6bb6df4"
+      },
+      {
+        "seq": 5,
+        "kind": "EVENT_RELEASED",
+        "event_id": "WF07-E2",
+        "revision": 2,
+        "payload": {
+          "kind": "request",
+          "publisher": "local_scenario_operator",
+          "simulation_only": true
+        },
+        "previous_hash": "8545ba8c1448ed9807172e79e1d8a7d71b35150eeb4899b1d9d546b0e6bb6df4",
+        "hash": "d58fc657cbbeec61880908260847844141383ad21c467adb03ab8f6cd26f1f63"
+      },
+      {
+        "seq": 6,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E2",
+        "revision": 2,
+        "payload": {
+          "proposal_id": "P00002",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF07-E2",
+          "state_revision": 2,
+          "authorization_epoch": 1,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "d58fc657cbbeec61880908260847844141383ad21c467adb03ab8f6cd26f1f63",
+        "hash": "e002a8193ef1e8a50fc822117f80f5179f85c424836f8765793decc26a90523e"
+      },
+      {
+        "seq": 7,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E2",
+        "revision": 2,
+        "payload": {
+          "proposal_id": "P00003",
+          "owner": "privacy_agent",
+          "action": "ATTEST_PRIVACY_SCOPE",
+          "event_id": "WF07-E2",
+          "state_revision": 2,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Assess the requested purpose, fields and explicit institutional review record.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "e002a8193ef1e8a50fc822117f80f5179f85c424836f8765793decc26a90523e",
+        "hash": "4ff0d3405c6f371130b0b610e01532b10e9fbb561f8bdaaf9e9981c327429966"
+      },
+      {
+        "seq": 8,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E2",
+        "revision": 2,
+        "payload": {
+          "proposal_id": "P00004",
+          "owner": "research_irb_agent",
+          "action": "ATTEST_RESEARCH_BASIS",
+          "event_id": "WF07-E2",
+          "state_revision": 2,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "reason": "Validate the recorded research review basis; no blanket consent assumption.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "4ff0d3405c6f371130b0b610e01532b10e9fbb561f8bdaaf9e9981c327429966",
+        "hash": "8a2e68d7b94ad3514aada73180003b25b544195c077d914e1ce7e27824b4fa17"
+      },
+      {
+        "seq": 9,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E2",
+        "revision": 2,
+        "payload": {
+          "proposal_id": "P00005",
+          "owner": "research_irb_agent",
+          "action": "RELEASE_MINIMIZED_VIEW",
+          "event_id": "WF07-E2",
+          "state_revision": 2,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Request only the explicitly scoped, modeled research view after both attestations.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "8a2e68d7b94ad3514aada73180003b25b544195c077d914e1ce7e27824b4fa17",
+        "hash": "4cdfd348d932127a5c6f130d8c02edd57f48134d1104e8b834a2c958dd261745"
+      },
+      {
+        "seq": 10,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E2",
+        "revision": 2,
+        "payload": {
+          "receipt_id": "R00002",
+          "event_id": "WF07-E2",
+          "owner": "hospital_agent",
+          "proposal": {
+            "proposal_id": "P00002",
+            "owner": "hospital_agent",
+            "action": "REQUEST_CLINICAL_REVIEW",
+            "event_id": "WF07-E2",
+            "state_revision": 2,
+            "authorization_epoch": 1,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [],
+            "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "NOOP",
+            "reason": "ALREADY_COMMITTED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [],
+          "effect": null,
+          "current_revision": 2,
+          "current_authorization_epoch": 1
+        },
+        "previous_hash": "4cdfd348d932127a5c6f130d8c02edd57f48134d1104e8b834a2c958dd261745",
+        "hash": "f4130944b5c21d5f23905ec736e6e670de0efada8f44455973d317233ab52643"
+      },
+      {
+        "seq": 11,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E2",
+        "revision": 2,
+        "payload": {
+          "receipt_id": "R00003",
+          "event_id": "WF07-E2",
+          "owner": "privacy_agent",
+          "proposal": {
+            "proposal_id": "P00003",
+            "owner": "privacy_agent",
+            "action": "ATTEST_PRIVACY_SCOPE",
+            "event_id": "WF07-E2",
+            "state_revision": 2,
+            "authorization_epoch": 1,
+            "request_id": "REQ-ONC-001",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "policy_ids": [
+              "KR-PIPA-ART28-2-PSEUDONYM-001",
+              "KR-PIPA-ART28-4-SAFEGUARDS-001"
+            ],
+            "reason": "Assess the requested purpose, fields and explicit institutional review record.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "MISSING_PRIVACY_REVIEW",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "MISSING_PRIVACY_REVIEW",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "effect": null,
+          "current_revision": 2,
+          "current_authorization_epoch": 1,
+          "scheduler_round": 1
+        },
+        "previous_hash": "f4130944b5c21d5f23905ec736e6e670de0efada8f44455973d317233ab52643",
+        "hash": "7a5b093a3485843e96a2ff08cb72b0897b9d4cf3661f8172b7fbf794f5c2716f"
+      },
+      {
+        "seq": 12,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E2",
+        "revision": 2,
+        "payload": {
+          "receipt_id": "R00004",
+          "event_id": "WF07-E2",
+          "owner": "research_irb_agent",
+          "proposal": {
+            "proposal_id": "P00004",
+            "owner": "research_irb_agent",
+            "action": "ATTEST_RESEARCH_BASIS",
+            "event_id": "WF07-E2",
+            "state_revision": 2,
+            "authorization_epoch": 1,
+            "request_id": "REQ-ONC-001",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "policy_ids": [
+              "KR-BIOETHICS-ART10-IRB-001"
+            ],
+            "reason": "Validate the recorded research review basis; no blanket consent assumption.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "MISSING_RESEARCH_REVIEW",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "MISSING_RESEARCH_REVIEW",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "effect": null,
+          "current_revision": 2,
+          "current_authorization_epoch": 1,
+          "scheduler_round": 1
+        },
+        "previous_hash": "7a5b093a3485843e96a2ff08cb72b0897b9d4cf3661f8172b7fbf794f5c2716f",
+        "hash": "0fd38287dfda32511d5916c99ad558d72b9644eca055bc5a871c813ea9e04257"
+      },
+      {
+        "seq": 13,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E2",
+        "revision": 2,
+        "payload": {
+          "receipt_id": "R00005",
+          "event_id": "WF07-E2",
+          "owner": "research_irb_agent",
+          "proposal": {
+            "proposal_id": "P00005",
+            "owner": "research_irb_agent",
+            "action": "RELEASE_MINIMIZED_VIEW",
+            "event_id": "WF07-E2",
+            "state_revision": 2,
+            "authorization_epoch": 1,
+            "request_id": "REQ-ONC-001",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "policy_ids": [
+              "KR-PIPA-ART28-2-PSEUDONYM-001",
+              "KR-PIPA-ART28-4-SAFEGUARDS-001"
+            ],
+            "reason": "Request only the explicitly scoped, modeled research view after both attestations.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "MISSING_PRIVACY_REVIEW",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "MISSING_PRIVACY_REVIEW",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "effect": null,
+          "current_revision": 2,
+          "current_authorization_epoch": 1,
+          "scheduler_round": 1
+        },
+        "previous_hash": "0fd38287dfda32511d5916c99ad558d72b9644eca055bc5a871c813ea9e04257",
+        "hash": "d2e8522f13e156ce68a65eae56ca93c88f77ba4d1ba67da80bd2fefe132c96ba"
+      },
+      {
+        "seq": 14,
+        "kind": "COORDINATION_SCHEDULER",
+        "event_id": "WF07-E2",
+        "revision": 2,
+        "payload": {
+          "strategy": "SNAPSHOT_ONCE",
+          "arrival_ids": [
+            "P00002",
+            "P00003",
+            "P00004",
+            "P00005"
+          ],
+          "execution_order_ids": [
+            "P00002",
+            "P00003",
+            "P00004",
+            "P00005"
+          ],
+          "rounds": 1,
+          "coordinator_is_institution": false
+        },
+        "previous_hash": "d2e8522f13e156ce68a65eae56ca93c88f77ba4d1ba67da80bd2fefe132c96ba",
+        "hash": "76bcf219edc00f2c4a2be5b61e1087a25131d6b413be08114b2dcf8d32e2fd90"
+      },
+      {
+        "seq": 15,
+        "kind": "EVENT_RELEASED",
+        "event_id": "WF07-E3",
+        "revision": 3,
+        "payload": {
+          "kind": "approval",
+          "publisher": "local_scenario_operator",
+          "simulation_only": true
+        },
+        "previous_hash": "76bcf219edc00f2c4a2be5b61e1087a25131d6b413be08114b2dcf8d32e2fd90",
+        "hash": "aca30e74cbdb5d9053e2688610a59dd820b5de50ddb8ab2bb364f9d8701562c2"
+      },
+      {
+        "seq": 16,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E3",
+        "revision": 3,
+        "payload": {
+          "proposal_id": "P00006",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF07-E3",
+          "state_revision": 3,
+          "authorization_epoch": 1,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "aca30e74cbdb5d9053e2688610a59dd820b5de50ddb8ab2bb364f9d8701562c2",
+        "hash": "16b58a68dda0649e30b910f6fad1b36847ec7d1187861519e1fbc16eaca0e448"
+      },
+      {
+        "seq": 17,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E3",
+        "revision": 3,
+        "payload": {
+          "proposal_id": "P00007",
+          "owner": "privacy_agent",
+          "action": "ATTEST_PRIVACY_SCOPE",
+          "event_id": "WF07-E3",
+          "state_revision": 3,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Assess the requested purpose, fields and explicit institutional review record.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "16b58a68dda0649e30b910f6fad1b36847ec7d1187861519e1fbc16eaca0e448",
+        "hash": "bfe126018a43e2f6c8cf92d67ac64d660244656b041853be39a0afa364842b57"
+      },
+      {
+        "seq": 18,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E3",
+        "revision": 3,
+        "payload": {
+          "proposal_id": "P00008",
+          "owner": "research_irb_agent",
+          "action": "ATTEST_RESEARCH_BASIS",
+          "event_id": "WF07-E3",
+          "state_revision": 3,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "reason": "Validate the recorded research review basis; no blanket consent assumption.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "bfe126018a43e2f6c8cf92d67ac64d660244656b041853be39a0afa364842b57",
+        "hash": "b2fa986335958db1a07a110d019b26993b5c04d1c95ee9e99b32d64b950b759e"
+      },
+      {
+        "seq": 19,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E3",
+        "revision": 3,
+        "payload": {
+          "proposal_id": "P00009",
+          "owner": "research_irb_agent",
+          "action": "RELEASE_MINIMIZED_VIEW",
+          "event_id": "WF07-E3",
+          "state_revision": 3,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Request only the explicitly scoped, modeled research view after both attestations.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "b2fa986335958db1a07a110d019b26993b5c04d1c95ee9e99b32d64b950b759e",
+        "hash": "f580d00972426d9c3e0d13693e1e3ac2d1ef4e1aa9208c4f83bbf8c5a7462c62"
+      },
+      {
+        "seq": 20,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E3",
+        "revision": 3,
+        "payload": {
+          "receipt_id": "R00006",
+          "event_id": "WF07-E3",
+          "owner": "hospital_agent",
+          "proposal": {
+            "proposal_id": "P00006",
+            "owner": "hospital_agent",
+            "action": "REQUEST_CLINICAL_REVIEW",
+            "event_id": "WF07-E3",
+            "state_revision": 3,
+            "authorization_epoch": 1,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [],
+            "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "NOOP",
+            "reason": "ALREADY_COMMITTED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [],
+          "effect": null,
+          "current_revision": 3,
+          "current_authorization_epoch": 1
+        },
+        "previous_hash": "f580d00972426d9c3e0d13693e1e3ac2d1ef4e1aa9208c4f83bbf8c5a7462c62",
+        "hash": "ced9dd9cdbbc5635c63074a7f00fcb5b7d6ee45941e25e9a0336f76f9d7ce4e0"
+      },
+      {
+        "seq": 21,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E3",
+        "revision": 3,
+        "payload": {
+          "receipt_id": "R00007",
+          "event_id": "WF07-E3",
+          "owner": "privacy_agent",
+          "proposal": {
+            "proposal_id": "P00007",
+            "owner": "privacy_agent",
+            "action": "ATTEST_PRIVACY_SCOPE",
+            "event_id": "WF07-E3",
+            "state_revision": 3,
+            "authorization_epoch": 1,
+            "request_id": "REQ-ONC-001",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "policy_ids": [
+              "KR-PIPA-ART28-2-PSEUDONYM-001",
+              "KR-PIPA-ART28-4-SAFEGUARDS-001"
+            ],
+            "reason": "Assess the requested purpose, fields and explicit institutional review record.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "WRONG_APPROVAL_AUTHORITY",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "WRONG_APPROVAL_AUTHORITY",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "effect": null,
+          "current_revision": 3,
+          "current_authorization_epoch": 1,
+          "scheduler_round": 1
+        },
+        "previous_hash": "ced9dd9cdbbc5635c63074a7f00fcb5b7d6ee45941e25e9a0336f76f9d7ce4e0",
+        "hash": "5da8fe45c50f760d5996b896ad75c510128a5f54126c117475c3691b7ef4e368"
+      },
+      {
+        "seq": 22,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E3",
+        "revision": 3,
+        "payload": {
+          "receipt_id": "R00008",
+          "event_id": "WF07-E3",
+          "owner": "research_irb_agent",
+          "proposal": {
+            "proposal_id": "P00008",
+            "owner": "research_irb_agent",
+            "action": "ATTEST_RESEARCH_BASIS",
+            "event_id": "WF07-E3",
+            "state_revision": 3,
+            "authorization_epoch": 1,
+            "request_id": "REQ-ONC-001",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "policy_ids": [
+              "KR-BIOETHICS-ART10-IRB-001"
+            ],
+            "reason": "Validate the recorded research review basis; no blanket consent assumption.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "MISSING_RESEARCH_REVIEW",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "MISSING_RESEARCH_REVIEW",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "effect": null,
+          "current_revision": 3,
+          "current_authorization_epoch": 1,
+          "scheduler_round": 1
+        },
+        "previous_hash": "5da8fe45c50f760d5996b896ad75c510128a5f54126c117475c3691b7ef4e368",
+        "hash": "ec2e5dba6327acf74dd6b423fee52080e45e73aeab64d031801ac50f8cdd3156"
+      },
+      {
+        "seq": 23,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E3",
+        "revision": 3,
+        "payload": {
+          "receipt_id": "R00009",
+          "event_id": "WF07-E3",
+          "owner": "research_irb_agent",
+          "proposal": {
+            "proposal_id": "P00009",
+            "owner": "research_irb_agent",
+            "action": "RELEASE_MINIMIZED_VIEW",
+            "event_id": "WF07-E3",
+            "state_revision": 3,
+            "authorization_epoch": 1,
+            "request_id": "REQ-ONC-001",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "policy_ids": [
+              "KR-PIPA-ART28-2-PSEUDONYM-001",
+              "KR-PIPA-ART28-4-SAFEGUARDS-001"
+            ],
+            "reason": "Request only the explicitly scoped, modeled research view after both attestations.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "WRONG_APPROVAL_AUTHORITY",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "WRONG_APPROVAL_AUTHORITY",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "effect": null,
+          "current_revision": 3,
+          "current_authorization_epoch": 1,
+          "scheduler_round": 1
+        },
+        "previous_hash": "ec2e5dba6327acf74dd6b423fee52080e45e73aeab64d031801ac50f8cdd3156",
+        "hash": "251381d587566e29b5e1517aa47f46e1c69324ff1422a17ce114f12f774cd8cd"
+      },
+      {
+        "seq": 24,
+        "kind": "COORDINATION_SCHEDULER",
+        "event_id": "WF07-E3",
+        "revision": 3,
+        "payload": {
+          "strategy": "SNAPSHOT_ONCE",
+          "arrival_ids": [
+            "P00006",
+            "P00007",
+            "P00008",
+            "P00009"
+          ],
+          "execution_order_ids": [
+            "P00006",
+            "P00007",
+            "P00008",
+            "P00009"
+          ],
+          "rounds": 1,
+          "coordinator_is_institution": false
+        },
+        "previous_hash": "251381d587566e29b5e1517aa47f46e1c69324ff1422a17ce114f12f774cd8cd",
+        "hash": "5f4bd765dfa3b4033d19e27be4ac45e057db09fd153194e7a27cfe8efdadada0"
+      },
+      {
+        "seq": 25,
+        "kind": "EVENT_RELEASED",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "payload": {
+          "kind": "approval",
+          "publisher": "local_scenario_operator",
+          "simulation_only": true
+        },
+        "previous_hash": "5f4bd765dfa3b4033d19e27be4ac45e057db09fd153194e7a27cfe8efdadada0",
+        "hash": "975120fca3bb5db1c8e71e06d97348967457fad687101bc84a7553550c158df1"
+      },
+      {
+        "seq": 26,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "payload": {
+          "proposal_id": "P00010",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF07-E4",
+          "state_revision": 4,
+          "authorization_epoch": 1,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "975120fca3bb5db1c8e71e06d97348967457fad687101bc84a7553550c158df1",
+        "hash": "2582c6a861aa8c74990769bb62b64f25191cbb7695b9b86b8fc0b550f9c61508"
+      },
+      {
+        "seq": 27,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "payload": {
+          "proposal_id": "P00011",
+          "owner": "privacy_agent",
+          "action": "ATTEST_PRIVACY_SCOPE",
+          "event_id": "WF07-E4",
+          "state_revision": 4,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Assess the requested purpose, fields and explicit institutional review record.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "2582c6a861aa8c74990769bb62b64f25191cbb7695b9b86b8fc0b550f9c61508",
+        "hash": "af57073e4aead0ffa33c3b4a5f7cb1db1a2f85f4f529f621dd903bccaefd10f1"
+      },
+      {
+        "seq": 28,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "payload": {
+          "proposal_id": "P00012",
+          "owner": "research_irb_agent",
+          "action": "ATTEST_RESEARCH_BASIS",
+          "event_id": "WF07-E4",
+          "state_revision": 4,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "reason": "Validate the recorded research review basis; no blanket consent assumption.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "af57073e4aead0ffa33c3b4a5f7cb1db1a2f85f4f529f621dd903bccaefd10f1",
+        "hash": "8f42ef90f44962074306dbece6481db1407bce8ef4cf0dc4bd63f3553a49ad52"
+      },
+      {
+        "seq": 29,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "payload": {
+          "proposal_id": "P00013",
+          "owner": "research_irb_agent",
+          "action": "RELEASE_MINIMIZED_VIEW",
+          "event_id": "WF07-E4",
+          "state_revision": 4,
+          "authorization_epoch": 1,
+          "request_id": "REQ-ONC-001",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "policy_ids": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "reason": "Request only the explicitly scoped, modeled research view after both attestations.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "8f42ef90f44962074306dbece6481db1407bce8ef4cf0dc4bd63f3553a49ad52",
+        "hash": "37c05cf0abdecc89d83f09a3afee7da9dd34e6577506c92cd1630bd38028c8e8"
+      },
+      {
+        "seq": 30,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "payload": {
+          "receipt_id": "R00010",
+          "event_id": "WF07-E4",
+          "owner": "hospital_agent",
+          "proposal": {
+            "proposal_id": "P00010",
+            "owner": "hospital_agent",
+            "action": "REQUEST_CLINICAL_REVIEW",
+            "event_id": "WF07-E4",
+            "state_revision": 4,
+            "authorization_epoch": 1,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [],
+            "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "NOOP",
+            "reason": "ALREADY_COMMITTED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [],
+          "effect": null,
+          "current_revision": 4,
+          "current_authorization_epoch": 1
+        },
+        "previous_hash": "37c05cf0abdecc89d83f09a3afee7da9dd34e6577506c92cd1630bd38028c8e8",
+        "hash": "850d78a261d8b918d5ea45d0e2df047e375c70287a0db2cd3fef5e1daf74ffa8"
+      },
+      {
+        "seq": 31,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "payload": {
+          "receipt_id": "R00011",
+          "event_id": "WF07-E4",
+          "owner": "privacy_agent",
+          "proposal": {
+            "proposal_id": "P00011",
+            "owner": "privacy_agent",
+            "action": "ATTEST_PRIVACY_SCOPE",
+            "event_id": "WF07-E4",
+            "state_revision": 4,
+            "authorization_epoch": 1,
+            "request_id": "REQ-ONC-001",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "policy_ids": [
+              "KR-PIPA-ART28-2-PSEUDONYM-001",
+              "KR-PIPA-ART28-4-SAFEGUARDS-001"
+            ],
+            "reason": "Assess the requested purpose, fields and explicit institutional review record.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "WRONG_APPROVAL_AUTHORITY",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "WRONG_APPROVAL_AUTHORITY",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "effect": null,
+          "current_revision": 4,
+          "current_authorization_epoch": 1,
+          "scheduler_round": 1
+        },
+        "previous_hash": "850d78a261d8b918d5ea45d0e2df047e375c70287a0db2cd3fef5e1daf74ffa8",
+        "hash": "1e5b193ea54b3330fb78b86301eb9f797889d3238d31428f9d48aee188066033"
+      },
+      {
+        "seq": 32,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "payload": {
+          "receipt_id": "R00012",
+          "event_id": "WF07-E4",
+          "owner": "research_irb_agent",
+          "proposal": {
+            "proposal_id": "P00012",
+            "owner": "research_irb_agent",
+            "action": "ATTEST_RESEARCH_BASIS",
+            "event_id": "WF07-E4",
+            "state_revision": 4,
+            "authorization_epoch": 1,
+            "request_id": "REQ-ONC-001",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "policy_ids": [
+              "KR-BIOETHICS-ART10-IRB-001"
+            ],
+            "reason": "Validate the recorded research review basis; no blanket consent assumption.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [
+            {
+              "policy_id": "KR-BIOETHICS-ART10-IRB-001",
+              "record_sha256": "13bef150ed487b67d38fd1a3402cd846ee429af69a292428232fe1499f2b7b4a",
+              "official_url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1029630879",
+              "effective_date": "2025-10-01",
+              "interpretation_review": "PENDING_INDEPENDENT_REVIEW"
+            }
+          ],
+          "effect": {
+            "sequence": 2,
+            "action": "ATTEST_RESEARCH_BASIS",
+            "owner": "research_irb_agent",
+            "event_id": "WF07-E4",
+            "cursor": 4,
+            "request_id": "REQ-ONC-001",
+            "authorization_epoch": 1,
+            "proposal_id": "P00012",
+            "payload": {},
+            "simulation_only": true
+          },
+          "current_revision": 4,
+          "current_authorization_epoch": 1
+        },
+        "previous_hash": "1e5b193ea54b3330fb78b86301eb9f797889d3238d31428f9d48aee188066033",
+        "hash": "8c5cc755c580fcda7953c0dad33c41b0132a61fbbcd89d2a328132f66572972f"
+      },
+      {
+        "seq": 33,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "payload": {
+          "receipt_id": "R00013",
+          "event_id": "WF07-E4",
+          "owner": "research_irb_agent",
+          "proposal": {
+            "proposal_id": "P00013",
+            "owner": "research_irb_agent",
+            "action": "RELEASE_MINIMIZED_VIEW",
+            "event_id": "WF07-E4",
+            "state_revision": 4,
+            "authorization_epoch": 1,
+            "request_id": "REQ-ONC-001",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "policy_ids": [
+              "KR-PIPA-ART28-2-PSEUDONYM-001",
+              "KR-PIPA-ART28-4-SAFEGUARDS-001"
+            ],
+            "reason": "Request only the explicitly scoped, modeled research view after both attestations.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "WRONG_APPROVAL_AUTHORITY",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "HUMAN_AUTHORITY_REQUIRED",
+            "reason": "WRONG_APPROVAL_AUTHORITY",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "effect": null,
+          "current_revision": 4,
+          "current_authorization_epoch": 1,
+          "scheduler_round": 1
+        },
+        "previous_hash": "8c5cc755c580fcda7953c0dad33c41b0132a61fbbcd89d2a328132f66572972f",
+        "hash": "587a384e7f83b761b4f9779831a53cfaa937d9275b038eda229a34d555dab8ac"
+      },
+      {
+        "seq": 34,
+        "kind": "COORDINATION_SCHEDULER",
+        "event_id": "WF07-E4",
+        "revision": 4,
+        "payload": {
+          "strategy": "SNAPSHOT_ONCE",
+          "arrival_ids": [
+            "P00010",
+            "P00011",
+            "P00012",
+            "P00013"
+          ],
+          "execution_order_ids": [
+            "P00010",
+            "P00011",
+            "P00012",
+            "P00013"
+          ],
+          "rounds": 1,
+          "coordinator_is_institution": false
+        },
+        "previous_hash": "587a384e7f83b761b4f9779831a53cfaa937d9275b038eda229a34d555dab8ac",
+        "hash": "10464679fb7f614963babc9c183bd1fd158fbf9a6855b91dd3d573c032e9236b"
+      }
+    ],
+    "audit_chain_valid": true,
+    "strategy": "MEDVERSE",
+    "mode": "MODELED_SANDBOX",
+    "agent_backend": "deterministic_institutional_model_v1",
+    "retrieval_backend": "lexical_bilingual_bm25_v1",
+    "legal_review_status": "PENDING",
+    "clinical_review_status": "PENDING",
+    "strict_deployment_enabled": false
+  }
+}

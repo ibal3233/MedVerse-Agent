@@ -1,0 +1,53 @@
+[
+  {
+    "check": "zero_ood_augmentation_overlap",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "id_action_accuracy",
+    "pass": false,
+    "observed": 0.6666666666666666,
+    "expected": ">=0.90"
+  },
+  {
+    "check": "ood_action_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.80"
+  },
+  {
+    "check": "ood_action_macro_f1",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.75"
+  },
+  {
+    "check": "ood_assessment_accuracy",
+    "pass": false,
+    "observed": 0.75,
+    "expected": ">=0.80"
+  },
+  {
+    "check": "unsafe_execution_after_shield",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "publication_plots",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4
+    },
+    "expected": ">=4 PNG and >=4 PDF"
+  },
+  {
+    "check": "dataset_methodology_recorded",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  }
+]

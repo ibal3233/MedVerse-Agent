@@ -1,0 +1,52 @@
+{
+  "total_action_counts": {
+    "PRESERVE_TECHNICAL_LOGS": 24,
+    "MARK_TELEMETRY_UNVERIFIED": 12,
+    "VERIFY_DEVICE_IDENTITY": 12,
+    "ISOLATE_SUSPECT_SESSION": 12,
+    "REQUEST_ALTERNATIVE_CHANNEL": 12
+  },
+  "total_assessment_counts": {
+    "TELEMETRY_TRUST_ACCEPTABLE": 12,
+    "TELEMETRY_RELIABILITY_DEGRADED": 24,
+    "DEVICE_IDENTITY_INTEGRITY_UNCERTAIN": 36
+  },
+  "action_counts_by_group": {
+    "5": {
+      "PRESERVE_TECHNICAL_LOGS": 6,
+      "MARK_TELEMETRY_UNVERIFIED": 3,
+      "VERIFY_DEVICE_IDENTITY": 3,
+      "ISOLATE_SUSPECT_SESSION": 3,
+      "REQUEST_ALTERNATIVE_CHANNEL": 3
+    },
+    "6": {
+      "PRESERVE_TECHNICAL_LOGS": 6,
+      "MARK_TELEMETRY_UNVERIFIED": 3,
+      "VERIFY_DEVICE_IDENTITY": 3,
+      "ISOLATE_SUSPECT_SESSION": 3,
+      "REQUEST_ALTERNATIVE_CHANNEL": 3
+    },
+    "7": {
+      "PRESERVE_TECHNICAL_LOGS": 6,
+      "MARK_TELEMETRY_UNVERIFIED": 3,
+      "VERIFY_DEVICE_IDENTITY": 3,
+      "ISOLATE_SUSPECT_SESSION": 3,
+      "REQUEST_ALTERNATIVE_CHANNEL": 3
+    },
+    "8": {
+      "PRESERVE_TECHNICAL_LOGS": 6,
+      "MARK_TELEMETRY_UNVERIFIED": 3,
+      "VERIFY_DEVICE_IDENTITY": 3,
+      "ISOLATE_SUSPECT_SESSION": 3,
+      "REQUEST_ALTERNATIVE_CHANNEL": 3
+    }
+  },
+  "base_scenario_counts": {
+    "healthy": 12,
+    "loss": 12,
+    "cert": 12,
+    "session": 12,
+    "alt_channel": 12,
+    "logs": 12
+  }
+}

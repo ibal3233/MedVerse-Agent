@@ -1,0 +1,85 @@
+[
+  {
+    "check": "complete_replication_factorial",
+    "pass": true,
+    "observed": {
+      "records": 486,
+      "core_states": 162
+    },
+    "expected": {
+      "records": 486,
+      "core_states": 162
+    }
+  },
+  {
+    "check": "fresh_exact_model_visible_records",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "all_seven_diagnosed_cores_protected",
+    "pass": true,
+    "observed": 7,
+    "expected": 7
+  },
+  {
+    "check": "three_replications_per_protected_core",
+    "pass": true,
+    "observed": 21,
+    "expected": 21
+  },
+  {
+    "check": "fresh_contexts_balanced",
+    "pass": true,
+    "observed": {
+      "clinical_data_quality_review": 162,
+      "institutional_access_recertification": 162,
+      "privacy_impact_reassessment": 162
+    },
+    "expected": "162 each"
+  },
+  {
+    "check": "semantic_freshness_claim_is_bounded",
+    "pass": true,
+    "observed": "NOT_SEMANTICALLY_UNSEEN",
+    "expected": "NOT_SEMANTICALLY_UNSEEN"
+  },
+  {
+    "check": "protocol_frozen_before_repair_training",
+    "pass": true,
+    "observed": {
+      "training_performed": false,
+      "status": "PRE_FROZEN_BEFORE_TARGETED_REPAIR_TRAINING"
+    },
+    "expected": "pre-frozen, no training"
+  },
+  {
+    "check": "benchmark_sha256_recorded",
+    "pass": true,
+    "observed": "c7c0d4fc60eba832e24ea60c4d9db43654022512b83f789da5944d86cf58550d",
+    "expected": "SHA256"
+  },
+  {
+    "check": "reporting_contract_frozen",
+    "pass": true,
+    "observed": {
+      "hyperparameter_results_table": true,
+      "training_history_plot": true,
+      "hyperparameter_plot": true,
+      "solver_convergence_plot": true,
+      "per_class_table": true,
+      "replication_results_table": true
+    },
+    "expected": "all true"
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4
+    },
+    "expected": ">=4 PNG and >=4 PDF"
+  }
+]

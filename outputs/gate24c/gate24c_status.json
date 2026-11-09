@@ -1,0 +1,99 @@
+{
+  "gate": "GATE_24C_CYBER_REPAIRED_PROSPECTIVE_EVALUATION",
+  "status": "PASS",
+  "passed_checks": 12,
+  "total_checks": 12,
+  "agent": "Cyber / Network Agent",
+  "model_family": "multinomial_logistic_regression",
+  "chosen_C": 0.3,
+  "train_records": 54,
+  "dev_records": 18,
+  "opened_g4_records_excluded": 18,
+  "prospective_records": 72,
+  "prospective_metrics": {
+    "action": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "by_group": {
+      "g5": {
+        "records": 18,
+        "action_accuracy": 1.0,
+        "action_macro_f1": 1.0,
+        "assessment_accuracy": 1.0,
+        "assessment_macro_f1": 1.0
+      },
+      "g6": {
+        "records": 18,
+        "action_accuracy": 1.0,
+        "action_macro_f1": 1.0,
+        "assessment_accuracy": 1.0,
+        "assessment_macro_f1": 1.0
+      },
+      "g7": {
+        "records": 18,
+        "action_accuracy": 1.0,
+        "action_macro_f1": 1.0,
+        "assessment_accuracy": 1.0,
+        "assessment_macro_f1": 1.0
+      },
+      "g8": {
+        "records": 18,
+        "action_accuracy": 1.0,
+        "action_macro_f1": 1.0,
+        "assessment_accuracy": 1.0,
+        "assessment_macro_f1": 1.0
+      }
+    }
+  },
+  "action_class_metrics": [
+    {
+      "class": "ISOLATE_SUSPECT_SESSION",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 12
+    },
+    {
+      "class": "MARK_TELEMETRY_UNVERIFIED",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 12
+    },
+    {
+      "class": "PRESERVE_TECHNICAL_LOGS",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 24
+    },
+    {
+      "class": "REQUEST_ALTERNATIVE_CHANNEL",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 12
+    },
+    {
+      "class": "VERIFY_DEVICE_IDENTITY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 12
+    }
+  ],
+  "minimum_action_class_recall": 1.0,
+  "training_history_steps": 3,
+  "sklearn_version": "1.8.0",
+  "hyperparameter_table_path": "outputs/gate24c/gate24c_hyperparameter_results_table.md",
+  "prospective_results_table_path": "outputs/gate24c/gate24c_prospective_results_table.md",
+  "model_path": "outputs/gate24c/cyber_network_repaired_model.joblib",
+  "figures_directory": "outputs/gate24c/figures",
+  "claim_boundary": "Synthetic prospective generator-shift benchmark derived from frozen scenario semantics; not external network telemetry or clinical data.",
+  "next_dependency": "If PASS, stop agent-learning experiments and perform final system consolidation for demo/video. If FAIL, document Cyber residual limitations rather than opening another adaptive loop."
+}

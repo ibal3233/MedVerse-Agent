@@ -1,0 +1,10 @@
+"""Spyder-compatible additive coordination audit. Does not change Gates 1-27."""
+from pathlib import Path
+import sys
+sys.dont_write_bytecode = True
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from coordination28.evaluate import main
+if __name__ == '__main__':
+    main()

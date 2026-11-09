@@ -1,0 +1,5650 @@
+{
+  "version": "1.0.0",
+  "families": [
+    {
+      "family_id": "D01",
+      "track": "T1",
+      "split": "DEVELOPMENT",
+      "motif": "single_trusted_care_route",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "clinical_review": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06"
+      },
+      "evidence_register": {},
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "D02",
+      "track": "T1",
+      "split": "CONFIRMATION",
+      "motif": "quarantine_then_ack_then_care",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "stream_isolated"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "containment": [
+          "adequate"
+        ],
+        "handoff": [
+          "adequate"
+        ],
+        "clinical_review": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "cyber_network_agent",
+          "kind": "QUARANTINE_STREAM",
+          "task": "containment",
+          "provides": [
+            "stream_isolated"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "technical_workspace",
+          "purpose": "safety",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "hospital_agent",
+          "kind": "HANDOFF_ACK",
+          "task": "handoff",
+          "provides": [
+            "handoff_ack"
+          ],
+          "needs": [
+            "stream_isolated"
+          ],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [
+            "handoff_ack"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_cyber_network_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "safety",
+          "recipient": "technical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "c4943b6603336b7fdc96253aa5db7d78be81d61f183f2c842a5c5d4a80848798",
+        "G-A02": "1cd0b85c7816b3ca638bc616130181f95de448b3757837c885d5304e9ddb882a",
+        "G-A03": "8cdc9042e2648b5693f077bbd91c1f79b179e9f12e0904e457715f7b0ebe047d"
+      },
+      "evidence_register": {
+        "KR-PIPC-SAFE-2026-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "D03",
+      "track": "T2",
+      "split": "CONFIRMATION",
+      "motif": "denied_primary_scoped_alternative",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "research_done"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "clinical_review": [
+          "adequate"
+        ],
+        "raw_scope": [
+          "adequate"
+        ],
+        "raw_basis": [
+          "adequate"
+        ],
+        "raw_task": [
+          "adequate"
+        ],
+        "limited_scope": [
+          "adequate"
+        ],
+        "limited_basis": [
+          "adequate"
+        ],
+        "limited_task": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "raw_scope",
+          "provides": [
+            "raw_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "raw_basis",
+          "provides": [
+            "raw_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A04",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "raw_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "raw_privacy_ok",
+            "raw_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "full_record"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A04"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A05",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "limited_scope",
+          "provides": [
+            "limited_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A05"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A06",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "limited_basis",
+          "provides": [
+            "limited_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A06"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A07",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "limited_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "limited_privacy_ok",
+            "limited_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A07"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "DENIED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "DENIED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A04": {
+          "status": "DENIED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A04"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "full_record"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A05": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A05"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A06": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A06"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A07": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A07"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+        "G-A02": "e96b8d91928d104812fbcfee4cc7f302aa08a4725b970320073b974b08af9e04",
+        "G-A03": "a7f5d96b1aa20102a9d00e272af8551c38a78e725f3eef0868f793430931c437",
+        "G-A04": "7bf5b45f66caa41c85e53a3e896e8462bc411fba46ce2c36cb24241a6c2e8a4a",
+        "G-A05": "0a8cdc50cb13a7745a6c2509f4380bb3ff667f528a90368e44e0a7e27303e68e",
+        "G-A06": "17c63c3cd7496de61a43ce92b484109c302be838b2c73bce0936cd007e0c05d7",
+        "G-A07": "9fc65faa638f530c53ad7b2536ba04d13f6d1c9ae1479c8259a69ab421da487c"
+      },
+      "evidence_register": {
+        "KR-PIPA-ART28-2-PSEUDONYM-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-PIPA-ART28-4-SAFEGUARDS-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-BIOETHICS-ART10-IRB-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "D04",
+      "track": "T2",
+      "split": "DEVELOPMENT",
+      "motif": "several_valid_disclosure_choices",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "research_done"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "wide_scope": [
+          "adequate"
+        ],
+        "wide_basis": [
+          "adequate"
+        ],
+        "wide_task": [
+          "adequate"
+        ],
+        "narrow_scope": [
+          "adequate"
+        ],
+        "narrow_basis": [
+          "adequate"
+        ],
+        "narrow_task": [
+          "adequate"
+        ]
+      },
+      "facts": {},
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "wide_scope",
+          "provides": [
+            "wide_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "wide_basis",
+          "provides": [
+            "wide_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "wide_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "wide_privacy_ok",
+            "wide_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A04",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "narrow_scope",
+          "provides": [
+            "narrow_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A04"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A05",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "narrow_basis",
+          "provides": [
+            "narrow_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A05"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A06",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "narrow_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "narrow_privacy_ok",
+            "narrow_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "episode_code"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A06"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band",
+            "reported_at"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A04": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A04"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A05": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A05"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A06": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A06"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "episode_code"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "6fc09e4a08e7c8c43027de9579ba35471b9fd307320139c39a32aa1868f86fd5",
+        "G-A02": "6c700075792e02371b3e9f42203af9232f04c68f910f44a34895cf4efc59a2d7",
+        "G-A03": "b4eb333a11e2a91bb58af4e38602dcfefa3326b8e26a70098479f204fad405c0",
+        "G-A04": "6032be0bdb49b28346e27d0c47f642b753a07136f645b8d4a300e9f0e8a01438",
+        "G-A05": "6c3b2001094bed245ff0a5112bcf6b4a34945a81b28b2a9d48bc28fd781ecf52",
+        "G-A06": "d2c1eecd3a0a29b44a75f19c40289be54c439d4bff0afb78aa7c14114c7c7929"
+      },
+      "evidence_register": {
+        "KR-PIPA-ART28-2-PSEUDONYM-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-PIPA-ART28-4-SAFEGUARDS-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-BIOETHICS-ART10-IRB-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "D05",
+      "track": "T3",
+      "split": "DEVELOPMENT",
+      "motif": "valid_single_workspace_transfer",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "dt_received"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "dt_receiving": [
+          "adequate"
+        ]
+      },
+      "facts": {},
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "DT_RECEIVE",
+          "task": "dt_receiving",
+          "provides": [
+            "dt_received"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_dt_dt_received"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": "E1",
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "95f4ea3d431d4d1f76ded5497ec7a746624e4add154182cee600e73ee1f5b2ff"
+      },
+      "evidence_register": {
+        "KR-MSA-ART23-EMR-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {
+        "E1": {
+          "dt_ref": "E1",
+          "data_version": "v1",
+          "observed_event": 4,
+          "provenance_ref": "trusted-modeled-source",
+          "validity": "VALID",
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "authority_epoch": 1,
+          "expires_event": 20
+        }
+      },
+      "trusted_envelope_hashes": [
+        "ac61788768f50fc93517eb63bcb548f5b8362724a788cac4eae77ea716767297"
+      ],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "D06",
+      "track": "T3",
+      "split": "DEVELOPMENT",
+      "motif": "missing_context_not_permission",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "dt_received"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "dt_receiving": [
+          "adequate"
+        ]
+      },
+      "facts": {},
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "DT_RECEIVE",
+          "task": "dt_receiving",
+          "provides": [
+            "dt_received"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_dt_dt_received"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": "E1",
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "95f4ea3d431d4d1f76ded5497ec7a746624e4add154182cee600e73ee1f5b2ff"
+      },
+      "evidence_register": {
+        "KR-MSA-ART23-EMR-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {
+        "E1": {
+          "dt_ref": "E1",
+          "data_version": "v1",
+          "observed_event": 4,
+          "validity": "VALID",
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "authority_epoch": 1,
+          "expires_event": 20
+        }
+      },
+      "trusted_envelope_hashes": [
+        "071a3eda2d409cb973c2167b0c802c9b27d5354d67ccaa1cd2bbb879099b1d1e"
+      ],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C01",
+      "track": "T1",
+      "split": "CONFIRMATION",
+      "motif": "isolated_session_independent_route_with_ack",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "stream_isolated"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "clinical_review": [
+          "adequate"
+        ],
+        "containment": [
+          "adequate"
+        ],
+        "handoff": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_session": true,
+        "route_independent": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [],
+          "forbids": [
+            "stream_isolated"
+          ],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_session",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "cyber_network_agent",
+          "kind": "QUARANTINE_STREAM",
+          "task": "containment",
+          "provides": [
+            "stream_isolated"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "technical_workspace",
+          "purpose": "safety",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "hospital_agent",
+          "kind": "HANDOFF_ACK",
+          "task": "handoff",
+          "provides": [
+            "handoff_ack"
+          ],
+          "needs": [
+            "stream_isolated"
+          ],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A04",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [
+            "handoff_ack"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_independent",
+              "value": true
+            }
+          ],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A04"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_cyber_network_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "safety",
+          "recipient": "technical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A04": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A04"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+        "G-A02": "94662035bc4743ddc6c9dc6f413269da65be2595d323aaaf9ce77db27b5cc1b8",
+        "G-A03": "8cdc9042e2648b5693f077bbd91c1f79b179e9f12e0904e457715f7b0ebe047d",
+        "G-A04": "c877a0942a76aa659f92db9a4be57609728f1aea41a32a9aa8e4a66c92f76bb7"
+      },
+      "evidence_register": {
+        "KR-PIPC-SAFE-2026-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C02",
+      "track": "T1",
+      "split": "CONFIRMATION",
+      "motif": "two_containment_alternatives_preserve_one_route",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "contained"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "clinical_review": [
+          "adequate"
+        ],
+        "containment": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_remote": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [
+            "contained"
+          ],
+          "forbids": [
+            "all_links_down"
+          ],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_remote",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "cyber_network_agent",
+          "kind": "QUARANTINE_STREAM",
+          "task": "containment",
+          "provides": [
+            "contained",
+            "all_links_down"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "containment_mode"
+          ],
+          "fields": [],
+          "recipient": "technical_workspace",
+          "purpose": "safety",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "cyber_network_agent",
+          "kind": "QUARANTINE_STREAM",
+          "task": "containment",
+          "provides": [
+            "contained",
+            "affected_stream_down"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "containment_mode"
+          ],
+          "fields": [],
+          "recipient": "technical_workspace",
+          "purpose": "safety",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_cyber_network_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "safety",
+          "recipient": "technical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_cyber_network_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "safety",
+          "recipient": "technical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+        "G-A02": "94662035bc4743ddc6c9dc6f413269da65be2595d323aaaf9ce77db27b5cc1b8",
+        "G-A03": "70df59aeb48f7713171bf3c319f0d9b0178d7badf473b23075e184f30909516b"
+      },
+      "evidence_register": {
+        "KR-PIPC-SAFE-2026-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C03",
+      "track": "T1",
+      "split": "CONFIRMATION",
+      "motif": "no_permitted_clinical_route_retains_containment",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "stream_isolated"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "containment": [
+          "adequate"
+        ],
+        "clinical_review": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_main": false,
+        "route_backup": false
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "cyber_network_agent",
+          "kind": "QUARANTINE_STREAM",
+          "task": "containment",
+          "provides": [
+            "stream_isolated"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "technical_workspace",
+          "purpose": "safety",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [
+            "stream_isolated"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_main",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [
+            "stream_isolated"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_backup",
+              "value": true
+            }
+          ],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_cyber_network_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "safety",
+          "recipient": "technical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "c4943b6603336b7fdc96253aa5db7d78be81d61f183f2c842a5c5d4a80848798",
+        "G-A02": "1cd0b85c7816b3ca638bc616130181f95de448b3757837c885d5304e9ddb882a",
+        "G-A03": "8cdc9042e2648b5693f077bbd91c1f79b179e9f12e0904e457715f7b0ebe047d"
+      },
+      "evidence_register": {
+        "KR-PIPC-SAFE-2026-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C04",
+      "track": "T1",
+      "split": "CONFIRMATION",
+      "motif": "pending_named_handoff_does_not_create_authority",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "stream_isolated"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "containment": [
+          "adequate"
+        ],
+        "handoff": [
+          "adequate"
+        ],
+        "clinical_review": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "cyber_network_agent",
+          "kind": "QUARANTINE_STREAM",
+          "task": "containment",
+          "provides": [
+            "stream_isolated"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "technical_workspace",
+          "purpose": "safety",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "hospital_agent",
+          "kind": "HANDOFF_ACK",
+          "task": "handoff",
+          "provides": [
+            "handoff_ack"
+          ],
+          "needs": [
+            "stream_isolated"
+          ],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [
+            "handoff_ack"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_cyber_network_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "safety",
+          "recipient": "technical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "PENDING",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "c4943b6603336b7fdc96253aa5db7d78be81d61f183f2c842a5c5d4a80848798",
+        "G-A02": "d003ac9b9d8088cbb30db6488d7229d2b3026b2f08345d0a0a95265722052a27",
+        "G-A03": "8cdc9042e2648b5693f077bbd91c1f79b179e9f12e0904e457715f7b0ebe047d"
+      },
+      "evidence_register": {
+        "KR-PIPC-SAFE-2026-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C05",
+      "track": "T2",
+      "split": "CONFIRMATION",
+      "motif": "joint_scope_conflict_with_adequate_alternative",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "research_one",
+        "research_two"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "clinical_review": [
+          "adequate"
+        ],
+        "one_scope": [
+          "adequate"
+        ],
+        "one_basis": [
+          "adequate"
+        ],
+        "one_task": [
+          "adequate"
+        ],
+        "two_scope": [
+          "adequate"
+        ],
+        "two_basis": [
+          "adequate"
+        ],
+        "two_task": [
+          "adequate"
+        ],
+        "count_scope": [
+          "adequate"
+        ],
+        "count_basis": [
+          "adequate"
+        ],
+        "count_task": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "one_scope",
+          "provides": [
+            "one_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "one_basis",
+          "provides": [
+            "one_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A04",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "one_task",
+          "provides": [
+            "research_one"
+          ],
+          "needs": [
+            "one_privacy_ok",
+            "one_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_one"
+          ],
+          "fields": [
+            "age_band"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A04"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A05",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "two_scope",
+          "provides": [
+            "two_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A05"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A06",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "two_basis",
+          "provides": [
+            "two_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A06"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A07",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "two_task",
+          "provides": [
+            "research_two"
+          ],
+          "needs": [
+            "two_privacy_ok",
+            "two_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_two"
+          ],
+          "fields": [
+            "location_band"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A07"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A08",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "count_scope",
+          "provides": [
+            "count_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A08"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A09",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "count_basis",
+          "provides": [
+            "count_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A09"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A10",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "count_task",
+          "provides": [
+            "research_two"
+          ],
+          "needs": [
+            "count_privacy_ok",
+            "count_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_two"
+          ],
+          "fields": [
+            "cohort_count"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A10"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A04": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A04"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "age_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A05": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A05"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A06": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A06"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A07": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A07"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "location_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A08": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A08"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A09": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A09"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A10": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A10"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "cohort_count"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+        "G-A02": "c4af335bef9055942c84b5cd2be861769866ffc0648d0332aec57811b37ff79d",
+        "G-A03": "dd7d932985fe9add4a110c81dda02a168815fcb99e6477fed186a44c8c697ae6",
+        "G-A04": "74ec746c4a3ba6dc246dd965a9f280856cf498f5418461bfd89385003b341dc3",
+        "G-A05": "0a8cdc50cb13a7745a6c2509f4380bb3ff667f528a90368e44e0a7e27303e68e",
+        "G-A06": "17c63c3cd7496de61a43ce92b484109c302be838b2c73bce0936cd007e0c05d7",
+        "G-A07": "8f93ca98a2b0215e11bef5eda885c919bdd8ba94553955c90ecd73a175bdaf06",
+        "G-A08": "773dcbf48a84cdbaad8ef33f1e92065a69f27f9fa0473be52b8a4b76206cfab0",
+        "G-A09": "032f48bd7c5db96940858969e79684a3340c47e5aa87b36fe9574a95aa5c8fad",
+        "G-A10": "f68047770f3e5717317e3027cc704ae7c2b17419ff0b6a76e081d00d656f1bff"
+      },
+      "evidence_register": {
+        "KR-PIPA-ART28-2-PSEUDONYM-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-PIPA-ART28-4-SAFEGUARDS-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-BIOETHICS-ART10-IRB-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [
+        {
+          "recipient": "research_workspace",
+          "forbidden_combination": [
+            "age_band",
+            "location_band"
+          ],
+          "basis": "explicit modeled joint-scope restriction, not an inferred legal rule"
+        }
+      ],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C06",
+      "track": "T2",
+      "split": "CONFIRMATION",
+      "motif": "revoked_original_separate_authority_for_alternative",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "research_done"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "clinical_review": [
+          "adequate"
+        ],
+        "old_scope": [
+          "adequate"
+        ],
+        "old_basis": [
+          "adequate"
+        ],
+        "old_task": [
+          "adequate"
+        ],
+        "new_scope": [
+          "adequate"
+        ],
+        "new_basis": [
+          "adequate"
+        ],
+        "new_task": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "old_scope",
+          "provides": [
+            "old_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "old_basis",
+          "provides": [
+            "old_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A04",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "old_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "old_privacy_ok",
+            "old_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "full_record"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A04"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A05",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "new_scope",
+          "provides": [
+            "new_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A05"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A06",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "new_basis",
+          "provides": [
+            "new_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A06"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A07",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "new_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "new_privacy_ok",
+            "new_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "cohort_count"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A07"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A04": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A04"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "full_record"
+          ],
+          "epoch": 0,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A05": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A05"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A06": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A06"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A07": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A07"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "cohort_count"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+        "G-A02": "c4af335bef9055942c84b5cd2be861769866ffc0648d0332aec57811b37ff79d",
+        "G-A03": "dd7d932985fe9add4a110c81dda02a168815fcb99e6477fed186a44c8c697ae6",
+        "G-A04": "0dcafd6ba62c634e3517d38b5bfcea40444140c685d401930dbb9894a491c70b",
+        "G-A05": "0a8cdc50cb13a7745a6c2509f4380bb3ff667f528a90368e44e0a7e27303e68e",
+        "G-A06": "17c63c3cd7496de61a43ce92b484109c302be838b2c73bce0936cd007e0c05d7",
+        "G-A07": "9f5faf40fc76a20f0c0429588cbca704e2fc6cd1c2fa33945ca2e0792df59e19"
+      },
+      "evidence_register": {
+        "KR-PIPA-ART28-2-PSEUDONYM-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-PIPA-ART28-4-SAFEGUARDS-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-BIOETHICS-ART10-IRB-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C07",
+      "track": "T2",
+      "split": "CONFIRMATION",
+      "motif": "cheaper_inadequate_view_vs_valid_task_adequate",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "research_done"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "clinical_review": [
+          "adequate"
+        ],
+        "insufficient_scope": [
+          "adequate"
+        ],
+        "insufficient_basis": [
+          "adequate"
+        ],
+        "insufficient_task": [
+          "adequate"
+        ],
+        "adequate_scope": [
+          "adequate"
+        ],
+        "adequate_basis": [
+          "adequate"
+        ],
+        "adequate_task": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "insufficient_scope",
+          "provides": [
+            "insufficient_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "insufficient_basis",
+          "provides": [
+            "insufficient_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A04",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "insufficient_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "insufficient_privacy_ok",
+            "insufficient_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "cohort_count"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "not_task_adequate"
+          ],
+          "grant_ids": [
+            "G-A04"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A05",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "adequate_scope",
+          "provides": [
+            "adequate_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A05"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A06",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "adequate_basis",
+          "provides": [
+            "adequate_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A06"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A07",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "adequate_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "adequate_privacy_ok",
+            "adequate_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A07"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A04": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A04"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "cohort_count"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A05": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A05"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A06": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A06"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A07": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A07"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+        "G-A02": "c4af335bef9055942c84b5cd2be861769866ffc0648d0332aec57811b37ff79d",
+        "G-A03": "dd7d932985fe9add4a110c81dda02a168815fcb99e6477fed186a44c8c697ae6",
+        "G-A04": "5264c34500ed59bc2b4a54ceb918b019266164c0a947b62c630d5d5ff6c1ef02",
+        "G-A05": "0a8cdc50cb13a7745a6c2509f4380bb3ff667f528a90368e44e0a7e27303e68e",
+        "G-A06": "17c63c3cd7496de61a43ce92b484109c302be838b2c73bce0936cd007e0c05d7",
+        "G-A07": "9fc65faa638f530c53ad7b2536ba04d13f6d1c9ae1479c8259a69ab421da487c"
+      },
+      "evidence_register": {
+        "KR-PIPA-ART28-2-PSEUDONYM-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-PIPA-ART28-4-SAFEGUARDS-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-BIOETHICS-ART10-IRB-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C08",
+      "track": "T2",
+      "split": "CONFIRMATION",
+      "motif": "unknown_evidence_with_clinical_continuation",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "research_done"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "clinical_review": [
+          "adequate"
+        ],
+        "pending_scope": [
+          "adequate"
+        ],
+        "pending_basis": [
+          "adequate"
+        ],
+        "pending_task": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "pending_scope",
+          "provides": [
+            "pending_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "pending_basis",
+          "provides": [
+            "pending_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A04",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "pending_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "pending_privacy_ok",
+            "pending_basis_ok"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "episode_code"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A04"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A04": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A04"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "episode_code"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+        "G-A02": "c4af335bef9055942c84b5cd2be861769866ffc0648d0332aec57811b37ff79d",
+        "G-A03": "dd7d932985fe9add4a110c81dda02a168815fcb99e6477fed186a44c8c697ae6",
+        "G-A04": "9b8b094b68c2acbdd1f47659be0d7d4ef2ed9d6a8969ec2fb6ce16d3b7e183f5"
+      },
+      "evidence_register": {
+        "KR-PIPA-ART28-2-PSEUDONYM-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-PIPA-ART28-4-SAFEGUARDS-001": {
+          "status": "MISSING",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-BIOETHICS-ART10-IRB-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {},
+      "trusted_envelope_hashes": [],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C09",
+      "track": "T3",
+      "split": "CONFIRMATION",
+      "motif": "stale_primary_independently_available_fresh_view",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "dt_received",
+        "clinical_review_done"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "dt_receiving": [
+          "adequate"
+        ],
+        "clinical_review": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "DT_RECEIVE",
+          "task": "dt_receiving",
+          "provides": [
+            "dt_received"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_dt_dt_received"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": "E1",
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "hospital_agent",
+          "kind": "DT_RECEIVE",
+          "task": "dt_receiving",
+          "provides": [
+            "dt_received"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_dt_dt_received"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": "E2",
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [
+            "dt_received"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "95f4ea3d431d4d1f76ded5497ec7a746624e4add154182cee600e73ee1f5b2ff",
+        "G-A02": "cac739203ecba43b74e0998251d9a0186eff09520a4a3217a45e89e618c0bf2a",
+        "G-A03": "8cdc9042e2648b5693f077bbd91c1f79b179e9f12e0904e457715f7b0ebe047d"
+      },
+      "evidence_register": {
+        "KR-MSA-ART23-EMR-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {
+        "E1": {
+          "dt_ref": "E1",
+          "data_version": "v1",
+          "observed_event": 1,
+          "provenance_ref": "trusted-modeled-source",
+          "validity": "VALID",
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "authority_epoch": 1,
+          "expires_event": 20
+        },
+        "E2": {
+          "dt_ref": "E2",
+          "data_version": "v1",
+          "observed_event": 4,
+          "provenance_ref": "trusted-modeled-source",
+          "validity": "VALID",
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "authority_epoch": 1,
+          "expires_event": 20
+        }
+      },
+      "trusted_envelope_hashes": [
+        "d039b18cd0f1d0509172bfa1fc6bcb8e29c7185a3d17a9675b45b818a75c3dcc",
+        "3f85142b29b840b8616fd1f3167217be99dd2bf6e3334917a9af75f70cdb60c6"
+      ],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C10",
+      "track": "T3",
+      "split": "CONFIRMATION",
+      "motif": "wrong_policy_version_alternative_with_human_record",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "dt_received",
+        "oversight_recorded"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "dt_receiving": [
+          "adequate"
+        ],
+        "oversight": [
+          "adequate"
+        ]
+      },
+      "facts": {},
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "DT_RECEIVE",
+          "task": "dt_receiving",
+          "provides": [
+            "dt_received"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_dt_dt_received"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": "E1",
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "regulator_agent",
+          "kind": "OVERSIGHT_ATTEST",
+          "task": "oversight",
+          "provides": [
+            "oversight_recorded"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "oversight_workspace",
+          "purpose": "safety",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-AI-ACT-ART34-HIGHIMPACT-DUTIES-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "hospital_agent",
+          "kind": "DT_RECEIVE",
+          "task": "dt_receiving",
+          "provides": [
+            "dt_received"
+          ],
+          "needs": [
+            "oversight_recorded"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_dt_dt_received"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": "E2",
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_regulator_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "safety",
+          "recipient": "oversight_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "95f4ea3d431d4d1f76ded5497ec7a746624e4add154182cee600e73ee1f5b2ff",
+        "G-A02": "80c915a8f17646123990becdda96f9b5a6ac37b9df4abc9bc5d78757374c19b7",
+        "G-A03": "73f873a1b2dc69a9afd05ff17d3b17cf86b3864c684af8853199bfe4e26a007c"
+      },
+      "evidence_register": {
+        "KR-MSA-ART23-EMR-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-AI-ACT-ART34-HIGHIMPACT-DUTIES-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {
+        "E1": {
+          "dt_ref": "E1",
+          "data_version": "v1",
+          "observed_event": 4,
+          "provenance_ref": "trusted-modeled-source",
+          "validity": "VALID",
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "policy_snapshot": "OLD",
+          "authority_epoch": 1,
+          "expires_event": 20
+        },
+        "E2": {
+          "dt_ref": "E2",
+          "data_version": "v1",
+          "observed_event": 4,
+          "provenance_ref": "trusted-modeled-source",
+          "validity": "VALID",
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "authority_epoch": 1,
+          "expires_event": 20
+        }
+      },
+      "trusted_envelope_hashes": [
+        "9c8f59e28b147ecac40273dc9543f3662137ac7fe44caa04be03cba62ecc525f",
+        "3f85142b29b840b8616fd1f3167217be99dd2bf6e3334917a9af75f70cdb60c6"
+      ],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C11",
+      "track": "T3",
+      "split": "CONFIRMATION",
+      "motif": "source_permission_does_not_transfer_to_recipient",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "dt_received",
+        "clinical_review_done"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "clinical_review": [
+          "adequate"
+        ],
+        "dt_receiving": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "hospital_agent",
+          "kind": "DT_RECEIVE",
+          "task": "dt_receiving",
+          "provides": [
+            "dt_received"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_dt_dt_received"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": "E1",
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+        "G-A02": "cac739203ecba43b74e0998251d9a0186eff09520a4a3217a45e89e618c0bf2a"
+      },
+      "evidence_register": {
+        "KR-MSA-ART23-EMR-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {
+        "E1": {
+          "dt_ref": "E1",
+          "data_version": "v1",
+          "observed_event": 4,
+          "provenance_ref": "trusted-modeled-source",
+          "validity": "VALID",
+          "purpose": "care",
+          "recipient": "research_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "authority_epoch": 1,
+          "expires_event": 20
+        }
+      },
+      "trusted_envelope_hashes": [
+        "8a19ded315d19166c449cb58543c368e55e286dd7a3f190b966e97e04b1423c9"
+      ],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    },
+    {
+      "family_id": "C12",
+      "track": "T3",
+      "split": "CONFIRMATION",
+      "motif": "cross_track_context_handoff_and_research_alternative",
+      "provenance": "Developer-authored institutional scenario model; not patient-derived.",
+      "interpretation_review": "PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+      "jurisdiction": "KR",
+      "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+      "epoch": 1,
+      "cursor": 5,
+      "freshness_events": 2,
+      "initial_tokens": [],
+      "goals": [
+        "clinical_review_done",
+        "stream_isolated",
+        "research_done",
+        "dt_received"
+      ],
+      "task_purposes": [
+        "care",
+        "trial_analysis",
+        "safety"
+      ],
+      "adequacy": {
+        "containment": [
+          "adequate"
+        ],
+        "handoff": [
+          "adequate"
+        ],
+        "clinical_review": [
+          "adequate"
+        ],
+        "dt_receiving": [
+          "adequate"
+        ],
+        "raw_scope": [
+          "adequate"
+        ],
+        "raw_basis": [
+          "adequate"
+        ],
+        "raw_task": [
+          "adequate"
+        ],
+        "limited_scope": [
+          "adequate"
+        ],
+        "limited_basis": [
+          "adequate"
+        ],
+        "limited_task": [
+          "adequate"
+        ]
+      },
+      "facts": {
+        "route_trusted": true
+      },
+      "actions": [
+        {
+          "id": "A01",
+          "owner": "cyber_network_agent",
+          "kind": "QUARANTINE_STREAM",
+          "task": "containment",
+          "provides": [
+            "stream_isolated"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "technical_workspace",
+          "purpose": "safety",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A02",
+          "owner": "hospital_agent",
+          "kind": "HANDOFF_ACK",
+          "task": "handoff",
+          "provides": [
+            "handoff_ack"
+          ],
+          "needs": [
+            "stream_isolated"
+          ],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A02"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A03",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "clinical_review",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [
+            "handoff_ack"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [
+            {
+              "key": "route_trusted",
+              "value": true
+            }
+          ],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A04",
+          "owner": "hospital_agent",
+          "kind": "DT_RECEIVE",
+          "task": "dt_receiving",
+          "provides": [
+            "dt_received"
+          ],
+          "needs": [
+            "handoff_ack"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "one_dt_dt_received"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A04"
+          ],
+          "evidence": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": "E1",
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A05",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "raw_scope",
+          "provides": [
+            "raw_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A05"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A06",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "raw_basis",
+          "provides": [
+            "raw_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A06"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A07",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "raw_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "raw_privacy_ok",
+            "raw_basis_ok",
+            "dt_received"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "full_record"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A07"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A08",
+          "owner": "privacy_agent",
+          "kind": "PRIVACY_ATTEST",
+          "task": "limited_scope",
+          "provides": [
+            "limited_privacy_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A08"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A09",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_ATTEST",
+          "task": "limited_basis",
+          "provides": [
+            "limited_basis_ok"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A09"
+          ],
+          "evidence": [
+            "KR-BIOETHICS-ART10-IRB-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        {
+          "id": "A10",
+          "owner": "research_irb_agent",
+          "kind": "RESEARCH_VIEW",
+          "task": "limited_task",
+          "provides": [
+            "research_done"
+          ],
+          "needs": [
+            "limited_privacy_ok",
+            "limited_basis_ok",
+            "dt_received",
+            "clinical_review_done"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "view_research_done"
+          ],
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "recipient": "research_workspace",
+          "purpose": "trial_analysis",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A10"
+          ],
+          "evidence": [
+            "KR-PIPA-ART28-2-PSEUDONYM-001",
+            "KR-PIPA-ART28-4-SAFEGUARDS-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        }
+      ],
+      "authority_register": {
+        "G-A01": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_cyber_network_agent",
+          "action_ids": [
+            "A01"
+          ],
+          "purpose": "safety",
+          "recipient": "technical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A02": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A02"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A03": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A03"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A04": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_hospital_agent",
+          "action_ids": [
+            "A04"
+          ],
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A05": {
+          "status": "DENIED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A05"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A06": {
+          "status": "DENIED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A06"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A07": {
+          "status": "DENIED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A07"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "full_record"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A08": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_privacy_agent",
+          "action_ids": [
+            "A08"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A09": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A09"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        },
+        "G-A10": {
+          "status": "APPROVED",
+          "issued_by": "modeled_authority_for_research_irb_agent",
+          "action_ids": [
+            "A10"
+          ],
+          "purpose": "trial_analysis",
+          "recipient": "research_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "epoch": 1,
+          "expires_event": 20,
+          "simulation_only": true
+        }
+      },
+      "authority_register_hashes": {
+        "G-A01": "c4943b6603336b7fdc96253aa5db7d78be81d61f183f2c842a5c5d4a80848798",
+        "G-A02": "1cd0b85c7816b3ca638bc616130181f95de448b3757837c885d5304e9ddb882a",
+        "G-A03": "8cdc9042e2648b5693f077bbd91c1f79b179e9f12e0904e457715f7b0ebe047d",
+        "G-A04": "97e973b0397ac4ef07ba805910b6111496fae3f4c31d307a6198544788058bc7",
+        "G-A05": "53cfc147ae9f3d10b12353b869bae1c66fbce423a5875dde9fe22c6fc2349e71",
+        "G-A06": "72d22f36c1c12fd08eeea7065ca263c6363b80314e427aa37c44c8ee526a315b",
+        "G-A07": "c77ccc2b04063b0f2a5bba93deafb6b441ef8ab2ed27fa34b904d57342bf441d",
+        "G-A08": "773dcbf48a84cdbaad8ef33f1e92065a69f27f9fa0473be52b8a4b76206cfab0",
+        "G-A09": "032f48bd7c5db96940858969e79684a3340c47e5aa87b36fe9574a95aa5c8fad",
+        "G-A10": "53fc05c566fd6d62060264bae0ebd313881dd350179e6a9554c307f5f89bf350"
+      },
+      "evidence_register": {
+        "KR-PIPC-SAFE-2026-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-MSA-ART23-EMR-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-PIPA-ART28-2-PSEUDONYM-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-PIPA-ART28-4-SAFEGUARDS-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        },
+        "KR-BIOETHICS-ART10-IRB-001": {
+          "status": "AVAILABLE",
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "interpretation_status": "MODELING_ASSUMPTION_PENDING_REVIEW"
+        }
+      },
+      "field_constraints": [],
+      "envelopes": {
+        "E1": {
+          "dt_ref": "E1",
+          "data_version": "v1",
+          "observed_event": 4,
+          "provenance_ref": "trusted-modeled-source",
+          "validity": "VALID",
+          "purpose": "care",
+          "recipient": "clinical_workspace",
+          "fields": [
+            "episode_code",
+            "symptom_band"
+          ],
+          "policy_snapshot": "G29-MODELING-SNAPSHOT-1",
+          "authority_epoch": 1,
+          "expires_event": 20
+        }
+      },
+      "trusted_envelope_hashes": [
+        "ac61788768f50fc93517eb63bcb548f5b8362724a788cac4eae77ea716767297"
+      ],
+      "operator_private_views": {
+        "hospital_agent": {
+          "modeled_symptom": "patient-reported concern; no diagnosis"
+        },
+        "cyber_network_agent": {
+          "stream_ref": "opaque-stream"
+        },
+        "privacy_agent": {
+          "scope_contract": "metadata_only"
+        },
+        "research_irb_agent": {
+          "task_contract": "trial_analysis"
+        },
+        "regulator_agent": {
+          "review_role": "modeled_oversight_only"
+        }
+      },
+      "event_history": [
+        {
+          "cursor": 1,
+          "kind": "CLINICAL_CONCERN_REPORTED"
+        },
+        {
+          "cursor": 2,
+          "kind": "STREAM_STATE_UPDATED"
+        },
+        {
+          "cursor": 3,
+          "kind": "TASK_AND_AUTHORITY_RECORDS_RELEASED"
+        },
+        {
+          "cursor": 5,
+          "kind": "WORKFLOW_SELECTION_REQUESTED"
+        }
+      ]
+    }
+  ],
+  "threshold_selection": false,
+  "split_basis": "Whole dependency skeletons grouped before any strategy/reference execution. Shared action/rule primitives remain.",
+  "independent_external_authorship": false
+}

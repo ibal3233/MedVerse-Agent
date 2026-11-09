@@ -1,0 +1,31 @@
+{
+  "gate": "GATE_22B3_PRIVACY_CONFIRMATION_TRAINING",
+  "agent": "Privacy Agent",
+  "oracle_version": "KR-PRIVACY-PRECEDENCE-v2",
+  "model_family": "multinomial_logistic_regression",
+  "original_train_records": 72,
+  "augmentation_records": 137,
+  "combined_training_records": 209,
+  "dev_records": 24,
+  "opened_id_test_records": 24,
+  "fresh_confirmation_records": 486,
+  "hyperparameter_grid": [
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0
+  ],
+  "chosen_C": 1.0,
+  "hyperparameter_selection_data": "Gate-21A DEV only",
+  "confirmation_used_for_hyperparameter_selection": false,
+  "opened_gate22a_used_for_training": false,
+  "opened_gate22a_used_for_selection": false,
+  "training_history_type": "stratified compositional-data-growth curve; no fabricated epochs",
+  "hyperparameter_table": "outputs/gate22b3/gate22b3_hyperparameter_results_table.md",
+  "claim_boundary": "Synthetic policy-state confirmation under explicitly adopted precedence semantics; not external clinical/legal validation.",
+  "shield_boundary": "The existing privacy_policy_shield is a benchmark-specific execution control. Its unsafe-ALLOW metric tests disclosure safety and must not be described as complete Korean legal-policy validation.",
+  "patient_data": false
+}

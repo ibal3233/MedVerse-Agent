@@ -1,0 +1,26 @@
+{
+  "gate": "GATE_26A_ARCHITECTURAL_BASELINE_PROTOCOL_FREEZE",
+  "status": "PASS",
+  "passed_checks": 8,
+  "total_checks": 8,
+  "training_performed": false,
+  "benchmark_records": 70,
+  "archetypes": {
+    "AGREEMENT": 10,
+    "COMPLEMENTARY": 10,
+    "CONDITIONAL_HARMONIZATION": 10,
+    "HUMAN_AUTHORITY_REQUIRED": 10,
+    "INSTITUTIONAL_CONFLICT": 10,
+    "INSUFFICIENT_EVIDENCE": 10,
+    "POLICY_CONFLICT": 10
+  },
+  "baselines": {
+    "B1": "Single omniscient agent",
+    "B2": "Role-based but unconstrained MAS",
+    "B3": "Consensus/debate MAS",
+    "B4": "Policy filtering without harmonization",
+    "B5": "MedVerse-Agent"
+  },
+  "benchmark_sha256": "3936884644117f793895c2865e4bfb319a5a2eeed1dbb5bda63324ec8a44ac1b",
+  "next_dependency": "Gate26B: execute B1-B5 exactly once on the frozen benchmark; do not tune baselines after observing results."
+}

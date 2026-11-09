@@ -1,0 +1,19 @@
+{
+  "release": "MedVerse-Final-Validation-v1.0",
+  "as_of": "2026-11-03",
+  "created_utc": "2026-11-02T18:09:29.703638+00:00",
+  "files": {
+    "final_validation/common.py": "d39c5fd84e6080e637b3b5acf5a7d869bb32a032f08e8b01864ae2e862aa1806",
+    "final_validation/knowledge.py": "f526553885ea0128c98062b268732a86f19de5725f8757e9396f3a0451326680",
+    "final_validation/engine.py": "8ea6881bb2b086c86a54893f4866bf069b01206a5f7419f436b373a5dfb74544",
+    "final_validation/validate.py": "707fedc05df2f523aaa69c24c8679882d392c6adc0ec3856a60e97ad7a9a6fa7",
+    "data/final_validation/query_families.json": "4fffe1f5b306a4623ebde2c8c0b29800fca2289b8712050a987ad45bbcde88af",
+    "data/final_validation/workflow_families.json": "702b8c0203b1498c2ebf0d8fdf78b993bbf23333efac5cfae33bff5acb380449",
+    "data/final_validation/workflow_oracle.json": "9cd25618518864f10bffde06033d2620f3391ac3818655e6c594ad3b13e0270f",
+    "data/final_validation/claim_registry.json": "fd9e3aa8a31658672624214add00ad9207342645eaad6d91b10f3f552f23a911",
+    "data/final_validation/source_review.json": "a1699c1545163450b2f2656d7ca50bb47a5837956ef5fc8f5dd112df542ea7e2"
+  },
+  "no_training": true,
+  "selection_rule": "No hyperparameter or ranker selection. Lexical backend explicitly evaluated because original dense dependency is unavailable.",
+  "scope": "Developer-authored finite scenario verification. No external expert confirmation."
+}

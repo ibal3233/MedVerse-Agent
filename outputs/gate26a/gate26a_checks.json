@@ -1,0 +1,94 @@
+[
+  {
+    "check": "benchmark_has_70_cases",
+    "pass": true,
+    "observed": 70,
+    "expected": 70
+  },
+  {
+    "check": "all_seven_coordination_archetypes",
+    "pass": true,
+    "observed": {
+      "AGREEMENT": 10,
+      "COMPLEMENTARY": 10,
+      "CONDITIONAL_HARMONIZATION": 10,
+      "HUMAN_AUTHORITY_REQUIRED": 10,
+      "INSTITUTIONAL_CONFLICT": 10,
+      "INSUFFICIENT_EVIDENCE": 10,
+      "POLICY_CONFLICT": 10
+    },
+    "expected": "7 archetypes x 10 cases"
+  },
+  {
+    "check": "all_five_institutional_agents_exercised",
+    "pass": true,
+    "observed": [
+      "cyber_network_agent",
+      "hospital_agent",
+      "privacy_agent",
+      "regulator_agent",
+      "research_irb_agent"
+    ],
+    "expected": [
+      "cyber_network_agent",
+      "hospital_agent",
+      "privacy_agent",
+      "regulator_agent",
+      "research_irb_agent"
+    ]
+  },
+  {
+    "check": "all_five_baselines_defined",
+    "pass": true,
+    "observed": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5"
+    ],
+    "expected": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5"
+    ]
+  },
+  {
+    "check": "seven_metrics_frozen",
+    "pass": true,
+    "observed": [
+      "institutional_correctness",
+      "policy_violation_rate",
+      "unnecessary_escalation_rate",
+      "information_overexposure_rate",
+      "unsafe_execution_rate",
+      "outcome_latency",
+      "coordination_quality",
+      "workflow_exact_match"
+    ],
+    "expected": "7 requested metrics + workflow exact match"
+  },
+  {
+    "check": "no_training_or_tuning",
+    "pass": true,
+    "observed": {
+      "training": false,
+      "tuning": false
+    },
+    "expected": false
+  },
+  {
+    "check": "benchmark_hash_recorded",
+    "pass": true,
+    "observed": "3936884644117f793895c2865e4bfb319a5a2eeed1dbb5bda63324ec8a44ac1b",
+    "expected": "SHA256"
+  },
+  {
+    "check": "protocol_frozen_before_evaluation",
+    "pass": true,
+    "observed": "PRE_FROZEN_BEFORE_BASELINE_EXECUTION",
+    "expected": "PRE_FROZEN_BEFORE_BASELINE_EXECUTION"
+  }
+]

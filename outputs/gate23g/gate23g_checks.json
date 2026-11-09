@@ -1,0 +1,65 @@
+[
+  {
+    "check": "benchmark_sha256_matches_frozen_protocol",
+    "pass": true,
+    "observed": "52112275b302101f7031a66ceffde38d1dc59b69233c750bfc771c29ccefbaba",
+    "expected": "52112275b302101f7031a66ceffde38d1dc59b69233c750bfc771c29ccefbaba"
+  },
+  {
+    "check": "every_factorial_state_tested_exactly_once",
+    "pass": true,
+    "observed": {
+      "prediction_rows": 48,
+      "unique_test_ids": 48,
+      "factorial_ids": 48
+    },
+    "expected": 48
+  },
+  {
+    "check": "pooled_action_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.90"
+  },
+  {
+    "check": "pooled_action_macro_f1",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.80"
+  },
+  {
+    "check": "pooled_assessment_accuracy",
+    "pass": true,
+    "observed": 0.9583333333333334,
+    "expected": ">=0.90"
+  },
+  {
+    "check": "id_action_accuracy_each_fold_model",
+    "pass": true,
+    "observed": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "expected": ">=0.90 for each fold"
+  },
+  {
+    "check": "policy_inconsistent_execution_rate",
+    "pass": true,
+    "observed": 0.0,
+    "expected": 0.0
+  },
+  {
+    "check": "publication_and_raw_outputs",
+    "pass": true,
+    "observed": {
+      "png": 6,
+      "pdf": 6,
+      "raw_predictions": true,
+      "class_metrics": true,
+      "methodology": true
+    },
+    "expected": "6 PNG + 6 PDF + raw predictions + class metrics + methodology"
+  }
+]

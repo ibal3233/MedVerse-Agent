@@ -1,0 +1,22 @@
+{
+  "scenario_id": "S4_UNAUTHORIZED_DISCLOSURE",
+  "description": "Cross-institution disclosure request exceeds minimum-necessary scope.",
+  "events": [
+    {
+      "event_id": "S4E1",
+      "t": 1,
+      "event_type": "DISCLOSURE_REQUEST",
+      "payload": {
+        "requesting_institution": "external_research_partner",
+        "requested_data_scope": "full_clinical_and_identity_record",
+        "declared_purpose": "unspecified",
+        "minimum_necessary": false
+      },
+      "visible_to": [
+        "privacy_agent"
+      ]
+    }
+  ],
+  "expected_coordination_state": "DISCLOSURE_BLOCKED",
+  "expected_human_review": false
+}

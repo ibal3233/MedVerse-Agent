@@ -1,0 +1,154 @@
+{
+  "status": "EXECUTED",
+  "training_performed": false,
+  "models": {
+    "Privacy": {
+      "n": 486,
+      "action_accuracy": 1.0,
+      "action_macro_f1": 1.0,
+      "class_report": {
+        "ALLOW_AUTHORIZED_DISCLOSURE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "DENY_UNAUTHORIZED_DISCLOSURE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 348.0
+        },
+        "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 12.0
+        },
+        "PRESERVE_PRIVACY_AUDIT_LOG": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "REQUEST_ADDITIONAL_AUTHORIZATION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 120.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 486.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 486.0
+        }
+      },
+      "chosen_C": 0.3,
+      "lbfgs_iterations": 23,
+      "model_sha256": "3bc0376b1091436d6acc92654c2f5bfd55aca815880fd8a84124d40736b21d8c",
+      "note": "Inference-only replay on previously used confirmation contexts; not fresh generalization or new training."
+    },
+    "Cyber": {
+      "n": 72,
+      "model_sha256": "c38ddc360e5d503d86c229e90239838f42aaea1d8fd64843dfef5e8136e525d8",
+      "chosen_C": 0.3,
+      "note": "Frozen model inference only; original TRAIN statistics reused.",
+      "action": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "class_report": {
+          "ISOLATE_SUSPECT_SESSION": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "MARK_TELEMETRY_UNVERIFIED": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "PRESERVE_TECHNICAL_LOGS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 24.0
+          },
+          "REQUEST_ALTERNATIVE_CHANNEL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "VERIFY_DEVICE_IDENTITY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 72.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 72.0
+          }
+        },
+        "lbfgs_iterations": 19
+      },
+      "assessment": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "class_report": {
+          "DEVICE_IDENTITY_INTEGRITY_UNCERTAIN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 36.0
+          },
+          "TELEMETRY_RELIABILITY_DEGRADED": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 24.0
+          },
+          "TELEMETRY_TRUST_ACCEPTABLE": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 72.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 72.0
+          }
+        },
+        "lbfgs_iterations": 18
+      }
+    }
+  }
+}

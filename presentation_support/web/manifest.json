@@ -1,0 +1,37 @@
+[
+  {
+    "file": "architecture.png",
+    "title": "Gate 26 \u2014 architectural comparison",
+    "caption": "Seven semantic archetypes / 70 context variants. Reference architectures, not five new live LLMs; B4 CQ 0.600, B5 CQ 1.000.",
+    "source": "fig26_coordination_quality.png",
+    "sha256": "806c68a0de780dc597f6bb64b1f75b229bd94d0743e3efd9f177a8c78ef9b060"
+  },
+  {
+    "file": "dt_freshness.png",
+    "title": "Gate 31 \u2014 observation freshness",
+    "caption": "Source run 20261103T132213_435523Z. Diagnostic development fixture: an unrelated metadata update must not make old telemetry fresh. Not a clinical freshness limit.",
+    "source": "Team_MedVerse_Gate31_DT_Freshness.png",
+    "sha256": "e1fd893b43dae966149f8c123570edb025ad5b7cc1a95a6c5fb1fc02378b1d7e"
+  },
+  {
+    "file": "language.png",
+    "title": "Gate 31 \u2014 Korean / English retrieval",
+    "caption": "Archived BM25 paired-query regression. This is not the later Windows dense-model result.",
+    "source": "Team_MedVerse_Gate31_Paired_Retrieval.png",
+    "sha256": "54beb7170a82e0601cea7b5fc52ad251dff497a8ca5dfbdd30f91f1e6a142794"
+  },
+  {
+    "file": "commitment.png",
+    "title": "Gate 33 \u2014 benefit and cost of waiting",
+    "caption": "Recorded integration run 20261104T035439_172645Z. The prompt-alternative gain and later-revocation loss are both retained.",
+    "source": "Team_MedVerse_Gate33_Commitment_Timeline.png",
+    "sha256": "afe124c0f82068b6491a834e72b82803fe418a4883bff5a0638ea6b7cafe9d12"
+  },
+  {
+    "file": "agents.png",
+    "title": "Gate 33 \u2014 institutional contributions",
+    "caption": "Decision opportunities and effects from known continuations. Counts are correlated and are not per-agent learned accuracy.",
+    "source": "Team_MedVerse_Gate33_Agent_Evidence.png",
+    "sha256": "bd632c89af0d9ff8ff0164394bcd75b2b6044beb409b3e98967ea0cb1dd5852f"
+  }
+]

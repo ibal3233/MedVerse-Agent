@@ -1,0 +1,33 @@
+--- before/foundation31/retrieval.py
++++ after/foundation31/retrieval.py
+@@ -13,6 +13,7 @@
+ from medverse.knowledge_base.jurisdictional_semantic_kb import JurisdictionAwarePolicyKB
+ from final_validation.knowledge import PolicyCorpus
+ from .common import MODEL,REVISION,AS_OF,CORPUS,ROLES,read,digest
++from .runtime_support import embedding_dimension,token_length_audit
+ 
+ class RetrievalError(ValueError):pass
+ class DenseUnavailable(RuntimeError):pass
+@@ -56,7 +57,7 @@
+             self.model=SentenceTransformer(MODEL,revision=REVISION,device='cpu',
+                  local_files_only=self.local_only,cache_folder=self.cache_folder,trust_remote_code=False)
+             self.model.eval()
+-            dimension=self.model.get_sentence_embedding_dimension()
++            dimension=embedding_dimension(self.model)
+             if dimension!=384: raise DenseUnavailable(f'WRONG_EMBEDDING_DIMENSION:{dimension}')
+             resolved=getattr(self.model[0].auto_model.config,'_commit_hash',None)
+             if resolved and resolved!=REVISION:raise DenseUnavailable('MODEL_REVISION_MISMATCH')
+@@ -84,12 +85,7 @@
+         norm_error=float(max(np.abs(np.linalg.norm(emb,axis=1)-1)))
+         diagnostics={'document_vectors':len(records),'dimension':384,'max_unit_norm_error':norm_error,
+                      'query_norm':float(np.linalg.norm(q)),'model':deepcopy(self.metadata)}
+-        tokenizer=getattr(self.model,'tokenizer',None)
+-        if tokenizer is not None:
+-            texts=[self._text(r) for r in records]
+-            counts=[len(tokenizer(t,add_special_tokens=True,truncation=False)['input_ids']) for t in texts]
+-            diagnostics['documents_exceeding_model_limit']=sum(n>self.model.max_seq_length for n in counts)
+-            diagnostics['truncation_policy']='original model limit; no post-result chunking changes'
++        diagnostics.update(token_length_audit(self.model,records,query,self._text))
+         return [(records[i],float(scores[i])) for i in order[:top_k]],diagnostics
+ 
+ class EvidenceService:

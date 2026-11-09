@@ -1,0 +1,91 @@
+[
+  {
+    "check": "all_confirmation_action_errors_traced",
+    "pass": true,
+    "observed": 21,
+    "expected": 21
+  },
+  {
+    "check": "all_errors_classified_into_known_precedence_families",
+    "pass": true,
+    "observed": {
+      "authorization_denial_precedence_over_purpose": 12,
+      "minimum_necessary_precedence_over_purpose": 6,
+      "missing_evidence_precedence_over_authorization_denial": 3
+    },
+    "expected": "other = 0"
+  },
+  {
+    "check": "error_core_support_quantified",
+    "pass": true,
+    "observed": 7,
+    "expected": 7
+  },
+  {
+    "check": "sparse_support_detected",
+    "pass": true,
+    "observed": {
+      "low_or_zero_support": 7,
+      "total_error_cores": 7,
+      "zero_support": 2
+    },
+    "expected": "all failing cores have <=1 combined-training example"
+  },
+  {
+    "check": "context_invariance_of_error_cores",
+    "pass": true,
+    "observed": {
+      "('KR', False, True, False, False)": [
+        "cross_institutional_referral",
+        "data_governance_audit",
+        "institutional_quality_review"
+      ],
+      "('KR', False, False, False, True)": [
+        "cross_institutional_referral",
+        "data_governance_audit",
+        "institutional_quality_review"
+      ],
+      "('KR', False, True, False, True)": [
+        "cross_institutional_referral",
+        "data_governance_audit",
+        "institutional_quality_review"
+      ],
+      "('KR', False, False, False, False)": [
+        "cross_institutional_referral",
+        "data_governance_audit",
+        "institutional_quality_review"
+      ],
+      "('KR', True, False, False, False)": [
+        "cross_institutional_referral",
+        "data_governance_audit",
+        "institutional_quality_review"
+      ],
+      "('KR', False, None, True, True)": [
+        "cross_institutional_referral",
+        "data_governance_audit",
+        "institutional_quality_review"
+      ],
+      "('KR', True, False, False, True)": [
+        "cross_institutional_referral",
+        "data_governance_audit",
+        "institutional_quality_review"
+      ]
+    },
+    "expected": "each failing core appears in all 3 fresh contexts"
+  },
+  {
+    "check": "no_retraining_or_retuning",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4
+    },
+    "expected": ">=4 PNG and >=4 PDF"
+  }
+]

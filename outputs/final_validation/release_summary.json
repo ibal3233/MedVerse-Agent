@@ -1,0 +1,106 @@
+{
+  "release": "Team MedVerse Final Validation v1.0",
+  "reference_date": "2026-11-03",
+  "engineering_validation": "PASS_WITH_EXPLICIT_SCOPE",
+  "deployment_readiness": "HOLD",
+  "original_files_unchanged": 743,
+  "frozen_core_unchanged": true,
+  "integrity_checks": "30/30",
+  "finite_authorization_states": "512/512",
+  "workflow_results": [
+    {
+      "strategy": "LOCAL_FILTER",
+      "families": 8,
+      "workflow_obligations_met": 6,
+      "workflow_completion_rate": 0.75,
+      "clinical_review_completed": 8,
+      "unsafe_commits": 0,
+      "committed_actions": 24,
+      "research_releases": 2,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 0.9649399999999999,
+      "p95_event_latency_ms": 2.047229,
+      "audit_chains_valid": true
+    },
+    {
+      "strategy": "STATEFUL_FILTER",
+      "families": 8,
+      "workflow_obligations_met": 8,
+      "workflow_completion_rate": 1.0,
+      "clinical_review_completed": 8,
+      "unsafe_commits": 0,
+      "committed_actions": 25,
+      "research_releases": 3,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 0.8555215,
+      "p95_event_latency_ms": 1.619161,
+      "audit_chains_valid": true
+    },
+    {
+      "strategy": "MEDVERSE",
+      "families": 8,
+      "workflow_obligations_met": 8,
+      "workflow_completion_rate": 1.0,
+      "clinical_review_completed": 8,
+      "unsafe_commits": 0,
+      "committed_actions": 25,
+      "research_releases": 3,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 1.037811,
+      "p95_event_latency_ms": 3.408895,
+      "audit_chains_valid": true
+    },
+    {
+      "strategy": "DENY_ALL",
+      "families": 8,
+      "workflow_obligations_met": 0,
+      "workflow_completion_rate": 0.0,
+      "clinical_review_completed": 0,
+      "unsafe_commits": 0,
+      "committed_actions": 0,
+      "research_releases": 0,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 0.9780095,
+      "p95_event_latency_ms": 2.761729,
+      "audit_chains_valid": true
+    }
+  ],
+  "retrieval_results": {
+    "en": {
+      "n_queries": 20,
+      "top1_accuracy": 0.8,
+      "recall_at3": 0.85,
+      "median_latency_ms": 1.6691045
+    },
+    "ko": {
+      "n_queries": 20,
+      "top1_accuracy": 0.7,
+      "recall_at3": 0.85,
+      "median_latency_ms": 1.428089
+    },
+    "all": {
+      "n_queries": 40,
+      "top1_accuracy": 0.75,
+      "recall_at3": 0.85,
+      "median_latency_ms": 1.5334805
+    },
+    "families_both_languages_hit": 16,
+    "intent_families": 20,
+    "backend": "explicit lexical bilingual BM25, not original multilingual embedding model",
+    "dense_reproduction": "BLOCKED_DEPENDENCY",
+    "claim": "retrieval on developer-authored intent families; not legal applicability or clinical validity"
+  },
+  "browser_checks": "18/18",
+  "browser_transport_limitation": "Direct localhost browser navigation blocked by environment policy (ERR_BLOCKED_BY_ADMINISTRATOR). Browser policy was not modified. Live backend API exercised through urllib bridge. Native download dispatch intercepted; generated Blob and exported JSON checked.",
+  "clean_runtime_checks": "6/6",
+  "model_backend": "Deterministic reference agents in live new UI. Frozen Privacy/Cyber model replay is separate.",
+  "independent_legal_review": "PENDING",
+  "clinical_review": "PENDING",
+  "dense_embedding_reproduction": "BLOCKED_DEPENDENCY",
+  "research_irb_learning": "EXPLORATORY_NOT_PROMOTED",
+  "guarantee": "No claim of perfection, external clinical/legal validity, security certification or competition outcome."
+}

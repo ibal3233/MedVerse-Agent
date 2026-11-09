@@ -1,0 +1,74 @@
+{
+  "scope": "Read-only explanatory replay of existing reference code; no new experimental gate, validation claim, sensor acquisition, policy authorization, or clinical diagnosis. Modeled input values copied from original Gate14 fixture.",
+  "basis": "foundation31.ReleasedDigitalTwin + historical DataPolicyGroundedAgent; not the live Gate33 proposer.",
+  "ncc_csv_present": false,
+  "events": [
+    {
+      "event": 1,
+      "new_domain": "clinical",
+      "supplied_values": {
+        "SpO2": 78.0,
+        "heart_rate": 122.0
+      },
+      "clinical": {
+        "SpO2": 78.0,
+        "heart_rate": 122.0
+      },
+      "observed_core_fields": 2,
+      "required_core_fields": 7,
+      "validity": "UNVERIFIED",
+      "assessment": "POSSIBLE_CRITICAL_CLINICAL_DETERIORATION",
+      "proposed_actions": [
+        "VERIFY_MEASUREMENT",
+        "CONTACT_PATIENT",
+        "REQUEST_HUMAN_CLINICAL_REVIEW"
+      ],
+      "permissions_created": false
+    },
+    {
+      "event": 2,
+      "new_domain": "network",
+      "supplied_values": {
+        "packet_loss": 0.27,
+        "rtt_ms": 840.0,
+        "jitter_ms": 180.0
+      },
+      "clinical": {
+        "SpO2": 78.0,
+        "heart_rate": 122.0
+      },
+      "observed_core_fields": 5,
+      "required_core_fields": 7,
+      "validity": "UNVERIFIED",
+      "assessment": "POSSIBLE_CRITICAL_CLINICAL_DETERIORATION",
+      "proposed_actions": [
+        "VERIFY_MEASUREMENT",
+        "CONTACT_PATIENT",
+        "REQUEST_HUMAN_CLINICAL_REVIEW"
+      ],
+      "permissions_created": false
+    },
+    {
+      "event": 3,
+      "new_domain": "security",
+      "supplied_values": {
+        "certificate_status": "mismatch",
+        "session_origin": "abnormal"
+      },
+      "clinical": {
+        "SpO2": 78.0,
+        "heart_rate": 122.0
+      },
+      "observed_core_fields": 7,
+      "required_core_fields": 7,
+      "validity": "UNVERIFIED",
+      "assessment": "POSSIBLE_CRITICAL_CLINICAL_DETERIORATION",
+      "proposed_actions": [
+        "VERIFY_MEASUREMENT",
+        "CONTACT_PATIENT",
+        "REQUEST_HUMAN_CLINICAL_REVIEW"
+      ],
+      "permissions_created": false
+    }
+  ]
+}

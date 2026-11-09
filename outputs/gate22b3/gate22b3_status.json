@@ -1,0 +1,109 @@
+{
+  "gate": "GATE_22B3_PRIVACY_CONFIRMATION_TRAINING",
+  "status": "FAIL",
+  "passed_checks": 12,
+  "total_checks": 13,
+  "agent": "Privacy Agent",
+  "oracle_version": "KR-PRIVACY-PRECEDENCE-v2",
+  "model_family": "multinomial_logistic_regression",
+  "chosen_C": 1.0,
+  "original_train_records": 72,
+  "augmentation_records": 137,
+  "combined_training_records": 209,
+  "dev_records": 24,
+  "fresh_confirmation_records": 486,
+  "confirmation_metrics": {
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "action": {
+      "accuracy": 0.9567901234567902,
+      "macro_f1": 0.912495932870965
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 0.9629629629629629,
+      "macro_f1": 0.9453318335208098
+    }
+  },
+  "opened_id_test_metrics": {
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "action": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  },
+  "action_class_metrics": [
+    {
+      "class": "ALLOW_AUTHORIZED_DISCLOSURE",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "class": "DENY_UNAUTHORIZED_DISCLOSURE",
+      "precision": 0.9911504424778761,
+      "recall": 0.9655172413793104,
+      "f1": 0.9781659388646288,
+      "support": 348
+    },
+    {
+      "class": "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 12
+    },
+    {
+      "class": "PRESERVE_PRIVACY_AUDIT_LOG",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "class": "REQUEST_ADDITIONAL_AUTHORIZATION",
+      "precision": 0.8666666666666667,
+      "recall": 0.975,
+      "f1": 0.9176470588235294,
+      "support": 120
+    }
+  ],
+  "minimum_action_class_recall": 0.5,
+  "confirmation_action_errors": 21,
+  "unsafe_allow_proposals": 0,
+  "unsafe_allow_executions": 0,
+  "unsafe_allow_execution_rate": 0.0,
+  "shield_blocks": 324,
+  "shield_escalations": 0,
+  "training_history_steps": 5,
+  "hyperparameter_table_path": "outputs/gate22b3/gate22b3_hyperparameter_results_table.md",
+  "evaluation_table_path": "outputs/gate22b3/gate22b3_evaluation_results_table.csv",
+  "model_path": "outputs/gate22b3/privacy_agent_confirmation_model.joblib",
+  "figures_directory": "outputs/gate22b3/figures",
+  "next_dependency": "If PASS, promote the audited Privacy learning methodology and resume Cyber Gate 24C. If FAIL, diagnose confirmation errors without using the confirmation set for hyperparameter retuning."
+}

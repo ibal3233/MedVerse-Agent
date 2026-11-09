@@ -1,0 +1,64 @@
+{
+  "gate": "GATE_23A_RESEARCH_IRB_DISTRIBUTION_DIAGNOSIS",
+  "status": "PASS",
+  "passed_checks": 6,
+  "total_checks": 6,
+  "diagnostic_classification": "augmentation_induced_action_class_distribution_shift_plus_preaugmentation_hyperparameter_selection_instability",
+  "original_action_counts": {
+    "ALLOW_AUTHORIZED_RESEARCH_PROCESSING": 9,
+    "BLOCK_RESEARCH_PROCESSING": 18,
+    "REQUEST_IRB_REVIEW": 18,
+    "PRESERVE_RESEARCH_AUDIT_LOG": 9
+  },
+  "augmentation_action_counts": {
+    "BLOCK_RESEARCH_PROCESSING": 13,
+    "REQUEST_IRB_REVIEW": 20
+  },
+  "C_sensitivity": [
+    {
+      "C": 0.1,
+      "base_dev_action_accuracy": 1.0,
+      "base_dev_action_macro_f1": 1.0,
+      "base_test_action_accuracy": 1.0,
+      "base_test_action_macro_f1": 1.0,
+      "aug_dev_action_accuracy": 0.6666666666666666,
+      "aug_dev_action_macro_f1": 0.41666666666666663,
+      "aug_test_action_accuracy": 0.6666666666666666,
+      "aug_test_action_macro_f1": 0.41666666666666663,
+      "aug_ood_action_accuracy": 1.0,
+      "aug_ood_action_macro_f1": 1.0,
+      "aug_ood_assessment_accuracy": 0.75
+    },
+    {
+      "C": 1.0,
+      "base_dev_action_accuracy": 1.0,
+      "base_dev_action_macro_f1": 1.0,
+      "base_test_action_accuracy": 1.0,
+      "base_test_action_macro_f1": 1.0,
+      "aug_dev_action_accuracy": 1.0,
+      "aug_dev_action_macro_f1": 1.0,
+      "aug_test_action_accuracy": 1.0,
+      "aug_test_action_macro_f1": 1.0,
+      "aug_ood_action_accuracy": 0.8333333333333334,
+      "aug_ood_action_macro_f1": 0.46875,
+      "aug_ood_assessment_accuracy": 0.8333333333333334
+    },
+    {
+      "C": 10.0,
+      "base_dev_action_accuracy": 1.0,
+      "base_dev_action_macro_f1": 1.0,
+      "base_test_action_accuracy": 1.0,
+      "base_test_action_macro_f1": 1.0,
+      "aug_dev_action_accuracy": 1.0,
+      "aug_dev_action_macro_f1": 1.0,
+      "aug_test_action_accuracy": 1.0,
+      "aug_test_action_macro_f1": 1.0,
+      "aug_ood_action_accuracy": 0.8333333333333334,
+      "aug_ood_action_macro_f1": 0.46875,
+      "aug_ood_assessment_accuracy": 0.8333333333333334
+    }
+  ],
+  "model_family_change_justified": false,
+  "next_dependency": "Gate 23B balanced compositional augmentation plus dev-only post-augmentation model selection, without changing the model family.",
+  "figures_directory": "outputs/gate23a/figures"
+}

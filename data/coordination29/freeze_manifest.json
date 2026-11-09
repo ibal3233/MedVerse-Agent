@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "gate": "GATE_29_INSTITUTIONAL_WORKFLOW_CHOICE",
+  "frozen_utc": "2026-11-03T07:56:35.963328+00:00",
+  "confirmation_outcomes_seen": false,
+  "training": false,
+  "splits": {
+    "DEVELOPMENT": 4,
+    "CONFIRMATION": 14
+  },
+  "interpretation_review": "PENDING",
+  "files": {
+    "GATE29_START_HERE.md": "3fd96899949e7a2c16331f8e266a523723be521278f6d459ea2775aa3da0cb8e",
+    "coordination29/__init__.py": "afc4273eace8e115793c160b8676eb45f40cec1eff67739ac5bb911af058602a",
+    "coordination29/build_specification.py": "d694d2d5a647f3d1f9a28c45fc15139de3bdba998450c738d86ff7ed75deddf4",
+    "coordination29/common.py": "6f453fadc106a7441365dfa3f4f446e30d8f1988b18c3a43f6843497f82ad88f",
+    "coordination29/evaluate.py": "f3774c094f5b6149a1a355e8c9bed82f7f93efb60366860803dbd6e41602f17d",
+    "coordination29/figures.py": "076d2fb5bb4a6b089ba32b86948058287b5888dba2d850e20623b336972b1798",
+    "coordination29/freeze.py": "cec8bdf49bf5ce5ca1dd19a7484676ef19e6112d42896a5f759cc26b6f7818c8",
+    "coordination29/handoffs.py": "56b2310ea9f9bed562c4767e40cbf2f44f299f99d42f6869cd36190fbd6fdc16",
+    "coordination29/reference_evaluator.py": "d25dc45b991229603aa2dfc8184f1da2ce28a0167c2d2c6e057f13b9251b1898",
+    "coordination29/selectors.py": "6f7050e5db4e624421a5e6b538453287d5523ef8a97eccd768f3b7ea74fb6c90",
+    "coordination29/specification_checks.py": "411b207b351ddc51dadc20a82e53a927a5da7a80cefd649307ae0fe34d208b7c",
+    "coordination29/tests.py": "35967addd4e0e431ea0cabd37f1fab8f56df3f90d653d94704c0c1cb1bf28eee",
+    "coordination29/validator.py": "f98e0b367a500387634ca126b6a037759c1aa4c5e8814658496c61646d8ab535",
+    "data/coordination29/preexecution_grouping.json": "c49e25a18958bb82422c85b14aa8aafebc1d6535fbc37f5d535e8a3c872bac00",
+    "data/coordination29/scenario_families.json": "ff8dadf3c39257fa89cd0fbdfec71ae7668e9e783ad2be49bf4a73a533b510bc",
+    "data/coordination29/source_snapshot.json": "09c396a1929a551fd8751977d87760d8873fbecd731fb9a9db337d87204ab836",
+    "data/coordination29/upstream_manifest.json": "bb52f487848fb18776c93c81bef59ab98565e07a70f0905ad93d6c64d7748934",
+    "data/policy/candidate_v0.4/policy_records_v0.4_candidate.json": "c4e6930d8585f787e7492ef5fe630d52368436e276f8aabd140d4d81767a024d",
+    "docs/coordination29/PROTOCOL.md": "dee3abca25cf7fdc11fbc5b915e91f53ba51c0cd4ecc08c2c101db94ea4ef86f",
+    "medverse/gates/gate29_institutional_workflow_choice.py": "626bc8a7bfde31ee1f1308b28b327855fcae620ec3a20c5c0de94eb9804df07a"
+  },
+  "presentation_amendment": {
+    "version": "1.0.1",
+    "utc": "2026-11-03T07:59:39.997539+00:00",
+    "reason": "Raise adapter-figure y-axis ceiling so legend cannot overlap 3/3 count labels. No values, cases, methods or scoring changed.",
+    "original_manifest_sha256": "df2c0599a5fa4fc1a35ae144a734c4a1fbfeb1a1a5cbcf6092d34c07de70aa76",
+    "changed_file": "coordination29/figures.py",
+    "previous_sha256": "2c5efb3a7719b120031c0e12454b0d7d108e8627857f472d5f8c89c4ec0cb921",
+    "new_sha256": "076d2fb5bb4a6b089ba32b86948058287b5888dba2d850e20623b336972b1798",
+    "scientific_change": false
+  }
+}

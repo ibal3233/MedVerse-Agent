@@ -1,0 +1,23 @@
+{
+  "agent_id": "hospital_agent",
+  "institutional_role": "Healthcare Provider",
+  "allowed_event_types": [
+    "CLINICAL_ALARM"
+  ],
+  "allowed_observation_fields": [
+    "SpO2",
+    "heart_rate"
+  ],
+  "allowed_actions": [
+    "VERIFY_MEASUREMENT",
+    "CONTACT_PATIENT",
+    "REQUEST_HUMAN_CLINICAL_REVIEW",
+    "CONTINUE_SAFE_CARE"
+  ],
+  "forbidden_action_classes": [
+    "network_isolation",
+    "device_quarantine",
+    "privacy_sanction",
+    "research_authorization"
+  ]
+}

@@ -1,0 +1,240 @@
+%runfile D:/experiments/hackathon/Team_MedVerse_Validated_Sandbox_v1/MedVerse-Agent/medverse/gates/gate27_final_validation.py --wdir
+{
+  "release": "v1.0",
+  "stage": "confirm",
+  "engineering_integrity": "PASS",
+  "checks_passed": 30,
+  "checks_total": 30,
+  "workflow_summary": [
+    {
+      "strategy": "LOCAL_FILTER",
+      "families": 8,
+      "workflow_obligations_met": 6,
+      "workflow_completion_rate": 0.75,
+      "clinical_review_completed": 8,
+      "unsafe_commits": 0,
+      "committed_actions": 24,
+      "research_releases": 2,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 0.57155,
+      "p95_event_latency_ms": 1.0469,
+      "audit_chains_valid": true
+    },
+    {
+      "strategy": "STATEFUL_FILTER",
+      "families": 8,
+      "workflow_obligations_met": 8,
+      "workflow_completion_rate": 1.0,
+      "clinical_review_completed": 8,
+      "unsafe_commits": 0,
+      "committed_actions": 25,
+      "research_releases": 3,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 0.59585,
+      "p95_event_latency_ms": 0.9963,
+      "audit_chains_valid": true
+    },
+    {
+      "strategy": "MEDVERSE",
+      "families": 8,
+      "workflow_obligations_met": 8,
+      "workflow_completion_rate": 1.0,
+      "clinical_review_completed": 8,
+      "unsafe_commits": 0,
+      "committed_actions": 25,
+      "research_releases": 3,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 0.60915,
+      "p95_event_latency_ms": 1.1252,
+      "audit_chains_valid": true
+    },
+    {
+      "strategy": "DENY_ALL",
+      "families": 8,
+      "workflow_obligations_met": 0,
+      "workflow_completion_rate": 0.0,
+      "clinical_review_completed": 0,
+      "unsafe_commits": 0,
+      "committed_actions": 0,
+      "research_releases": 0,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 0.56555,
+      "p95_event_latency_ms": 0.9288,
+      "audit_chains_valid": true
+    }
+  ],
+  "retrieval_summary": {
+    "en": {
+      "n_queries": 20,
+      "top1_accuracy": 0.8,
+      "recall_at3": 0.85,
+      "median_latency_ms": 1.2744
+    },
+    "ko": {
+      "n_queries": 20,
+      "top1_accuracy": 0.7,
+      "recall_at3": 0.85,
+      "median_latency_ms": 1.1549999999999998
+    },
+    "all": {
+      "n_queries": 40,
+      "top1_accuracy": 0.75,
+      "recall_at3": 0.85,
+      "median_latency_ms": 1.1676
+    },
+    "families_both_languages_hit": 16,
+    "intent_families": 20,
+    "backend": "explicit lexical bilingual BM25, not original multilingual embedding model",
+    "dense_reproduction": "BLOCKED_DEPENDENCY",
+    "claim": "retrieval on developer-authored intent families; not legal applicability or clinical validity"
+  },
+  "authorization_states": 512,
+  "authorization_states_passed": 512,
+  "clinical_validation": "NOT_ESTABLISHED",
+  "independent_legal_interpretation_review": "PENDING",
+  "dense_embedding_reproduction": "BLOCKED_DEPENDENCY",
+  "original_model_training": "NOT_REOPENED",
+  "general_deployment_readiness": "HOLD",
+  "claim_boundary": "Developer-authored modeled workflows. No independent clinical/legal validation, no new trained agent generalization."
+}
+C:\Users\user\anaconda3\envs\pytorch\Lib\site-packages\sklearn\base.py:525: InconsistentVersionWarning: Trying to unpickle estimator DictVectorizer from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\user\anaconda3\envs\pytorch\Lib\site-packages\sklearn\base.py:525: InconsistentVersionWarning: Trying to unpickle estimator LogisticRegression from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\user\anaconda3\envs\pytorch\Lib\site-packages\sklearn\base.py:525: InconsistentVersionWarning: Trying to unpickle estimator Pipeline from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\user\anaconda3\envs\pytorch\Lib\site-packages\sklearn\base.py:525: InconsistentVersionWarning: Trying to unpickle estimator DictVectorizer from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\user\anaconda3\envs\pytorch\Lib\site-packages\sklearn\base.py:525: InconsistentVersionWarning: Trying to unpickle estimator LogisticRegression from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\user\anaconda3\envs\pytorch\Lib\site-packages\sklearn\base.py:525: InconsistentVersionWarning: Trying to unpickle estimator Pipeline from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+%runfile D:/experiments/hackathon/Team_MedVerse_Validated_Sandbox_v1/MedVerse-Agent/medverse/gates/gate26b_architectural_baseline_comparison.py --wdir
+Reloaded modules: final_validation, final_validation.common, final_validation.knowledge, final_validation.engine, final_validation.validate, medverse, medverse.learning, medverse.learning.privacy_agent_model
+
+========================================
+ MedVerse-Agent - Gate 26B
+ Architectural Baseline Comparison
+ B1-B5
+========================================
+
+{
+  "gate": "GATE_26_ARCHITECTURAL_BASELINE_COMPARISON",
+  "status": "PASS",
+  "passed_checks": 9,
+  "total_checks": 9,
+  "training_performed": false,
+  "baseline_specific_tuning_performed": false,
+  "benchmark_records": 70,
+  "baseline_runs": 350,
+  "baseline_summary": [
+    {
+      "baseline": "B1",
+      "baseline_name": "Single omniscient agent",
+      "n_cases": 70,
+      "institutional_correctness": 0.17857142857142858,
+      "policy_violation_rate": 1.0,
+      "unnecessary_escalation_rate": 0.0,
+      "information_overexposure_rate": 0.9288301381158525,
+      "unsafe_execution_rate": 1.0,
+      "coordination_quality": 0.39285714285714285,
+      "workflow_exact_match": 0.0,
+      "median_latency_us": 2.0,
+      "p95_latency_us": 2.2
+    },
+    {
+      "baseline": "B2",
+      "baseline_name": "Role-based but unconstrained MAS",
+      "n_cases": 70,
+      "institutional_correctness": 0.8214285714285714,
+      "policy_violation_rate": 0.14285714285714285,
+      "unnecessary_escalation_rate": 0.0,
+      "information_overexposure_rate": 0.9288301381158525,
+      "unsafe_execution_rate": 0.14285714285714285,
+      "coordination_quality": 0.5404761904761903,
+      "workflow_exact_match": 0.0,
+      "median_latency_us": 1.8,
+      "p95_latency_us": 2.0
+    },
+    {
+      "baseline": "B3",
+      "baseline_name": "Consensus/debate MAS",
+      "n_cases": 70,
+      "institutional_correctness": 0.6071428571428571,
+      "policy_violation_rate": 0.0,
+      "unnecessary_escalation_rate": 0.6666666666666666,
+      "information_overexposure_rate": 0.9288301381158525,
+      "unsafe_execution_rate": 0.0,
+      "coordination_quality": 0.2857142857142857,
+      "workflow_exact_match": 0.0,
+      "median_latency_us": 3.0,
+      "p95_latency_us": 4.009999999999999
+    },
+    {
+      "baseline": "B4",
+      "baseline_name": "Policy filtering without harmonization",
+      "n_cases": 70,
+      "institutional_correctness": 0.9642857142857143,
+      "policy_violation_rate": 0.0,
+      "unnecessary_escalation_rate": 0.3333333333333333,
+      "information_overexposure_rate": 0.0,
+      "unsafe_execution_rate": 0.0,
+      "coordination_quality": 0.6,
+      "workflow_exact_match": 0.14285714285714285,
+      "median_latency_us": 2.3,
+      "p95_latency_us": 2.8
+    },
+    {
+      "baseline": "B5",
+      "baseline_name": "MedVerse-Agent",
+      "n_cases": 70,
+      "institutional_correctness": 1.0,
+      "policy_violation_rate": 0.0,
+      "unnecessary_escalation_rate": 0.0,
+      "information_overexposure_rate": 0.0,
+      "unsafe_execution_rate": 0.0,
+      "coordination_quality": 1.0,
+      "workflow_exact_match": 1.0,
+      "median_latency_us": 2.4,
+      "p95_latency_us": 2.9
+    }
+  ],
+  "interpretation": {
+    "B5_vs_B4_coordination_quality_delta": 0.4,
+    "B5_vs_B4_exact_workflow_delta": 0.8571428571428572,
+    "B5_vs_B1_institutional_correctness_delta": 0.8214285714285714,
+    "B5_policy_violation_rate": 0.0,
+    "B5_unsafe_execution_rate": 0.0,
+    "B5_information_overexposure_rate": 0.0,
+    "fastest_baseline": "B2",
+    "highest_coordination_quality": "B5",
+    "highest_exact_workflow_match": "B5",
+    "important_boundary": "A positive MedVerse result supports the value of the frozen harmonization architecture on this controlled synthetic benchmark. It does not establish superiority on external clinical deployments."
+  },
+  "figures_directory": "outputs/gate26/figures",
+  "main_table": "outputs/gate26/gate26_baseline_comparison_table.md",
+  "next_dependency": "No additional experimental tuning is authorized. Integrate Gate26 into the technical report, judge narrative, and demo/video."
+}
+
+Baseline comparison:
+{'baseline': 'B1', 'institutional_correctness': 0.179, 'policy_violation_rate': 1.0, 'unnecessary_escalation_rate': 0.0, 'information_overexposure_rate': 0.929, 'unsafe_execution_rate': 1.0, 'coordination_quality': 0.393, 'workflow_exact_match': 0.0, 'median_latency_us': 2.0}
+{'baseline': 'B2', 'institutional_correctness': 0.821, 'policy_violation_rate': 0.143, 'unnecessary_escalation_rate': 0.0, 'information_overexposure_rate': 0.929, 'unsafe_execution_rate': 0.143, 'coordination_quality': 0.54, 'workflow_exact_match': 0.0, 'median_latency_us': 1.8}
+{'baseline': 'B3', 'institutional_correctness': 0.607, 'policy_violation_rate': 0.0, 'unnecessary_escalation_rate': 0.667, 'information_overexposure_rate': 0.929, 'unsafe_execution_rate': 0.0, 'coordination_quality': 0.286, 'workflow_exact_match': 0.0, 'median_latency_us': 3.0}
+{'baseline': 'B4', 'institutional_correctness': 0.964, 'policy_violation_rate': 0.0, 'unnecessary_escalation_rate': 0.333, 'information_overexposure_rate': 0.0, 'unsafe_execution_rate': 0.0, 'coordination_quality': 0.6, 'workflow_exact_match': 0.143, 'median_latency_us': 2.3}
+{'baseline': 'B5', 'institutional_correctness': 1.0, 'policy_violation_rate': 0.0, 'unnecessary_escalation_rate': 0.0, 'information_overexposure_rate': 0.0, 'unsafe_execution_rate': 0.0, 'coordination_quality': 1.0, 'workflow_exact_match': 1.0, 'median_latency_us': 2.4}
+
+Outputs:
+D:\experiments\hackathon\Team_MedVerse_Validated_Sandbox_v1\MedVerse-Agent\outputs\gate26
+
+FULL GATE 26 PASS — B1-B5 were compared on the same frozen 70-case architectural benchmark with no training or baseline-specific tuning. The measured comparative result may now be reported.

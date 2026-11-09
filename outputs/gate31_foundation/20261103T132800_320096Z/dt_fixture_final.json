@@ -1,0 +1,178 @@
+{
+  "implementation": "medverse.digital_twin.model.PatientDigitalTwin",
+  "state": {
+    "clinical": {
+      "SpO2": 97.0,
+      "heart_rate": 81.0
+    },
+    "patient_context": {},
+    "network": {
+      "packet_loss": 0.01,
+      "rtt_ms": 24.0,
+      "jitter_ms": 4.0
+    },
+    "security": {
+      "certificate_status": "valid",
+      "session_origin": "normal"
+    },
+    "consent": {
+      "review_note": "metadata only; no new telemetry or permission"
+    },
+    "research": {},
+    "ai_state": {}
+  },
+  "quality": {
+    "validity": "VALID",
+    "reason": "ORIGINAL_S1_RULES_WITH_OBSERVED_FIELD_AGES",
+    "minimum_core_freshness": 1.0,
+    "observed_core_count": 7,
+    "required_core_count": 7,
+    "core_completeness": 1.0,
+    "missing_core_fields": []
+  },
+  "provenance": [
+    {
+      "field_name": "clinical.SpO2",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 0.0,
+      "ingestion_method": "controlled_event",
+      "authority": "hospital_agent"
+    },
+    {
+      "field_name": "clinical.heart_rate",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 0.0,
+      "ingestion_method": "controlled_event",
+      "authority": "hospital_agent"
+    },
+    {
+      "field_name": "network.packet_loss",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 0.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    },
+    {
+      "field_name": "network.rtt_ms",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 0.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    },
+    {
+      "field_name": "network.jitter_ms",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 0.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    },
+    {
+      "field_name": "security.certificate_status",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 0.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    },
+    {
+      "field_name": "security.session_origin",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 0.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    },
+    {
+      "field_name": "consent.review_note",
+      "source_type": "modeled_released_observation",
+      "source_id": "MODELED_PRIVACY",
+      "observed_at": 300.0,
+      "ingestion_method": "controlled_event",
+      "authority": "privacy_agent"
+    },
+    {
+      "field_name": "security.certificate_status",
+      "source_type": "modeled_released_observation",
+      "source_id": "MODELED_SECURITY",
+      "observed_at": 360.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    },
+    {
+      "field_name": "clinical.SpO2",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 420.0,
+      "ingestion_method": "controlled_event",
+      "authority": "hospital_agent"
+    },
+    {
+      "field_name": "clinical.heart_rate",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 420.0,
+      "ingestion_method": "controlled_event",
+      "authority": "hospital_agent"
+    },
+    {
+      "field_name": "network.packet_loss",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 420.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    },
+    {
+      "field_name": "network.rtt_ms",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 420.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    },
+    {
+      "field_name": "network.jitter_ms",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 420.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    },
+    {
+      "field_name": "security.certificate_status",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 420.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    },
+    {
+      "field_name": "security.session_origin",
+      "source_type": "modeled_released_observation",
+      "source_id": "DEVELOPMENT_MODELED_S1_FIXTURE",
+      "observed_at": 420.0,
+      "ingestion_method": "controlled_event",
+      "authority": "cyber_network_agent"
+    }
+  ],
+  "released_event": 6,
+  "modeled_seconds": 420.0,
+  "observation_count": 16,
+  "defaults_are_observations": false,
+  "permission_granted_by_dt": false,
+  "quality_scope": "S1 telemetry reference; not diagnosis or regulatory authorization",
+  "native_quality_diagnostic": {
+    "freshness": 1.0,
+    "integrity": 1.0,
+    "completeness": 1.0,
+    "provenance": 1.0,
+    "uncertainty": 0.0
+  },
+  "native_validity_diagnostic": "VALID",
+  "quality_note": "Native diagnostics use the latest global observation. Adapter reports oldest required observed core field; missing fields remain unverified. Exponential time constant 300 model-seconds is unchanged, not clinically validated."
+}

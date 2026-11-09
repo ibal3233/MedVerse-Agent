@@ -1,0 +1,93 @@
+{
+  "assessment": {
+    "train": {
+      "AUTHORIZED_MINIMUM_NECESSARY_DISCLOSURE": 18,
+      "UNAUTHORIZED_OR_EXCESSIVE_DISCLOSURE_REQUEST": 27,
+      "DISCLOSURE_AUTHORIZATION_UNKNOWN": 9,
+      "FOREIGN_POLICY_NOT_GOVERNING_AUTHORITY": 18
+    },
+    "dev": {
+      "AUTHORIZED_MINIMUM_NECESSARY_DISCLOSURE": 6,
+      "UNAUTHORIZED_OR_EXCESSIVE_DISCLOSURE_REQUEST": 9,
+      "DISCLOSURE_AUTHORIZATION_UNKNOWN": 3,
+      "FOREIGN_POLICY_NOT_GOVERNING_AUTHORITY": 6
+    },
+    "test": {
+      "AUTHORIZED_MINIMUM_NECESSARY_DISCLOSURE": 6,
+      "UNAUTHORIZED_OR_EXCESSIVE_DISCLOSURE_REQUEST": 9,
+      "DISCLOSURE_AUTHORIZATION_UNKNOWN": 3,
+      "FOREIGN_POLICY_NOT_GOVERNING_AUTHORITY": 6
+    }
+  },
+  "action": {
+    "train": {
+      "ALLOW_AUTHORIZED_DISCLOSURE": 9,
+      "DENY_UNAUTHORIZED_DISCLOSURE": 27,
+      "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY": 9,
+      "REQUEST_ADDITIONAL_AUTHORIZATION": 18,
+      "PRESERVE_PRIVACY_AUDIT_LOG": 9
+    },
+    "dev": {
+      "ALLOW_AUTHORIZED_DISCLOSURE": 3,
+      "DENY_UNAUTHORIZED_DISCLOSURE": 9,
+      "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY": 3,
+      "REQUEST_ADDITIONAL_AUTHORIZATION": 6,
+      "PRESERVE_PRIVACY_AUDIT_LOG": 3
+    },
+    "test": {
+      "ALLOW_AUTHORIZED_DISCLOSURE": 3,
+      "DENY_UNAUTHORIZED_DISCLOSURE": 9,
+      "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY": 3,
+      "REQUEST_ADDITIONAL_AUTHORIZATION": 6,
+      "PRESERVE_PRIVACY_AUDIT_LOG": 3
+    }
+  },
+  "boundary": {
+    "train": {
+      "COMPLIANT": 45,
+      "INSUFFICIENT_EVIDENCE": 9,
+      "WRONG_JURISDICTION": 18
+    },
+    "dev": {
+      "COMPLIANT": 15,
+      "INSUFFICIENT_EVIDENCE": 3,
+      "WRONG_JURISDICTION": 6
+    },
+    "test": {
+      "COMPLIANT": 15,
+      "INSUFFICIENT_EVIDENCE": 3,
+      "WRONG_JURISDICTION": 6
+    }
+  },
+  "enforcement": {
+    "train": {
+      "PERMIT": 45,
+      "ESCALATE": 9,
+      "BLOCK": 18
+    },
+    "dev": {
+      "PERMIT": 15,
+      "ESCALATE": 3,
+      "BLOCK": 6
+    },
+    "test": {
+      "PERMIT": 15,
+      "ESCALATE": 3,
+      "BLOCK": 6
+    }
+  },
+  "evidence": {
+    "train": {
+      "NONE": 63,
+      "DISCLOSURE_AUTHORIZATION_AND_PURPOSE": 9
+    },
+    "dev": {
+      "NONE": 21,
+      "DISCLOSURE_AUTHORIZATION_AND_PURPOSE": 3
+    },
+    "test": {
+      "NONE": 21,
+      "DISCLOSURE_AUTHORIZATION_AND_PURPOSE": 3
+    }
+  }
+}

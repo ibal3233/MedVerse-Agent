@@ -1,0 +1,45 @@
+[
+  {
+    "check": "ood_errors_reproduced",
+    "pass": true,
+    "observed": 6,
+    "expected": 6
+  },
+  {
+    "check": "precedence_error_structure_detected",
+    "pass": true,
+    "observed": {
+      "missing_evidence_dominates": 2,
+      "pseudonymization_deficiency_dominates": 4
+    },
+    "expected": "missing-evidence and pseudonymization precedence errors"
+  },
+  {
+    "check": "legacy_shield_gap_detected",
+    "pass": true,
+    "observed": 2,
+    "expected": ">0"
+  },
+  {
+    "check": "reference_shield_blocks_inconsistent_execution",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "no_training_change",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "publication_and_reporting_outputs",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4,
+      "safety_contract": true
+    },
+    "expected": ">=4 PNG, >=4 PDF, safety reporting contract"
+  }
+]

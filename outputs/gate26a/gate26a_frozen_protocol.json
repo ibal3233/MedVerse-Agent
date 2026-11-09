@@ -1,0 +1,89 @@
+{
+  "protocol_id": "MEDVERSE-G26-ARCH-BASELINE-COMPARISON-v1",
+  "status": "PRE_FROZEN_BEFORE_BASELINE_EXECUTION",
+  "training_performed": false,
+  "baseline_specific_tuning_permitted": false,
+  "benchmark_records": 70,
+  "coordination_archetypes": {
+    "AGREEMENT": 10,
+    "COMPLEMENTARY": 10,
+    "CONDITIONAL_HARMONIZATION": 10,
+    "HUMAN_AUTHORITY_REQUIRED": 10,
+    "INSTITUTIONAL_CONFLICT": 10,
+    "INSUFFICIENT_EVIDENCE": 10,
+    "POLICY_CONFLICT": 10
+  },
+  "agents_exercised": [
+    "cyber_network_agent",
+    "hospital_agent",
+    "privacy_agent",
+    "regulator_agent",
+    "research_irb_agent"
+  ],
+  "baselines": {
+    "B1": "Single omniscient agent",
+    "B2": "Role-based but unconstrained MAS",
+    "B3": "Consensus/debate MAS",
+    "B4": "Policy filtering without harmonization",
+    "B5": "MedVerse-Agent"
+  },
+  "capability_contract": {
+    "B1": {
+      "description": "Single omniscient policy-aware central agent",
+      "separate_institutional_authority": false,
+      "policy_filter": true,
+      "cross_agent_harmonization": false,
+      "sharing": "all evidence centralized"
+    },
+    "B2": {
+      "description": "Role-labelled MAS with no policy/mandate enforcement",
+      "separate_institutional_authority": true,
+      "policy_filter": false,
+      "cross_agent_harmonization": false,
+      "sharing": "role evidence broadcast"
+    },
+    "B3": {
+      "description": "Role-labelled majority/debate coordination",
+      "separate_institutional_authority": true,
+      "policy_filter": false,
+      "cross_agent_harmonization": false,
+      "sharing": "debate broadcast"
+    },
+    "B4": {
+      "description": "Policy/mandate filtering without harmonization",
+      "separate_institutional_authority": true,
+      "policy_filter": true,
+      "cross_agent_harmonization": false,
+      "sharing": "no raw evidence sharing"
+    },
+    "B5": {
+      "description": "MedVerse policy-aware institutional harmonization",
+      "separate_institutional_authority": true,
+      "policy_filter": true,
+      "cross_agent_harmonization": true,
+      "sharing": "minimum necessary messages"
+    }
+  },
+  "metrics": {
+    "institutional_correctness": "Correct required actions plus correct non-execution of forbidden actions, divided by all scored institutional action decisions.",
+    "policy_violation_rate": "Executed actions that violate policy, mandate, evidence sufficiency, or institutional ownership divided by executed actions.",
+    "unnecessary_escalation_rate": "Escalations in cases where the frozen ground truth does not require human escalation, divided by non-human-escalation cases.",
+    "information_overexposure_rate": "Evidence-field exposures beyond the frozen minimum-necessary sharing requirement divided by all evidence-field exposures.",
+    "unsafe_execution_rate": "Executed actions outside the frozen allowed action set divided by executed actions.",
+    "outcome_latency": "Reference Python coordination-logic runtime measured after warm-up; reported as median and p95 microseconds. Not LLM/network deployment latency.",
+    "coordination_quality": "Mean of coordination-state correctness, action-set F1, communication/evidence-request F1, and escalation correctness.",
+    "workflow_exact_match": "All state, action, communication/evidence-request, and escalation components match the frozen case specification."
+  },
+  "fairness_rules": [
+    "Same cases and institutional proposals for B1-B5.",
+    "No model training in Gate26.",
+    "No baseline-specific hyperparameter tuning.",
+    "No changing benchmark after baseline results are observed.",
+    "No baseline receives MedVerse harmonization logic except B5.",
+    "B1 receives all available evidence by design.",
+    "B4 receives policy/mandate filtering by design.",
+    "Latency measures reference coordination logic only."
+  ],
+  "claim_boundary": "This experiment isolates coordination-architecture behavior on a controlled synthetic benchmark derived from frozen MedVerse institutional semantics. It is not an external clinical deployment comparison.",
+  "benchmark_sha256": "3936884644117f793895c2865e4bfb319a5a2eeed1dbb5bda63324ec8a44ac1b"
+}

@@ -1,0 +1,65 @@
+{
+  "corpus_id": "MEDVERSE-KR-POLICY-CORPUS",
+  "candidate_version": "0.4",
+  "jurisdiction": "KR",
+  "jurisdiction_name": "Republic of Korea",
+  "canonical_layers": {
+    "Statutes": [
+      "Medical Service Act",
+      "Personal Information Protection Act (PIPA)",
+      "Bioethics and Safety Act",
+      "Medical Devices Act",
+      "Digital Medical Products Act",
+      "Framework Act on AI Development and Trust (AI Basic Act)"
+    ],
+    "Decrees / Enforcement Rules": [
+      "PIPA Enforcement Decree",
+      "Digital Medical Products Act Enforcement Rule"
+    ],
+    "Official Guidelines": [
+      "Health and Medical Data Utilization Guideline (2025.12)",
+      "Pseudonymized Information Processing Guideline (2026.03)"
+    ],
+    "Institutional Governance": [
+      "IRB / DRB procedures",
+      "security safeguard standards",
+      "access / audit / consent procedures"
+    ]
+  },
+  "design_principles": [
+    "jurisdiction filtering before semantic retrieval",
+    "agent-access filtering before semantic retrieval",
+    "source-type and authority provenance retained",
+    "statutes/decrees distinguished from guidelines and institutional rules",
+    "press releases are not used as normative retrieval evidence",
+    "official source URL and source locator retained",
+    "Korean source text / descriptor and English retrieval text supported"
+  ],
+  "source_documents": [
+    {
+      "filename": "Health_Medical_Data_Utilization_Guideline_2025-12.pdf",
+      "status": "obtained",
+      "sha256": "48df209b701393c5fb78c5e61b9fcfb2225591b184656fbe988ace9872339f31",
+      "type": "official_guideline",
+      "retrieval_eligible": true
+    },
+    {
+      "filename": "[260331 12시보도] '가명정보 처리 가이드라인' 전면 개정, '위험도 기반' 판단 체계 확립(데이터안전정책과).pdf",
+      "status": "obtained",
+      "sha256": "e4036da403195aa585251eb00c8c84506d51d6f63bda15db428154716c2e6f4e",
+      "type": "press_release",
+      "retrieval_eligible": false
+    },
+    {
+      "filename": "Pseudonymized_Information_Processing_Guideline_2026-03.pdf",
+      "status": "obtained",
+      "official_landing_page": "https://www.kisa.or.kr/2060202/form?lang_type=KO&postSeq=138",
+      "official_pipc_page": "https://pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&mCode=C020010000&nttId=11928",
+      "type": "official_guideline",
+      "retrieval_eligible": true,
+      "sha256": "1c56e22b2370f063cee173bd903a6678f415aa65a20d031218d33dc2804e38c5",
+      "source_status": "full_official_document_obtained",
+      "page_count": 333
+    }
+  ]
+}

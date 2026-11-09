@@ -1,0 +1,20 @@
+{
+  "gate": "GATE_24A_CYBER_PREPROCESSING_DIAGNOSIS",
+  "status": "PASS",
+  "passed_checks": 7,
+  "total_checks": 7,
+  "diagnostic_classification": "preprocessing_representation_instability_with_numeric_scale_sensitivity_and_implicit_missingness_encoding_plus_dev_plateau_selection_instability",
+  "baseline_C": 0.3,
+  "baseline_test_action_accuracy": 0.8333333333333334,
+  "baseline_test_assessment_accuracy": 0.8333333333333334,
+  "scale_only_test_action_accuracy": 1.0,
+  "scale_only_test_assessment_accuracy": 1.0,
+  "explicit_missing_test_action_accuracy": 1.0,
+  "explicit_missing_test_assessment_accuracy": 0.8333333333333334,
+  "combined_test_action_accuracy": 1.0,
+  "combined_test_assessment_accuracy": 1.0,
+  "production_model_changed": false,
+  "current_gate24_test_status": "OPENED_DIAGNOSTIC_GROUP",
+  "figures_directory": "outputs/gate24a/figures",
+  "next_dependency": "Gate 24B: pre-freeze a fresh Cyber/Network prospective benchmark before applying train-fitted numeric standardization and explicit missing-category encoding."
+}

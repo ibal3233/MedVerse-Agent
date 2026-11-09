@@ -1,0 +1,94 @@
+[
+  {
+    "check": "complete_factorial_state_space",
+    "pass": true,
+    "observed": {
+      "rows": 48,
+      "unique_signatures": 48
+    },
+    "expected": 48
+  },
+  {
+    "check": "outer_fold_partition",
+    "pass": true,
+    "observed": {
+      "0": 12,
+      "1": 12,
+      "2": 12,
+      "3": 12
+    },
+    "expected": {
+      "0": 12,
+      "1": 12,
+      "2": 12,
+      "3": 12
+    }
+  },
+  {
+    "check": "unique_record_ids",
+    "pass": true,
+    "observed": 48,
+    "expected": 48
+  },
+  {
+    "check": "interaction_learnability",
+    "pass": true,
+    "observed": [],
+    "expected": []
+  },
+  {
+    "check": "critical_interaction_supported_each_relevant_fold",
+    "pass": true,
+    "observed": {
+      "0": {
+        "factorial_train_side": 2,
+        "base_gate21a_train": 0,
+        "total_train_side": 2,
+        "held_out": 0
+      },
+      "1": {
+        "factorial_train_side": 1,
+        "base_gate21a_train": 0,
+        "total_train_side": 1,
+        "held_out": 1
+      },
+      "2": {
+        "factorial_train_side": 1,
+        "base_gate21a_train": 0,
+        "total_train_side": 1,
+        "held_out": 1
+      },
+      "3": {
+        "factorial_train_side": 2,
+        "base_gate21a_train": 0,
+        "total_train_side": 2,
+        "held_out": 0
+      }
+    },
+    "expected": "nonzero train-side support whenever held-out support > 0"
+  },
+  {
+    "check": "protocol_frozen_without_training",
+    "pass": true,
+    "observed": {
+      "status": "PRE_FROZEN_BEFORE_REPAIR_TRAINING",
+      "training_performed": false
+    },
+    "expected": "pre-frozen, no training"
+  },
+  {
+    "check": "benchmark_hash_recorded",
+    "pass": true,
+    "observed": "52112275b302101f7031a66ceffde38d1dc59b69233c750bfc771c29ccefbaba",
+    "expected": "SHA256 recorded"
+  },
+  {
+    "check": "publication_outputs_created",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4
+    },
+    "expected": ">=4 PNG and >=4 PDF"
+  }
+]

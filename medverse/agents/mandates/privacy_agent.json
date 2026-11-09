@@ -1,0 +1,31 @@
+{
+  "agent_id": "privacy_agent",
+  "institutional_role": "Privacy and Data Governance",
+  "allowed_event_types": [
+    "CONSENT_SCOPE_UPDATE",
+    "DISCLOSURE_REQUEST"
+  ],
+  "allowed_observation_fields": [
+    "care_use_allowed",
+    "research_use_allowed",
+    "consent_status",
+    "requesting_institution",
+    "requested_data_scope",
+    "declared_purpose",
+    "minimum_necessary"
+  ],
+  "allowed_actions": [
+    "ALLOW_TREATMENT_USE",
+    "BLOCK_RESEARCH_USE",
+    "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY",
+    "DENY_UNAUTHORIZED_DISCLOSURE",
+    "REQUEST_PRIVACY_REVIEW",
+    "PRESERVE_PRIVACY_AUDIT_LOG"
+  ],
+  "forbidden_action_classes": [
+    "clinical_diagnosis",
+    "network_isolation",
+    "research_enrollment",
+    "ai_model_override"
+  ]
+}

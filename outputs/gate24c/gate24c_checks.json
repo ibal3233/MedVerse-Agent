@@ -1,0 +1,114 @@
+[
+  {
+    "check": "frozen_benchmark_hash_matches",
+    "pass": true,
+    "observed": "ebe2bb97f71e52a853822e612e396817c1d0a66e6525eb0a0190907936ff59ee",
+    "expected": "ebe2bb97f71e52a853822e612e396817c1d0a66e6525eb0a0190907936ff59ee"
+  },
+  {
+    "check": "authorized_preprocessing_only",
+    "pass": true,
+    "observed": "TRAIN-fitted numeric standardization + explicit session_origin missing category",
+    "expected": true
+  },
+  {
+    "check": "dev_only_hyperparameter_selection",
+    "pass": true,
+    "observed": 0.3,
+    "expected": [
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ]
+  },
+  {
+    "check": "opened_g4_not_used",
+    "pass": true,
+    "observed": 18,
+    "expected": "18 diagnostic-only rows excluded"
+  },
+  {
+    "check": "prospective_action_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.9"
+  },
+  {
+    "check": "prospective_action_macro_f1",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.85"
+  },
+  {
+    "check": "prospective_assessment_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.9"
+  },
+  {
+    "check": "prospective_assessment_macro_f1",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.8"
+  },
+  {
+    "check": "minimum_action_class_recall",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.8"
+  },
+  {
+    "check": "all_four_prospective_groups_evaluated",
+    "pass": true,
+    "observed": {
+      "g5": {
+        "records": 18,
+        "action_accuracy": 1.0,
+        "action_macro_f1": 1.0,
+        "assessment_accuracy": 1.0,
+        "assessment_macro_f1": 1.0
+      },
+      "g6": {
+        "records": 18,
+        "action_accuracy": 1.0,
+        "action_macro_f1": 1.0,
+        "assessment_accuracy": 1.0,
+        "assessment_macro_f1": 1.0
+      },
+      "g7": {
+        "records": 18,
+        "action_accuracy": 1.0,
+        "action_macro_f1": 1.0,
+        "assessment_accuracy": 1.0,
+        "assessment_macro_f1": 1.0
+      },
+      "g8": {
+        "records": 18,
+        "action_accuracy": 1.0,
+        "action_macro_f1": 1.0,
+        "assessment_accuracy": 1.0,
+        "assessment_macro_f1": 1.0
+      }
+    },
+    "expected": "g5-g8, 18 rows each"
+  },
+  {
+    "check": "hyperparameter_table_and_training_history",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 7,
+      "pdf": 7
+    },
+    "expected": ">=7 PNG and >=7 PDF"
+  }
+]

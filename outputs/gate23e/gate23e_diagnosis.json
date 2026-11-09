@@ -1,0 +1,35 @@
+{
+  "gate": "GATE_23E_RESEARCH_IRB_FEATURE_SUPPORT_AUDIT",
+  "training_changed": false,
+  "hyperparameters_changed": false,
+  "model_family_changed": false,
+  "critical_feature": "ix_active_approved_but_pseudo_deficient",
+  "critical_feature_support": {
+    "original_train": 0,
+    "dev": 0,
+    "id_test": 0,
+    "compositional_augmentation": 0,
+    "replay": 0,
+    "combined_train": 0,
+    "ood": 4
+  },
+  "ood_action_errors": 4,
+  "critical_interaction_errors": 4,
+  "other_ood_action_errors": 0,
+  "ood_true_action_counts": {
+    "BLOCK_RESEARCH_PROCESSING": 6,
+    "REQUEST_IRB_REVIEW": 18
+  },
+  "ood_pred_action_counts": {
+    "BLOCK_RESEARCH_PROCESSING": 6,
+    "REQUEST_IRB_REVIEW": 14,
+    "ALLOW_AUTHORIZED_RESEARCH_PROCESSING": 2,
+    "PRESERVE_RESEARCH_AUDIT_LOG": 2
+  },
+  "diagnostic_classification": "unsupported_higher_order_interaction_activation_and_opened_ood_benchmark_support_gap",
+  "primary_finding": "The active-consent + approved-IRB + deficient-pseudonymization interaction is never positively activated in original train, dev, ID test, compositional augmentation, or replay, but appears four times in OOD. All four Gate-23D action errors occur on those cases.",
+  "learning_implication": "An engineered interaction feature with zero positive training support cannot acquire a supervised coefficient representing its policy effect. The result therefore does not yet establish insufficient logistic-regression capacity.",
+  "evaluation_implication": "The current 24-case OOD benchmark has now been repeatedly opened for diagnosis. If its unsupported interaction is added to training, this benchmark must be retired from final post-repair generalization claims.",
+  "macro_f1_context": "The OOD target contains only BLOCK_RESEARCH_PROCESSING and REQUEST_IRB_REVIEW. The four false predictions introduce ALLOW and PRESERVE labels with no true OOD support, strongly depressing macro-F1. The frozen threshold is retained; this is interpretation, not threshold revision.",
+  "authorized_next_step": "Design a fresh, pre-frozen generalization protocol in which each policy-relevant primitive/interaction has training support but the evaluation still withholds novel combinations. Prefer grouped/nested combinatorial folds or a new untouched OOD holdout. Do not tune on the current 24 OOD cases."
+}

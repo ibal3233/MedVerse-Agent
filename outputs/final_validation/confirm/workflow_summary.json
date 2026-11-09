@@ -1,0 +1,62 @@
+[
+  {
+    "strategy": "LOCAL_FILTER",
+    "families": 8,
+    "workflow_obligations_met": 6,
+    "workflow_completion_rate": 0.75,
+    "clinical_review_completed": 8,
+    "unsafe_commits": 0,
+    "committed_actions": 24,
+    "research_releases": 2,
+    "payload_scope_errors": 0,
+    "prerequisite_order_errors": 0,
+    "p50_event_latency_ms": 0.9649399999999999,
+    "p95_event_latency_ms": 2.047229,
+    "audit_chains_valid": true
+  },
+  {
+    "strategy": "STATEFUL_FILTER",
+    "families": 8,
+    "workflow_obligations_met": 8,
+    "workflow_completion_rate": 1.0,
+    "clinical_review_completed": 8,
+    "unsafe_commits": 0,
+    "committed_actions": 25,
+    "research_releases": 3,
+    "payload_scope_errors": 0,
+    "prerequisite_order_errors": 0,
+    "p50_event_latency_ms": 0.8555215,
+    "p95_event_latency_ms": 1.619161,
+    "audit_chains_valid": true
+  },
+  {
+    "strategy": "MEDVERSE",
+    "families": 8,
+    "workflow_obligations_met": 8,
+    "workflow_completion_rate": 1.0,
+    "clinical_review_completed": 8,
+    "unsafe_commits": 0,
+    "committed_actions": 25,
+    "research_releases": 3,
+    "payload_scope_errors": 0,
+    "prerequisite_order_errors": 0,
+    "p50_event_latency_ms": 1.037811,
+    "p95_event_latency_ms": 3.408895,
+    "audit_chains_valid": true
+  },
+  {
+    "strategy": "DENY_ALL",
+    "families": 8,
+    "workflow_obligations_met": 0,
+    "workflow_completion_rate": 0.0,
+    "clinical_review_completed": 0,
+    "unsafe_commits": 0,
+    "committed_actions": 0,
+    "research_releases": 0,
+    "payload_scope_errors": 0,
+    "prerequisite_order_errors": 0,
+    "p50_event_latency_ms": 0.9780095,
+    "p95_event_latency_ms": 2.761729,
+    "audit_chains_valid": true
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "version": "0.1",
+  "purpose": "Gate 9 evaluation-harness validation cases",
+  "cases": [
+    {
+      "case_id": "C1_S1_FULL",
+      "description": "Full S1 complementary-risk sequence",
+      "expected": {
+        "route_E1": [
+          "hospital_agent"
+        ],
+        "route_E2": [
+          "cyber_network_agent"
+        ],
+        "route_E3": [
+          "cyber_network_agent"
+        ],
+        "coordination_state": "COMPLEMENTARY_RISK",
+        "human_review_required": true
+      }
+    },
+    {
+      "case_id": "C2_CLINICAL_ONLY",
+      "description": "Only the clinical deterioration assessment is available",
+      "expected": {
+        "coordination_state": "SINGLE_DOMAIN_ESCALATION",
+        "human_review_required": true
+      }
+    },
+    {
+      "case_id": "C3_TECHNICAL_ONLY",
+      "description": "Only the technical telemetry/device assessments are available",
+      "expected": {
+        "coordination_state": "TECHNICAL_VERIFICATION",
+        "human_review_required": false
+      }
+    },
+    {
+      "case_id": "C4_NO_RISK",
+      "description": "No risk assessment is supplied",
+      "expected": {
+        "coordination_state": "MONITOR",
+        "human_review_required": false
+      }
+    }
+  ]
+}

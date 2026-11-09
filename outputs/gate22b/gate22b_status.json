@@ -1,0 +1,13 @@
+{
+  "gate": "GATE_22B_PRIVACY_OOD_ERROR_DIAGNOSIS",
+  "status": "PASS",
+  "passed_checks": 5,
+  "total_checks": 5,
+  "diagnostic_classification": "compositional_generalization_and_rule_precedence_limitation",
+  "id_action_accuracy": 1.0,
+  "ood_action_accuracy": 0.5,
+  "ood_action_macro_f1": 0.29411764705882354,
+  "unsafe_executed_after_policy_shield": 0,
+  "figures_directory": "outputs/gate22b/figures",
+  "next_dependency": "Gate 22C targeted compositional-coverage intervention"
+}

@@ -1,0 +1,25 @@
+{
+  "intervention": "compositional_augmentation_plus_class_preserving_train_replay",
+  "diagnostic_basis": "Gate 23A found that augmentation omitted ALLOW and PRESERVE actions and that C selected before augmentation was unstable after distribution shift.",
+  "what_changed": [
+    "training-only class-preserving replay",
+    "hyperparameter selection occurs after augmentation",
+    "finer regularization grid around diagnosed transition"
+  ],
+  "what_did_not_change": [
+    "model family",
+    "feature semantics",
+    "original train/dev/test assignments",
+    "Research/IRB oracle",
+    "OOD benchmark",
+    "policy shield"
+  ],
+  "selection_rule": "C chosen on original DEV only using mean macro-F1 across all five outputs; ID test and OOD are not used for selection.",
+  "original_train_records": 54,
+  "compositional_augmentation_records": 33,
+  "replay_records": 47,
+  "combined_training_records": 134,
+  "ood_records": 24,
+  "generated_ood_overlap": 0,
+  "patient_data": false
+}

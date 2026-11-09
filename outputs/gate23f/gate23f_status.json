@@ -1,0 +1,22 @@
+{
+  "gate": "GATE_23F_RESEARCH_IRB_GENERALIZATION_PROTOCOL",
+  "status": "PASS",
+  "passed_checks": 8,
+  "total_checks": 8,
+  "training_performed": false,
+  "protocol_id": "MEDVERSE-G23F-RESEARCH-IRB-COMBINATORIAL-v2",
+  "factorial_states": 48,
+  "outer_folds": 4,
+  "states_per_fold": {
+    "0": 12,
+    "1": 12,
+    "2": 12,
+    "3": 12
+  },
+  "interaction_coverage_violations": 0,
+  "benchmark_sha256": "52112275b302101f7031a66ceffde38d1dc59b69233c750bfc771c29ccefbaba",
+  "current_ood_v1_status": "DIAGNOSTIC_ONLY",
+  "new_protocol_status": "PRE_FROZEN_BEFORE_REPAIR_TRAINING",
+  "figures_directory": "outputs/gate23f/figures",
+  "next_dependency": "Gate 23G: retrain/evaluate Research/IRB under the frozen four-fold combinatorial protocol, with model family and shield v2 unchanged."
+}

@@ -1,0 +1,20 @@
+{
+  "gate": "GATE_22B1_PRIVACY_ORACLE_SPLIT_COVERAGE_AUDIT",
+  "status": "PASS",
+  "passed_checks": 8,
+  "total_checks": 8,
+  "training_performed": false,
+  "observed_gate21a_gate22a_oracle_conflicts": 0,
+  "gate22a_ood_classification": {
+    "undefined_by_train_oracle": 40
+  },
+  "unique_model_visible_privacy_signatures": 8,
+  "train_dev_model_visible_overlap": 8,
+  "train_test_model_visible_overlap": 8,
+  "ood_exact_core_signatures_seen_in_train": 0,
+  "root_cause_classification": "train_oracle_underspecification_plus_semantic_split_leakage_plus_compositional_coverage_gap",
+  "gate22a_status_after_audit": "OPENED_DIAGNOSTIC_BENCHMARK",
+  "gate22c_scientific_status": "INTERVENTION_EVIDENCE_ONLY_PENDING_FRESH_CONFIRMATION",
+  "next_dependency": "Freeze a fresh Privacy confirmation benchmark under an explicitly adopted precedence oracle; only then promote the cross-agent learning methodology and resume Gate 24C.",
+  "figures_directory": "outputs/gate22b1/figures"
+}

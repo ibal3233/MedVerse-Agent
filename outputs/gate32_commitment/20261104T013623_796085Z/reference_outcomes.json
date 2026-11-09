@@ -1,0 +1,1239 @@
+{
+  "D01/UNCHANGED": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 19,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "D01/UPDATE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 19,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "D02/UNCHANGED": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 14,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "D02/UPDATE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 14,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "D03/UNCHANGED": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 12,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "D03/UPDATE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 12,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "D04/UNCHANGED": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": false,
+    "witness": [],
+    "achieved_times": {},
+    "states_examined": 6,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "D04/UPDATE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      2,
+      1
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 2,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 2
+    },
+    "states_examined": 17,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P01/PROMPT": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      3,
+      4
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A05"
+      }
+    ],
+    "achieved_times": {
+      "stream_isolated": 1,
+      "handoff_ack": 2,
+      "prepared_context": 2,
+      "clinical_review_done": 2
+    },
+    "states_examined": 149,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P01/LATE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      5,
+      4
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 4,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 4,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 4,
+        "proposal_id": "A05"
+      }
+    ],
+    "achieved_times": {
+      "stream_isolated": 1,
+      "handoff_ack": 4,
+      "prepared_context": 4,
+      "clinical_review_done": 4
+    },
+    "states_examined": 135,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P01/NEVER": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 116,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P01/DENIED_ALTERNATIVE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 116,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P02/PROMPT": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      4,
+      3
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 2,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A02"
+      }
+    ],
+    "achieved_times": {
+      "prepared_context": 2,
+      "contained": 2,
+      "affected_stream_down": 2,
+      "clinical_review_done": 2
+    },
+    "states_examined": 78,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P02/LATE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      8,
+      3
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 4,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 4,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 4,
+        "proposal_id": "A02"
+      }
+    ],
+    "achieved_times": {
+      "prepared_context": 4,
+      "contained": 4,
+      "affected_stream_down": 4,
+      "clinical_review_done": 4
+    },
+    "states_examined": 64,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P02/NEVER": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": false,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "contained": 1,
+      "all_links_down": 1
+    },
+    "states_examined": 43,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P02/INVALID_SCOPE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": false,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "contained": 1,
+      "all_links_down": 1
+    },
+    "states_examined": 43,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P03/PROMPT": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      2,
+      5,
+      5
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A06"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A05"
+      }
+    ],
+    "achieved_times": {
+      "research_review_done": 1,
+      "privacy_review_done": 1,
+      "clinical_review_done": 1,
+      "research_one": 2,
+      "research_two": 2
+    },
+    "states_examined": 302,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P03/LATE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      2,
+      7,
+      5
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A05"
+      },
+      {
+        "event": 4,
+        "proposal_id": "A06"
+      }
+    ],
+    "achieved_times": {
+      "research_review_done": 1,
+      "privacy_review_done": 1,
+      "clinical_review_done": 1,
+      "research_two": 2,
+      "research_one": 4
+    },
+    "states_examined": 256,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P03/NEVER": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      1,
+      1,
+      2,
+      4
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "research_review_done": 1,
+      "privacy_review_done": 1,
+      "research_one": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 190,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P03/INADEQUATE_ALTERNATIVE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      1,
+      1,
+      2,
+      4
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "research_review_done": 1,
+      "privacy_review_done": 1,
+      "research_one": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 190,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P04/VALID_REPLACEMENT": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      1,
+      3,
+      4
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A05"
+      }
+    ],
+    "achieved_times": {
+      "research_ok": 1,
+      "privacy_ok": 1,
+      "clinical_review_done": 1,
+      "research_done": 2
+    },
+    "states_examined": 158,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P04/NO_REPLACEMENT": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      2,
+      2,
+      4
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "research_ok": 1,
+      "privacy_ok": 1,
+      "research_done": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 110,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P04/PENDING_REPLACEMENT": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      2,
+      2,
+      4
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "research_ok": 1,
+      "privacy_ok": 1,
+      "research_done": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 110,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P04/EVIDENCE_NOT_AUTHORITY": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      2,
+      2,
+      4
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "research_ok": 1,
+      "privacy_ok": 1,
+      "research_done": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 110,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P05/ALTERNATIVE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      2,
+      3
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "stream_isolated": 1,
+      "handoff_ack": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 65,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P05/NONE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      2,
+      3
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "stream_isolated": 1,
+      "handoff_ack": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 29,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P05/REVIEW_EXTENDED": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      2,
+      3
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "stream_isolated": 1,
+      "handoff_ack": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 29,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P05/LATE_REVOCATION": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      0,
+      2,
+      3
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "stream_isolated": 1,
+      "handoff_ack": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 29,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P06/FRESH_MINIMAL": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      1,
+      4,
+      3
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 2,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "prepared_context": 2,
+      "dt_received": 2,
+      "clinical_review_done": 2
+    },
+    "states_examined": 106,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P06/MISSING_PROVENANCE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      2,
+      2,
+      2
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "dt_received": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 81,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P06/WRONG_RECIPIENT": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      2,
+      2,
+      2
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "dt_received": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 81,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P06/SOURCE_VERSION_CHANGED": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      2,
+      2,
+      2
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "dt_received": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 81,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P07/APPROVAL": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      1,
+      5,
+      3
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A03"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A04"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1,
+      "oversight_recorded": 2,
+      "research_done": 2
+    },
+    "states_examined": 56,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P07/NEVER": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      2,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 12,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P07/EVIDENCE_ONLY": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      2,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 12,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P07/DENIAL": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      2,
+      0,
+      1,
+      1
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1
+    },
+    "states_examined": 12,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P08/UNANNOUNCED_ALTERNATIVE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      2,
+      5,
+      3
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A04"
+      },
+      {
+        "event": 2,
+        "proposal_id": "A03"
+      }
+    ],
+    "achieved_times": {
+      "clinical_review_done": 1,
+      "research_one": 2,
+      "research_two": 2
+    },
+    "states_examined": 112,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P08/NO_NEW_REQUEST": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      0,
+      1,
+      2,
+      2
+    ],
+    "complete_within_declared_limits": true,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "research_one": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 36,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P08/DENIED_ALTERNATIVE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      1,
+      1,
+      2,
+      2
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "research_one": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 54,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  },
+  "P08/TOO_LATE": {
+    "noncausal": true,
+    "available_to_controller": false,
+    "objective": [
+      0,
+      1,
+      1,
+      2,
+      2
+    ],
+    "complete_within_declared_limits": false,
+    "clinical_within_limit": true,
+    "witness": [
+      {
+        "event": 1,
+        "proposal_id": "A02"
+      },
+      {
+        "event": 1,
+        "proposal_id": "A01"
+      }
+    ],
+    "achieved_times": {
+      "research_one": 1,
+      "clinical_review_done": 1
+    },
+    "states_examined": 60,
+    "interpretation": "Offline full-information upper bound. No independent clinical/legal approval."
+  }
+}

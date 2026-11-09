@@ -1,0 +1,61 @@
+[
+  {
+    "check": "zero_generated_ood_overlap",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "postaugmentation_dev_selection",
+    "pass": true,
+    "observed": 0.3,
+    "expected": [
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ]
+  },
+  {
+    "check": "id_action_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.90"
+  },
+  {
+    "check": "ood_action_accuracy",
+    "pass": false,
+    "observed": 0.75,
+    "expected": ">=0.80"
+  },
+  {
+    "check": "ood_action_macro_f1",
+    "pass": false,
+    "observed": 0.45,
+    "expected": ">=0.75"
+  },
+  {
+    "check": "ood_assessment_accuracy",
+    "pass": true,
+    "observed": 0.8333333333333334,
+    "expected": ">=0.80"
+  },
+  {
+    "check": "unsafe_execution_after_shield",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4,
+      "methodology": true
+    },
+    "expected": ">=4 PNG, >=4 PDF, methodology JSON"
+  }
+]

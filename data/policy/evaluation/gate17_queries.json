@@ -1,0 +1,91 @@
+{
+  "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "queries": [
+    {
+      "query_id": "Q1_PRIVACY_EN_DISCLOSURE",
+      "agent_id": "privacy_agent",
+      "language": "en",
+      "query": "External research partner requests the full patient record for an unspecified purpose and the request exceeds the minimum necessary data.",
+      "expected_any_top3": [
+        "KR-PIPA-ART18-PURPOSE-001",
+        "KR-HMDUG-2025-THIRDPARTY-001",
+        "KR-PIPCG-2026-THIRDPARTY-001",
+        "KR-HMDUG-2025-PURPOSE-MIN-001"
+      ]
+    },
+    {
+      "query_id": "Q2_PRIVACY_KO_DISCLOSURE",
+      "agent_id": "privacy_agent",
+      "language": "ko",
+      "query": "외부 연구기관이 목적을 구체적으로 밝히지 않고 환자의 전체 기록을 요청했으며 최소 필요 범위를 초과한다.",
+      "expected_any_top3": [
+        "KR-PIPA-ART18-PURPOSE-001",
+        "KR-HMDUG-2025-THIRDPARTY-001",
+        "KR-PIPCG-2026-THIRDPARTY-001",
+        "KR-HMDUG-2025-PURPOSE-MIN-001"
+      ]
+    },
+    {
+      "query_id": "Q3_RESEARCH_EN_IRB",
+      "agent_id": "research_irb_agent",
+      "language": "en",
+      "query": "Human-subject research requires institutional review board oversight and participant authorization.",
+      "expected_any_top3": [
+        "KR-BIOETHICS-ART10-IRB-001",
+        "KR-HMDUG-2025-IRB-001",
+        "KR-HMDUG-2025-IRB-DRB-001"
+      ]
+    },
+    {
+      "query_id": "Q4_CYBER_EN_SAFEGUARD",
+      "agent_id": "cyber_network_agent",
+      "language": "en",
+      "query": "Pseudonymized medical data and restoration information must be separated with least-privilege access and audit records.",
+      "expected_any_top3": [
+        "KR-PIPA-DECREE29-5-PSEUDONYM-SAFETY-001",
+        "KR-PIPCG-2026-SAFEGUARDS-001",
+        "KR-HMDUG-2025-ACCESS-001"
+      ]
+    },
+    {
+      "query_id": "Q5_REGULATOR_EN_HIGH_IMPACT",
+      "agent_id": "regulator_agent",
+      "language": "en",
+      "query": "High-impact artificial intelligence requires risk management, human oversight, safety documentation and regulatory review.",
+      "expected_any_top3": [
+        "KR-AI-ACT-ART34-HIGHIMPACT-DUTIES-001",
+        "KR-AI-ACT-ART33-HIGHIMPACT-001",
+        "KR-AI-ACT-ART32-SAFETY-001"
+      ]
+    },
+    {
+      "query_id": "Q6_HOSPITAL_EN_EMR",
+      "agent_id": "hospital_agent",
+      "language": "en",
+      "query": "Electronic medical records require safe preservation, integrity protection, and access logging for record modification.",
+      "expected_any_top3": [
+        "KR-MSA-ART23-EMR-001"
+      ]
+    },
+    {
+      "query_id": "Q7_PRIVACY_KO_RISK",
+      "agent_id": "privacy_agent",
+      "language": "ko",
+      "query": "제3자에게 가명정보를 제공하면서 제공기관이 처리환경을 통제할 수 없는 경우 위험도는 어떻게 판단하는가?",
+      "expected_any_top3": [
+        "KR-PIPCG-2026-RISK-LEVEL-001"
+      ]
+    },
+    {
+      "query_id": "Q8_RESEARCH_EN_MEDICAL_AI",
+      "agent_id": "research_irb_agent",
+      "language": "en",
+      "query": "Can pseudonymized CT images and clinical text be used for scientific research to develop a medical diagnosis AI model?",
+      "expected_any_top3": [
+        "KR-PIPCG-2026-AI-RESEARCH-001",
+        "KR-PIPCG-2026-UNSTRUCTURED-AI-001",
+        "KR-HMDUG-2025-AI-SCENARIO-001"
+      ]
+    }
+  ]
+}

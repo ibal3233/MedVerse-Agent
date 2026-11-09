@@ -1,0 +1,46 @@
+{
+  "dataset_id": "MEDVERSE-G21A-INSTITUTIONAL-LEARNING-v1",
+  "total_records": 480,
+  "agent_counts": {
+    "hospital_agent": 90,
+    "cyber_network_agent": 90,
+    "privacy_agent": 120,
+    "research_irb_agent": 90,
+    "regulator_agent": 90
+  },
+  "agent_split_counts": {
+    "hospital_agent": {
+      "train": 54,
+      "dev": 18,
+      "test": 18
+    },
+    "cyber_network_agent": {
+      "train": 54,
+      "dev": 18,
+      "test": 18
+    },
+    "privacy_agent": {
+      "train": 72,
+      "dev": 24,
+      "test": 24
+    },
+    "research_irb_agent": {
+      "train": 54,
+      "dev": 18,
+      "test": 18
+    },
+    "regulator_agent": {
+      "train": 54,
+      "dev": 18,
+      "test": 18
+    }
+  },
+  "split_counts": {
+    "train": 288,
+    "dev": 96,
+    "test": 96
+  },
+  "patient_data": false,
+  "generation_type": "deterministic_policy_safety_benchmark",
+  "split_strategy": "agent-aware grouped perturbation split"
+}

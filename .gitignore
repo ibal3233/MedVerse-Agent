@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.spyproject/
+.env
+.venv/
+
+# Keep external data local unless redistribution is explicitly intended
+data/external/*.csv
+!data/external/README.md
+
+# Generated outputs can be selectively committed later
+outputs/**/*.png

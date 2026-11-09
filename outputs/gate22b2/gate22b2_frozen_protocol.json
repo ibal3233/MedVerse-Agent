@@ -1,0 +1,53 @@
+{
+  "protocol_id": "MEDVERSE-G22B2-PRIVACY-CONFIRMATION-v2",
+  "oracle_version": "KR-PRIVACY-PRECEDENCE-v2",
+  "status": "PRE_FROZEN_BEFORE_PRIVACY_CONFIRMATION_TRAINING",
+  "training_performed": false,
+  "benchmark_design": {
+    "jurisdictions": 3,
+    "authorization_states": 3,
+    "minimum_necessary_states": 3,
+    "purpose_states": 3,
+    "audit_states": 2,
+    "fresh_request_contexts": 3,
+    "unique_core_states": 162,
+    "total_records": 486
+  },
+  "scientific_role": "Prospectively frozen synthetic confirmation benchmark under the explicitly adopted Privacy precedence oracle.",
+  "exact_model_visible_overlap_with_prior_learning_or_diagnostic_sets": 0,
+  "core_overlap_disclosure": {
+    "prospective_unique_core_states": 162,
+    "gate21a_core_overlap": 8,
+    "gate22a_core_overlap": 20,
+    "gate22c_core_overlap": 137
+  },
+  "important_boundary": "Freshness is at the exact model-visible record/context level. Many policy core states intentionally overlap previously adopted precedence semantics; this benchmark confirms the repaired oracle-consistent learner and context invariance, not externally novel law.",
+  "future_training_rule": "Train only on Gate-21A TRAIN plus the Gate-22C compositional augmentation. Gate-22A's 40 opened OOD records must not be added.",
+  "future_hyperparameter_rule": "Re-run C selection after augmentation using DEV only. The confirmation benchmark is never used for C selection.",
+  "hyperparameter_table_required": true,
+  "hyperparameter_table_columns": [
+    "C",
+    "train_action_macro_f1",
+    "dev_action_macro_f1",
+    "train_assessment_macro_f1",
+    "dev_assessment_macro_f1",
+    "selected"
+  ],
+  "training_history_required": true,
+  "training_history_definition": "For non-iterative logistic regression, use data-growth learning history + TRAIN/DEV hyperparameter trajectory + solver iterations. Do not fabricate epoch histories.",
+  "confirmation_thresholds": {
+    "action_accuracy": 0.95,
+    "action_macro_f1": 0.9,
+    "assessment_accuracy": 0.95,
+    "assessment_macro_f1": 0.9,
+    "boundary_accuracy": 0.95,
+    "enforcement_accuracy": 0.95,
+    "evidence_accuracy": 0.95,
+    "minimum_action_class_recall": 0.8,
+    "policy_inconsistent_execution_rate": 0.0
+  },
+  "old_gate22a_status": "DIAGNOSTIC_ONLY",
+  "gate22c_status": "INTERVENTION_EVIDENCE_PENDING_CONFIRMATION",
+  "claim_boundary": "Synthetic policy-state confirmation under explicitly adopted precedence semantics; not external clinical/legal validation.",
+  "benchmark_sha256": "046ed01a9392306042ebc432f9e7dc4db05fd38f57bb7db701a50238d072a176"
+}

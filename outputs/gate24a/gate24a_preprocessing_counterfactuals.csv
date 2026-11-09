@@ -1,0 +1,9 @@
+config,target,C,scale_numeric,explicit_missing_session_origin,dev_accuracy,dev_macro_f1,test_accuracy,test_macro_f1,solver_iterations
+baseline,target_action,0.3,False,False,1.0,1.0,0.8333333333333334,0.76,1370
+baseline,target_assessment,0.3,False,False,1.0,1.0,0.8333333333333334,0.6,625
+scale_only,target_action,0.3,True,False,1.0,1.0,1.0,1.0,19
+scale_only,target_assessment,0.3,True,False,1.0,1.0,1.0,1.0,16
+explicit_missing_only,target_action,0.3,False,True,1.0,1.0,1.0,1.0,1902
+explicit_missing_only,target_assessment,0.3,False,True,1.0,1.0,0.8333333333333334,0.6,478
+scale_plus_explicit_missing,target_action,0.3,True,True,1.0,1.0,1.0,1.0,19
+scale_plus_explicit_missing,target_assessment,0.3,True,True,1.0,1.0,1.0,1.0,18

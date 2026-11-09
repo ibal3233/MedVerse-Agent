@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "checks_passed": 31,
+  "checks_total": 31,
+  "transport": "Actual UI assets rendered offline; test-only fetch bridge to running HTTP backend. Native navigation and native download dispatch not verified.",
+  "native_navigation_error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:33679/\nCall log:\n  - navigating to \"http://127.0.0.1:33679/\", waiting until \"networkidle\"\n",
+  "browser": "144.0.7559.96",
+  "checks": [
+    {
+      "check": "Actual interface assets and live backend loaded",
+      "passed": true
+    },
+    {
+      "check": "Correct integrated default selected",
+      "passed": true
+    },
+    {
+      "check": "Future contracts not visible initially",
+      "passed": true
+    },
+    {
+      "check": "Actual progressive release 1",
+      "passed": true
+    },
+    {
+      "check": "Actual progressive release 2",
+      "passed": true
+    },
+    {
+      "check": "Clinical review committed before research request",
+      "passed": true
+    },
+    {
+      "check": "Cyber projection excludes clinical observation",
+      "passed": true
+    },
+    {
+      "check": "Actual progressive release 3",
+      "passed": true
+    },
+    {
+      "check": "Original research request does not cause disclosure",
+      "passed": true
+    },
+    {
+      "check": "Research projection excludes clinical observation",
+      "passed": true
+    },
+    {
+      "check": "Actual progressive release 4",
+      "passed": true
+    },
+    {
+      "check": "DT context checked at receiver",
+      "passed": true
+    },
+    {
+      "check": "Actual progressive release 5",
+      "passed": true
+    },
+    {
+      "check": "Alternative awaiting modeled research authority",
+      "passed": true
+    },
+    {
+      "check": "Actual progressive release 6",
+      "passed": true
+    },
+    {
+      "check": "Alternative research workflow committed",
+      "passed": true
+    },
+    {
+      "check": "Final event disables further release",
+      "passed": true
+    },
+    {
+      "check": "Actual proposal and rule receipt rendered",
+      "passed": true
+    },
+    {
+      "check": "Browser export contains actual modeled commits",
+      "passed": true
+    },
+    {
+      "check": "English query uses explicit BM25",
+      "passed": true
+    },
+    {
+      "check": "Korean query returns source-linked records",
+      "passed": true
+    },
+    {
+      "check": "Unknown exact ID refuses substitution",
+      "passed": true
+    },
+    {
+      "check": "Recorded experiment and available figure assets visible",
+      "passed": true
+    },
+    {
+      "check": "Limitations explicitly rendered",
+      "passed": true
+    },
+    {
+      "check": "UI can pause before commitment",
+      "passed": true
+    },
+    {
+      "check": "UI revalidates revoked pending actions",
+      "passed": true
+    },
+    {
+      "check": "Original DT adapter visible",
+      "passed": true
+    },
+    {
+      "check": "No fabricated initial vital values",
+      "passed": true
+    },
+    {
+      "check": "Actual exported DT data",
+      "passed": true
+    },
+    {
+      "check": "Dense failure not relabelled as BM25",
+      "passed": true
+    },
+    {
+      "check": "No JavaScript page errors",
+      "passed": true
+    }
+  ],
+  "javascript_errors": [],
+  "screenshots": [
+    "08_Performance.png",
+    "01_Ready.png",
+    "03_Original_Request_Withheld.png",
+    "05_Decision_Receipt.png",
+    "09_Dense_Status_Explicit.png",
+    "04_Authorized_Alternative.png",
+    "02_Clinical_Cyber_Handoff.png",
+    "07_Unknown_Source_Refused.png",
+    "06_Korean_Policy_Evidence.png"
+  ],
+  "independence": "Browser regression of known demonstration, not clinical validation"
+}

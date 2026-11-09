@@ -1,0 +1,46 @@
+{
+  "protocol_id": "MEDVERSE-G23F-RESEARCH-IRB-COMBINATORIAL-v2",
+  "status": "PRE_FROZEN_BEFORE_REPAIR_TRAINING",
+  "benchmark_semantics": "Full 3x4x2x2 factorial Research/IRB state space under the already frozen deterministic institutional oracle.",
+  "total_factorial_states": 48,
+  "outer_folds": 4,
+  "states_per_outer_fold": {
+    "0": 12,
+    "1": 12,
+    "2": 12,
+    "3": 12
+  },
+  "future_training_protocol": "For outer fold k, fit only on states whose outer_fold != k plus the frozen original Gate-21A TRAIN partition. Hyperparameters are selected using the frozen Gate-21A DEV partition only. Evaluate once on outer fold k.",
+  "aggregate_evaluation": "Pool predictions from all four held-out folds after each record has served as test exactly once. Report pooled accuracy, macro-F1, per-class metrics, confusion matrix and policy-inconsistent execution.",
+  "hyperparameter_policy": {
+    "selection_data": "Gate-21A DEV only",
+    "outer_test_used_for_selection": false,
+    "candidate_grid": [
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ]
+  },
+  "overfitting_controls": [
+    "protocol frozen before Gate-23G repair training",
+    "each factorial signature belongs to exactly one outer test fold",
+    "outer test fold excluded from fitting and hyperparameter selection",
+    "current Gate-23 OOD-v1 remains diagnostic-only",
+    "raw fold predictions retained",
+    "same frozen oracle and feature semantics used across folds"
+  ],
+  "interaction_learnability_rule": "Any engineered interaction activated in an outer test fold must have nonzero positive support on that fold's training side.",
+  "current_ood_v1_status": "DIAGNOSTIC_ONLY",
+  "claim_boundary": "This is a prospective combinatorial generalization benchmark over a synthetic policy state space. It is not an external clinical dataset and must not be described as externally unseen real-world data.",
+  "future_pass_thresholds": {
+    "pooled_action_accuracy": 0.9,
+    "pooled_action_macro_f1": 0.8,
+    "pooled_assessment_accuracy": 0.9,
+    "id_action_accuracy_each_fold_model": 0.9,
+    "policy_inconsistent_execution_rate": 0.0
+  },
+  "benchmark_sha256": "52112275b302101f7031a66ceffde38d1dc59b69233c750bfc771c29ccefbaba"
+}

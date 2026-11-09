@@ -1,0 +1,90 @@
+{
+  "gate": "GATE_22B_PRIVACY_OOD_ERROR_DIAGNOSIS",
+  "training_changed": false,
+  "model_changed": false,
+  "frozen_C": 1.0,
+  "id_metrics": {
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "action": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  },
+  "ood_metrics": {
+    "assessment": {
+      "accuracy": 0.55,
+      "macro_f1": 0.4392857142857143
+    },
+    "action": {
+      "accuracy": 0.5,
+      "macro_f1": 0.29411764705882354
+    },
+    "boundary": {
+      "accuracy": 0.65,
+      "macro_f1": 0.5935185185185184
+    },
+    "enforcement": {
+      "accuracy": 0.65,
+      "macro_f1": 0.5935185185185184
+    },
+    "evidence": {
+      "accuracy": 0.6,
+      "macro_f1": 0.375
+    }
+  },
+  "family_stats": {
+    "multiple_simultaneous_violations": {
+      "n": 6,
+      "correct": 2,
+      "action_accuracy": 0.3333333333333333
+    },
+    "audit_plus_policy_violation": {
+      "n": 4,
+      "correct": 2,
+      "action_accuracy": 0.5
+    },
+    "missing_evidence_precedence": {
+      "n": 14,
+      "correct": 6,
+      "action_accuracy": 0.42857142857142855
+    },
+    "wrong_jurisdiction_precedence": {
+      "n": 16,
+      "correct": 10,
+      "action_accuracy": 0.625
+    }
+  },
+  "complexity_stats": {
+    "simple": {
+      "n": 10,
+      "action_accuracy": 0.4,
+      "assessment_accuracy": 0.0
+    },
+    "multi_condition": {
+      "n": 30,
+      "action_accuracy": 0.5333333333333333,
+      "assessment_accuracy": 0.7333333333333333
+    }
+  },
+  "action_errors": 20,
+  "unsafe_raw_proposals": 0,
+  "unsafe_executed_after_policy_shield": 0,
+  "diagnostic_classification": "compositional_generalization_and_rule_precedence_limitation",
+  "primary_hypothesis": "The learner was trained on mostly atomic policy templates and therefore does not reliably represent precedence among multiple simultaneous institutional conditions. A linear classifier can interpolate the atomic mappings but cannot consistently reproduce the deterministic oracle's ordered rule composition on unseen combinations.",
+  "secondary_hypothesis": "Linear model capacity may contribute, but model complexity must not be changed until compositional data/representation coverage is tested."
+}

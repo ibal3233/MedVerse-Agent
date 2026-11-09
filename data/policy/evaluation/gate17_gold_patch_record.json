@@ -1,0 +1,44 @@
+{
+  "patch_id": "G17-GOLDSET-001",
+  "classification": "benchmark_ground_truth_misspecification",
+  "changed_component": "gate17_queries.expected_any_top3",
+  "unchanged_components": [
+    "embedding_model",
+    "corpus_records",
+    "similarity_function",
+    "top_k",
+    "jurisdiction_filter",
+    "agent_access_filter",
+    "policy_boundary_validator"
+  ],
+  "patched_queries": {
+    "Q1_PRIVACY_EN_DISCLOSURE": {
+      "before": [
+        "KR-PIPA-ART18-PURPOSE-001",
+        "KR-HMDUG-2025-THIRDPARTY-001",
+        "KR-PIPCG-2026-THIRDPARTY-001"
+      ],
+      "after": [
+        "KR-PIPA-ART18-PURPOSE-001",
+        "KR-HMDUG-2025-THIRDPARTY-001",
+        "KR-PIPCG-2026-THIRDPARTY-001",
+        "KR-HMDUG-2025-PURPOSE-MIN-001"
+      ],
+      "reason": "Query explicitly tests purpose limitation and minimum-necessary scope; KR-HMDUG-2025-PURPOSE-MIN-001 directly covers both concepts and was retrieved at rank 1 (EN) / rank 2 (KO)."
+    },
+    "Q2_PRIVACY_KO_DISCLOSURE": {
+      "before": [
+        "KR-PIPA-ART18-PURPOSE-001",
+        "KR-HMDUG-2025-THIRDPARTY-001",
+        "KR-PIPCG-2026-THIRDPARTY-001"
+      ],
+      "after": [
+        "KR-PIPA-ART18-PURPOSE-001",
+        "KR-HMDUG-2025-THIRDPARTY-001",
+        "KR-PIPCG-2026-THIRDPARTY-001",
+        "KR-HMDUG-2025-PURPOSE-MIN-001"
+      ],
+      "reason": "Query explicitly tests purpose limitation and minimum-necessary scope; KR-HMDUG-2025-PURPOSE-MIN-001 directly covers both concepts and was retrieved at rank 1 (EN) / rank 2 (KO)."
+    }
+  }
+}

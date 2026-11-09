@@ -1,0 +1,90 @@
+{
+  "gate": "GATE_23_RESEARCH_IRB_AGENT_LEARNING",
+  "status": "FAIL",
+  "passed_checks": 6,
+  "total_checks": 8,
+  "agent": "Research / IRB Agent",
+  "training_performed": true,
+  "model_family": "multinomial_logistic_regression",
+  "chosen_C": 0.1,
+  "original_train_records": 54,
+  "dev_records": 18,
+  "id_test_records": 18,
+  "augmentation_records": 33,
+  "combined_training_records": 87,
+  "ood_records": 24,
+  "ood_augmentation_overlap": 0,
+  "id_metrics": {
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "action": {
+      "accuracy": 0.6666666666666666,
+      "macro_f1": 0.41666666666666663
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  },
+  "ood_metrics_before": {
+    "assessment": {
+      "accuracy": 0.5833333333333334,
+      "macro_f1": 0.5238095238095237
+    },
+    "action": {
+      "accuracy": 0.6666666666666666,
+      "macro_f1": 0.35416666666666663
+    },
+    "boundary": {
+      "accuracy": 0.5833333333333334,
+      "macro_f1": 0.3684210526315789
+    },
+    "enforcement": {
+      "accuracy": 0.5833333333333334,
+      "macro_f1": 0.3684210526315789
+    },
+    "evidence": {
+      "accuracy": 0.5833333333333334,
+      "macro_f1": 0.3684210526315789
+    }
+  },
+  "ood_metrics_after": {
+    "assessment": {
+      "accuracy": 0.75,
+      "macro_f1": 0.5772727272727273
+    },
+    "action": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "boundary": {
+      "accuracy": 0.75,
+      "macro_f1": 0.6974789915966386
+    },
+    "enforcement": {
+      "accuracy": 0.75,
+      "macro_f1": 0.6974789915966386
+    },
+    "evidence": {
+      "accuracy": 0.75,
+      "macro_f1": 0.6974789915966386
+    }
+  },
+  "ood_action_errors_before": 8,
+  "ood_action_errors_after": 0,
+  "unsafe_raw_proposals_after": 0,
+  "unsafe_executed_after_policy_shield": 0,
+  "model_path": "outputs/gate23/research_irb_agent_model.joblib",
+  "figures_directory": "outputs/gate23/figures",
+  "next_dependency": "Gate 24 Cyber / Network Agent learning if Gate 23 passes."
+}

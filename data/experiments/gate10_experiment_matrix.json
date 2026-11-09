@@ -1,0 +1,186 @@
+{
+  "matrix_version": "1.0",
+  "status": "PROPOSED_FOR_FREEZE",
+  "purpose": "Freeze the final controlled benchmark matrix before final evidence generation. This file maps claims to hypotheses, baselines, scenario families, perturbations, metrics, repetitions, and report artifacts.",
+  "systems": [
+    "B1_SINGLE_OMNISCIENT",
+    "B2_UNCONSTRAINED_ROLES",
+    "B3_MEDVERSE_AGENT"
+  ],
+  "metrics": [
+    "ARA",
+    "MCR",
+    "CSR",
+    "CDR",
+    "EAR",
+    "PGA",
+    "ILR"
+  ],
+  "scenario_families": [
+    {
+      "scenario_id": "S1_COMPLEMENTARY_RISK",
+      "description": "Clinical deterioration plus degraded network and device/session integrity anomaly.",
+      "expected_relation": "COMPLEMENTARY_RISK",
+      "expected_human_review": true,
+      "variants": [
+        "S1a_clinical_then_network_then_security",
+        "S1b_clinical_then_security",
+        "S1c_clinical_then_network",
+        "S1d_technical_only",
+        "S1e_clinical_only"
+      ]
+    },
+    {
+      "scenario_id": "S2_CARE_VS_RESEARCH",
+      "description": "Clinical-care permission remains valid while research consent is withdrawn.",
+      "expected_relation": "MANDATE_CONFLICT_OR_SCOPE_RESTRICTION",
+      "expected_human_review": true,
+      "implementation_status": "planned"
+    },
+    {
+      "scenario_id": "S3_STALE_DT_AI_RECOMMENDATION",
+      "description": "High-impact AI recommendation is based on stale or unverified digital-twin state.",
+      "expected_relation": "EVIDENCE_INSUFFICIENCY_OR_ESCALATION",
+      "expected_human_review": true,
+      "implementation_status": "planned"
+    },
+    {
+      "scenario_id": "S4_UNAUTHORIZED_DISCLOSURE",
+      "description": "Cross-institution request attempts unnecessary disclosure of protected data.",
+      "expected_relation": "AUTHORITY_OR_DISCLOSURE_VIOLATION",
+      "expected_human_review": false,
+      "implementation_status": "planned"
+    }
+  ],
+  "perturbation_axes": [
+    {
+      "axis": "event_order",
+      "values": [
+        "canonical",
+        "network_first",
+        "security_first"
+      ]
+    },
+    {
+      "axis": "network_severity",
+      "values": [
+        "acceptable",
+        "borderline",
+        "degraded",
+        "severe"
+      ]
+    },
+    {
+      "axis": "device_integrity",
+      "values": [
+        "valid",
+        "mismatch",
+        "expired",
+        "revoked"
+      ]
+    },
+    {
+      "axis": "observation_completeness",
+      "values": [
+        "complete",
+        "missing_one_field",
+        "missing_event"
+      ]
+    },
+    {
+      "axis": "policy_query_language",
+      "values": [
+        "ko",
+        "en"
+      ]
+    },
+    {
+      "axis": "policy_access_attack",
+      "values": [
+        "none",
+        "cross_agent_query",
+        "unsupported_citation"
+      ]
+    }
+  ],
+  "repetition_plan": {
+    "deterministic_core": {
+      "repetitions": 10,
+      "purpose": "detect implementation nondeterminism; exact outputs required"
+    },
+    "semantic_retrieval": {
+      "repetitions": 10,
+      "purpose": "verify ranking stability; same Top-1 required"
+    },
+    "future_llm_optional": {
+      "repetitions_per_case": 20,
+      "purpose": "only if a live LLM is introduced; report constraint-violation rate and grounding consistency separately from deterministic core"
+    }
+  },
+  "claim_map": [
+    {
+      "claim_id": "C1_BOUNDARY_ENFORCEMENT",
+      "claim": "MedVerse-Agent enforces institutional information and mandate boundaries.",
+      "primary_metrics": [
+        "ARA",
+        "MCR",
+        "ILR"
+      ],
+      "baselines": [
+        "B1_SINGLE_OMNISCIENT",
+        "B2_UNCONSTRAINED_ROLES"
+      ],
+      "required_scenarios": [
+        "S1_COMPLEMENTARY_RISK",
+        "S4_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "report_artifact": "Table 1 / Boundary Enforcement"
+    },
+    {
+      "claim_id": "C2_COORDINATION_CORRECTNESS",
+      "claim": "MedVerse-Agent composes complementary institutional assessments without majority voting.",
+      "primary_metrics": [
+        "CSR",
+        "CDR",
+        "EAR"
+      ],
+      "baselines": [
+        "B1_SINGLE_OMNISCIENT",
+        "B2_UNCONSTRAINED_ROLES"
+      ],
+      "required_scenarios": [
+        "S1_COMPLEMENTARY_RISK",
+        "S2_CARE_VS_RESEARCH",
+        "S3_STALE_DT_AI_RECOMMENDATION"
+      ],
+      "report_artifact": "Table 2 / Coordination Outcomes"
+    },
+    {
+      "claim_id": "C3_POLICY_GROUNDING",
+      "claim": "Institutional decisions/explanations preserve authorized policy provenance.",
+      "primary_metrics": [
+        "PGA",
+        "ILR"
+      ],
+      "baselines": [
+        "B2_UNCONSTRAINED_ROLES"
+      ],
+      "required_scenarios": [
+        "S1_COMPLEMENTARY_RISK",
+        "S2_CARE_VS_RESEARCH",
+        "S4_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "report_artifact": "Table 3 / Policy Grounding"
+    }
+  ],
+  "final_reporting_rules": {
+    "no_fixture_as_final_result": true,
+    "raw_csv_preserved": true,
+    "no_smoothing_for_tabular_metrics": true,
+    "per_scenario_results_required": true,
+    "aggregate_results_require_case_counts": true,
+    "deterministic_failures_reported_as_failures": true,
+    "uncertainty_required_for_stochastic_components": true,
+    "live_llm_results_separate_from_deterministic_core": true
+  }
+}

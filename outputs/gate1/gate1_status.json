@@ -1,0 +1,15 @@
+{
+  "gate": "GATE_1_DATA_LOADING",
+  "core_status": "PASS",
+  "external_public_data_status": "HOLD",
+  "external_public_data_sha256": null,
+  "core_summary": {
+    "PASS": 16
+  },
+  "external_summary": {},
+  "interpretation": {
+    "PASS": "All predefined checks passed.",
+    "FAIL": "At least one predefined validation failed. Diagnose before changing schema/data.",
+    "HOLD": "Authoritative external file is not present yet; do not substitute fabricated data."
+  }
+}

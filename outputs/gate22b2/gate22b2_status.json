@@ -1,0 +1,43 @@
+{
+  "gate": "GATE_22B2_PRIVACY_CONFIRMATION_BENCHMARK_FREEZE",
+  "status": "PASS",
+  "passed_checks": 11,
+  "total_checks": 11,
+  "training_performed": false,
+  "protocol_id": "MEDVERSE-G22B2-PRIVACY-CONFIRMATION-v2",
+  "oracle_version": "KR-PRIVACY-PRECEDENCE-v2",
+  "prospective_records": 486,
+  "unique_core_states": 162,
+  "fresh_contexts": [
+    "institutional_quality_review",
+    "cross_institutional_referral",
+    "data_governance_audit"
+  ],
+  "exact_model_visible_overlap_with_prior_sets": 0,
+  "core_overlap_transparency": {
+    "prospective_unique_core_states": 162,
+    "gate21a_core_overlap": 8,
+    "gate22a_core_overlap": 20,
+    "gate22c_core_overlap": 137
+  },
+  "action_class_support": {
+    "DENY_UNAUTHORIZED_DISCLOSURE": 348,
+    "REQUEST_ADDITIONAL_AUTHORIZATION": 120,
+    "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY": 12,
+    "PRESERVE_PRIVACY_AUDIT_LOG": 3,
+    "ALLOW_AUTHORIZED_DISCLOSURE": 3
+  },
+  "assessment_class_support": {
+    "FOREIGN_POLICY_NOT_GOVERNING_AUTHORITY": 324,
+    "DISCLOSURE_AUTHORIZATION_UNKNOWN": 114,
+    "UNAUTHORIZED_OR_EXCESSIVE_DISCLOSURE_REQUEST": 42,
+    "AUTHORIZED_MINIMUM_NECESSARY_DISCLOSURE": 6
+  },
+  "benchmark_sha256": "046ed01a9392306042ebc432f9e7dc4db05fd38f57bb7db701a50238d072a176",
+  "hyperparameter_table_required_in_next_gate": true,
+  "training_history_required_in_next_gate": true,
+  "old_gate22a_status": "DIAGNOSTIC_ONLY",
+  "gate22c_status": "INTERVENTION_EVIDENCE_PENDING_CONFIRMATION",
+  "figures_directory": "outputs/gate22b2/figures",
+  "next_dependency": "Gate 22B.3: retrain Privacy using Gate-21A TRAIN + Gate-22C augmentation; perform DEV-only C selection; save hyperparameter results table and training-history diagnostics; evaluate once on the frozen 486-record confirmation benchmark."
+}

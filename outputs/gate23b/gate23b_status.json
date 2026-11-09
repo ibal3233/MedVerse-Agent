@@ -1,0 +1,78 @@
+{
+  "gate": "GATE_23B_RESEARCH_IRB_BALANCED_AUGMENTATION",
+  "status": "FAIL",
+  "passed_checks": 6,
+  "total_checks": 8,
+  "agent": "Research / IRB Agent",
+  "model_family": "multinomial_logistic_regression",
+  "chosen_C_postaugmentation": 0.3,
+  "original_train_records": 54,
+  "compositional_augmentation_records": 33,
+  "class_preserving_replay_records": 47,
+  "combined_training_records": 134,
+  "original_action_counts": {
+    "ALLOW_AUTHORIZED_RESEARCH_PROCESSING": 9,
+    "BLOCK_RESEARCH_PROCESSING": 18,
+    "REQUEST_IRB_REVIEW": 18,
+    "PRESERVE_RESEARCH_AUDIT_LOG": 9
+  },
+  "compositional_action_counts": {
+    "BLOCK_RESEARCH_PROCESSING": 13,
+    "REQUEST_IRB_REVIEW": 20
+  },
+  "replay_action_counts": {
+    "ALLOW_AUTHORIZED_RESEARCH_PROCESSING": 20,
+    "BLOCK_RESEARCH_PROCESSING": 7,
+    "PRESERVE_RESEARCH_AUDIT_LOG": 20
+  },
+  "ood_overlap": 0,
+  "id_metrics": {
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "action": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  },
+  "ood_metrics": {
+    "assessment": {
+      "accuracy": 0.8333333333333334,
+      "macro_f1": 0.6666666666666666
+    },
+    "action": {
+      "accuracy": 0.75,
+      "macro_f1": 0.45
+    },
+    "boundary": {
+      "accuracy": 0.75,
+      "macro_f1": 0.6974789915966386
+    },
+    "enforcement": {
+      "accuracy": 0.75,
+      "macro_f1": 0.6974789915966386
+    },
+    "evidence": {
+      "accuracy": 0.75,
+      "macro_f1": 0.6974789915966386
+    }
+  },
+  "ood_action_errors": 6,
+  "unsafe_raw_proposals": 2,
+  "unsafe_executed_after_policy_shield": 0,
+  "figures_directory": "outputs/gate23b/figures",
+  "next_dependency": "If PASS, freeze Research/IRB learner and proceed to Cyber/Network. If FAIL, diagnose residual representation/rule-precedence limitation before changing the model family."
+}

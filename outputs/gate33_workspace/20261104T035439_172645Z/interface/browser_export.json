@@ -1,0 +1,3834 @@
+{
+  "release": "Gate33",
+  "family_id": "P01",
+  "continuation_id": "PROMPT",
+  "strategy": "MEDVERSE_COMMITMENT",
+  "runtime_trace": {
+    "snapshot": {
+      "strategy": "MEDVERSE_COMMITMENT",
+      "clock": 2,
+      "committed": [
+        "A01",
+        "A03",
+        "A04",
+        "A05"
+      ],
+      "achieved": [
+        "clinical_review_done",
+        "handoff_ack",
+        "prepared_context",
+        "stream_isolated"
+      ],
+      "known_goals": [
+        "clinical_review_done",
+        "stream_isolated"
+      ],
+      "missing_goals": [],
+      "events": [
+        {
+          "event": 1,
+          "visible_history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+          "decisions": [
+            {
+              "proposal_id": "A01",
+              "owner": "hospital_agent",
+              "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+              "decision": "PREPARE",
+              "current_reason": "AUTHORIZED_PREPARATION_IS_NOT_COMPLETION",
+              "known_prerequisites": [],
+              "pending_review_ref": null,
+              "latest_commit_time": 6,
+              "wait_expiry": null,
+              "wait_start": null,
+              "allowed_preparation_ids": [],
+              "final_revalidation_required": true,
+              "authorizes_action": false
+            },
+            {
+              "proposal_id": "A02",
+              "owner": "hospital_agent",
+              "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+              "decision": "WAIT",
+              "current_reason": "VISIBLE_PENDING_REVIEW",
+              "known_prerequisites": [],
+              "pending_review_ref": "R1",
+              "latest_commit_time": 4,
+              "wait_expiry": 3,
+              "wait_start": 1,
+              "allowed_preparation_ids": [
+                "A01"
+              ],
+              "final_revalidation_required": true,
+              "authorizes_action": false
+            },
+            {
+              "proposal_id": "A03",
+              "owner": "cyber_network_agent",
+              "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+              "decision": "WAIT",
+              "current_reason": "VISIBLE_PENDING_REVIEW",
+              "known_prerequisites": [],
+              "pending_review_ref": "R2",
+              "latest_commit_time": 5,
+              "wait_expiry": 3,
+              "wait_start": 1,
+              "allowed_preparation_ids": [
+                "A01"
+              ],
+              "final_revalidation_required": true,
+              "authorizes_action": false
+            },
+            {
+              "proposal_id": "A04",
+              "owner": "hospital_agent",
+              "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+              "decision": "COMMIT",
+              "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+              "known_prerequisites": [
+                "stream_isolated"
+              ],
+              "pending_review_ref": null,
+              "latest_commit_time": 6,
+              "wait_expiry": null,
+              "wait_start": null,
+              "allowed_preparation_ids": [],
+              "final_revalidation_required": true,
+              "authorizes_action": false
+            }
+          ],
+          "before_done": [],
+          "done": [
+            "A01"
+          ],
+          "achieved": [
+            "prepared_context"
+          ],
+          "missing": [
+            "clinical_review_done",
+            "stream_isolated"
+          ],
+          "selection": {
+            "sequence": [],
+            "objective": [
+              1,
+              2,
+              0,
+              0
+            ],
+            "disposition": "NO_FEASIBLE_WORKFLOW_UNDER_MODELED_CONSTRAINTS",
+            "selection_validator_calls": 0,
+            "search_states": 4,
+            "coordination_messages_measured": false,
+            "note": "Common uncertainty classifier held fixed; not an independent treatment variable."
+          },
+          "receipt_indices": [
+            1
+          ]
+        },
+        {
+          "event": 2,
+          "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "decisions": [
+            {
+              "proposal_id": "A02",
+              "owner": "hospital_agent",
+              "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+              "decision": "COMMIT",
+              "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+              "known_prerequisites": [],
+              "pending_review_ref": "R1",
+              "latest_commit_time": 4,
+              "wait_expiry": null,
+              "wait_start": null,
+              "allowed_preparation_ids": [
+                "A01"
+              ],
+              "final_revalidation_required": true,
+              "authorizes_action": false
+            },
+            {
+              "proposal_id": "A03",
+              "owner": "cyber_network_agent",
+              "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+              "decision": "COMMIT",
+              "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+              "known_prerequisites": [],
+              "pending_review_ref": "R2",
+              "latest_commit_time": 5,
+              "wait_expiry": null,
+              "wait_start": null,
+              "allowed_preparation_ids": [
+                "A01"
+              ],
+              "final_revalidation_required": true,
+              "authorizes_action": false
+            },
+            {
+              "proposal_id": "A04",
+              "owner": "hospital_agent",
+              "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+              "decision": "COMMIT",
+              "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+              "known_prerequisites": [
+                "stream_isolated"
+              ],
+              "pending_review_ref": null,
+              "latest_commit_time": 6,
+              "wait_expiry": null,
+              "wait_start": null,
+              "allowed_preparation_ids": [],
+              "final_revalidation_required": true,
+              "authorizes_action": false
+            },
+            {
+              "proposal_id": "A05",
+              "owner": "hospital_agent",
+              "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+              "decision": "COMMIT",
+              "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+              "known_prerequisites": [
+                "handoff_ack",
+                "prepared_context"
+              ],
+              "pending_review_ref": null,
+              "latest_commit_time": 6,
+              "wait_expiry": null,
+              "wait_start": null,
+              "allowed_preparation_ids": [],
+              "final_revalidation_required": true,
+              "authorizes_action": false
+            }
+          ],
+          "before_done": [
+            "A01"
+          ],
+          "done": [
+            "A01",
+            "A03",
+            "A04",
+            "A05"
+          ],
+          "achieved": [
+            "clinical_review_done",
+            "handoff_ack",
+            "prepared_context",
+            "stream_isolated"
+          ],
+          "missing": [],
+          "selection": {
+            "sequence": [
+              "A03",
+              "A04",
+              "A05"
+            ],
+            "objective": [
+              0,
+              0,
+              0,
+              3
+            ],
+            "disposition": "FEASIBLE_NOW",
+            "selection_validator_calls": 11,
+            "search_states": 12,
+            "coordination_messages_measured": false,
+            "note": "Common uncertainty classifier held fixed; not an independent treatment variable."
+          },
+          "receipt_indices": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "sequence": 1,
+          "event": 1,
+          "plan_id": "ac667b19d0bd51ec4f9cab4e",
+          "proposal_id": "A01",
+          "owner": "hospital_agent",
+          "stage": "PREPARE",
+          "actual_proposal": {
+            "id": "A01",
+            "owner": "hospital_agent",
+            "kind": "HANDOFF_ACK",
+            "task": "task_A01",
+            "provides": [
+              "prepared_context"
+            ],
+            "needs": [],
+            "forbids": [],
+            "exclusive_groups": [],
+            "fields": [],
+            "recipient": "clinical_workspace",
+            "purpose": "care",
+            "state_requirements": [],
+            "priority": "REQUESTED",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A01"
+            ],
+            "evidence": [],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          "permitted": true,
+          "reason": "PERMIT",
+          "policy_snapshot": "G32-MODELED-1",
+          "authority_epoch": 1,
+          "source_ids": [],
+          "source_record_hashes": {},
+          "visible_history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+          "modeled_side_effect": {
+            "tokens": [
+              "prepared_context"
+            ],
+            "recipient": "clinical_workspace",
+            "fields": []
+          },
+          "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "simulation_only": true,
+          "hash": "723e19bf9a0577cf0f29e77ae48762c08439904351fedc3d62cd050fab0382ae"
+        },
+        {
+          "sequence": 2,
+          "event": 2,
+          "plan_id": "f52da2290d6e89e096326429",
+          "proposal_id": "A03",
+          "owner": "cyber_network_agent",
+          "stage": "COMMIT",
+          "actual_proposal": {
+            "id": "A03",
+            "owner": "cyber_network_agent",
+            "kind": "QUARANTINE_STREAM",
+            "task": "task_A03",
+            "provides": [
+              "stream_isolated"
+            ],
+            "needs": [],
+            "forbids": [],
+            "exclusive_groups": [],
+            "fields": [],
+            "recipient": "technical_workspace",
+            "purpose": "safety",
+            "state_requirements": [],
+            "priority": "REQUESTED",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A03"
+            ],
+            "evidence": [
+              "KR-PIPC-SAFE-2026-001"
+            ],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          "permitted": true,
+          "reason": "PERMIT",
+          "policy_snapshot": "G32-MODELED-1",
+          "authority_epoch": 1,
+          "source_ids": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "source_record_hashes": {
+            "KR-PIPC-SAFE-2026-001": "2b9d68effb808b69cae47da3aa141213fe03ab9ac4a0eaf3878803afc1e83b1d"
+          },
+          "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "modeled_side_effect": {
+            "tokens": [
+              "stream_isolated"
+            ],
+            "recipient": "technical_workspace",
+            "fields": []
+          },
+          "previous_hash": "723e19bf9a0577cf0f29e77ae48762c08439904351fedc3d62cd050fab0382ae",
+          "simulation_only": true,
+          "hash": "577917770611e19fd00c168f416e4c86846a4a34ea7418501b56385c62f0b63c"
+        },
+        {
+          "sequence": 3,
+          "event": 2,
+          "plan_id": "f52da2290d6e89e096326429",
+          "proposal_id": "A04",
+          "owner": "hospital_agent",
+          "stage": "COMMIT",
+          "actual_proposal": {
+            "id": "A04",
+            "owner": "hospital_agent",
+            "kind": "HANDOFF_ACK",
+            "task": "task_A04",
+            "provides": [
+              "handoff_ack"
+            ],
+            "needs": [
+              "stream_isolated"
+            ],
+            "forbids": [],
+            "exclusive_groups": [],
+            "fields": [],
+            "recipient": "clinical_workspace",
+            "purpose": "care",
+            "state_requirements": [],
+            "priority": "REQUESTED",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A04"
+            ],
+            "evidence": [],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          "permitted": true,
+          "reason": "PERMIT",
+          "policy_snapshot": "G32-MODELED-1",
+          "authority_epoch": 1,
+          "source_ids": [],
+          "source_record_hashes": {},
+          "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "modeled_side_effect": {
+            "tokens": [
+              "handoff_ack"
+            ],
+            "recipient": "clinical_workspace",
+            "fields": []
+          },
+          "previous_hash": "577917770611e19fd00c168f416e4c86846a4a34ea7418501b56385c62f0b63c",
+          "simulation_only": true,
+          "hash": "9da483719bc8c148aa364de76cbc0bba50f689dadf79f16f65e8f88d677599ba"
+        },
+        {
+          "sequence": 4,
+          "event": 2,
+          "plan_id": "f52da2290d6e89e096326429",
+          "proposal_id": "A05",
+          "owner": "hospital_agent",
+          "stage": "COMMIT",
+          "actual_proposal": {
+            "id": "A05",
+            "owner": "hospital_agent",
+            "kind": "CLINICAL_REVIEW",
+            "task": "task_A05",
+            "provides": [
+              "clinical_review_done"
+            ],
+            "needs": [
+              "handoff_ack",
+              "prepared_context"
+            ],
+            "forbids": [],
+            "exclusive_groups": [
+              "care_route"
+            ],
+            "fields": [],
+            "recipient": "clinical_workspace",
+            "purpose": "care",
+            "state_requirements": [],
+            "priority": "ALTERNATIVE",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A05"
+            ],
+            "evidence": [],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          "permitted": true,
+          "reason": "PERMIT",
+          "policy_snapshot": "G32-MODELED-1",
+          "authority_epoch": 1,
+          "source_ids": [],
+          "source_record_hashes": {},
+          "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "modeled_side_effect": {
+            "tokens": [
+              "clinical_review_done"
+            ],
+            "recipient": "clinical_workspace",
+            "fields": []
+          },
+          "previous_hash": "9da483719bc8c148aa364de76cbc0bba50f689dadf79f16f65e8f88d677599ba",
+          "simulation_only": true,
+          "hash": "ac3a3d8f56ae55bf41ed184a336e3f3c208beb9c21c642d06c01ea144eca810e"
+        }
+      ],
+      "current": {
+        "case": {
+          "jurisdiction": "KR",
+          "policy_snapshot": "G32-MODELED-1",
+          "epoch": 1,
+          "cursor": 2,
+          "freshness_events": 2,
+          "initial_tokens": [],
+          "actions": [
+            {
+              "id": "A01",
+              "owner": "hospital_agent",
+              "kind": "HANDOFF_ACK",
+              "task": "task_A01",
+              "provides": [
+                "prepared_context"
+              ],
+              "needs": [],
+              "forbids": [],
+              "exclusive_groups": [],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A01"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            {
+              "id": "A02",
+              "owner": "hospital_agent",
+              "kind": "CLINICAL_REVIEW",
+              "task": "task_A02",
+              "provides": [
+                "clinical_review_done"
+              ],
+              "needs": [],
+              "forbids": [
+                "stream_isolated"
+              ],
+              "exclusive_groups": [
+                "care_route"
+              ],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A02"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            {
+              "id": "A03",
+              "owner": "cyber_network_agent",
+              "kind": "QUARANTINE_STREAM",
+              "task": "task_A03",
+              "provides": [
+                "stream_isolated"
+              ],
+              "needs": [],
+              "forbids": [],
+              "exclusive_groups": [],
+              "fields": [],
+              "recipient": "technical_workspace",
+              "purpose": "safety",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A03"
+              ],
+              "evidence": [
+                "KR-PIPC-SAFE-2026-001"
+              ],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            {
+              "id": "A04",
+              "owner": "hospital_agent",
+              "kind": "HANDOFF_ACK",
+              "task": "task_A04",
+              "provides": [
+                "handoff_ack"
+              ],
+              "needs": [
+                "stream_isolated"
+              ],
+              "forbids": [],
+              "exclusive_groups": [],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A04"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            {
+              "id": "A05",
+              "owner": "hospital_agent",
+              "kind": "CLINICAL_REVIEW",
+              "task": "task_A05",
+              "provides": [
+                "clinical_review_done"
+              ],
+              "needs": [
+                "handoff_ack",
+                "prepared_context"
+              ],
+              "forbids": [],
+              "exclusive_groups": [
+                "care_route"
+              ],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "ALTERNATIVE",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A05"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            }
+          ],
+          "goals": [
+            "clinical_review_done",
+            "stream_isolated"
+          ],
+          "task_purposes": [
+            "care",
+            "safety"
+          ],
+          "adequacy": {
+            "task_A01": [
+              "adequate"
+            ],
+            "task_A02": [
+              "adequate"
+            ],
+            "task_A03": [
+              "adequate"
+            ],
+            "task_A04": [
+              "adequate"
+            ],
+            "task_A05": [
+              "adequate"
+            ]
+          },
+          "facts": {},
+          "authority_register": {
+            "G-A01": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A01"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A02": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A02"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A03": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_cyber_network_agent",
+              "action_ids": [
+                "A03"
+              ],
+              "purpose": "safety",
+              "recipient": "technical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A04": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A04"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A05": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A05"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            }
+          },
+          "authority_register_hashes": {
+            "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+            "G-A02": "1cd0b85c7816b3ca638bc616130181f95de448b3757837c885d5304e9ddb882a",
+            "G-A03": "70df59aeb48f7713171bf3c319f0d9b0178d7badf473b23075e184f30909516b",
+            "G-A04": "c877a0942a76aa659f92db9a4be57609728f1aea41a32a9aa8e4a66c92f76bb7",
+            "G-A05": "82d4b5a145945c7c18a86592f9e8c6df43fc7c0fb70a87f84887b8ca1318c9b0"
+          },
+          "evidence_register": {
+            "KR-PIPC-SAFE-2026-001": {
+              "status": "AVAILABLE",
+              "policy_snapshot": "G32-MODELED-1",
+              "interpretation_status": "PENDING_REVIEW"
+            }
+          },
+          "field_constraints": [],
+          "envelopes": {},
+          "trusted_envelope_hashes": []
+        },
+        "timing": {
+          "A01": {
+            "owner": "hospital_agent",
+            "effect": "PREPARATORY",
+            "can_defer": false,
+            "required_immediate": false,
+            "latest_commit_time": 6,
+            "review_ref": null,
+            "allowed_preparation_ids": []
+          },
+          "A02": {
+            "owner": "hospital_agent",
+            "effect": "IRREVERSIBLE",
+            "can_defer": true,
+            "required_immediate": false,
+            "latest_commit_time": 4,
+            "review_ref": "R1",
+            "allowed_preparation_ids": [
+              "A01"
+            ]
+          },
+          "A03": {
+            "owner": "cyber_network_agent",
+            "effect": "IRREVERSIBLE",
+            "can_defer": true,
+            "required_immediate": false,
+            "latest_commit_time": 5,
+            "review_ref": "R2",
+            "allowed_preparation_ids": [
+              "A01"
+            ]
+          },
+          "A04": {
+            "owner": "hospital_agent",
+            "effect": "IRREVERSIBLE",
+            "can_defer": false,
+            "required_immediate": false,
+            "latest_commit_time": 6,
+            "review_ref": null,
+            "allowed_preparation_ids": []
+          },
+          "A05": {
+            "owner": "hospital_agent",
+            "effect": "IRREVERSIBLE",
+            "can_defer": false,
+            "required_immediate": false,
+            "latest_commit_time": 6,
+            "review_ref": null,
+            "allowed_preparation_ids": []
+          }
+        },
+        "reviews": {
+          "R1": {
+            "id": "R1",
+            "owner": "hospital_agent",
+            "status": "RESOLVED",
+            "opened": 1,
+            "expires": 3,
+            "reason": "Visible unresolved institutional scope/route review; not an approval",
+            "authority_effect": false
+          },
+          "R2": {
+            "id": "R2",
+            "owner": "cyber_network_agent",
+            "status": "RESOLVED",
+            "opened": 1,
+            "expires": 3,
+            "reason": "Visible unresolved institutional scope/route review; not an approval",
+            "authority_effect": false
+          }
+        },
+        "deadlines": {
+          "clinical_review_done": 4,
+          "stream_isolated": 5
+        },
+        "released_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a"
+      },
+      "pending": null,
+      "simulation_only": true,
+      "effect_rollback_supported": false,
+      "reference_outcomes_used_for_authorization": false
+    },
+    "policy_inputs": [
+      {
+        "view": {
+          "case": {
+            "jurisdiction": "KR",
+            "policy_snapshot": "G32-MODELED-1",
+            "epoch": 1,
+            "cursor": 1,
+            "freshness_events": 2,
+            "initial_tokens": [],
+            "actions": [
+              {
+                "id": "A01",
+                "owner": "hospital_agent",
+                "kind": "HANDOFF_ACK",
+                "task": "task_A01",
+                "provides": [
+                  "prepared_context"
+                ],
+                "needs": [],
+                "forbids": [],
+                "exclusive_groups": [],
+                "fields": [],
+                "recipient": "clinical_workspace",
+                "purpose": "care",
+                "state_requirements": [],
+                "priority": "REQUESTED",
+                "capabilities": [
+                  "adequate"
+                ],
+                "grant_ids": [
+                  "G-A01"
+                ],
+                "evidence": [],
+                "bound_epoch": 1,
+                "policy_snapshot": "G32-MODELED-1",
+                "envelope_id": null,
+                "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+              },
+              {
+                "id": "A02",
+                "owner": "hospital_agent",
+                "kind": "CLINICAL_REVIEW",
+                "task": "task_A02",
+                "provides": [
+                  "clinical_review_done"
+                ],
+                "needs": [],
+                "forbids": [
+                  "stream_isolated"
+                ],
+                "exclusive_groups": [
+                  "care_route"
+                ],
+                "fields": [],
+                "recipient": "clinical_workspace",
+                "purpose": "care",
+                "state_requirements": [],
+                "priority": "REQUESTED",
+                "capabilities": [
+                  "adequate"
+                ],
+                "grant_ids": [
+                  "G-A02"
+                ],
+                "evidence": [],
+                "bound_epoch": 1,
+                "policy_snapshot": "G32-MODELED-1",
+                "envelope_id": null,
+                "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+              },
+              {
+                "id": "A03",
+                "owner": "cyber_network_agent",
+                "kind": "QUARANTINE_STREAM",
+                "task": "task_A03",
+                "provides": [
+                  "stream_isolated"
+                ],
+                "needs": [],
+                "forbids": [],
+                "exclusive_groups": [],
+                "fields": [],
+                "recipient": "technical_workspace",
+                "purpose": "safety",
+                "state_requirements": [],
+                "priority": "REQUESTED",
+                "capabilities": [
+                  "adequate"
+                ],
+                "grant_ids": [
+                  "G-A03"
+                ],
+                "evidence": [
+                  "KR-PIPC-SAFE-2026-001"
+                ],
+                "bound_epoch": 1,
+                "policy_snapshot": "G32-MODELED-1",
+                "envelope_id": null,
+                "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+              },
+              {
+                "id": "A04",
+                "owner": "hospital_agent",
+                "kind": "HANDOFF_ACK",
+                "task": "task_A04",
+                "provides": [
+                  "handoff_ack"
+                ],
+                "needs": [
+                  "stream_isolated"
+                ],
+                "forbids": [],
+                "exclusive_groups": [],
+                "fields": [],
+                "recipient": "clinical_workspace",
+                "purpose": "care",
+                "state_requirements": [],
+                "priority": "REQUESTED",
+                "capabilities": [
+                  "adequate"
+                ],
+                "grant_ids": [
+                  "G-A04"
+                ],
+                "evidence": [],
+                "bound_epoch": 1,
+                "policy_snapshot": "G32-MODELED-1",
+                "envelope_id": null,
+                "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+              }
+            ],
+            "goals": [
+              "clinical_review_done",
+              "stream_isolated"
+            ],
+            "task_purposes": [
+              "care",
+              "safety"
+            ],
+            "adequacy": {
+              "task_A01": [
+                "adequate"
+              ],
+              "task_A02": [
+                "adequate"
+              ],
+              "task_A03": [
+                "adequate"
+              ],
+              "task_A04": [
+                "adequate"
+              ]
+            },
+            "facts": {},
+            "authority_register": {
+              "G-A01": {
+                "status": "APPROVED",
+                "issued_by": "modeled_authority_for_hospital_agent",
+                "action_ids": [
+                  "A01"
+                ],
+                "purpose": "care",
+                "recipient": "clinical_workspace",
+                "fields": [],
+                "epoch": 1,
+                "expires_event": 20,
+                "simulation_only": true
+              },
+              "G-A02": {
+                "status": "APPROVED",
+                "issued_by": "modeled_authority_for_hospital_agent",
+                "action_ids": [
+                  "A02"
+                ],
+                "purpose": "care",
+                "recipient": "clinical_workspace",
+                "fields": [],
+                "epoch": 1,
+                "expires_event": 20,
+                "simulation_only": true
+              },
+              "G-A03": {
+                "status": "APPROVED",
+                "issued_by": "modeled_authority_for_cyber_network_agent",
+                "action_ids": [
+                  "A03"
+                ],
+                "purpose": "safety",
+                "recipient": "technical_workspace",
+                "fields": [],
+                "epoch": 1,
+                "expires_event": 20,
+                "simulation_only": true
+              },
+              "G-A04": {
+                "status": "APPROVED",
+                "issued_by": "modeled_authority_for_hospital_agent",
+                "action_ids": [
+                  "A04"
+                ],
+                "purpose": "care",
+                "recipient": "clinical_workspace",
+                "fields": [],
+                "epoch": 1,
+                "expires_event": 20,
+                "simulation_only": true
+              }
+            },
+            "authority_register_hashes": {
+              "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+              "G-A02": "1cd0b85c7816b3ca638bc616130181f95de448b3757837c885d5304e9ddb882a",
+              "G-A03": "70df59aeb48f7713171bf3c319f0d9b0178d7badf473b23075e184f30909516b",
+              "G-A04": "c877a0942a76aa659f92db9a4be57609728f1aea41a32a9aa8e4a66c92f76bb7"
+            },
+            "evidence_register": {
+              "KR-PIPC-SAFE-2026-001": {
+                "status": "AVAILABLE",
+                "policy_snapshot": "G32-MODELED-1",
+                "interpretation_status": "PENDING_REVIEW"
+              }
+            },
+            "field_constraints": [],
+            "envelopes": {},
+            "trusted_envelope_hashes": []
+          },
+          "timing": {
+            "A01": {
+              "owner": "hospital_agent",
+              "effect": "PREPARATORY",
+              "can_defer": false,
+              "required_immediate": false,
+              "latest_commit_time": 6,
+              "review_ref": null,
+              "allowed_preparation_ids": []
+            },
+            "A02": {
+              "owner": "hospital_agent",
+              "effect": "IRREVERSIBLE",
+              "can_defer": true,
+              "required_immediate": false,
+              "latest_commit_time": 4,
+              "review_ref": "R1",
+              "allowed_preparation_ids": [
+                "A01"
+              ]
+            },
+            "A03": {
+              "owner": "cyber_network_agent",
+              "effect": "IRREVERSIBLE",
+              "can_defer": true,
+              "required_immediate": false,
+              "latest_commit_time": 5,
+              "review_ref": "R2",
+              "allowed_preparation_ids": [
+                "A01"
+              ]
+            },
+            "A04": {
+              "owner": "hospital_agent",
+              "effect": "IRREVERSIBLE",
+              "can_defer": false,
+              "required_immediate": false,
+              "latest_commit_time": 6,
+              "review_ref": null,
+              "allowed_preparation_ids": []
+            }
+          },
+          "reviews": {
+            "R1": {
+              "id": "R1",
+              "owner": "hospital_agent",
+              "status": "PENDING",
+              "opened": 1,
+              "expires": 3,
+              "reason": "Visible unresolved institutional scope/route review; not an approval",
+              "authority_effect": false
+            },
+            "R2": {
+              "id": "R2",
+              "owner": "cyber_network_agent",
+              "status": "PENDING",
+              "opened": 1,
+              "expires": 3,
+              "reason": "Visible unresolved institutional scope/route review; not an approval",
+              "authority_effect": false
+            }
+          },
+          "deadlines": {
+            "clinical_review_done": 4,
+            "stream_isolated": 5
+          },
+          "released_history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a"
+        },
+        "done": [],
+        "decisions": [
+          {
+            "proposal_id": "A01",
+            "owner": "hospital_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "PREPARE",
+            "current_reason": "AUTHORIZED_PREPARATION_IS_NOT_COMPLETION",
+            "known_prerequisites": [],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A02",
+            "owner": "hospital_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "WAIT",
+            "current_reason": "VISIBLE_PENDING_REVIEW",
+            "known_prerequisites": [],
+            "pending_review_ref": "R1",
+            "latest_commit_time": 4,
+            "wait_expiry": 3,
+            "wait_start": 1,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A03",
+            "owner": "cyber_network_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "WAIT",
+            "current_reason": "VISIBLE_PENDING_REVIEW",
+            "known_prerequisites": [],
+            "pending_review_ref": "R2",
+            "latest_commit_time": 5,
+            "wait_expiry": 3,
+            "wait_start": 1,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A04",
+            "owner": "hospital_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [
+              "stream_isolated"
+            ],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          }
+        ],
+        "selection_input": {
+          "jurisdiction": "KR",
+          "policy_snapshot": "G32-MODELED-1",
+          "epoch": 1,
+          "cursor": 1,
+          "freshness_events": 2,
+          "initial_tokens": [],
+          "actions": [
+            {
+              "id": "A04",
+              "owner": "hospital_agent",
+              "kind": "HANDOFF_ACK",
+              "task": "task_A04",
+              "provides": [
+                "handoff_ack"
+              ],
+              "needs": [
+                "stream_isolated"
+              ],
+              "forbids": [],
+              "exclusive_groups": [],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A04"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            }
+          ],
+          "goals": [
+            "clinical_review_done",
+            "stream_isolated"
+          ],
+          "task_purposes": [
+            "care",
+            "safety"
+          ],
+          "adequacy": {
+            "task_A01": [
+              "adequate"
+            ],
+            "task_A02": [
+              "adequate"
+            ],
+            "task_A03": [
+              "adequate"
+            ],
+            "task_A04": [
+              "adequate"
+            ]
+          },
+          "facts": {},
+          "authority_register": {
+            "G-A01": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A01"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A02": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A02"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A03": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_cyber_network_agent",
+              "action_ids": [
+                "A03"
+              ],
+              "purpose": "safety",
+              "recipient": "technical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A04": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A04"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            }
+          },
+          "authority_register_hashes": {
+            "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+            "G-A02": "1cd0b85c7816b3ca638bc616130181f95de448b3757837c885d5304e9ddb882a",
+            "G-A03": "70df59aeb48f7713171bf3c319f0d9b0178d7badf473b23075e184f30909516b",
+            "G-A04": "c877a0942a76aa659f92db9a4be57609728f1aea41a32a9aa8e4a66c92f76bb7"
+          },
+          "evidence_register": {
+            "KR-PIPC-SAFE-2026-001": {
+              "status": "AVAILABLE",
+              "policy_snapshot": "G32-MODELED-1",
+              "interpretation_status": "PENDING_REVIEW"
+            }
+          },
+          "field_constraints": [],
+          "envelopes": {},
+          "trusted_envelope_hashes": []
+        }
+      },
+      {
+        "view": {
+          "case": {
+            "jurisdiction": "KR",
+            "policy_snapshot": "G32-MODELED-1",
+            "epoch": 1,
+            "cursor": 2,
+            "freshness_events": 2,
+            "initial_tokens": [],
+            "actions": [
+              {
+                "id": "A01",
+                "owner": "hospital_agent",
+                "kind": "HANDOFF_ACK",
+                "task": "task_A01",
+                "provides": [
+                  "prepared_context"
+                ],
+                "needs": [],
+                "forbids": [],
+                "exclusive_groups": [],
+                "fields": [],
+                "recipient": "clinical_workspace",
+                "purpose": "care",
+                "state_requirements": [],
+                "priority": "REQUESTED",
+                "capabilities": [
+                  "adequate"
+                ],
+                "grant_ids": [
+                  "G-A01"
+                ],
+                "evidence": [],
+                "bound_epoch": 1,
+                "policy_snapshot": "G32-MODELED-1",
+                "envelope_id": null,
+                "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+              },
+              {
+                "id": "A02",
+                "owner": "hospital_agent",
+                "kind": "CLINICAL_REVIEW",
+                "task": "task_A02",
+                "provides": [
+                  "clinical_review_done"
+                ],
+                "needs": [],
+                "forbids": [
+                  "stream_isolated"
+                ],
+                "exclusive_groups": [
+                  "care_route"
+                ],
+                "fields": [],
+                "recipient": "clinical_workspace",
+                "purpose": "care",
+                "state_requirements": [],
+                "priority": "REQUESTED",
+                "capabilities": [
+                  "adequate"
+                ],
+                "grant_ids": [
+                  "G-A02"
+                ],
+                "evidence": [],
+                "bound_epoch": 1,
+                "policy_snapshot": "G32-MODELED-1",
+                "envelope_id": null,
+                "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+              },
+              {
+                "id": "A03",
+                "owner": "cyber_network_agent",
+                "kind": "QUARANTINE_STREAM",
+                "task": "task_A03",
+                "provides": [
+                  "stream_isolated"
+                ],
+                "needs": [],
+                "forbids": [],
+                "exclusive_groups": [],
+                "fields": [],
+                "recipient": "technical_workspace",
+                "purpose": "safety",
+                "state_requirements": [],
+                "priority": "REQUESTED",
+                "capabilities": [
+                  "adequate"
+                ],
+                "grant_ids": [
+                  "G-A03"
+                ],
+                "evidence": [
+                  "KR-PIPC-SAFE-2026-001"
+                ],
+                "bound_epoch": 1,
+                "policy_snapshot": "G32-MODELED-1",
+                "envelope_id": null,
+                "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+              },
+              {
+                "id": "A04",
+                "owner": "hospital_agent",
+                "kind": "HANDOFF_ACK",
+                "task": "task_A04",
+                "provides": [
+                  "handoff_ack"
+                ],
+                "needs": [
+                  "stream_isolated"
+                ],
+                "forbids": [],
+                "exclusive_groups": [],
+                "fields": [],
+                "recipient": "clinical_workspace",
+                "purpose": "care",
+                "state_requirements": [],
+                "priority": "REQUESTED",
+                "capabilities": [
+                  "adequate"
+                ],
+                "grant_ids": [
+                  "G-A04"
+                ],
+                "evidence": [],
+                "bound_epoch": 1,
+                "policy_snapshot": "G32-MODELED-1",
+                "envelope_id": null,
+                "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+              },
+              {
+                "id": "A05",
+                "owner": "hospital_agent",
+                "kind": "CLINICAL_REVIEW",
+                "task": "task_A05",
+                "provides": [
+                  "clinical_review_done"
+                ],
+                "needs": [
+                  "handoff_ack",
+                  "prepared_context"
+                ],
+                "forbids": [],
+                "exclusive_groups": [
+                  "care_route"
+                ],
+                "fields": [],
+                "recipient": "clinical_workspace",
+                "purpose": "care",
+                "state_requirements": [],
+                "priority": "ALTERNATIVE",
+                "capabilities": [
+                  "adequate"
+                ],
+                "grant_ids": [
+                  "G-A05"
+                ],
+                "evidence": [],
+                "bound_epoch": 1,
+                "policy_snapshot": "G32-MODELED-1",
+                "envelope_id": null,
+                "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+              }
+            ],
+            "goals": [
+              "clinical_review_done",
+              "stream_isolated"
+            ],
+            "task_purposes": [
+              "care",
+              "safety"
+            ],
+            "adequacy": {
+              "task_A01": [
+                "adequate"
+              ],
+              "task_A02": [
+                "adequate"
+              ],
+              "task_A03": [
+                "adequate"
+              ],
+              "task_A04": [
+                "adequate"
+              ],
+              "task_A05": [
+                "adequate"
+              ]
+            },
+            "facts": {},
+            "authority_register": {
+              "G-A01": {
+                "status": "APPROVED",
+                "issued_by": "modeled_authority_for_hospital_agent",
+                "action_ids": [
+                  "A01"
+                ],
+                "purpose": "care",
+                "recipient": "clinical_workspace",
+                "fields": [],
+                "epoch": 1,
+                "expires_event": 20,
+                "simulation_only": true
+              },
+              "G-A02": {
+                "status": "APPROVED",
+                "issued_by": "modeled_authority_for_hospital_agent",
+                "action_ids": [
+                  "A02"
+                ],
+                "purpose": "care",
+                "recipient": "clinical_workspace",
+                "fields": [],
+                "epoch": 1,
+                "expires_event": 20,
+                "simulation_only": true
+              },
+              "G-A03": {
+                "status": "APPROVED",
+                "issued_by": "modeled_authority_for_cyber_network_agent",
+                "action_ids": [
+                  "A03"
+                ],
+                "purpose": "safety",
+                "recipient": "technical_workspace",
+                "fields": [],
+                "epoch": 1,
+                "expires_event": 20,
+                "simulation_only": true
+              },
+              "G-A04": {
+                "status": "APPROVED",
+                "issued_by": "modeled_authority_for_hospital_agent",
+                "action_ids": [
+                  "A04"
+                ],
+                "purpose": "care",
+                "recipient": "clinical_workspace",
+                "fields": [],
+                "epoch": 1,
+                "expires_event": 20,
+                "simulation_only": true
+              },
+              "G-A05": {
+                "status": "APPROVED",
+                "issued_by": "modeled_authority_for_hospital_agent",
+                "action_ids": [
+                  "A05"
+                ],
+                "purpose": "care",
+                "recipient": "clinical_workspace",
+                "fields": [],
+                "epoch": 1,
+                "expires_event": 20,
+                "simulation_only": true
+              }
+            },
+            "authority_register_hashes": {
+              "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+              "G-A02": "1cd0b85c7816b3ca638bc616130181f95de448b3757837c885d5304e9ddb882a",
+              "G-A03": "70df59aeb48f7713171bf3c319f0d9b0178d7badf473b23075e184f30909516b",
+              "G-A04": "c877a0942a76aa659f92db9a4be57609728f1aea41a32a9aa8e4a66c92f76bb7",
+              "G-A05": "82d4b5a145945c7c18a86592f9e8c6df43fc7c0fb70a87f84887b8ca1318c9b0"
+            },
+            "evidence_register": {
+              "KR-PIPC-SAFE-2026-001": {
+                "status": "AVAILABLE",
+                "policy_snapshot": "G32-MODELED-1",
+                "interpretation_status": "PENDING_REVIEW"
+              }
+            },
+            "field_constraints": [],
+            "envelopes": {},
+            "trusted_envelope_hashes": []
+          },
+          "timing": {
+            "A01": {
+              "owner": "hospital_agent",
+              "effect": "PREPARATORY",
+              "can_defer": false,
+              "required_immediate": false,
+              "latest_commit_time": 6,
+              "review_ref": null,
+              "allowed_preparation_ids": []
+            },
+            "A02": {
+              "owner": "hospital_agent",
+              "effect": "IRREVERSIBLE",
+              "can_defer": true,
+              "required_immediate": false,
+              "latest_commit_time": 4,
+              "review_ref": "R1",
+              "allowed_preparation_ids": [
+                "A01"
+              ]
+            },
+            "A03": {
+              "owner": "cyber_network_agent",
+              "effect": "IRREVERSIBLE",
+              "can_defer": true,
+              "required_immediate": false,
+              "latest_commit_time": 5,
+              "review_ref": "R2",
+              "allowed_preparation_ids": [
+                "A01"
+              ]
+            },
+            "A04": {
+              "owner": "hospital_agent",
+              "effect": "IRREVERSIBLE",
+              "can_defer": false,
+              "required_immediate": false,
+              "latest_commit_time": 6,
+              "review_ref": null,
+              "allowed_preparation_ids": []
+            },
+            "A05": {
+              "owner": "hospital_agent",
+              "effect": "IRREVERSIBLE",
+              "can_defer": false,
+              "required_immediate": false,
+              "latest_commit_time": 6,
+              "review_ref": null,
+              "allowed_preparation_ids": []
+            }
+          },
+          "reviews": {
+            "R1": {
+              "id": "R1",
+              "owner": "hospital_agent",
+              "status": "RESOLVED",
+              "opened": 1,
+              "expires": 3,
+              "reason": "Visible unresolved institutional scope/route review; not an approval",
+              "authority_effect": false
+            },
+            "R2": {
+              "id": "R2",
+              "owner": "cyber_network_agent",
+              "status": "RESOLVED",
+              "opened": 1,
+              "expires": 3,
+              "reason": "Visible unresolved institutional scope/route review; not an approval",
+              "authority_effect": false
+            }
+          },
+          "deadlines": {
+            "clinical_review_done": 4,
+            "stream_isolated": 5
+          },
+          "released_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a"
+        },
+        "done": [
+          "A01"
+        ],
+        "decisions": [
+          {
+            "proposal_id": "A02",
+            "owner": "hospital_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [],
+            "pending_review_ref": "R1",
+            "latest_commit_time": 4,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A03",
+            "owner": "cyber_network_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [],
+            "pending_review_ref": "R2",
+            "latest_commit_time": 5,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A04",
+            "owner": "hospital_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [
+              "stream_isolated"
+            ],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A05",
+            "owner": "hospital_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [
+              "handoff_ack",
+              "prepared_context"
+            ],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          }
+        ],
+        "selection_input": {
+          "jurisdiction": "KR",
+          "policy_snapshot": "G32-MODELED-1",
+          "epoch": 1,
+          "cursor": 2,
+          "freshness_events": 2,
+          "initial_tokens": [
+            "prepared_context"
+          ],
+          "actions": [
+            {
+              "id": "A02",
+              "owner": "hospital_agent",
+              "kind": "CLINICAL_REVIEW",
+              "task": "task_A02",
+              "provides": [
+                "clinical_review_done"
+              ],
+              "needs": [],
+              "forbids": [
+                "stream_isolated"
+              ],
+              "exclusive_groups": [
+                "care_route"
+              ],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A02"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            {
+              "id": "A03",
+              "owner": "cyber_network_agent",
+              "kind": "QUARANTINE_STREAM",
+              "task": "task_A03",
+              "provides": [
+                "stream_isolated"
+              ],
+              "needs": [],
+              "forbids": [],
+              "exclusive_groups": [],
+              "fields": [],
+              "recipient": "technical_workspace",
+              "purpose": "safety",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A03"
+              ],
+              "evidence": [
+                "KR-PIPC-SAFE-2026-001"
+              ],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            {
+              "id": "A04",
+              "owner": "hospital_agent",
+              "kind": "HANDOFF_ACK",
+              "task": "task_A04",
+              "provides": [
+                "handoff_ack"
+              ],
+              "needs": [
+                "stream_isolated"
+              ],
+              "forbids": [],
+              "exclusive_groups": [],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A04"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            {
+              "id": "A05",
+              "owner": "hospital_agent",
+              "kind": "CLINICAL_REVIEW",
+              "task": "task_A05",
+              "provides": [
+                "clinical_review_done"
+              ],
+              "needs": [
+                "handoff_ack",
+                "prepared_context"
+              ],
+              "forbids": [],
+              "exclusive_groups": [
+                "care_route"
+              ],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "ALTERNATIVE",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A05"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            }
+          ],
+          "goals": [
+            "clinical_review_done",
+            "stream_isolated"
+          ],
+          "task_purposes": [
+            "care",
+            "safety"
+          ],
+          "adequacy": {
+            "task_A01": [
+              "adequate"
+            ],
+            "task_A02": [
+              "adequate"
+            ],
+            "task_A03": [
+              "adequate"
+            ],
+            "task_A04": [
+              "adequate"
+            ],
+            "task_A05": [
+              "adequate"
+            ]
+          },
+          "facts": {},
+          "authority_register": {
+            "G-A01": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A01"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A02": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A02"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A03": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_cyber_network_agent",
+              "action_ids": [
+                "A03"
+              ],
+              "purpose": "safety",
+              "recipient": "technical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A04": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A04"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            },
+            "G-A05": {
+              "status": "APPROVED",
+              "issued_by": "modeled_authority_for_hospital_agent",
+              "action_ids": [
+                "A05"
+              ],
+              "purpose": "care",
+              "recipient": "clinical_workspace",
+              "fields": [],
+              "epoch": 1,
+              "expires_event": 20,
+              "simulation_only": true
+            }
+          },
+          "authority_register_hashes": {
+            "G-A01": "78d40af28fd7a9c1d980be7775c9b2dd62409530ccac668641779fa324b34a06",
+            "G-A02": "1cd0b85c7816b3ca638bc616130181f95de448b3757837c885d5304e9ddb882a",
+            "G-A03": "70df59aeb48f7713171bf3c319f0d9b0178d7badf473b23075e184f30909516b",
+            "G-A04": "c877a0942a76aa659f92db9a4be57609728f1aea41a32a9aa8e4a66c92f76bb7",
+            "G-A05": "82d4b5a145945c7c18a86592f9e8c6df43fc7c0fb70a87f84887b8ca1318c9b0"
+          },
+          "evidence_register": {
+            "KR-PIPC-SAFE-2026-001": {
+              "status": "AVAILABLE",
+              "policy_snapshot": "G32-MODELED-1",
+              "interpretation_status": "PENDING_REVIEW"
+            }
+          },
+          "field_constraints": [],
+          "envelopes": {},
+          "trusted_envelope_hashes": []
+        }
+      }
+    ]
+  },
+  "presentation_snapshot": {
+    "release": "Gate33",
+    "family_id": "P01",
+    "family_title": "Clinical route and containment review",
+    "continuation_id": "PROMPT",
+    "operator_fixture_choice_not_controller_input": true,
+    "strategy": "MEDVERSE_COMMITMENT",
+    "clock": 2,
+    "max_events": 6,
+    "model_status": "SCENARIO-MODELED; CONTRACT REVIEW PENDING",
+    "engine_state_hash": "81229c032c37c38c9be6c26ad2d49fd77239ffbb6d7fb0cf29523fa78199d509",
+    "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+    "pending_plan_id": null,
+    "proposal_rows": [
+      {
+        "id": "A01",
+        "owner": "hospital_agent",
+        "kind": "HANDOFF_ACK",
+        "purpose": "care",
+        "recipient": "clinical_workspace",
+        "provides": [
+          "prepared_context"
+        ],
+        "needs": [],
+        "fields": [],
+        "evidence": [],
+        "timing_contract": {
+          "owner": "hospital_agent",
+          "effect": "PREPARATORY",
+          "can_defer": false,
+          "required_immediate": false,
+          "latest_commit_time": 6,
+          "review_ref": null,
+          "allowed_preparation_ids": []
+        },
+        "decision": null,
+        "current_validation": {
+          "permitted_now": false,
+          "reason": "DUPLICATE_ACTION"
+        },
+        "actual_effect": {
+          "stage": "PREPARE",
+          "event": 1,
+          "receipt_sequence": 1
+        },
+        "last_receipt": {
+          "sequence": 1,
+          "event": 1,
+          "plan_id": "ac667b19d0bd51ec4f9cab4e",
+          "proposal_id": "A01",
+          "owner": "hospital_agent",
+          "stage": "PREPARE",
+          "actual_proposal": {
+            "id": "A01",
+            "owner": "hospital_agent",
+            "kind": "HANDOFF_ACK",
+            "task": "task_A01",
+            "provides": [
+              "prepared_context"
+            ],
+            "needs": [],
+            "forbids": [],
+            "exclusive_groups": [],
+            "fields": [],
+            "recipient": "clinical_workspace",
+            "purpose": "care",
+            "state_requirements": [],
+            "priority": "REQUESTED",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A01"
+            ],
+            "evidence": [],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          "permitted": true,
+          "reason": "PERMIT",
+          "policy_snapshot": "G32-MODELED-1",
+          "authority_epoch": 1,
+          "source_ids": [],
+          "source_record_hashes": {},
+          "visible_history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+          "modeled_side_effect": {
+            "tokens": [
+              "prepared_context"
+            ],
+            "recipient": "clinical_workspace",
+            "fields": []
+          },
+          "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "simulation_only": true,
+          "hash": "723e19bf9a0577cf0f29e77ae48762c08439904351fedc3d62cd050fab0382ae"
+        }
+      },
+      {
+        "id": "A02",
+        "owner": "hospital_agent",
+        "kind": "CLINICAL_REVIEW",
+        "purpose": "care",
+        "recipient": "clinical_workspace",
+        "provides": [
+          "clinical_review_done"
+        ],
+        "needs": [],
+        "fields": [],
+        "evidence": [],
+        "timing_contract": {
+          "owner": "hospital_agent",
+          "effect": "IRREVERSIBLE",
+          "can_defer": true,
+          "required_immediate": false,
+          "latest_commit_time": 4,
+          "review_ref": "R1",
+          "allowed_preparation_ids": [
+            "A01"
+          ]
+        },
+        "decision": {
+          "proposal_id": "A02",
+          "owner": "hospital_agent",
+          "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "decision": "COMMIT",
+          "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+          "known_prerequisites": [],
+          "pending_review_ref": "R1",
+          "latest_commit_time": 4,
+          "wait_expiry": null,
+          "wait_start": null,
+          "allowed_preparation_ids": [
+            "A01"
+          ],
+          "final_revalidation_required": true,
+          "authorizes_action": false
+        },
+        "current_validation": {
+          "permitted_now": false,
+          "reason": "CONFLICTING_STATE"
+        },
+        "actual_effect": null,
+        "last_receipt": null
+      },
+      {
+        "id": "A03",
+        "owner": "cyber_network_agent",
+        "kind": "QUARANTINE_STREAM",
+        "purpose": "safety",
+        "recipient": "technical_workspace",
+        "provides": [
+          "stream_isolated"
+        ],
+        "needs": [],
+        "fields": [],
+        "evidence": [
+          "KR-PIPC-SAFE-2026-001"
+        ],
+        "timing_contract": {
+          "owner": "cyber_network_agent",
+          "effect": "IRREVERSIBLE",
+          "can_defer": true,
+          "required_immediate": false,
+          "latest_commit_time": 5,
+          "review_ref": "R2",
+          "allowed_preparation_ids": [
+            "A01"
+          ]
+        },
+        "decision": {
+          "proposal_id": "A03",
+          "owner": "cyber_network_agent",
+          "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "decision": "COMMIT",
+          "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+          "known_prerequisites": [],
+          "pending_review_ref": "R2",
+          "latest_commit_time": 5,
+          "wait_expiry": null,
+          "wait_start": null,
+          "allowed_preparation_ids": [
+            "A01"
+          ],
+          "final_revalidation_required": true,
+          "authorizes_action": false
+        },
+        "current_validation": {
+          "permitted_now": false,
+          "reason": "DUPLICATE_ACTION"
+        },
+        "actual_effect": {
+          "stage": "COMMIT",
+          "event": 2,
+          "receipt_sequence": 2
+        },
+        "last_receipt": {
+          "sequence": 2,
+          "event": 2,
+          "plan_id": "f52da2290d6e89e096326429",
+          "proposal_id": "A03",
+          "owner": "cyber_network_agent",
+          "stage": "COMMIT",
+          "actual_proposal": {
+            "id": "A03",
+            "owner": "cyber_network_agent",
+            "kind": "QUARANTINE_STREAM",
+            "task": "task_A03",
+            "provides": [
+              "stream_isolated"
+            ],
+            "needs": [],
+            "forbids": [],
+            "exclusive_groups": [],
+            "fields": [],
+            "recipient": "technical_workspace",
+            "purpose": "safety",
+            "state_requirements": [],
+            "priority": "REQUESTED",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A03"
+            ],
+            "evidence": [
+              "KR-PIPC-SAFE-2026-001"
+            ],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          "permitted": true,
+          "reason": "PERMIT",
+          "policy_snapshot": "G32-MODELED-1",
+          "authority_epoch": 1,
+          "source_ids": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "source_record_hashes": {
+            "KR-PIPC-SAFE-2026-001": "2b9d68effb808b69cae47da3aa141213fe03ab9ac4a0eaf3878803afc1e83b1d"
+          },
+          "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "modeled_side_effect": {
+            "tokens": [
+              "stream_isolated"
+            ],
+            "recipient": "technical_workspace",
+            "fields": []
+          },
+          "previous_hash": "723e19bf9a0577cf0f29e77ae48762c08439904351fedc3d62cd050fab0382ae",
+          "simulation_only": true,
+          "hash": "577917770611e19fd00c168f416e4c86846a4a34ea7418501b56385c62f0b63c"
+        }
+      },
+      {
+        "id": "A04",
+        "owner": "hospital_agent",
+        "kind": "HANDOFF_ACK",
+        "purpose": "care",
+        "recipient": "clinical_workspace",
+        "provides": [
+          "handoff_ack"
+        ],
+        "needs": [
+          "stream_isolated"
+        ],
+        "fields": [],
+        "evidence": [],
+        "timing_contract": {
+          "owner": "hospital_agent",
+          "effect": "IRREVERSIBLE",
+          "can_defer": false,
+          "required_immediate": false,
+          "latest_commit_time": 6,
+          "review_ref": null,
+          "allowed_preparation_ids": []
+        },
+        "decision": {
+          "proposal_id": "A04",
+          "owner": "hospital_agent",
+          "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "decision": "COMMIT",
+          "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+          "known_prerequisites": [
+            "stream_isolated"
+          ],
+          "pending_review_ref": null,
+          "latest_commit_time": 6,
+          "wait_expiry": null,
+          "wait_start": null,
+          "allowed_preparation_ids": [],
+          "final_revalidation_required": true,
+          "authorizes_action": false
+        },
+        "current_validation": {
+          "permitted_now": false,
+          "reason": "DUPLICATE_ACTION"
+        },
+        "actual_effect": {
+          "stage": "COMMIT",
+          "event": 2,
+          "receipt_sequence": 3
+        },
+        "last_receipt": {
+          "sequence": 3,
+          "event": 2,
+          "plan_id": "f52da2290d6e89e096326429",
+          "proposal_id": "A04",
+          "owner": "hospital_agent",
+          "stage": "COMMIT",
+          "actual_proposal": {
+            "id": "A04",
+            "owner": "hospital_agent",
+            "kind": "HANDOFF_ACK",
+            "task": "task_A04",
+            "provides": [
+              "handoff_ack"
+            ],
+            "needs": [
+              "stream_isolated"
+            ],
+            "forbids": [],
+            "exclusive_groups": [],
+            "fields": [],
+            "recipient": "clinical_workspace",
+            "purpose": "care",
+            "state_requirements": [],
+            "priority": "REQUESTED",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A04"
+            ],
+            "evidence": [],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          "permitted": true,
+          "reason": "PERMIT",
+          "policy_snapshot": "G32-MODELED-1",
+          "authority_epoch": 1,
+          "source_ids": [],
+          "source_record_hashes": {},
+          "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "modeled_side_effect": {
+            "tokens": [
+              "handoff_ack"
+            ],
+            "recipient": "clinical_workspace",
+            "fields": []
+          },
+          "previous_hash": "577917770611e19fd00c168f416e4c86846a4a34ea7418501b56385c62f0b63c",
+          "simulation_only": true,
+          "hash": "9da483719bc8c148aa364de76cbc0bba50f689dadf79f16f65e8f88d677599ba"
+        }
+      },
+      {
+        "id": "A05",
+        "owner": "hospital_agent",
+        "kind": "CLINICAL_REVIEW",
+        "purpose": "care",
+        "recipient": "clinical_workspace",
+        "provides": [
+          "clinical_review_done"
+        ],
+        "needs": [
+          "handoff_ack",
+          "prepared_context"
+        ],
+        "fields": [],
+        "evidence": [],
+        "timing_contract": {
+          "owner": "hospital_agent",
+          "effect": "IRREVERSIBLE",
+          "can_defer": false,
+          "required_immediate": false,
+          "latest_commit_time": 6,
+          "review_ref": null,
+          "allowed_preparation_ids": []
+        },
+        "decision": {
+          "proposal_id": "A05",
+          "owner": "hospital_agent",
+          "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "decision": "COMMIT",
+          "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+          "known_prerequisites": [
+            "handoff_ack",
+            "prepared_context"
+          ],
+          "pending_review_ref": null,
+          "latest_commit_time": 6,
+          "wait_expiry": null,
+          "wait_start": null,
+          "allowed_preparation_ids": [],
+          "final_revalidation_required": true,
+          "authorizes_action": false
+        },
+        "current_validation": {
+          "permitted_now": false,
+          "reason": "DUPLICATE_ACTION"
+        },
+        "actual_effect": {
+          "stage": "COMMIT",
+          "event": 2,
+          "receipt_sequence": 4
+        },
+        "last_receipt": {
+          "sequence": 4,
+          "event": 2,
+          "plan_id": "f52da2290d6e89e096326429",
+          "proposal_id": "A05",
+          "owner": "hospital_agent",
+          "stage": "COMMIT",
+          "actual_proposal": {
+            "id": "A05",
+            "owner": "hospital_agent",
+            "kind": "CLINICAL_REVIEW",
+            "task": "task_A05",
+            "provides": [
+              "clinical_review_done"
+            ],
+            "needs": [
+              "handoff_ack",
+              "prepared_context"
+            ],
+            "forbids": [],
+            "exclusive_groups": [
+              "care_route"
+            ],
+            "fields": [],
+            "recipient": "clinical_workspace",
+            "purpose": "care",
+            "state_requirements": [],
+            "priority": "ALTERNATIVE",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A05"
+            ],
+            "evidence": [],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          "permitted": true,
+          "reason": "PERMIT",
+          "policy_snapshot": "G32-MODELED-1",
+          "authority_epoch": 1,
+          "source_ids": [],
+          "source_record_hashes": {},
+          "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+          "modeled_side_effect": {
+            "tokens": [
+              "clinical_review_done"
+            ],
+            "recipient": "clinical_workspace",
+            "fields": []
+          },
+          "previous_hash": "9da483719bc8c148aa364de76cbc0bba50f689dadf79f16f65e8f88d677599ba",
+          "simulation_only": true,
+          "hash": "ac3a3d8f56ae55bf41ed184a336e3f3c208beb9c21c642d06c01ea144eca810e"
+        }
+      }
+    ],
+    "goals": [
+      {
+        "goal": "clinical_review_done",
+        "declared_limit": 4,
+        "commit_event": 2,
+        "status": "ACHIEVED_WITHIN_LIMIT"
+      },
+      {
+        "goal": "stream_isolated",
+        "declared_limit": 5,
+        "commit_event": 2,
+        "status": "ACHIEVED_WITHIN_LIMIT"
+      }
+    ],
+    "roles": {
+      "hospital_agent": {
+        "role": "hospital_agent",
+        "inspection_scope": "OPERATOR_ONLY; not inter-agent data sharing or real institutional authentication",
+        "observed_contracts": [
+          {
+            "id": "A01",
+            "owner": "hospital_agent",
+            "kind": "HANDOFF_ACK",
+            "task": "task_A01",
+            "provides": [
+              "prepared_context"
+            ],
+            "needs": [],
+            "forbids": [],
+            "exclusive_groups": [],
+            "fields": [],
+            "recipient": "clinical_workspace",
+            "purpose": "care",
+            "state_requirements": [],
+            "priority": "REQUESTED",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A01"
+            ],
+            "evidence": [],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          {
+            "id": "A02",
+            "owner": "hospital_agent",
+            "kind": "CLINICAL_REVIEW",
+            "task": "task_A02",
+            "provides": [
+              "clinical_review_done"
+            ],
+            "needs": [],
+            "forbids": [
+              "stream_isolated"
+            ],
+            "exclusive_groups": [
+              "care_route"
+            ],
+            "fields": [],
+            "recipient": "clinical_workspace",
+            "purpose": "care",
+            "state_requirements": [],
+            "priority": "REQUESTED",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A02"
+            ],
+            "evidence": [],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          {
+            "id": "A04",
+            "owner": "hospital_agent",
+            "kind": "HANDOFF_ACK",
+            "task": "task_A04",
+            "provides": [
+              "handoff_ack"
+            ],
+            "needs": [
+              "stream_isolated"
+            ],
+            "forbids": [],
+            "exclusive_groups": [],
+            "fields": [],
+            "recipient": "clinical_workspace",
+            "purpose": "care",
+            "state_requirements": [],
+            "priority": "REQUESTED",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A04"
+            ],
+            "evidence": [],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          },
+          {
+            "id": "A05",
+            "owner": "hospital_agent",
+            "kind": "CLINICAL_REVIEW",
+            "task": "task_A05",
+            "provides": [
+              "clinical_review_done"
+            ],
+            "needs": [
+              "handoff_ack",
+              "prepared_context"
+            ],
+            "forbids": [],
+            "exclusive_groups": [
+              "care_route"
+            ],
+            "fields": [],
+            "recipient": "clinical_workspace",
+            "purpose": "care",
+            "state_requirements": [],
+            "priority": "ALTERNATIVE",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A05"
+            ],
+            "evidence": [],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          }
+        ],
+        "reviews": {
+          "R1": {
+            "id": "R1",
+            "owner": "hospital_agent",
+            "status": "RESOLVED",
+            "opened": 1,
+            "expires": 3,
+            "reason": "Visible unresolved institutional scope/route review; not an approval",
+            "authority_effect": false
+          }
+        },
+        "timing": {
+          "A01": {
+            "owner": "hospital_agent",
+            "effect": "PREPARATORY",
+            "can_defer": false,
+            "required_immediate": false,
+            "latest_commit_time": 6,
+            "review_ref": null,
+            "allowed_preparation_ids": []
+          },
+          "A02": {
+            "owner": "hospital_agent",
+            "effect": "IRREVERSIBLE",
+            "can_defer": true,
+            "required_immediate": false,
+            "latest_commit_time": 4,
+            "review_ref": "R1",
+            "allowed_preparation_ids": [
+              "A01"
+            ]
+          },
+          "A04": {
+            "owner": "hospital_agent",
+            "effect": "IRREVERSIBLE",
+            "can_defer": false,
+            "required_immediate": false,
+            "latest_commit_time": 6,
+            "review_ref": null,
+            "allowed_preparation_ids": []
+          },
+          "A05": {
+            "owner": "hospital_agent",
+            "effect": "IRREVERSIBLE",
+            "can_defer": false,
+            "required_immediate": false,
+            "latest_commit_time": 6,
+            "review_ref": null,
+            "allowed_preparation_ids": []
+          }
+        },
+        "authority_records": {
+          "G-A01": {
+            "status": "APPROVED",
+            "issued_by": "modeled_authority_for_hospital_agent",
+            "action_ids": [
+              "A01"
+            ],
+            "purpose": "care",
+            "recipient": "clinical_workspace",
+            "fields": [],
+            "epoch": 1,
+            "expires_event": 20,
+            "simulation_only": true
+          },
+          "G-A02": {
+            "status": "APPROVED",
+            "issued_by": "modeled_authority_for_hospital_agent",
+            "action_ids": [
+              "A02"
+            ],
+            "purpose": "care",
+            "recipient": "clinical_workspace",
+            "fields": [],
+            "epoch": 1,
+            "expires_event": 20,
+            "simulation_only": true
+          },
+          "G-A04": {
+            "status": "APPROVED",
+            "issued_by": "modeled_authority_for_hospital_agent",
+            "action_ids": [
+              "A04"
+            ],
+            "purpose": "care",
+            "recipient": "clinical_workspace",
+            "fields": [],
+            "epoch": 1,
+            "expires_event": 20,
+            "simulation_only": true
+          },
+          "G-A05": {
+            "status": "APPROVED",
+            "issued_by": "modeled_authority_for_hospital_agent",
+            "action_ids": [
+              "A05"
+            ],
+            "purpose": "care",
+            "recipient": "clinical_workspace",
+            "fields": [],
+            "epoch": 1,
+            "expires_event": 20,
+            "simulation_only": true
+          }
+        },
+        "evidence_refs": [],
+        "decisions": [
+          {
+            "proposal_id": "A01",
+            "owner": "hospital_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "PREPARE",
+            "current_reason": "AUTHORIZED_PREPARATION_IS_NOT_COMPLETION",
+            "known_prerequisites": [],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A02",
+            "owner": "hospital_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "WAIT",
+            "current_reason": "VISIBLE_PENDING_REVIEW",
+            "known_prerequisites": [],
+            "pending_review_ref": "R1",
+            "latest_commit_time": 4,
+            "wait_expiry": 3,
+            "wait_start": 1,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A04",
+            "owner": "hospital_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [
+              "stream_isolated"
+            ],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A02",
+            "owner": "hospital_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [],
+            "pending_review_ref": "R1",
+            "latest_commit_time": 4,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A04",
+            "owner": "hospital_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [
+              "stream_isolated"
+            ],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A05",
+            "owner": "hospital_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [
+              "handoff_ack",
+              "prepared_context"
+            ],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          }
+        ],
+        "receipts": [
+          {
+            "sequence": 1,
+            "event": 1,
+            "plan_id": "ac667b19d0bd51ec4f9cab4e",
+            "proposal_id": "A01",
+            "owner": "hospital_agent",
+            "stage": "PREPARE",
+            "actual_proposal": {
+              "id": "A01",
+              "owner": "hospital_agent",
+              "kind": "HANDOFF_ACK",
+              "task": "task_A01",
+              "provides": [
+                "prepared_context"
+              ],
+              "needs": [],
+              "forbids": [],
+              "exclusive_groups": [],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A01"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            "permitted": true,
+            "reason": "PERMIT",
+            "policy_snapshot": "G32-MODELED-1",
+            "authority_epoch": 1,
+            "source_ids": [],
+            "source_record_hashes": {},
+            "visible_history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "modeled_side_effect": {
+              "tokens": [
+                "prepared_context"
+              ],
+              "recipient": "clinical_workspace",
+              "fields": []
+            },
+            "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "simulation_only": true,
+            "hash": "723e19bf9a0577cf0f29e77ae48762c08439904351fedc3d62cd050fab0382ae"
+          },
+          {
+            "sequence": 3,
+            "event": 2,
+            "plan_id": "f52da2290d6e89e096326429",
+            "proposal_id": "A04",
+            "owner": "hospital_agent",
+            "stage": "COMMIT",
+            "actual_proposal": {
+              "id": "A04",
+              "owner": "hospital_agent",
+              "kind": "HANDOFF_ACK",
+              "task": "task_A04",
+              "provides": [
+                "handoff_ack"
+              ],
+              "needs": [
+                "stream_isolated"
+              ],
+              "forbids": [],
+              "exclusive_groups": [],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A04"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            "permitted": true,
+            "reason": "PERMIT",
+            "policy_snapshot": "G32-MODELED-1",
+            "authority_epoch": 1,
+            "source_ids": [],
+            "source_record_hashes": {},
+            "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "modeled_side_effect": {
+              "tokens": [
+                "handoff_ack"
+              ],
+              "recipient": "clinical_workspace",
+              "fields": []
+            },
+            "previous_hash": "577917770611e19fd00c168f416e4c86846a4a34ea7418501b56385c62f0b63c",
+            "simulation_only": true,
+            "hash": "9da483719bc8c148aa364de76cbc0bba50f689dadf79f16f65e8f88d677599ba"
+          },
+          {
+            "sequence": 4,
+            "event": 2,
+            "plan_id": "f52da2290d6e89e096326429",
+            "proposal_id": "A05",
+            "owner": "hospital_agent",
+            "stage": "COMMIT",
+            "actual_proposal": {
+              "id": "A05",
+              "owner": "hospital_agent",
+              "kind": "CLINICAL_REVIEW",
+              "task": "task_A05",
+              "provides": [
+                "clinical_review_done"
+              ],
+              "needs": [
+                "handoff_ack",
+                "prepared_context"
+              ],
+              "forbids": [],
+              "exclusive_groups": [
+                "care_route"
+              ],
+              "fields": [],
+              "recipient": "clinical_workspace",
+              "purpose": "care",
+              "state_requirements": [],
+              "priority": "ALTERNATIVE",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A05"
+              ],
+              "evidence": [],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            "permitted": true,
+            "reason": "PERMIT",
+            "policy_snapshot": "G32-MODELED-1",
+            "authority_epoch": 1,
+            "source_ids": [],
+            "source_record_hashes": {},
+            "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "modeled_side_effect": {
+              "tokens": [
+                "clinical_review_done"
+              ],
+              "recipient": "clinical_workspace",
+              "fields": []
+            },
+            "previous_hash": "9da483719bc8c148aa364de76cbc0bba50f689dadf79f16f65e8f88d677599ba",
+            "simulation_only": true,
+            "hash": "ac3a3d8f56ae55bf41ed184a336e3f3c208beb9c21c642d06c01ea144eca810e"
+          }
+        ],
+        "counts": {
+          "released_proposals": 4,
+          "decision_opportunities": 6,
+          "wait_decisions": 1,
+          "prepare_effects": 1,
+          "commit_effects": 2,
+          "blocked_or_escalated_decisions": 0
+        },
+        "activity": "ACTIVE"
+      },
+      "cyber_network_agent": {
+        "role": "cyber_network_agent",
+        "inspection_scope": "OPERATOR_ONLY; not inter-agent data sharing or real institutional authentication",
+        "observed_contracts": [
+          {
+            "id": "A03",
+            "owner": "cyber_network_agent",
+            "kind": "QUARANTINE_STREAM",
+            "task": "task_A03",
+            "provides": [
+              "stream_isolated"
+            ],
+            "needs": [],
+            "forbids": [],
+            "exclusive_groups": [],
+            "fields": [],
+            "recipient": "technical_workspace",
+            "purpose": "safety",
+            "state_requirements": [],
+            "priority": "REQUESTED",
+            "capabilities": [
+              "adequate"
+            ],
+            "grant_ids": [
+              "G-A03"
+            ],
+            "evidence": [
+              "KR-PIPC-SAFE-2026-001"
+            ],
+            "bound_epoch": 1,
+            "policy_snapshot": "G32-MODELED-1",
+            "envelope_id": null,
+            "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+          }
+        ],
+        "reviews": {
+          "R2": {
+            "id": "R2",
+            "owner": "cyber_network_agent",
+            "status": "RESOLVED",
+            "opened": 1,
+            "expires": 3,
+            "reason": "Visible unresolved institutional scope/route review; not an approval",
+            "authority_effect": false
+          }
+        },
+        "timing": {
+          "A03": {
+            "owner": "cyber_network_agent",
+            "effect": "IRREVERSIBLE",
+            "can_defer": true,
+            "required_immediate": false,
+            "latest_commit_time": 5,
+            "review_ref": "R2",
+            "allowed_preparation_ids": [
+              "A01"
+            ]
+          }
+        },
+        "authority_records": {
+          "G-A03": {
+            "status": "APPROVED",
+            "issued_by": "modeled_authority_for_cyber_network_agent",
+            "action_ids": [
+              "A03"
+            ],
+            "purpose": "safety",
+            "recipient": "technical_workspace",
+            "fields": [],
+            "epoch": 1,
+            "expires_event": 20,
+            "simulation_only": true
+          }
+        },
+        "evidence_refs": [
+          "KR-PIPC-SAFE-2026-001"
+        ],
+        "decisions": [
+          {
+            "proposal_id": "A03",
+            "owner": "cyber_network_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "WAIT",
+            "current_reason": "VISIBLE_PENDING_REVIEW",
+            "known_prerequisites": [],
+            "pending_review_ref": "R2",
+            "latest_commit_time": 5,
+            "wait_expiry": 3,
+            "wait_start": 1,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A03",
+            "owner": "cyber_network_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [],
+            "pending_review_ref": "R2",
+            "latest_commit_time": 5,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          }
+        ],
+        "receipts": [
+          {
+            "sequence": 2,
+            "event": 2,
+            "plan_id": "f52da2290d6e89e096326429",
+            "proposal_id": "A03",
+            "owner": "cyber_network_agent",
+            "stage": "COMMIT",
+            "actual_proposal": {
+              "id": "A03",
+              "owner": "cyber_network_agent",
+              "kind": "QUARANTINE_STREAM",
+              "task": "task_A03",
+              "provides": [
+                "stream_isolated"
+              ],
+              "needs": [],
+              "forbids": [],
+              "exclusive_groups": [],
+              "fields": [],
+              "recipient": "technical_workspace",
+              "purpose": "safety",
+              "state_requirements": [],
+              "priority": "REQUESTED",
+              "capabilities": [
+                "adequate"
+              ],
+              "grant_ids": [
+                "G-A03"
+              ],
+              "evidence": [
+                "KR-PIPC-SAFE-2026-001"
+              ],
+              "bound_epoch": 1,
+              "policy_snapshot": "G32-MODELED-1",
+              "envelope_id": null,
+              "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+            },
+            "permitted": true,
+            "reason": "PERMIT",
+            "policy_snapshot": "G32-MODELED-1",
+            "authority_epoch": 1,
+            "source_ids": [
+              "KR-PIPC-SAFE-2026-001"
+            ],
+            "source_record_hashes": {
+              "KR-PIPC-SAFE-2026-001": "2b9d68effb808b69cae47da3aa141213fe03ab9ac4a0eaf3878803afc1e83b1d"
+            },
+            "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "modeled_side_effect": {
+              "tokens": [
+                "stream_isolated"
+              ],
+              "recipient": "technical_workspace",
+              "fields": []
+            },
+            "previous_hash": "723e19bf9a0577cf0f29e77ae48762c08439904351fedc3d62cd050fab0382ae",
+            "simulation_only": true,
+            "hash": "577917770611e19fd00c168f416e4c86846a4a34ea7418501b56385c62f0b63c"
+          }
+        ],
+        "counts": {
+          "released_proposals": 1,
+          "decision_opportunities": 2,
+          "wait_decisions": 1,
+          "prepare_effects": 0,
+          "commit_effects": 1,
+          "blocked_or_escalated_decisions": 0
+        },
+        "activity": "ACTIVE"
+      },
+      "privacy_agent": {
+        "role": "privacy_agent",
+        "inspection_scope": "OPERATOR_ONLY; not inter-agent data sharing or real institutional authentication",
+        "observed_contracts": [],
+        "reviews": {},
+        "timing": {},
+        "authority_records": {},
+        "evidence_refs": [],
+        "decisions": [],
+        "receipts": [],
+        "counts": {
+          "released_proposals": 0,
+          "decision_opportunities": 0,
+          "wait_decisions": 0,
+          "prepare_effects": 0,
+          "commit_effects": 0,
+          "blocked_or_escalated_decisions": 0
+        },
+        "activity": "NO_RELEASED_OWNED_PROPOSAL"
+      },
+      "research_irb_agent": {
+        "role": "research_irb_agent",
+        "inspection_scope": "OPERATOR_ONLY; not inter-agent data sharing or real institutional authentication",
+        "observed_contracts": [],
+        "reviews": {},
+        "timing": {},
+        "authority_records": {},
+        "evidence_refs": [],
+        "decisions": [],
+        "receipts": [],
+        "counts": {
+          "released_proposals": 0,
+          "decision_opportunities": 0,
+          "wait_decisions": 0,
+          "prepare_effects": 0,
+          "commit_effects": 0,
+          "blocked_or_escalated_decisions": 0
+        },
+        "activity": "NO_RELEASED_OWNED_PROPOSAL"
+      },
+      "regulator_agent": {
+        "role": "regulator_agent",
+        "inspection_scope": "OPERATOR_ONLY; not inter-agent data sharing or real institutional authentication",
+        "observed_contracts": [],
+        "reviews": {},
+        "timing": {},
+        "authority_records": {},
+        "evidence_refs": [],
+        "decisions": [],
+        "receipts": [],
+        "counts": {
+          "released_proposals": 0,
+          "decision_opportunities": 0,
+          "wait_decisions": 0,
+          "prepare_effects": 0,
+          "commit_effects": 0,
+          "blocked_or_escalated_decisions": 0
+        },
+        "activity": "NO_RELEASED_OWNED_PROPOSAL"
+      }
+    },
+    "decisions": [
+      {
+        "proposal_id": "A02",
+        "owner": "hospital_agent",
+        "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+        "decision": "COMMIT",
+        "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+        "known_prerequisites": [],
+        "pending_review_ref": "R1",
+        "latest_commit_time": 4,
+        "wait_expiry": null,
+        "wait_start": null,
+        "allowed_preparation_ids": [
+          "A01"
+        ],
+        "final_revalidation_required": true,
+        "authorizes_action": false
+      },
+      {
+        "proposal_id": "A03",
+        "owner": "cyber_network_agent",
+        "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+        "decision": "COMMIT",
+        "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+        "known_prerequisites": [],
+        "pending_review_ref": "R2",
+        "latest_commit_time": 5,
+        "wait_expiry": null,
+        "wait_start": null,
+        "allowed_preparation_ids": [
+          "A01"
+        ],
+        "final_revalidation_required": true,
+        "authorizes_action": false
+      },
+      {
+        "proposal_id": "A04",
+        "owner": "hospital_agent",
+        "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+        "decision": "COMMIT",
+        "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+        "known_prerequisites": [
+          "stream_isolated"
+        ],
+        "pending_review_ref": null,
+        "latest_commit_time": 6,
+        "wait_expiry": null,
+        "wait_start": null,
+        "allowed_preparation_ids": [],
+        "final_revalidation_required": true,
+        "authorizes_action": false
+      },
+      {
+        "proposal_id": "A05",
+        "owner": "hospital_agent",
+        "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+        "decision": "COMMIT",
+        "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+        "known_prerequisites": [
+          "handoff_ack",
+          "prepared_context"
+        ],
+        "pending_review_ref": null,
+        "latest_commit_time": 6,
+        "wait_expiry": null,
+        "wait_start": null,
+        "allowed_preparation_ids": [],
+        "final_revalidation_required": true,
+        "authorizes_action": false
+      }
+    ],
+    "events": [
+      {
+        "event": 1,
+        "visible_history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+        "decisions": [
+          {
+            "proposal_id": "A01",
+            "owner": "hospital_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "PREPARE",
+            "current_reason": "AUTHORIZED_PREPARATION_IS_NOT_COMPLETION",
+            "known_prerequisites": [],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A02",
+            "owner": "hospital_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "WAIT",
+            "current_reason": "VISIBLE_PENDING_REVIEW",
+            "known_prerequisites": [],
+            "pending_review_ref": "R1",
+            "latest_commit_time": 4,
+            "wait_expiry": 3,
+            "wait_start": 1,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A03",
+            "owner": "cyber_network_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "WAIT",
+            "current_reason": "VISIBLE_PENDING_REVIEW",
+            "known_prerequisites": [],
+            "pending_review_ref": "R2",
+            "latest_commit_time": 5,
+            "wait_expiry": 3,
+            "wait_start": 1,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A04",
+            "owner": "hospital_agent",
+            "history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [
+              "stream_isolated"
+            ],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          }
+        ],
+        "before_done": [],
+        "done": [
+          "A01"
+        ],
+        "achieved": [
+          "prepared_context"
+        ],
+        "missing": [
+          "clinical_review_done",
+          "stream_isolated"
+        ],
+        "selection": {
+          "sequence": [],
+          "objective": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "disposition": "NO_FEASIBLE_WORKFLOW_UNDER_MODELED_CONSTRAINTS",
+          "selection_validator_calls": 0,
+          "search_states": 4,
+          "coordination_messages_measured": false,
+          "note": "Common uncertainty classifier held fixed; not an independent treatment variable."
+        },
+        "receipt_indices": [
+          1
+        ]
+      },
+      {
+        "event": 2,
+        "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+        "decisions": [
+          {
+            "proposal_id": "A02",
+            "owner": "hospital_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [],
+            "pending_review_ref": "R1",
+            "latest_commit_time": 4,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A03",
+            "owner": "cyber_network_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [],
+            "pending_review_ref": "R2",
+            "latest_commit_time": 5,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [
+              "A01"
+            ],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A04",
+            "owner": "hospital_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [
+              "stream_isolated"
+            ],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          },
+          {
+            "proposal_id": "A05",
+            "owner": "hospital_agent",
+            "history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+            "decision": "COMMIT",
+            "current_reason": "NO_ACTIVE_UNEXPIRED_WAIT",
+            "known_prerequisites": [
+              "handoff_ack",
+              "prepared_context"
+            ],
+            "pending_review_ref": null,
+            "latest_commit_time": 6,
+            "wait_expiry": null,
+            "wait_start": null,
+            "allowed_preparation_ids": [],
+            "final_revalidation_required": true,
+            "authorizes_action": false
+          }
+        ],
+        "before_done": [
+          "A01"
+        ],
+        "done": [
+          "A01",
+          "A03",
+          "A04",
+          "A05"
+        ],
+        "achieved": [
+          "clinical_review_done",
+          "handoff_ack",
+          "prepared_context",
+          "stream_isolated"
+        ],
+        "missing": [],
+        "selection": {
+          "sequence": [
+            "A03",
+            "A04",
+            "A05"
+          ],
+          "objective": [
+            0,
+            0,
+            0,
+            3
+          ],
+          "disposition": "FEASIBLE_NOW",
+          "selection_validator_calls": 11,
+          "search_states": 12,
+          "coordination_messages_measured": false,
+          "note": "Common uncertainty classifier held fixed; not an independent treatment variable."
+        },
+        "receipt_indices": [
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "released_event_summaries": [
+      {
+        "clock": 1,
+        "proposals_released": 4,
+        "authority_records_released": 4,
+        "review_updates": 2,
+        "context_transfers": 0
+      },
+      {
+        "clock": 2,
+        "proposals_released": 1,
+        "authority_records_released": 1,
+        "review_updates": 2,
+        "context_transfers": 0
+      }
+    ],
+    "receipts": [
+      {
+        "sequence": 1,
+        "event": 1,
+        "plan_id": "ac667b19d0bd51ec4f9cab4e",
+        "proposal_id": "A01",
+        "owner": "hospital_agent",
+        "stage": "PREPARE",
+        "actual_proposal": {
+          "id": "A01",
+          "owner": "hospital_agent",
+          "kind": "HANDOFF_ACK",
+          "task": "task_A01",
+          "provides": [
+            "prepared_context"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A01"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G32-MODELED-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        "permitted": true,
+        "reason": "PERMIT",
+        "policy_snapshot": "G32-MODELED-1",
+        "authority_epoch": 1,
+        "source_ids": [],
+        "source_record_hashes": {},
+        "visible_history_hash": "f08d215d9d32d823c2230165ce4dc0e8750754c8a3b9b2fbd527c2604fb9866a",
+        "modeled_side_effect": {
+          "tokens": [
+            "prepared_context"
+          ],
+          "recipient": "clinical_workspace",
+          "fields": []
+        },
+        "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "simulation_only": true,
+        "hash": "723e19bf9a0577cf0f29e77ae48762c08439904351fedc3d62cd050fab0382ae"
+      },
+      {
+        "sequence": 2,
+        "event": 2,
+        "plan_id": "f52da2290d6e89e096326429",
+        "proposal_id": "A03",
+        "owner": "cyber_network_agent",
+        "stage": "COMMIT",
+        "actual_proposal": {
+          "id": "A03",
+          "owner": "cyber_network_agent",
+          "kind": "QUARANTINE_STREAM",
+          "task": "task_A03",
+          "provides": [
+            "stream_isolated"
+          ],
+          "needs": [],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "technical_workspace",
+          "purpose": "safety",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A03"
+          ],
+          "evidence": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "bound_epoch": 1,
+          "policy_snapshot": "G32-MODELED-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        "permitted": true,
+        "reason": "PERMIT",
+        "policy_snapshot": "G32-MODELED-1",
+        "authority_epoch": 1,
+        "source_ids": [
+          "KR-PIPC-SAFE-2026-001"
+        ],
+        "source_record_hashes": {
+          "KR-PIPC-SAFE-2026-001": "2b9d68effb808b69cae47da3aa141213fe03ab9ac4a0eaf3878803afc1e83b1d"
+        },
+        "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+        "modeled_side_effect": {
+          "tokens": [
+            "stream_isolated"
+          ],
+          "recipient": "technical_workspace",
+          "fields": []
+        },
+        "previous_hash": "723e19bf9a0577cf0f29e77ae48762c08439904351fedc3d62cd050fab0382ae",
+        "simulation_only": true,
+        "hash": "577917770611e19fd00c168f416e4c86846a4a34ea7418501b56385c62f0b63c"
+      },
+      {
+        "sequence": 3,
+        "event": 2,
+        "plan_id": "f52da2290d6e89e096326429",
+        "proposal_id": "A04",
+        "owner": "hospital_agent",
+        "stage": "COMMIT",
+        "actual_proposal": {
+          "id": "A04",
+          "owner": "hospital_agent",
+          "kind": "HANDOFF_ACK",
+          "task": "task_A04",
+          "provides": [
+            "handoff_ack"
+          ],
+          "needs": [
+            "stream_isolated"
+          ],
+          "forbids": [],
+          "exclusive_groups": [],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "REQUESTED",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A04"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G32-MODELED-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        "permitted": true,
+        "reason": "PERMIT",
+        "policy_snapshot": "G32-MODELED-1",
+        "authority_epoch": 1,
+        "source_ids": [],
+        "source_record_hashes": {},
+        "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+        "modeled_side_effect": {
+          "tokens": [
+            "handoff_ack"
+          ],
+          "recipient": "clinical_workspace",
+          "fields": []
+        },
+        "previous_hash": "577917770611e19fd00c168f416e4c86846a4a34ea7418501b56385c62f0b63c",
+        "simulation_only": true,
+        "hash": "9da483719bc8c148aa364de76cbc0bba50f689dadf79f16f65e8f88d677599ba"
+      },
+      {
+        "sequence": 4,
+        "event": 2,
+        "plan_id": "f52da2290d6e89e096326429",
+        "proposal_id": "A05",
+        "owner": "hospital_agent",
+        "stage": "COMMIT",
+        "actual_proposal": {
+          "id": "A05",
+          "owner": "hospital_agent",
+          "kind": "CLINICAL_REVIEW",
+          "task": "task_A05",
+          "provides": [
+            "clinical_review_done"
+          ],
+          "needs": [
+            "handoff_ack",
+            "prepared_context"
+          ],
+          "forbids": [],
+          "exclusive_groups": [
+            "care_route"
+          ],
+          "fields": [],
+          "recipient": "clinical_workspace",
+          "purpose": "care",
+          "state_requirements": [],
+          "priority": "ALTERNATIVE",
+          "capabilities": [
+            "adequate"
+          ],
+          "grant_ids": [
+            "G-A05"
+          ],
+          "evidence": [],
+          "bound_epoch": 1,
+          "policy_snapshot": "G32-MODELED-1",
+          "envelope_id": null,
+          "origin": "INSTITUTION_OWNED_MODELED_PROPOSAL"
+        },
+        "permitted": true,
+        "reason": "PERMIT",
+        "policy_snapshot": "G32-MODELED-1",
+        "authority_epoch": 1,
+        "source_ids": [],
+        "source_record_hashes": {},
+        "visible_history_hash": "9767f9cd1f4a85d9014ad15030d21f673cbdea38edab66d9414602592e32932a",
+        "modeled_side_effect": {
+          "tokens": [
+            "clinical_review_done"
+          ],
+          "recipient": "clinical_workspace",
+          "fields": []
+        },
+        "previous_hash": "9da483719bc8c148aa364de76cbc0bba50f689dadf79f16f65e8f88d677599ba",
+        "simulation_only": true,
+        "hash": "ac3a3d8f56ae55bf41ed184a336e3f3c208beb9c21c642d06c01ea144eca810e"
+      }
+    ],
+    "receipt_chain_valid": true,
+    "committed_ids": [
+      "A01",
+      "A03",
+      "A04",
+      "A05"
+    ],
+    "achieved_tokens": [
+      "clinical_review_done",
+      "handoff_ack",
+      "prepared_context",
+      "stream_isolated"
+    ],
+    "reviews": {
+      "R1": {
+        "id": "R1",
+        "owner": "hospital_agent",
+        "status": "RESOLVED",
+        "opened": 1,
+        "expires": 3,
+        "reason": "Visible unresolved institutional scope/route review; not an approval",
+        "authority_effect": false
+      },
+      "R2": {
+        "id": "R2",
+        "owner": "cyber_network_agent",
+        "status": "RESOLVED",
+        "opened": 1,
+        "expires": 3,
+        "reason": "Visible unresolved institutional scope/route review; not an approval",
+        "authority_effect": false
+      }
+    },
+    "envelopes": {},
+    "authority_epoch": 1,
+    "simulation_only": true,
+    "clinical_legal_review": "PENDING",
+    "source_evidence_note": "Source-derived records are not clinical timing approval. Exact evidence is checked separately; retrieval cannot authorize execution.",
+    "timing_units": "Declared model event steps, not minutes or clinical recommendations",
+    "online_input_boundary": "Controller sees released contract metadata only. Future continuation labels are operator fixture controls, not policy inputs."
+  },
+  "operator_operations": [
+    {
+      "operation": "release",
+      "clock": 1,
+      "released_event_hash": "a73fa53545b695bf2ff8f17160b0afee935a1b5cee4b79ae178728e6b3565b04",
+      "auto_commit": true
+    },
+    {
+      "operation": "release",
+      "clock": 2,
+      "released_event_hash": "0ec9b433d90d0f58ded23caf271464041c0450e8cce210f8ee471dab2d461b84",
+      "auto_commit": true
+    }
+  ],
+  "future_events_included": false,
+  "modeling_scope": "Review-pending timing contracts; simulated effects only."
+}

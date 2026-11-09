@@ -1,0 +1,144 @@
+HTTP replay: D01 T1 DEVELOPMENT
+HTTP replay: D02 T1 CONFIRMATION
+HTTP replay: D03 T2 CONFIRMATION
+HTTP replay: D04 T2 DEVELOPMENT
+HTTP replay: D05 T3 DEVELOPMENT
+HTTP replay: D06 T3 DEVELOPMENT
+HTTP replay: C01 T1 CONFIRMATION
+HTTP replay: C02 T1 CONFIRMATION
+HTTP replay: C03 T1 CONFIRMATION
+HTTP replay: C04 T1 CONFIRMATION
+HTTP replay: C05 T2 CONFIRMATION
+HTTP replay: C06 T2 CONFIRMATION
+HTTP replay: C07 T2 CONFIRMATION
+HTTP replay: C08 T2 CONFIRMATION
+HTTP replay: C09 T3 CONFIRMATION
+HTTP replay: C10 T3 CONFIRMATION
+HTTP replay: C11 T3 CONFIRMATION
+HTTP replay: C12 T3 CONFIRMATION
+{
+  "gate": "GATE_30_INTEGRATED_RELEASE",
+  "run_id": "20261103T111811_756965Z",
+  "engineering_integrity": "PASS",
+  "checks_passed": 41,
+  "checks_total": 41,
+  "snapshot_runs": 72,
+  "progressive_sessions": 72,
+  "progressive_event_responses": 432,
+  "source_families": 18,
+  "previous_confirmation_families": 14,
+  "evaluation_scope": "Known Gate 29 families replayed through the live HTTP runtime; integration regression, not new confirmation.",
+  "summary": [
+    {
+      "strategy": "REQUEST_ONLY",
+      "snapshot_families": 14,
+      "snapshot_objective_matches": 5,
+      "snapshot_disposition_matches": 5,
+      "snapshot_feasible_families": 10,
+      "snapshot_feasible_completed": 1,
+      "progressive_steps": 84,
+      "progressive_reference_matches": 75,
+      "progressive_complete_final_families": 1,
+      "progressive_families": 14,
+      "invalid_commits": 0,
+      "audit_chains_valid": true,
+      "role_projection_errors": 0,
+      "timing": {
+        "n": 60,
+        "p50_ms": 7.267165,
+        "p95_ms": 14.454392649999987,
+        "p99_ms": 22.128649009999986,
+        "min_ms": 1.147371,
+        "max_ms": 24.391453
+      }
+    },
+    {
+      "strategy": "FAIR_STATEFUL_SELECTOR",
+      "snapshot_families": 14,
+      "snapshot_objective_matches": 14,
+      "snapshot_disposition_matches": 14,
+      "snapshot_feasible_families": 10,
+      "snapshot_feasible_completed": 10,
+      "progressive_steps": 84,
+      "progressive_reference_matches": 84,
+      "progressive_complete_final_families": 8,
+      "progressive_families": 14,
+      "invalid_commits": 0,
+      "audit_chains_valid": true,
+      "role_projection_errors": 0,
+      "timing": {
+        "n": 60,
+        "p50_ms": 7.3367715,
+        "p95_ms": 15.897492499999995,
+        "p99_ms": 25.79641724999997,
+        "min_ms": 1.254138,
+        "max_ms": 30.702754
+      }
+    },
+    {
+      "strategy": "INDEPENDENT_CONSTRAINT_PLANNER",
+      "snapshot_families": 14,
+      "snapshot_objective_matches": 14,
+      "snapshot_disposition_matches": 14,
+      "snapshot_feasible_families": 10,
+      "snapshot_feasible_completed": 10,
+      "progressive_steps": 84,
+      "progressive_reference_matches": 84,
+      "progressive_complete_final_families": 8,
+      "progressive_families": 14,
+      "invalid_commits": 0,
+      "audit_chains_valid": true,
+      "role_projection_errors": 0,
+      "timing": {
+        "n": 60,
+        "p50_ms": 7.371503,
+        "p95_ms": 15.735379649999999,
+        "p99_ms": 18.67943376,
+        "min_ms": 1.00469,
+        "max_ms": 19.078236
+      }
+    },
+    {
+      "strategy": "MEDVERSE_HARMONIZER",
+      "snapshot_families": 14,
+      "snapshot_objective_matches": 14,
+      "snapshot_disposition_matches": 14,
+      "snapshot_feasible_families": 10,
+      "snapshot_feasible_completed": 10,
+      "progressive_steps": 84,
+      "progressive_reference_matches": 84,
+      "progressive_complete_final_families": 8,
+      "progressive_families": 14,
+      "invalid_commits": 0,
+      "audit_chains_valid": true,
+      "role_projection_errors": 0,
+      "timing": {
+        "n": 60,
+        "p50_ms": 7.546045,
+        "p95_ms": 16.060081299999997,
+        "p99_ms": 23.376383299999972,
+        "min_ms": 1.076907,
+        "max_ms": 28.345971
+      }
+    }
+  ],
+  "snapshot_capable_reference_agreement": true,
+  "progressive_capable_reference_agreement": true,
+  "observed_invalid_commits": 0,
+  "temporal_probes": 42,
+  "temporal_rejections": 42,
+  "loopback_timing_samples": 240,
+  "timing_protocol": "10 repetitions/configuration; six C12 event calls; one excluded warmup replay/configuration; seed 3001; includes loopback HTTP and JSON, no LLM/network/human services.",
+  "browser_status": "NOT_YET_RUN",
+  "source_and_clinical_review": "PENDING",
+  "dense_backend": "NOT_USED_LEXICAL_BM25",
+  "trained_proposals": "NOT_USED_FROZEN_INSTITUTION_OWNED_CONTRACTS",
+  "all_original_files_preserved": true,
+  "original_file_count": 1048,
+  "unique_superiority_established": false,
+  "presentation_files": [],
+  "protocol_sha256": "3bf2a679009018d9840f5499088f4d78010b8d5be5d52bcc6387d6a5bd8b9a89",
+  "freeze_manifest_sha256": "7573bc7fbd25da5abd637d2a76bb75bc5b972c742cc488419d21e53ebf7a8cac"
+}
+Raw results: /mnt/data/MedVerse_Gate30_Work/MedVerse-Agent/outputs/gate30_integration/20261103T111811_756965Z
+Gate 30: PASS | run: /mnt/data/MedVerse_Gate30_Work/MedVerse-Agent/outputs/gate30_integration/20261103T111811_756965Z

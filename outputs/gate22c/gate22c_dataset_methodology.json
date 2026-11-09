@@ -1,0 +1,21 @@
+{
+  "intervention": "targeted_compositional_coverage",
+  "why_needed": "Gate 22B showed that atomic policy templates were insufficient for unseen combinations requiring rule precedence.",
+  "what_changed": "Additional interaction-rich training states were generated from the same frozen deterministic privacy oracle.",
+  "what_did_not_change": [
+    "Privacy Agent model family",
+    "C=1.0",
+    "feature semantics",
+    "Gate-21A original train/test split",
+    "Gate-22A OOD benchmark",
+    "policy shield"
+  ],
+  "anti_leakage_rule": "Every Gate-22A OOD core policy-state combination is excluded from the augmentation set before training.",
+  "augmentation_selection": "Keep interaction-rich non-OOD states containing wrong jurisdiction, missing evidence, >=2 simultaneous violations, or audit+violation.",
+  "original_training_records": 72,
+  "augmentation_records": 137,
+  "combined_training_records": 209,
+  "ood_records": 40,
+  "ood_core_overlap_with_augmentation": 0,
+  "patient_data": false
+}

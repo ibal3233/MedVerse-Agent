@@ -1,0 +1,55 @@
+{
+  "dataset_id": "MEDVERSE-G21A-INSTITUTIONAL-LEARNING-v1",
+  "total_records": 480,
+  "agent_counts": {
+    "hospital_agent": 90,
+    "cyber_network_agent": 90,
+    "privacy_agent": 120,
+    "research_irb_agent": 90,
+    "regulator_agent": 90
+  },
+  "split_counts": {
+    "train": 288,
+    "dev": 96,
+    "test": 96
+  },
+  "agent_split_counts": {
+    "hospital_agent": {
+      "train": 54,
+      "dev": 18,
+      "test": 18
+    },
+    "cyber_network_agent": {
+      "train": 54,
+      "dev": 18,
+      "test": 18
+    },
+    "privacy_agent": {
+      "train": 72,
+      "dev": 24,
+      "test": 24
+    },
+    "research_irb_agent": {
+      "train": 54,
+      "dev": 18,
+      "test": 18
+    },
+    "regulator_agent": {
+      "train": 54,
+      "dev": 18,
+      "test": 18
+    }
+  },
+  "patient_data": false,
+  "generation_type": "deterministic_policy_safety_benchmark",
+  "split_strategy": "agent-aware grouped perturbation split",
+  "sha256": {
+    "all_agents.csv": "bf76b4e35d2a1f6dea62b017bcc33745e27fc33bc37ec392ae9d153b7ffa3f04",
+    "hospital_agent.csv": "2a0dad841d636d55d8a19338b3820be741fc1e2d700fe5939f3fc32a3bba9de1",
+    "cyber_network_agent.csv": "63e709a28f265c963e313fefec802dfa0c800fffc91433460dce553860f44393",
+    "privacy_agent.csv": "27ba85b53874bbf066cd3f8b401430ff5339da66672382da65da7cce1ccbab4d",
+    "research_irb_agent.csv": "a0c0de72ed8660b21f7b7dd83f56e617fbc8cfd88a9b7fd448565008da11045d",
+    "regulator_agent.csv": "5ad94dbc04e5d79b17ba6a1b95eb38a267e1fe6803dc7911c2160e39fb98789f",
+    "splits.json": "f5e1340dee2d37f91bd4c95122bf586604e0cbb1a3f994cf08474f57c0a90191"
+  }
+}

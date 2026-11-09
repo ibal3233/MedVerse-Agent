@@ -1,0 +1,28 @@
+{
+  "gate": "GATE_28_COORDINATION_MECHANISM",
+  "version": "1.0.0",
+  "created_utc": "2026-11-03T03:59:36.088666+00:00",
+  "files": {
+    "final_validation/__init__.py": "6008cb7d92a2de0b9cf06cb40c5650225152b330a3a5a7bf51d91ecc2d92e86e",
+    "final_validation/common.py": "d39c5fd84e6080e637b3b5acf5a7d869bb32a032f08e8b01864ae2e862aa1806",
+    "final_validation/engine.py": "8ea6881bb2b086c86a54893f4866bf069b01206a5f7419f436b373a5dfb74544",
+    "final_validation/knowledge.py": "f526553885ea0128c98062b268732a86f19de5725f8757e9396f3a0451326680",
+    "data/final_validation/freeze_manifest.json": "1d00510fbb7d26543176fcf62e7059969eb2226c5fc7bdcc29091991369a27d8",
+    "data/final_validation/workflow_families.json": "702b8c0203b1498c2ebf0d8fdf78b993bbf23333efac5cfae33bff5acb380449",
+    "data/final_validation/workflow_oracle.json": "9cd25618518864f10bffde06033d2620f3391ac3818655e6c594ad3b13e0270f",
+    "data/final_validation/source_review.json": "a1699c1545163450b2f2656d7ca50bb47a5837956ef5fc8f5dd112df542ea7e2",
+    "data/policy/candidate_v0.4/policy_records_v0.4_candidate.json": "c4e6930d8585f787e7492ef5fe630d52368436e276f8aabd140d4d81767a024d",
+    "coordination28/__init__.py": "9ce876b969ccb5e2c2bd2657f4f915cf40cbe2031016d0e2413ff445b136c36a",
+    "coordination28/schedulers.py": "c5e70e238d03bb23ed3366e0b09b3a8e2385380bdd289e218f4a617c9862b336",
+    "coordination28/evaluate.py": "5fc398c9aae0b3b72ae348dca97b7bd940ac876987f5b743b2f58cc7cd7a881f",
+    "coordination28/tests.py": "55095a23e48fa67b92cdf9e1fa4d624465682f4a54b0da3475756d865938071e",
+    "medverse/gates/gate28_coordination_mechanism.py": "9db8fd13aedef5fd2ea5a36ed73024e3d3749bc5fdb61cdbe0b8406fcc272db0",
+    "docs/coordination28/PROTOCOL.md": "c3a92b6cfa63b76f4a47843cd9a5b99306df76094a650a4dd9a0cf8f536fa134",
+    "data/coordination28/schedule_bank.json": "c3283e5bba078e2d1c5adaafd19b6e0121e323f713a2a62731fde6dda9ad99a7"
+  },
+  "training": false,
+  "threshold_selection": false,
+  "original_gates_modified": false,
+  "evaluation_type": "exhaustive proposal-order perturbations of previously seen workflow families",
+  "independent_clinical_or_legal_confirmation": false
+}

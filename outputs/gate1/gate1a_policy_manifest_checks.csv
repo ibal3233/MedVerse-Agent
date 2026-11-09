@@ -1,0 +1,6 @@
+check,status,observed,expected
+policy_documents_present,PASS,2,>=2
+policy_document_ids_unique,PASS,"['KR_MEDICAL_SERVICE_ACT_ART21', 'KR_PIPC_SECURITY_MEASURES_2026']",all unique
+policy_manifest_schema_complete,PASS,[],none
+policy_urls_https,PASS,[],none
+initial_agents_have_policy_source,PASS,"['cyber_network_agent', 'hospital_agent']",hospital_agent and cyber_network_agent

@@ -1,0 +1,25 @@
+{
+  "en": {
+    "n_queries": 20,
+    "top1_accuracy": 0.8,
+    "recall_at3": 0.85,
+    "median_latency_ms": 1.6691045
+  },
+  "ko": {
+    "n_queries": 20,
+    "top1_accuracy": 0.7,
+    "recall_at3": 0.85,
+    "median_latency_ms": 1.428089
+  },
+  "all": {
+    "n_queries": 40,
+    "top1_accuracy": 0.75,
+    "recall_at3": 0.85,
+    "median_latency_ms": 1.5334805
+  },
+  "families_both_languages_hit": 16,
+  "intent_families": 20,
+  "backend": "explicit lexical bilingual BM25, not original multilingual embedding model",
+  "dense_reproduction": "BLOCKED_DEPENDENCY",
+  "claim": "retrieval on developer-authored intent families; not legal applicability or clinical validity"
+}

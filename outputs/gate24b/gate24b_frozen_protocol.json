@@ -1,0 +1,52 @@
+{
+  "protocol_id": "MEDVERSE-G24B-CYBER-PROSPECTIVE-GROUPS-v1",
+  "status": "PRE_FROZEN_BEFORE_PREPROCESSING_REPAIR_TRAINING",
+  "training_performed": false,
+  "source_semantics": "Exact six-scenario Cyber/Network Gate-21A generator semantics extended prospectively from g0-g4 to g5-g8.",
+  "prospective_groups": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "records_per_group": {
+    "5": 18,
+    "6": 18,
+    "7": 18,
+    "8": 18
+  },
+  "total_records": 72,
+  "future_training_rule": "Fit only on Gate-21A TRAIN g0-g2; select hyperparameters on DEV g3 only; g4 remains diagnostic-only.",
+  "future_confirmation_rule": "After preprocessing and C are fixed using TRAIN/DEV only, evaluate once on g5-g8. Do not use g5-g8 for selection.",
+  "authorized_repair": {
+    "numeric_preprocessing": "TRAIN-fitted standardization of packet_loss, rtt_ms, jitter_ms",
+    "categorical_preprocessing": "explicit __MISSING__ for absent session_origin",
+    "model_family": "multinomial_logistic_regression"
+  },
+  "hyperparameter_grid": [
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0
+  ],
+  "training_history_required": true,
+  "training_history_definition": [
+    "group-wise cumulative learning curve",
+    "train-vs-dev hyperparameter path",
+    "solver convergence iterations"
+  ],
+  "confirmation_thresholds": {
+    "prospective_action_accuracy": 0.9,
+    "prospective_action_macro_f1": 0.85,
+    "prospective_assessment_accuracy": 0.9,
+    "prospective_assessment_macro_f1": 0.8,
+    "all_action_class_recall_minimum": 0.8
+  },
+  "claim_boundary": "Synthetic prospective generator-shift benchmark derived from frozen scenario semantics; not external network telemetry or clinical data.",
+  "opened_gate24_test_status": "DIAGNOSTIC_ONLY",
+  "patient_data": false,
+  "benchmark_sha256": "ebe2bb97f71e52a853822e612e396817c1d0a66e6525eb0a0190907936ff59ee"
+}

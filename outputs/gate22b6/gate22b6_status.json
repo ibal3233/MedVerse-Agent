@@ -1,0 +1,105 @@
+{
+  "gate": "GATE_22B6_PRIVACY_TARGETED_ACTION_REPAIR",
+  "status": "PASS",
+  "passed_checks": 14,
+  "total_checks": 14,
+  "agent": "Privacy Agent",
+  "intervention_scope": "ACTION_HEAD_ONLY",
+  "base_non_action_model_source": "Gate22B.3",
+  "action_model_family": "multinomial_logistic_regression",
+  "chosen_action_C": 0.3,
+  "original_train_records": 72,
+  "gate22c_augmentation_records": 137,
+  "targeted_repair_records": 37,
+  "combined_action_training_records": 246,
+  "replication_records": 486,
+  "replication_metrics": {
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "action": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 0.9629629629629629,
+      "macro_f1": 0.9453318335208098
+    }
+  },
+  "opened_id_test_metrics": {
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "action": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  },
+  "action_class_metrics": [
+    {
+      "class": "ALLOW_AUTHORIZED_DISCLOSURE",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "class": "DENY_UNAUTHORIZED_DISCLOSURE",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 348
+    },
+    {
+      "class": "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 12
+    },
+    {
+      "class": "PRESERVE_PRIVACY_AUDIT_LOG",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "class": "REQUEST_ADDITIONAL_AUTHORIZATION",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+    }
+  ],
+  "minimum_action_class_recall": 1.0,
+  "protected_diagnosed_core_action_accuracy": 1.0,
+  "unsafe_allow_execution_rate": 0.0,
+  "training_history_steps": 5,
+  "claim_boundary": "A PASS may support repaired competence over the already-defined finite Privacy state space under fresh request contexts. It must NOT be described as unseen semantic-core generalization.",
+  "model_path": "outputs/gate22b6/privacy_agent_action_repaired_model.joblib",
+  "figures_directory": "outputs/gate22b6/figures",
+  "next_dependency": "If PASS, Privacy is closed for hackathon purposes under the finite-state claim boundary; resume Cyber Gate24C. If FAIL, document residual Privacy limits rather than opening another adaptive repair cycle."
+}

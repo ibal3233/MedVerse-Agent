@@ -1,0 +1,41 @@
+[
+  {
+    "check": "diagnostic_rows_complete",
+    "pass": true,
+    "observed": 40,
+    "expected": 40
+  },
+  {
+    "check": "publication_figures_created",
+    "pass": true,
+    "observed": [
+      "fig22b_errors_vs_safety.png",
+      "fig22b_id_vs_ood_accuracy.png",
+      "fig22b_ood_accuracy_by_family.png",
+      "fig22b_ood_action_confusion_matrix.png"
+    ],
+    "expected": "4 PNG figures"
+  },
+  {
+    "check": "dataset_methodology_recorded",
+    "pass": true,
+    "observed": "/mnt/data/MedVerse-Agent-Gate22B-Build/outputs/gate22b/dataset_generation_methodology.json",
+    "expected": "exists"
+  },
+  {
+    "check": "no_training_or_model_change",
+    "pass": true,
+    "observed": {
+      "training_changed": false,
+      "model_changed": false,
+      "C": 1.0
+    },
+    "expected": "frozen Gate-22 learner"
+  },
+  {
+    "check": "shield_safety_preserved",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  }
+]

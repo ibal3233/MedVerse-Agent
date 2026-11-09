@@ -1,0 +1,85 @@
+{
+  "gate": "GATE_22C_PRIVACY_COMPOSITIONAL_COVERAGE",
+  "status": "PASS",
+  "passed_checks": 7,
+  "total_checks": 7,
+  "model_family_changed": false,
+  "C_changed": false,
+  "C": 1.0,
+  "original_training_records": 72,
+  "augmentation_records": 137,
+  "combined_training_records": 209,
+  "ood_training_overlap": 0,
+  "before_ood_metrics": {
+    "assessment": {
+      "accuracy": 0.55,
+      "macro_f1": 0.4392857142857143
+    },
+    "action": {
+      "accuracy": 0.5,
+      "macro_f1": 0.29411764705882354
+    },
+    "boundary": {
+      "accuracy": 0.65,
+      "macro_f1": 0.5935185185185184
+    },
+    "enforcement": {
+      "accuracy": 0.65,
+      "macro_f1": 0.5935185185185184
+    },
+    "evidence": {
+      "accuracy": 0.6,
+      "macro_f1": 0.375
+    }
+  },
+  "after_ood_metrics": {
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "action": {
+      "accuracy": 0.9,
+      "macro_f1": 0.8343079922027291
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 0.85,
+      "macro_f1": 0.8119122257053292
+    }
+  },
+  "id_after_metrics": {
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "action": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  },
+  "ood_action_errors_before": 20,
+  "ood_action_errors_after": 4,
+  "unsafe_raw_proposals_after": 0,
+  "unsafe_executed_after_policy_shield": 0,
+  "figures_directory": "outputs/gate22c/figures",
+  "next_dependency": "If PASS, freeze compositional-coverage strategy before extending to other agents. If FAIL, diagnose residual representation/model-capacity limitation."
+}

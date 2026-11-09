@@ -1,0 +1,79 @@
+{
+  "project": "MedVerse-Agent",
+  "status": "EXPERIMENT_COMPLETE_READY_FOR_DEMO",
+  "training_performed_in_gate25": false,
+  "new_benchmark_created_in_gate25": false,
+  "new_threshold_created_in_gate25": false,
+  "deployment_jurisdiction": "KR",
+  "end_to_end": {
+    "gate19_status": "PASS",
+    "gate19_replay_mode": "FROZEN_PASS_FALLBACK_AFTER_DEPENDENCY_HOLD",
+    "gate19_runtime_status": "HOLD",
+    "gate19_runtime_reason": "sentence-transformers is required. Install with: pip install sentence-transformers",
+    "scenario_count": 4,
+    "scenario_outcome_accuracy": 1.0,
+    "scenarios": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "agents_exercised": [
+      "cyber_network_agent",
+      "hospital_agent",
+      "privacy_agent",
+      "regulator_agent",
+      "research_irb_agent"
+    ]
+  },
+  "judge_interface": {
+    "gate20_status": "PASS",
+    "gate20_replay_mode": "FROZEN_PASS_FALLBACK_AFTER_DEPENDENCY_HOLD",
+    "gate20_runtime_status": "HOLD",
+    "gate20_runtime_reason": "sentence-transformers is required. Install with: pip install sentence-transformers",
+    "checks": "27/27",
+    "outcomes_preserved": true,
+    "scenarios_visible": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ]
+  },
+  "privacy": {
+    "status": "PASS",
+    "checks": "14/14",
+    "action_accuracy": 1.0,
+    "action_macro_f1": 1.0,
+    "minimum_action_class_recall": 1.0,
+    "protected_diagnosed_core_action_accuracy": 1.0,
+    "evidence_accuracy": 0.9629629629629629,
+    "evidence_macro_f1": 0.9453318335208098,
+    "unsafe_allow_execution_rate": 0.0,
+    "claim_boundary": "A PASS may support repaired competence over the already-defined finite Privacy state space under fresh request contexts. It must NOT be described as unseen semantic-core generalization."
+  },
+  "cyber_network": {
+    "status": "PASS",
+    "checks": "12/12",
+    "action_accuracy": 1.0,
+    "action_macro_f1": 1.0,
+    "assessment_accuracy": 1.0,
+    "assessment_macro_f1": 1.0,
+    "minimum_action_class_recall": 1.0,
+    "prospective_groups": [
+      "g5",
+      "g6",
+      "g7",
+      "g8"
+    ],
+    "claim_boundary": "Synthetic prospective generator-shift benchmark derived from frozen scenario semantics; not external network telemetry or clinical data."
+  },
+  "scientific_claim_boundaries": [
+    "Privacy validation is over an already-defined finite synthetic policy state space under fresh request contexts; it is not unseen semantic-core generalization.",
+    "Cyber validation uses a synthetic prospective generator-shift benchmark; it is not external network telemetry or clinical validation.",
+    "Benchmark/reference validators establish consistency with synthetic benchmark oracles, not completeness of Korean legal-policy semantics.",
+    "NCC cancer data are population-level context and are not used for patient-level inference.",
+    "MedVerse-Agent harmonizes institutionally asymmetric agents; it is not a voting/consensus system."
+  ],
+  "video_ready_assets_directory": "outputs/gate25/demo_assets"
+}

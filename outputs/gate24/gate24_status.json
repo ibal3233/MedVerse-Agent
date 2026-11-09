@@ -1,0 +1,81 @@
+{
+  "gate": "GATE_24_CYBER_NETWORK_AGENT_TRAINING",
+  "status": "FAIL",
+  "passed_checks": 5,
+  "total_checks": 8,
+  "agent": "Cyber / Network Agent",
+  "model_family": "multinomial_logistic_regression",
+  "chosen_C": 0.3,
+  "train_records": 54,
+  "dev_records": 18,
+  "test_records": 18,
+  "train_groups": 3,
+  "dev_groups": 1,
+  "test_groups": 1,
+  "split_group_leakage_count": 0,
+  "test_metrics": {
+    "assessment": {
+      "accuracy": 0.8333333333333334,
+      "macro_f1": 0.6
+    },
+    "action": {
+      "accuracy": 0.8333333333333334,
+      "macro_f1": 0.76
+    }
+  },
+  "training_history_steps": 3,
+  "training_history_final": {
+    "step": 3,
+    "groups_used": 3,
+    "group_added": "cyber_network_agent::telemetry_security::g2",
+    "training_records": 54,
+    "train_action_accuracy": 1.0,
+    "train_action_macro_f1": 1.0,
+    "dev_action_accuracy": 1.0,
+    "dev_action_macro_f1": 1.0,
+    "train_assessment_accuracy": 1.0,
+    "dev_assessment_accuracy": 1.0,
+    "action_solver_iterations": 1370,
+    "assessment_solver_iterations": 625
+  },
+  "action_class_metrics": [
+    {
+      "class": "ISOLATE_SUSPECT_SESSION",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    {
+      "class": "MARK_TELEMETRY_UNVERIFIED",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "class": "PRESERVE_TECHNICAL_LOGS",
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "support": 6
+    },
+    {
+      "class": "REQUEST_ALTERNATIVE_CHANNEL",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "class": "VERIFY_DEVICE_IDENTITY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    }
+  ],
+  "model_path": "outputs/gate24/cyber_network_agent_model.joblib",
+  "figures_directory": "outputs/gate24/figures",
+  "next_dependency": "If PASS, Gate 24A prospective Cyber/Network compositional and threshold generalization protocol. If FAIL, diagnose class/feature/regularization error."
+}

@@ -1,0 +1,245 @@
+{
+  "kb_version": "0.3",
+  "design_note": "Gate 7A adds compact Korean retrieval descriptors and multilingual semantic retrieval while retaining the source-grounded English paraphrases and exact official provenance from Gate 6. Full legal text is not reproduced.",
+  "records": [
+    {
+      "chunk_id": "KR-MSA-ART21-ACCESS-001",
+      "document_id": "KR_MEDICAL_SERVICE_ACT",
+      "title": "Medical Service Act",
+      "jurisdiction": "KR",
+      "authority": "Ministry of Health and Welfare / National Law Information Center",
+      "source_language": "ko",
+      "article": "Article 21",
+      "effective_date": "2026-10-02",
+      "official_url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1026149983",
+      "agent_access": [
+        "hospital_agent"
+      ],
+      "topics": [
+        "medical_records",
+        "patient_access",
+        "record_disclosure",
+        "healthcare_provider"
+      ],
+      "text_en": "Patients may request access to their own medical records. Healthcare personnel and institutions generally may not disclose a patient's records to other persons unless a legally specified exception applies.",
+      "translation_status": "source-grounded English paraphrase",
+      "full_text_stored": false,
+      "title_ko": "의료법",
+      "article_ko": "제21조",
+      "retrieval_text_ko": "환자 진료기록 열람 사본 발급 의료기관 기록 공개 제3자 제공"
+    },
+    {
+      "chunk_id": "KR-PIPC-SAFE-2026-001",
+      "document_id": "KR_PIPC_SECURITY_MEASURES_2026",
+      "title": "Personal Information Security Measures Standard",
+      "jurisdiction": "KR",
+      "authority": "Personal Information Protection Commission",
+      "source_language": "ko",
+      "article": "Articles 1-2 (seed scope)",
+      "effective_date": "2026-07-01",
+      "official_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000281400",
+      "agent_access": [
+        "cyber_network_agent"
+      ],
+      "topics": [
+        "personal_information_security",
+        "technical_safeguards",
+        "access_control",
+        "access_logs",
+        "integrity"
+      ],
+      "text_en": "The standard establishes minimum technical, managerial, and physical safeguards for protecting personal information against loss, theft, leakage, forgery, alteration, or damage, and defines access-record concepts for personal-information systems.",
+      "translation_status": "source-grounded English paraphrase",
+      "full_text_stored": false,
+      "title_ko": "개인정보의 안전성 확보조치 기준",
+      "article_ko": "안전성 확보조치 및 접속기록",
+      "retrieval_text_ko": "개인정보 보호 기술적 관리적 물리적 안전조치 접근통제 접속기록 무결성"
+    },
+    {
+      "chunk_id": "KR-PIPA-ART18-PURPOSE-001",
+      "document_id": "KR-PIPA-2026",
+      "title": "Personal Information Protection Act",
+      "title_ko": "개인정보 보호법",
+      "article": "Article 18",
+      "article_ko": "제18조",
+      "retrieval_text_ko": "개인정보는 원래 수집·이용 목적의 범위를 넘어 이용하거나 제3자에게 제공하는 것이 제한되며, 별도 동의나 법률상 근거 등 예외 사유가 필요하다.",
+      "translation_status": "source-grounded English paraphrase",
+      "authority": "Korea Ministry of Government Legislation / Personal Information Protection Commission",
+      "effective_date": "2026-09-11",
+      "official_url": "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=900078309",
+      "source_type": "statute",
+      "supports": [
+        "purpose_limitation",
+        "third_party_disclosure_restriction",
+        "authorization_check"
+      ],
+      "agent_access": [
+        "privacy_agent"
+      ],
+      "text_en": "Use or third-party disclosure of personal information beyond the original collection/use purpose is restricted unless an applicable legal exception, separate consent, or other statutory basis exists.",
+      "topics": [
+        "purpose_limitation",
+        "third_party_disclosure_restriction",
+        "authorization_check"
+      ],
+      "jurisdiction": "KR",
+      "source_language": "ko",
+      "full_text_stored": false
+    },
+    {
+      "chunk_id": "KR-PIPA-ART17-DISCLOSURE-001",
+      "document_id": "KR-PIPA-2026",
+      "title": "Personal Information Protection Act",
+      "title_ko": "개인정보 보호법",
+      "article": "Article 17",
+      "article_ko": "제17조",
+      "retrieval_text_ko": "개인정보의 제3자 제공은 정보주체의 동의 또는 법률상 허용되는 범위 등 적법한 근거가 있을 때 가능하며, 제공받는 자와 이용 목적 등 관련 사항을 고지해야 한다.",
+      "translation_status": "source-grounded English paraphrase",
+      "authority": "Korea Ministry of Government Legislation / Personal Information Protection Commission",
+      "effective_date": "2026-09-11",
+      "official_url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1029334945",
+      "source_type": "statute",
+      "supports": [
+        "third_party_disclosure",
+        "lawful_basis",
+        "declared_purpose"
+      ],
+      "agent_access": [
+        "privacy_agent"
+      ],
+      "text_en": "Third-party provision of personal information requires a lawful basis, such as data-subject consent or another statutory authorization, with relevant disclosure-purpose information handled accordingly.",
+      "topics": [
+        "third_party_disclosure",
+        "lawful_basis",
+        "declared_purpose"
+      ],
+      "jurisdiction": "KR",
+      "source_language": "ko",
+      "full_text_stored": false
+    },
+    {
+      "chunk_id": "KR-BIOETHICS-ART16-CONSENT-001",
+      "document_id": "KR-BIOETHICS-2025",
+      "title": "Bioethics and Safety Act",
+      "title_ko": "생명윤리 및 안전에 관한 법률",
+      "article": "Article 16",
+      "article_ko": "제16조",
+      "retrieval_text_ko": "인간대상연구는 원칙적으로 연구대상자의 적법한 동의를 전제로 하며, 동의 능력이 불완전한 경우에는 법에서 정한 대리 동의 요건을 따라야 한다.",
+      "translation_status": "source-grounded English paraphrase",
+      "authority": "Korea Ministry of Government Legislation / Ministry of Health and Welfare",
+      "effective_date": "2025-10-01",
+      "official_url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1030696007",
+      "source_type": "statute",
+      "supports": [
+        "research_consent",
+        "participant_authorization",
+        "irb_scope"
+      ],
+      "agent_access": [
+        "research_irb_agent"
+      ],
+      "text_en": "Human-subject research is generally grounded in valid participant consent, with statutory surrogate-consent requirements applying when the participant lacks full consent capacity.",
+      "topics": [
+        "research_consent",
+        "participant_authorization",
+        "irb_scope"
+      ],
+      "jurisdiction": "KR",
+      "source_language": "ko",
+      "full_text_stored": false
+    },
+    {
+      "chunk_id": "KR-BIOETHICS-ART37-WITHDRAWAL-001",
+      "document_id": "KR-BIOETHICS-2025",
+      "title": "Bioethics and Safety Act",
+      "title_ko": "생명윤리 및 안전에 관한 법률",
+      "article": "Article 37",
+      "article_ko": "제37조",
+      "retrieval_text_ko": "인체유래물연구 동의에는 연구 목적, 개인정보 보호·처리, 제공, 보존·폐기, 동의 철회와 철회 시 처리 등에 관한 사항이 포함되어야 한다.",
+      "translation_status": "source-grounded English paraphrase",
+      "authority": "Korea Ministry of Government Legislation / Ministry of Health and Welfare",
+      "effective_date": "2025-10-01",
+      "official_url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1029630779",
+      "source_type": "statute",
+      "supports": [
+        "research_withdrawal",
+        "research_scope",
+        "data_handling_after_withdrawal"
+      ],
+      "agent_access": [
+        "research_irb_agent"
+      ],
+      "text_en": "Consent for human-derived-material research includes the research purpose, personal-information handling, provision, retention/disposal, and withdrawal of consent and handling after withdrawal.",
+      "topics": [
+        "research_withdrawal",
+        "research_scope",
+        "data_handling_after_withdrawal"
+      ],
+      "jurisdiction": "KR",
+      "source_language": "ko",
+      "full_text_stored": false
+    },
+    {
+      "chunk_id": "KR-DMPA-ART2-DIGITALDEVICE-001",
+      "document_id": "KR-DMPA-2026",
+      "title": "Digital Medical Products Act",
+      "title_ko": "디지털의료제품법",
+      "article": "Article 2",
+      "article_ko": "제2조",
+      "retrieval_text_ko": "디지털의료기기는 지능정보기술 등 디지털기술이 적용되어 진단·치료·예후 관찰, 치료 반응·결과 예측, 치료 효과·부작용 모니터링 등에 사용되는 의료기기를 포함한다.",
+      "translation_status": "source-grounded English paraphrase",
+      "authority": "Korea Ministry of Government Legislation / Ministry of Food and Drug Safety",
+      "effective_date": "2026-10-08",
+      "official_url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031809295",
+      "source_type": "statute",
+      "supports": [
+        "digital_medical_device_scope",
+        "regulated_high_impact_use"
+      ],
+      "agent_access": [
+        "regulator_agent"
+      ],
+      "text_en": "Digital medical devices include devices applying digital technologies for diagnosis, treatment, prognosis observation, prediction of treatment response/results, and monitoring of therapeutic effects or adverse effects.",
+      "topics": [
+        "digital_medical_device_scope",
+        "regulated_high_impact_use"
+      ],
+      "jurisdiction": "KR",
+      "source_language": "ko",
+      "full_text_stored": false
+    },
+    {
+      "chunk_id": "KR-DMPA-RULE14-SAFETY-001",
+      "document_id": "KR-DMPA-RULE-2026",
+      "title": "Enforcement Rule of the Digital Medical Products Act",
+      "title_ko": "디지털의료제품법 시행규칙",
+      "article": "Article 14",
+      "article_ko": "제14조",
+      "retrieval_text_ko": "디지털의료기기 임상시험계획 승인 신청에는 소프트웨어 검증·유효성, 전자적 침해행위 보호조치, 성능 및 안전 확인을 위한 자료 등 안전성 검토 자료가 요구된다.",
+      "translation_status": "source-grounded English paraphrase",
+      "authority": "Korea Ministry of Government Legislation / Ministry of Food and Drug Safety",
+      "effective_date": "2026-01-24",
+      "official_url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=192795",
+      "source_type": "enforcement_rule",
+      "supports": [
+        "software_validation",
+        "safety_evidence",
+        "cyber_protection",
+        "regulatory_oversight"
+      ],
+      "agent_access": [
+        "regulator_agent"
+      ],
+      "text_en": "Digital-medical-device clinical-trial applications require safety-review materials including software verification/validation, protection against cyber compromise, and evidence supporting performance and safety.",
+      "topics": [
+        "software_validation",
+        "safety_evidence",
+        "cyber_protection",
+        "regulatory_oversight"
+      ],
+      "jurisdiction": "KR",
+      "source_language": "ko",
+      "full_text_stored": false
+    }
+  ]
+}

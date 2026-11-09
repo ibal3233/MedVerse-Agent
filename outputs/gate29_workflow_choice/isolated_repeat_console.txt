@@ -1,0 +1,116 @@
+Gate 29 | Institutional workflow choice | independent reference outcomes | automatic figures
+D01 T1 DEVELOPMENT 1 institution-owned candidate actions
+D02 T1 CONFIRMATION 3 institution-owned candidate actions
+D03 T2 CONFIRMATION 7 institution-owned candidate actions
+D04 T2 DEVELOPMENT 6 institution-owned candidate actions
+D05 T3 DEVELOPMENT 1 institution-owned candidate actions
+D06 T3 DEVELOPMENT 1 institution-owned candidate actions
+C01 T1 CONFIRMATION 4 institution-owned candidate actions
+C02 T1 CONFIRMATION 3 institution-owned candidate actions
+C03 T1 CONFIRMATION 3 institution-owned candidate actions
+C04 T1 CONFIRMATION 3 institution-owned candidate actions
+C05 T2 CONFIRMATION 10 institution-owned candidate actions
+C06 T2 CONFIRMATION 7 institution-owned candidate actions
+C07 T2 CONFIRMATION 7 institution-owned candidate actions
+C08 T2 CONFIRMATION 4 institution-owned candidate actions
+C09 T3 CONFIRMATION 3 institution-owned candidate actions
+C10 T3 CONFIRMATION 3 institution-owned candidate actions
+C11 T3 CONFIRMATION 2 institution-owned candidate actions
+C12 T3 CONFIRMATION 10 institution-owned candidate actions
+{
+  "gate": "GATE_29_INSTITUTIONAL_WORKFLOW_CHOICE",
+  "run_id": "20261103T080135_717319Z",
+  "stage": "all",
+  "engineering_integrity": "PASS",
+  "checks_passed": 58,
+  "checks_total": 58,
+  "source_and_interpretation_review": "HOLD_PENDING_INDEPENDENT_CLINICAL_AND_KOREAN_LEGAL_REVIEW",
+  "reference_method": "independently coded finite reference evaluator; same-developer modeling assumptions",
+  "evaluation_independence": "Internal, predeclared grouped confirmation. Shared rule/action vocabulary; not external validation.",
+  "families": 18,
+  "development_families": 4,
+  "confirmation_families": 14,
+  "strategy_executions": 72,
+  "confirmation_summary": [
+    {
+      "strategy": "REQUEST_ONLY",
+      "confirmation_families": 14,
+      "reference_feasible_families": 10,
+      "completed_feasible": 1,
+      "feasible_workflow_recall": 0.1,
+      "optimal_partial_or_complete": 5,
+      "disposition_correct": 5,
+      "clinical_feasible_families": 11,
+      "clinical_completed": 9,
+      "execution_violations": 0,
+      "committed_actions": 21,
+      "validator_calls_selection_only": 305,
+      "all_audit_chains_valid": true
+    },
+    {
+      "strategy": "FAIR_STATEFUL_SELECTOR",
+      "confirmation_families": 14,
+      "reference_feasible_families": 10,
+      "completed_feasible": 10,
+      "feasible_workflow_recall": 1.0,
+      "optimal_partial_or_complete": 14,
+      "disposition_correct": 14,
+      "clinical_feasible_families": 11,
+      "clinical_completed": 11,
+      "execution_violations": 0,
+      "committed_actions": 42,
+      "validator_calls_selection_only": 1894,
+      "all_audit_chains_valid": true
+    },
+    {
+      "strategy": "INDEPENDENT_CONSTRAINT_PLANNER",
+      "confirmation_families": 14,
+      "reference_feasible_families": 10,
+      "completed_feasible": 10,
+      "feasible_workflow_recall": 1.0,
+      "optimal_partial_or_complete": 14,
+      "disposition_correct": 14,
+      "clinical_feasible_families": 11,
+      "clinical_completed": 11,
+      "execution_violations": 0,
+      "committed_actions": 42,
+      "validator_calls_selection_only": 6086,
+      "all_audit_chains_valid": true
+    },
+    {
+      "strategy": "MEDVERSE_HARMONIZER",
+      "confirmation_families": 14,
+      "reference_feasible_families": 10,
+      "completed_feasible": 10,
+      "feasible_workflow_recall": 1.0,
+      "optimal_partial_or_complete": 14,
+      "disposition_correct": 14,
+      "clinical_feasible_families": 11,
+      "clinical_completed": 11,
+      "execution_violations": 0,
+      "committed_actions": 42,
+      "validator_calls_selection_only": 287,
+      "all_audit_chains_valid": true
+    }
+  ],
+  "capable_selectors_match_reference_objective_and_disposition": true,
+  "all_capable_selectors_tie": true,
+  "strict_medverse_superiority_established": false,
+  "temporal_probes": 42,
+  "temporal_probes_reject_changed_authority": 42,
+  "adapter_tests": 114,
+  "adapter_reference_agreement": 114,
+  "adapter_expected_valid_accepts": 6,
+  "adapter_corrupted_or_missing_context_accepts": 0,
+  "original_files_preserved": 981,
+  "original_files_checked": 981,
+  "training_performed": false,
+  "classifiers_loaded": false,
+  "source_retrieval_benchmarked": false,
+  "main_interface_modified": false,
+  "clinical_validation": "NOT_ESTABLISHED",
+  "legal_validation": "NOT_ESTABLISHED",
+  "claim_boundary": "Finite developer-authored workflow choice and local context handoffs. No universal planner advantage or medical/ITU conformance claim.",
+  "freeze_manifest_sha256": "9bbee8372b8491d411180fc7ae088168b85587b8fbd684f3d1cd9478a5c8cd0a"
+}
+Raw evidence: /mnt/data/MedVerse_Gate29_Work/MedVerse-Agent/outputs/gate29_workflow_choice/20261103T080135_717319Z

@@ -1,0 +1,6 @@
+strategy,semantic_families,effective_family_schedule_runs,completed_runs,pooled_completion_fraction,macro_family_completion_fraction,families_robust_to_all_schedules,total_validation_calls,mean_validation_calls_per_workflow,max_rounds_per_event,total_invariant_violations,all_audit_chains_valid
+SNAPSHOT_ONCE,8,318,66,0.20754716981132076,0.75,6,11808,37.132075471698116,1,0,True
+SEQUENTIAL_ONCE,8,318,192,0.6037735849056604,0.875,6,11934,37.528301886792455,1,0,True
+STATEFUL_FIXED_POINT,8,318,318,1.0,1.0,8,12186,38.320754716981135,2,0,True
+DEPENDENCY_ORDERED,8,318,318,1.0,1.0,8,12060,37.924528301886795,1,0,True
+DEPENDENCY_EDGES_REMOVED,8,318,192,0.6037735849056604,0.875,6,11934,37.528301886792455,1,0,True

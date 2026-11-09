@@ -1,0 +1,170 @@
+[
+  {
+    "check": "test_01_original_library_import (__main__.DTTests.test_01_original_library_import)",
+    "passed": true
+  },
+  {
+    "check": "test_02_no_default_vitals (__main__.DTTests.test_02_no_default_vitals)",
+    "passed": true
+  },
+  {
+    "check": "test_03_initial_unverified (__main__.DTTests.test_03_initial_unverified)",
+    "passed": true
+  },
+  {
+    "check": "test_04_observation_provenance (__main__.DTTests.test_04_observation_provenance)",
+    "passed": true
+  },
+  {
+    "check": "test_05_wrong_owner_rejected (__main__.DTTests.test_05_wrong_owner_rejected)",
+    "passed": true
+  },
+  {
+    "check": "test_06_replay_rejected (__main__.DTTests.test_06_replay_rejected)",
+    "passed": true
+  },
+  {
+    "check": "test_07_future_observation_rejected (__main__.DTTests.test_07_future_observation_rejected)",
+    "passed": true
+  },
+  {
+    "check": "test_08_nonfinite_rejected (__main__.DTTests.test_08_nonfinite_rejected)",
+    "passed": true
+  },
+  {
+    "check": "test_09_unknown_security_rejected (__main__.DTTests.test_09_unknown_security_rejected)",
+    "passed": true
+  },
+  {
+    "check": "test_10_backward_event_rejected (__main__.DTTests.test_10_backward_event_rejected)",
+    "passed": true
+  },
+  {
+    "check": "test_11_stale_overwrite_rejected (__main__.DTTests.test_11_stale_overwrite_rejected)",
+    "passed": true
+  },
+  {
+    "check": "test_12_late_first_observation_preserved (__main__.DTTests.test_12_late_first_observation_preserved)",
+    "passed": true
+  },
+  {
+    "check": "test_13_complete_fixture_valid (__main__.DTTests.test_13_complete_fixture_valid)",
+    "passed": true
+  },
+  {
+    "check": "test_14_consent_does_not_refresh_telemetry (__main__.DTTests.test_14_consent_does_not_refresh_telemetry)",
+    "passed": true
+  },
+  {
+    "check": "test_15_security_integrity (__main__.DTTests.test_15_security_integrity)",
+    "passed": true
+  },
+  {
+    "check": "test_16_role_projection (__main__.DTTests.test_16_role_projection)",
+    "passed": true
+  },
+  {
+    "check": "test_17_session_isolation (__main__.DTTests.test_17_session_isolation)",
+    "passed": true
+  },
+  {
+    "check": "test_18_snapshot_copy (__main__.DTTests.test_18_snapshot_copy)",
+    "passed": true
+  },
+  {
+    "check": "test_19_missing_core_not_normal (__main__.DTTests.test_19_missing_core_not_normal)",
+    "passed": true
+  },
+  {
+    "check": "test_20_dt_not_permission (__main__.DTTests.test_20_dt_not_permission)",
+    "passed": true
+  },
+  {
+    "check": "test_21_exact_no_similarity (__main__.EvidenceTests.test_21_exact_no_similarity)",
+    "passed": true
+  },
+  {
+    "check": "test_22_exact_unknown_no_substitution (__main__.EvidenceTests.test_22_exact_unknown_no_substitution)",
+    "passed": true
+  },
+  {
+    "check": "test_23_case_insensitive_canonical_id (__main__.EvidenceTests.test_23_case_insensitive_canonical_id)",
+    "passed": true
+  },
+  {
+    "check": "test_24_multiple_exact_rejected (__main__.EvidenceTests.test_24_multiple_exact_rejected)",
+    "passed": true
+  },
+  {
+    "check": "test_25_exact_role_restricted (__main__.EvidenceTests.test_25_exact_role_restricted)",
+    "passed": true
+  },
+  {
+    "check": "test_26_jurisdiction (__main__.EvidenceTests.test_26_jurisdiction)",
+    "passed": true
+  },
+  {
+    "check": "test_27_future_date (__main__.EvidenceTests.test_27_future_date)",
+    "passed": true
+  },
+  {
+    "check": "test_28_invalid_date (__main__.EvidenceTests.test_28_invalid_date)",
+    "passed": true
+  },
+  {
+    "check": "test_29_expired (__main__.EvidenceTests.test_29_expired)",
+    "passed": true
+  },
+  {
+    "check": "test_30_eligibility_not_string (__main__.EvidenceTests.test_30_eligibility_not_string)",
+    "passed": true
+  },
+  {
+    "check": "test_31_unknown_role (__main__.EvidenceTests.test_31_unknown_role)",
+    "passed": true
+  },
+  {
+    "check": "test_32_topk_frozen_range (__main__.EvidenceTests.test_32_topk_frozen_range)",
+    "passed": true
+  },
+  {
+    "check": "test_33_empty_query (__main__.EvidenceTests.test_33_empty_query)",
+    "passed": true
+  },
+  {
+    "check": "test_34_duplicate_id (__main__.EvidenceTests.test_34_duplicate_id)",
+    "passed": true
+  },
+  {
+    "check": "test_35_source_link_preserved (__main__.EvidenceTests.test_35_source_link_preserved)",
+    "passed": true
+  },
+  {
+    "check": "test_36_missing_bundle_blocks_completeness (__main__.EvidenceTests.test_36_missing_bundle_blocks_completeness)",
+    "passed": true
+  },
+  {
+    "check": "test_37_ranked_reference_not_permission (__main__.EvidenceTests.test_37_ranked_reference_not_permission)",
+    "passed": true
+  },
+  {
+    "check": "test_38_dense_no_fallback (__main__.EvidenceTests.test_38_dense_no_fallback)",
+    "passed": true
+  },
+  {
+    "check": "test_39_exact_does_not_load_dense (__main__.EvidenceTests.test_39_exact_does_not_load_dense)",
+    "passed": true
+  },
+  {
+    "check": "test_40_prefilter_no_model_on_empty_scope (__main__.EvidenceTests.test_40_prefilter_no_model_on_empty_scope)",
+    "passed": true
+  },
+  {
+    "check": "test_41_cosine_and_filter_mechanics_only (__main__.EvidenceTests.test_41_cosine_and_filter_mechanics_only)",
+    "passed": true
+  },
+  {
+    "check": "test_42_asof_invalid (__main__.EvidenceTests.test_42_asof_invalid)",
+    "passed": true
+  }
+]

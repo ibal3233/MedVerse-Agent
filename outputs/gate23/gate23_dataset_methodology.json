@@ -1,0 +1,29 @@
+{
+  "agent": "Research / IRB Agent",
+  "benchmark_role": "policy-grounded institutional decision benchmark",
+  "original_dataset": "data/learning/gate21a/research_irb_agent.csv",
+  "original_split": {
+    "train": 54,
+    "dev": 18,
+    "test": 18
+  },
+  "feature_scope": [
+    "research_consent",
+    "irb_status",
+    "pseudonymized",
+    "audit_required"
+  ],
+  "label_source": "deterministic Research/IRB institutional oracle",
+  "oracle_precedence": [
+    "withdrawn consent blocks research processing",
+    "missing consent/IRB state triggers insufficient-evidence escalation",
+    "non-approved IRB or inadequate pseudonymization triggers IRB review",
+    "approved/active state may preserve audit log or allow research processing"
+  ],
+  "augmentation_rationale": "Gate 22B/22C demonstrated that atomic templates alone can underrepresent rule interactions. Research/IRB augmentation therefore adds interaction-rich non-OOD states before considering a more complex model.",
+  "anti_leakage": "all Gate-23 OOD core signatures excluded from augmentation",
+  "augmentation_records": 33,
+  "ood_records": 24,
+  "ood_overlap": 0,
+  "patient_data": false
+}

@@ -1,0 +1,21 @@
+{
+  "gate": "GATE_22B4_PRIVACY_CONFIRMATION_ERROR_DIAGNOSIS",
+  "status": "PASS",
+  "passed_checks": 7,
+  "total_checks": 7,
+  "training_performed": false,
+  "hyperparameter_retuning_performed": false,
+  "confirmation_action_errors": 21,
+  "error_families": {
+    "authorization_denial_precedence_over_purpose": 12,
+    "minimum_necessary_precedence_over_purpose": 6,
+    "missing_evidence_precedence_over_authorization_denial": 3
+  },
+  "unique_error_policy_cores": 7,
+  "zero_support_error_cores": 2,
+  "low_or_zero_support_error_cores": 7,
+  "diagnostic_classification": "sparse_precedence_interaction_support_with_minority_action_coverage_limitation_not_hyperparameter_failure",
+  "opened_confirmation_status": "DIAGNOSTIC_ONLY_AFTER_FIRST_EVALUATION",
+  "figures_directory": "outputs/gate22b4/figures",
+  "next_dependency": "Gate 22B.5: pre-freeze another fresh Privacy confirmation benchmark before adding balanced training support for the three diagnosed precedence families."
+}

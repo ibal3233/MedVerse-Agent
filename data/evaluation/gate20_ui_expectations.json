@@ -1,0 +1,48 @@
+{
+  "contract_id": "MEDVERSE-G20-UI-CONTRACT-v1",
+  "note": "Presentation-only expectations. These do not alter Gate-19 scientific outcomes or policy decisions.",
+  "required_layers": [
+    "digital_twin_state",
+    "institutional_assessments",
+    "korean_policy_evidence",
+    "policy_boundary_status",
+    "medverse_coordination"
+  ],
+  "scenario_expectations": {
+    "S1": {
+      "title": "When the Digital Twin Cannot Be Trusted",
+      "final_outcome": "COMPLEMENTARY_RISK",
+      "coordination_state": "COMPLEMENTARY",
+      "agents": [
+        "hospital_agent",
+        "cyber_network_agent"
+      ]
+    },
+    "S2": {
+      "title": "Care vs Research Consent",
+      "final_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "coordination_state": "AGREEMENT",
+      "agents": [
+        "privacy_agent",
+        "research_irb_agent"
+      ]
+    },
+    "S3": {
+      "title": "Unverified DT + High-Impact AI",
+      "final_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "agents": [
+        "regulator_agent"
+      ]
+    },
+    "S4": {
+      "title": "Unauthorized Disclosure",
+      "final_outcome": "DISCLOSURE_BLOCKED",
+      "coordination_state": "INSTITUTIONAL_CONFLICT",
+      "agents": [
+        "hospital_agent",
+        "privacy_agent"
+      ]
+    }
+  }
+}

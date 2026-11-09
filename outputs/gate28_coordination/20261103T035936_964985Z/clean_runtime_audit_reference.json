@@ -1,0 +1,36 @@
+{
+  "run_directory": "outputs/gate28_coordination/20261103T040105_925255Z",
+  "status": {
+    "gate": "GATE_28_COORDINATION_MECHANISM",
+    "stage": "audit",
+    "run_id": "20261103T040105_925255Z",
+    "training_performed": false,
+    "original_artifacts_changed": false,
+    "engineering_integrity": "PASS",
+    "evaluation_independence": "Known modeled families; new scheduling perturbations. Not external confirmation.",
+    "saved_classifiers_loaded": false,
+    "clinical_validation": "NOT_ESTABLISHED",
+    "legal_review": "PENDING",
+    "native_equivalence": {
+      "families_checked": 12,
+      "equal_behavior": 12,
+      "cycle_strategy_branch_literals": [
+        "DENY_ALL",
+        "LOCAL_FILTER"
+      ],
+      "conclusion": "Native MEDVERSE and STATEFUL_FILTER use the same scheduling path; the tie is structural."
+    },
+    "deterministic_checks_passed": 16,
+    "deterministic_checks_total": 16,
+    "mechanism_claim": "Dependency-aware scheduling is isolated from local authorization. Results do not establish unique institutional harmonization beyond an equivalent stateful scheduler, alternative-workflow synthesis, new legal reasoning, or trained-agent generalization."
+  },
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "scikit_learn_installed": null,
+    "saved_model_sklearn_version": "1.8.0",
+    "model_replay_environment": "NOT_INSTALLED",
+    "models_loaded_by_gate28": false,
+    "note": "Gate28 uses the original deterministic proposer and validator; saved classifiers are not loaded."
+  }
+}

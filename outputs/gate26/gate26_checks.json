@@ -1,0 +1,93 @@
+[
+  {
+    "check": "frozen_benchmark_hash_matches",
+    "pass": true,
+    "observed": "3936884644117f793895c2865e4bfb319a5a2eeed1dbb5bda63324ec8a44ac1b",
+    "expected": "3936884644117f793895c2865e4bfb319a5a2eeed1dbb5bda63324ec8a44ac1b"
+  },
+  {
+    "check": "all_five_baselines_executed",
+    "pass": true,
+    "observed": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5"
+    ],
+    "expected": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5"
+    ]
+  },
+  {
+    "check": "same_70_cases_per_baseline",
+    "pass": true,
+    "observed": {
+      "B1": 70,
+      "B2": 70,
+      "B3": 70,
+      "B4": 70,
+      "B5": 70
+    },
+    "expected": 70
+  },
+  {
+    "check": "no_training_or_baseline_tuning",
+    "pass": true,
+    "observed": {
+      "training": false,
+      "tuning": false
+    },
+    "expected": false
+  },
+  {
+    "check": "all_requested_metrics_reported",
+    "pass": true,
+    "observed": [
+      "baseline",
+      "baseline_name",
+      "n_cases",
+      "institutional_correctness",
+      "policy_violation_rate",
+      "unnecessary_escalation_rate",
+      "information_overexposure_rate",
+      "unsafe_execution_rate",
+      "coordination_quality",
+      "workflow_exact_match",
+      "median_latency_us",
+      "p95_latency_us"
+    ],
+    "expected": "all seven requested metrics"
+  },
+  {
+    "check": "raw_case_results_complete",
+    "pass": true,
+    "observed": 350,
+    "expected": 350
+  },
+  {
+    "check": "archetype_breakdown_complete",
+    "pass": true,
+    "observed": 35,
+    "expected": 35
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 6,
+      "pdf": 6
+    },
+    "expected": ">=6 PNG and >=6 PDF"
+  },
+  {
+    "check": "machine_readable_and_report_tables_created",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  }
+]

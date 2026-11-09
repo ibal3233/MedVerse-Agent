@@ -1,0 +1,51 @@
+[
+  {
+    "check": "augmentation_distribution_shift_detected",
+    "pass": true,
+    "observed": {
+      "BLOCK_RESEARCH_PROCESSING": 13,
+      "REQUEST_IRB_REVIEW": 20
+    },
+    "expected": "augmentation omits at least the two positive/audit action classes"
+  },
+  {
+    "check": "preaugmentation_all_C_id_capable",
+    "pass": true,
+    "observed": {
+      "0.1": 1.0,
+      "1.0": 1.0,
+      "10.0": 1.0
+    },
+    "expected": "1.0 for all C values"
+  },
+  {
+    "check": "postaugmentation_c01_id_degradation",
+    "pass": true,
+    "observed": 0.6666666666666666,
+    "expected": "<0.90"
+  },
+  {
+    "check": "same_model_family_recovers_id_at_higher_C",
+    "pass": true,
+    "observed": {
+      "C=1": 1.0,
+      "C=10": 1.0
+    },
+    "expected": ">=0.90"
+  },
+  {
+    "check": "publication_figures_created",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4
+    },
+    "expected": ">=4 PNG and >=4 PDF"
+  },
+  {
+    "check": "no_intervention_performed",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  }
+]

@@ -1,0 +1,100 @@
+{
+  "release": "v1.0",
+  "stage": "dev",
+  "engineering_integrity": "PASS",
+  "checks_passed": 30,
+  "checks_total": 30,
+  "workflow_summary": [
+    {
+      "strategy": "LOCAL_FILTER",
+      "families": 4,
+      "workflow_obligations_met": 3,
+      "workflow_completion_rate": 0.75,
+      "clinical_review_completed": 4,
+      "unsafe_commits": 0,
+      "committed_actions": 8,
+      "research_releases": 0,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 0.7667705,
+      "p95_event_latency_ms": 1.626517,
+      "audit_chains_valid": true
+    },
+    {
+      "strategy": "STATEFUL_FILTER",
+      "families": 4,
+      "workflow_obligations_met": 4,
+      "workflow_completion_rate": 1.0,
+      "clinical_review_completed": 4,
+      "unsafe_commits": 0,
+      "committed_actions": 9,
+      "research_releases": 1,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 0.9016845,
+      "p95_event_latency_ms": 1.68896,
+      "audit_chains_valid": true
+    },
+    {
+      "strategy": "MEDVERSE",
+      "families": 4,
+      "workflow_obligations_met": 4,
+      "workflow_completion_rate": 1.0,
+      "clinical_review_completed": 4,
+      "unsafe_commits": 0,
+      "committed_actions": 9,
+      "research_releases": 1,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 1.1287765,
+      "p95_event_latency_ms": 2.848261,
+      "audit_chains_valid": true
+    },
+    {
+      "strategy": "DENY_ALL",
+      "families": 4,
+      "workflow_obligations_met": 0,
+      "workflow_completion_rate": 0.0,
+      "clinical_review_completed": 0,
+      "unsafe_commits": 0,
+      "committed_actions": 0,
+      "research_releases": 0,
+      "payload_scope_errors": 0,
+      "prerequisite_order_errors": 0,
+      "p50_event_latency_ms": 0.7768145,
+      "p95_event_latency_ms": 1.491737,
+      "audit_chains_valid": true
+    }
+  ],
+  "retrieval_summary": {
+    "en": {
+      "n_queries": 20,
+      "top1_accuracy": 0.7,
+      "recall_at3": 0.9,
+      "median_latency_ms": 1.69841
+    },
+    "ko": {
+      "n_queries": 20,
+      "top1_accuracy": 0.65,
+      "recall_at3": 0.9,
+      "median_latency_ms": 1.4047070000000001
+    },
+    "all": {
+      "n_queries": 40,
+      "top1_accuracy": 0.675,
+      "recall_at3": 0.9,
+      "median_latency_ms": 1.5227125
+    },
+    "families_both_languages_hit": 17,
+    "intent_families": 20,
+    "backend": "explicit lexical bilingual BM25, not original multilingual embedding model",
+    "dense_reproduction": "BLOCKED_DEPENDENCY",
+    "claim": "retrieval on developer-authored intent families; not legal applicability or clinical validity"
+  },
+  "clinical_validation": "NOT_ESTABLISHED",
+  "independent_legal_interpretation_review": "PENDING",
+  "dense_embedding_reproduction": "BLOCKED_DEPENDENCY",
+  "original_model_training": "NOT_REOPENED",
+  "general_deployment_readiness": "HOLD",
+  "claim_boundary": "Developer-authored modeled workflows. No independent clinical/legal validation, no new trained agent generalization."
+}

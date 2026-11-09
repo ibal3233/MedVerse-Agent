@@ -1,0 +1,82 @@
+[
+  {
+    "check": "scheduler_preserves_issued_proposals_and_owners",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "dependency_order_respects_both_prerequisites",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "removing_edges_preserves_arrival_order",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "cyclic_graph_rejected_without_execution",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "effects_link_to_actual_issued_proposals",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "scheduler_cannot_manufacture_missing_review",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "revocation_respected_at_execution_boundary",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "fixed_point_terminates_within_structural_bound",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "no_progress_stops_without_waiting_for_future_events",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "counts_include_preflight_and_final_revalidation",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "reordering_does_not_expand_role_observations",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "blocked_research_does_not_block_clinical_review",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "missing_evidence_cannot_be_replaced_by_scheduling",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "repeat_cycle_does_not_duplicate_side_effect",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "foreign_jurisdiction_not_overridden",
+    "passed": true,
+    "error": null
+  },
+  {
+    "check": "scheduler_does_not_read_scoring_oracle",
+    "passed": true,
+    "error": null
+  }
+]

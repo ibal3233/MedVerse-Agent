@@ -1,0 +1,116 @@
+
+========================================
+ MedVerse-Agent - Gate 26B
+ Architectural Baseline Comparison
+ B1-B5
+========================================
+
+{
+  "gate": "GATE_26_ARCHITECTURAL_BASELINE_COMPARISON",
+  "status": "PASS",
+  "passed_checks": 9,
+  "total_checks": 9,
+  "training_performed": false,
+  "baseline_specific_tuning_performed": false,
+  "benchmark_records": 70,
+  "baseline_runs": 350,
+  "baseline_summary": [
+    {
+      "baseline": "B1",
+      "baseline_name": "Single omniscient agent",
+      "n_cases": 70,
+      "institutional_correctness": 0.17857142857142858,
+      "policy_violation_rate": 1.0,
+      "unnecessary_escalation_rate": 0.0,
+      "information_overexposure_rate": 0.9288301381158525,
+      "unsafe_execution_rate": 1.0,
+      "coordination_quality": 0.39285714285714285,
+      "workflow_exact_match": 0.0,
+      "median_latency_us": 1.7160000000000002,
+      "p95_latency_us": 3.01075
+    },
+    {
+      "baseline": "B2",
+      "baseline_name": "Role-based but unconstrained MAS",
+      "n_cases": 70,
+      "institutional_correctness": 0.8214285714285714,
+      "policy_violation_rate": 0.14285714285714285,
+      "unnecessary_escalation_rate": 0.0,
+      "information_overexposure_rate": 0.9288301381158525,
+      "unsafe_execution_rate": 0.14285714285714285,
+      "coordination_quality": 0.5404761904761903,
+      "workflow_exact_match": 0.0,
+      "median_latency_us": 1.6030000000000002,
+      "p95_latency_us": 2.6529499999999997
+    },
+    {
+      "baseline": "B3",
+      "baseline_name": "Consensus/debate MAS",
+      "n_cases": 70,
+      "institutional_correctness": 0.6071428571428571,
+      "policy_violation_rate": 0.0,
+      "unnecessary_escalation_rate": 0.6666666666666666,
+      "information_overexposure_rate": 0.9288301381158525,
+      "unsafe_execution_rate": 0.0,
+      "coordination_quality": 0.2857142857142857,
+      "workflow_exact_match": 0.0,
+      "median_latency_us": 2.81775,
+      "p95_latency_us": 6.180249999999999
+    },
+    {
+      "baseline": "B4",
+      "baseline_name": "Policy filtering without harmonization",
+      "n_cases": 70,
+      "institutional_correctness": 0.9642857142857143,
+      "policy_violation_rate": 0.0,
+      "unnecessary_escalation_rate": 0.3333333333333333,
+      "information_overexposure_rate": 0.0,
+      "unsafe_execution_rate": 0.0,
+      "coordination_quality": 0.6,
+      "workflow_exact_match": 0.14285714285714285,
+      "median_latency_us": 2.17375,
+      "p95_latency_us": 3.8676500000000003
+    },
+    {
+      "baseline": "B5",
+      "baseline_name": "MedVerse-Agent",
+      "n_cases": 70,
+      "institutional_correctness": 1.0,
+      "policy_violation_rate": 0.0,
+      "unnecessary_escalation_rate": 0.0,
+      "information_overexposure_rate": 0.0,
+      "unsafe_execution_rate": 0.0,
+      "coordination_quality": 1.0,
+      "workflow_exact_match": 1.0,
+      "median_latency_us": 2.322,
+      "p95_latency_us": 3.94165
+    }
+  ],
+  "interpretation": {
+    "B5_vs_B4_coordination_quality_delta": 0.4,
+    "B5_vs_B4_exact_workflow_delta": 0.8571428571428572,
+    "B5_vs_B1_institutional_correctness_delta": 0.8214285714285714,
+    "B5_policy_violation_rate": 0.0,
+    "B5_unsafe_execution_rate": 0.0,
+    "B5_information_overexposure_rate": 0.0,
+    "fastest_baseline": "B2",
+    "highest_coordination_quality": "B5",
+    "highest_exact_workflow_match": "B5",
+    "important_boundary": "A positive MedVerse result supports the value of the frozen harmonization architecture on this controlled synthetic benchmark. It does not establish superiority on external clinical deployments."
+  },
+  "figures_directory": "outputs/gate26/figures",
+  "main_table": "outputs/gate26/gate26_baseline_comparison_table.md",
+  "next_dependency": "No additional experimental tuning is authorized. Integrate Gate26 into the technical report, judge narrative, and demo/video."
+}
+
+Baseline comparison:
+{'baseline': 'B1', 'institutional_correctness': 0.179, 'policy_violation_rate': 1.0, 'unnecessary_escalation_rate': 0.0, 'information_overexposure_rate': 0.929, 'unsafe_execution_rate': 1.0, 'coordination_quality': 0.393, 'workflow_exact_match': 0.0, 'median_latency_us': 1.72}
+{'baseline': 'B2', 'institutional_correctness': 0.821, 'policy_violation_rate': 0.143, 'unnecessary_escalation_rate': 0.0, 'information_overexposure_rate': 0.929, 'unsafe_execution_rate': 0.143, 'coordination_quality': 0.54, 'workflow_exact_match': 0.0, 'median_latency_us': 1.6}
+{'baseline': 'B3', 'institutional_correctness': 0.607, 'policy_violation_rate': 0.0, 'unnecessary_escalation_rate': 0.667, 'information_overexposure_rate': 0.929, 'unsafe_execution_rate': 0.0, 'coordination_quality': 0.286, 'workflow_exact_match': 0.0, 'median_latency_us': 2.82}
+{'baseline': 'B4', 'institutional_correctness': 0.964, 'policy_violation_rate': 0.0, 'unnecessary_escalation_rate': 0.333, 'information_overexposure_rate': 0.0, 'unsafe_execution_rate': 0.0, 'coordination_quality': 0.6, 'workflow_exact_match': 0.143, 'median_latency_us': 2.17}
+{'baseline': 'B5', 'institutional_correctness': 1.0, 'policy_violation_rate': 0.0, 'unnecessary_escalation_rate': 0.0, 'information_overexposure_rate': 0.0, 'unsafe_execution_rate': 0.0, 'coordination_quality': 1.0, 'workflow_exact_match': 1.0, 'median_latency_us': 2.32}
+
+Outputs:
+/mnt/data/medverse_work/baseline/MedVerse-Agent/outputs/gate26
+
+FULL GATE 26 PASS — B1-B5 were compared on the same frozen 70-case architectural benchmark with no training or baseline-specific tuning. The measured comparative result may now be reported.

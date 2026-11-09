@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "server_launch_without_third_party_packages",
+      "pass": true
+    },
+    {
+      "check": "six_events_replayed",
+      "pass": true
+    },
+    {
+      "check": "clinical_review_committed",
+      "pass": true
+    },
+    {
+      "check": "minimized_view_committed",
+      "pass": true
+    },
+    {
+      "check": "audit_chain_valid",
+      "pass": true
+    },
+    {
+      "check": "exact_corpus_lookup_available",
+      "pass": true
+    }
+  ],
+  "environment": "Fresh venv without pip or third-party packages; isolated Python (-I -B). Linux/Python 3.13.5.",
+  "scope": "Runtime and local HTTP replay, not a Windows/Spyder test and not a fresh learned-model validation."
+}

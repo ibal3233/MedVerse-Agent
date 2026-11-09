@@ -1,0 +1,165 @@
+{
+  "campaign_version": "1.0",
+  "scope": "S1_COMPLEMENTARY_RISK",
+  "note": "This campaign generates final evidence only for the implemented S1 family. S2-S4 remain unimplemented and therefore no overall final claim spanning the full Gate 10 matrix is permitted yet.",
+  "variants": [
+    {
+      "variant_id": "S1a_CANONICAL",
+      "events": [
+        {
+          "event_id": "E1",
+          "t": 1,
+          "event_type": "CLINICAL_ALARM",
+          "payload": {
+            "SpO2": 78,
+            "heart_rate": 122
+          },
+          "visible_to": [
+            "hospital_agent"
+          ]
+        },
+        {
+          "event_id": "E2",
+          "t": 2,
+          "event_type": "NETWORK_DEGRADATION",
+          "payload": {
+            "packet_loss": 0.27,
+            "rtt_ms": 840,
+            "jitter_ms": 180
+          },
+          "visible_to": [
+            "cyber_network_agent"
+          ]
+        },
+        {
+          "event_id": "E3",
+          "t": 3,
+          "event_type": "DEVICE_AUTH_ANOMALY",
+          "payload": {
+            "certificate_status": "mismatch",
+            "session_origin": "abnormal"
+          },
+          "visible_to": [
+            "cyber_network_agent"
+          ]
+        }
+      ],
+      "expected_coordination_state": "COMPLEMENTARY_RISK",
+      "expected_human_review": true
+    },
+    {
+      "variant_id": "S1b_CLINICAL_SECURITY",
+      "events": [
+        {
+          "event_id": "E1",
+          "t": 1,
+          "event_type": "CLINICAL_ALARM",
+          "payload": {
+            "SpO2": 78,
+            "heart_rate": 122
+          },
+          "visible_to": [
+            "hospital_agent"
+          ]
+        },
+        {
+          "event_id": "E3",
+          "t": 2,
+          "event_type": "DEVICE_AUTH_ANOMALY",
+          "payload": {
+            "certificate_status": "mismatch",
+            "session_origin": "abnormal"
+          },
+          "visible_to": [
+            "cyber_network_agent"
+          ]
+        }
+      ],
+      "expected_coordination_state": "COMPLEMENTARY_RISK",
+      "expected_human_review": true
+    },
+    {
+      "variant_id": "S1c_CLINICAL_NETWORK",
+      "events": [
+        {
+          "event_id": "E1",
+          "t": 1,
+          "event_type": "CLINICAL_ALARM",
+          "payload": {
+            "SpO2": 78,
+            "heart_rate": 122
+          },
+          "visible_to": [
+            "hospital_agent"
+          ]
+        },
+        {
+          "event_id": "E2",
+          "t": 2,
+          "event_type": "NETWORK_DEGRADATION",
+          "payload": {
+            "packet_loss": 0.27,
+            "rtt_ms": 840,
+            "jitter_ms": 180
+          },
+          "visible_to": [
+            "cyber_network_agent"
+          ]
+        }
+      ],
+      "expected_coordination_state": "COMPLEMENTARY_RISK",
+      "expected_human_review": true
+    },
+    {
+      "variant_id": "S1d_TECHNICAL_ONLY",
+      "events": [
+        {
+          "event_id": "E2",
+          "t": 1,
+          "event_type": "NETWORK_DEGRADATION",
+          "payload": {
+            "packet_loss": 0.27,
+            "rtt_ms": 840,
+            "jitter_ms": 180
+          },
+          "visible_to": [
+            "cyber_network_agent"
+          ]
+        },
+        {
+          "event_id": "E3",
+          "t": 2,
+          "event_type": "DEVICE_AUTH_ANOMALY",
+          "payload": {
+            "certificate_status": "mismatch",
+            "session_origin": "abnormal"
+          },
+          "visible_to": [
+            "cyber_network_agent"
+          ]
+        }
+      ],
+      "expected_coordination_state": "TECHNICAL_VERIFICATION",
+      "expected_human_review": false
+    },
+    {
+      "variant_id": "S1e_CLINICAL_ONLY",
+      "events": [
+        {
+          "event_id": "E1",
+          "t": 1,
+          "event_type": "CLINICAL_ALARM",
+          "payload": {
+            "SpO2": 78,
+            "heart_rate": 122
+          },
+          "visible_to": [
+            "hospital_agent"
+          ]
+        }
+      ],
+      "expected_coordination_state": "SINGLE_DOMAIN_ESCALATION",
+      "expected_human_review": true
+    }
+  ]
+}

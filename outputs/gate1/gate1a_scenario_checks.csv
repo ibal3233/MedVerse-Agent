@@ -1,0 +1,12 @@
+check,status,observed,expected
+scenario_has_events,PASS,3,> 0
+event_ids_unique,PASS,"['E1', 'E2', 'E3']",all unique
+event_times_strictly_increasing,PASS,"[1, 2, 3]",strictly increasing
+event_schema_complete,PASS,[],no missing required keys
+every_event_has_visibility_target,PASS,[],none
+E1_SpO2_range,PASS,78,"[0,100]"
+E1_heart_rate_positive,PASS,122,>0
+E2_packet_loss_range,PASS,0.27,"[0,1]"
+E2_rtt_nonnegative,PASS,840,>=0
+E2_jitter_nonnegative,PASS,180,>=0
+E3_certificate_status_known,PASS,mismatch,known enum

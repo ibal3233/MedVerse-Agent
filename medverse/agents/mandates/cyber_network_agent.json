@@ -1,0 +1,28 @@
+{
+  "agent_id": "cyber_network_agent",
+  "institutional_role": "Cybersecurity and Network Reliability",
+  "allowed_event_types": [
+    "NETWORK_DEGRADATION",
+    "DEVICE_AUTH_ANOMALY"
+  ],
+  "allowed_observation_fields": [
+    "packet_loss",
+    "rtt_ms",
+    "jitter_ms",
+    "certificate_status",
+    "session_origin"
+  ],
+  "allowed_actions": [
+    "MARK_TELEMETRY_UNVERIFIED",
+    "REQUEST_ALTERNATIVE_CHANNEL",
+    "VERIFY_DEVICE_IDENTITY",
+    "ISOLATE_SUSPECT_SESSION",
+    "PRESERVE_TECHNICAL_LOGS"
+  ],
+  "forbidden_action_classes": [
+    "clinical_diagnosis",
+    "contact_patient",
+    "treatment_change",
+    "research_authorization"
+  ]
+}

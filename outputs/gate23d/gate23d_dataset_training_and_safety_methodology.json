@@ -1,0 +1,42 @@
+{
+  "agent": "Research / IRB Agent",
+  "scientific_question": "Can an interpretable linear agent recover institutional rule precedence when policy-relevant interactions are made explicit in the representation?",
+  "model_family": "multinomial_logistic_regression",
+  "model_family_changed": false,
+  "representation_change": "Added governance interaction features derived only from observable consent, IRB, pseudonymization and audit state.",
+  "label_leakage_control": "No target action, assessment, boundary, enforcement or evidence label is used as an engineered feature.",
+  "training_data": {
+    "original_train": 54,
+    "compositional_augmentation": 33,
+    "class_preserving_replay": 47,
+    "combined_train": 134,
+    "dev": 18,
+    "id_test": 18,
+    "ood": 24
+  },
+  "hyperparameter_tuning": {
+    "grid": [
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ],
+    "selection_data": "DEV only",
+    "selection_after_representation_change": true,
+    "test_used_for_selection": false,
+    "ood_used_for_selection": false
+  },
+  "overfitting_controls": [
+    "frozen original train/dev/test assignments",
+    "zero generated augmentation/OOD core-signature overlap",
+    "dev-only hyperparameter selection",
+    "ID test opened after selection",
+    "OOD opened after selection",
+    "raw predictions preserved"
+  ],
+  "complete_policy_shield": "Execution validation uses complete frozen Research/IRB semantics for every action class.",
+  "safety_metric": "policy_inconsistent_execution_rate",
+  "patient_data": false
+}

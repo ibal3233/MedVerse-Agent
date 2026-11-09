@@ -1,0 +1,242 @@
+[
+  {
+    "check": "unknown_exact_citation_rejected",
+    "category": "KB",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "cross_role_exact_lookup_rejected",
+    "category": "KB",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "wrong_jurisdiction_exact_rejected",
+    "category": "KB",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "future_effective_record_excluded",
+    "category": "KB",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "duplicate_record_rejected",
+    "category": "KB",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "unverified_press_release_excluded",
+    "category": "KB",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "unsupported_claim_valid_citation_rejected",
+    "category": "KB",
+    "pass": true,
+    "expected": false,
+    "observed": false,
+    "error": null
+  },
+  {
+    "check": "registered_model_claim_recognized",
+    "category": "KB",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "expired_source_rejected",
+    "category": "KB",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "event_replay_rejected",
+    "category": "EXECUTION",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "wrong_owner_rejected",
+    "category": "AUTHORITY",
+    "pass": true,
+    "expected": "OUTSIDE_MANDATE",
+    "observed": "OUTSIDE_MANDATE",
+    "error": null
+  },
+  {
+    "check": "proposal_lineage_tamper_rejected",
+    "category": "EXECUTION",
+    "pass": true,
+    "expected": "UNISSUED_OR_TAMPERED_PROPOSAL",
+    "observed": "UNISSUED_OR_TAMPERED_PROPOSAL",
+    "error": null
+  },
+  {
+    "check": "compromised_proposer_cannot_omit_required_policies",
+    "category": "KB",
+    "pass": true,
+    "expected": "REQUIRED_EVIDENCE_OMITTED",
+    "observed": "REQUIRED_EVIDENCE_OMITTED",
+    "error": null
+  },
+  {
+    "check": "revocation_between_proposal_and_commit_blocks",
+    "category": "TEMPORAL",
+    "pass": true,
+    "expected": "BLOCK",
+    "observed": "BLOCK",
+    "error": null
+  },
+  {
+    "check": "evidence_changed_after_proposal_detected",
+    "category": "TEMPORAL",
+    "pass": true,
+    "expected": "EVIDENCE_CHANGED",
+    "observed": "EVIDENCE_CHANGED",
+    "error": null
+  },
+  {
+    "check": "forged_approval_rejected",
+    "category": "AUTHORITY",
+    "pass": true,
+    "expected": "UNTRUSTED_APPROVAL",
+    "observed": "UNTRUSTED_APPROVAL",
+    "error": null
+  },
+  {
+    "check": "wrong_approval_authority_rejected",
+    "category": "AUTHORITY",
+    "pass": true,
+    "expected": "WRONG_APPROVAL_AUTHORITY",
+    "observed": "WRONG_APPROVAL_AUTHORITY",
+    "error": null
+  },
+  {
+    "check": "wrong_approval_purpose_rejected",
+    "category": "AUTHORITY",
+    "pass": true,
+    "expected": "APPROVAL_SCOPE_MISMATCH",
+    "observed": "APPROVAL_SCOPE_MISMATCH",
+    "error": null
+  },
+  {
+    "check": "expired_approval_rejected",
+    "category": "TEMPORAL",
+    "pass": true,
+    "expected": "EXPIRED_APPROVAL",
+    "observed": "EXPIRED_APPROVAL",
+    "error": null
+  },
+  {
+    "check": "duplicate_commit_no_second_side_effect",
+    "category": "EXECUTION",
+    "pass": true,
+    "expected": 1,
+    "observed": 1,
+    "error": null
+  },
+  {
+    "check": "concurrent_commit_single_effect",
+    "category": "EXECUTION",
+    "pass": true,
+    "expected": 1,
+    "observed": 1,
+    "error": null
+  },
+  {
+    "check": "unvalidated_external_deployment_denied",
+    "category": "SCOPE",
+    "pass": true,
+    "expected": "DEPLOYMENT_VALIDATION_REQUIRED",
+    "observed": "DEPLOYMENT_VALIDATION_REQUIRED",
+    "error": null
+  },
+  {
+    "check": "cyber_cannot_observe_clinical_values",
+    "category": "PRIVACY",
+    "pass": true,
+    "expected": false,
+    "observed": false,
+    "error": null
+  },
+  {
+    "check": "research_cannot_observe_clinical_values",
+    "category": "PRIVACY",
+    "pass": true,
+    "expected": false,
+    "observed": false,
+    "error": null
+  },
+  {
+    "check": "unreleased_research_request_absent",
+    "category": "PRIVACY",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "message_cannot_mint_human_permission",
+    "category": "AUTHORITY",
+    "pass": true,
+    "expected": false,
+    "observed": false,
+    "error": null
+  },
+  {
+    "check": "audit_chain_detects_record_mutation",
+    "category": "AUDIT",
+    "pass": true,
+    "expected": false,
+    "observed": false,
+    "error": null
+  },
+  {
+    "check": "unknown_dt_state_rejected",
+    "category": "VALIDATION",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  },
+  {
+    "check": "missing_evidence_abstains",
+    "category": "KB",
+    "pass": true,
+    "expected": "REQUEST_EVIDENCE",
+    "observed": "REQUEST_EVIDENCE",
+    "error": null
+  },
+  {
+    "check": "all_original_archive_files_unchanged",
+    "category": "PRESERVATION",
+    "pass": true,
+    "expected": true,
+    "observed": true,
+    "error": null
+  }
+]

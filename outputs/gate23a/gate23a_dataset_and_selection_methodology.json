@@ -1,0 +1,19 @@
+{
+  "why_this_diagnostic_exists": "Gate 23 improved OOD action performance but degraded ID action performance. This gate checks whether the cause is augmentation distribution shift or model capacity.",
+  "frozen_data": {
+    "original_train": 54,
+    "dev": 18,
+    "id_test": 18,
+    "ood": 24
+  },
+  "frozen_model_family": "multinomial_logistic_regression",
+  "candidate_C_values": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "no_parameter_is_selected_in_gate23a": true,
+  "no_test_set_used_for_selection": true,
+  "plots_are_diagnostic_only": true,
+  "patient_data": false
+}

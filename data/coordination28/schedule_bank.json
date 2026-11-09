@@ -1,0 +1,4159 @@
+{
+  "status": "INPUT_ONLY_BEFORE_OUTCOME_EVALUATION",
+  "templates_per_family": 240,
+  "event_chronology_changed": false,
+  "oracle_used_for_schedule_generation": false,
+  "deduplication": "identical owner/action delivery sequences at every event",
+  "families": {
+    "WF05": [
+      {
+        "schedule_id": "WF05-S001",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "77537666822abc5a9781a60cdb63e14db322a65f33cc6a11c069e04132b70fab",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S002",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "dbfa1e930fa7845c7d21bc76adc60235d7999b37e9173747d25438d082a753fa",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S003",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "a3de8717013208b21761a7eaf7e7a6b72def6b751fa463aff4f551a6bed20ad2",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S004",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "dde18dd6e35f7e5ecbbefd93a37b8ca37395f52ca4118b7d951d60aa16f37093",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S005",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "e08a16f32bbb020864199518ad02081df7cff6f950ecae3f64b80438c5430c7a",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S006",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "158669d1b1d19fe0d230f048b528bc27272657262ca77bf6327397760021dfb2",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S007",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "aae8e6c447eef429ace8cdbfe67c96c7989e4f24e08524164e06ba8caa55d3e7",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S008",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "0a5654c01e5fcce6f17cfeda65484a5d0c287f5aa7b8256ca3f55311203ba3f9",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S009",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "a40e36dd1c357e50aaffc9e067c1506a89a1297f00bd2159a50335f0c1db3211",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S010",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "1fdd524ab11b63819162d8507437b85b2c16aa2c5badfa12f0ff907e303ae1ed",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S011",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "41b706e74fb40c5c5180c3f20cbddcb161b2d0b810f06c9358c7b0ec726ec4e3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S012",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "d485da3dad571b3be6c157381aabff7d2b5e2d6cc23dce66dd56b9d7641a32b0",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S013",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "1da747b14b53f7f8276f7f57e707a5b844cbe040f7fd7bf997e7c7f8de6a5d4f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S014",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "32573da22e9c8ad70e14a35897e0cf87e1c7c242d89c0297ee843d4d4f5b444f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S015",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "10a4c8adc4dd48365d977fbfef7599f20e124eb4332c7232b34984d7396006d0",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S016",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "b52771bdd42864585897c6f9739bc38e8137b60f9d5ce889d47e09f24317a48b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S017",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "d3fbaeb59a5045939b2a24e13f9e8581915e6b820d5d27e2d400bf3b020988ad",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S018",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "79c1171fc57f1414ca2056717b110cbdc41dc715664f7f13871def4b9577ba7b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S019",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "83b622c56a01097faffbe44d1799708b3de8d599c6dd89b8a36def3a50975524",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S020",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "66f15332d1bc646f782f3db5075542c08e5fe1fd9d21619b397e273de0700b4c",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S021",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "a63b258a118cb34db322838d340c421e3792a0109e0d45a8cf065e96c5a5bc57",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S022",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "3c41c2b315c6a08edec4a93758414a6216f41658594a9a7448eacdf4b99a817d",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S023",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "6533e524b221c4baddb84e79827efe719216b8be1639d8f6bc8a39e883273ddd",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S024",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "53d772414ef8f7cfbdc2e22bd12b58fa0a6d241413f89f7f0c54e75429052c89",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S025",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "c762d009709cd7b9ced7d3f1efb80da91a6437742697de25f4b0d8690970ea4e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S026",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "9345d271a5f417fb0f4bad1aeb29613077cd3b7af628bd6e99b53c7d6b9b877f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S027",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "12b7cbeca4f195a7d4c1ef996f66fa7fd41edb78ed2f922867479101cc8a4ce5",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S028",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "a82a311f1e779c8ea957fd0008d250aa932afa1016701f7728997ef510e3a989",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S029",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "1cd27b2845eff03e9ec9c611191c40d2d5f9acba8281b1fbaf7a16f950b44e1c",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S030",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "52a42cf5e1548e500f708d2688402119a70852dc2440b12b840d9fcba37ff027",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S031",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "790cb348e46a5764c9f203dfe70bf4d845b7d2fcc1ca8896e2532bb3315de0e4",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S032",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "ac47f1722a2201bc0e55033e049f21d14892afd4ba8d0ed6b9fbd9d2624b5ea3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S033",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "27a09d3b03f361ef1a24543eb9da2a226ddbe1e504b63ff79941a0ab32429277",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S034",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "597f270c437370d25b1b87dec6c1f0579029f2e5c54decad2d84e34ff683c85a",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S035",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "f6e82471f5710d0c242f156b508e8f159a1047bb651c0e0bea128587ea8d7195",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S036",
+        "role_order": [
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "682d792e2c638288cd18493c4099ae655ad8caa2dd6b393b3950fd6c3a225ae1",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S037",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "1da1d2a6d1bf9f5f9ef414887c7cc46becd87fda4466615c2f5d48b6d1f325d3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S038",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "f3196021d60208372b6d604ba9458f7186aa567edf2bab3f57649145d357325f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S039",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "274ccdd49b9cb9f72575c78697ddcf050be2cb2017faf8db9ac8ae7a6387afc1",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S040",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "5eb5aff4d470f5d1a6d7542e65b3009511fca3d305be0e6c944e6aa9adceac70",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S041",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "02fda8fa1e61fc9c7dd82f55f95332bb7ac044a0069c6004f5c18a5894876d47",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S042",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "68dec3a03efa6a84954ba5937c7278dfbcc877b9736ab8377c0b0b3ddd948130",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S043",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "c33b979078d83e5128d19cb31edc387a15de7a11bad7e1fb381eb82beee42148",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S044",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "19f2201ca715354973d7f2ff6043eaf1a5a4a611f0a99dfc0c14941f7be3abfc",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S045",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "68521ec3e0e859da8464e6a6ecdfdba54260971361d7bc2cbf3c127951cea1bf",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S046",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "686a08b8415c3b74cf864cc4cdd4218a2ff739ed180626224e3b03d283154412",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S047",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "02b086241331b1506ece08faeff69558d7c2ccb67c6cd3b0a017b532a8cb56ad",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S048",
+        "role_order": [
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "c5fb42b3fe11f0266b4e051ea30cb61176be8c6280b0be7e35ed59f13cee9a79",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S049",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "d983c8f68953421149c89f0042235f5d3985c9b614b729581bb3f13eeac4251f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S050",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "2721fc869228ac543aeeba7b674d67d56455fa5b5e9d6504a31eee16c8cc4342",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S051",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "5437172d78ab681ab11a3bb5a18c5847eaa27c1a27981407918d0d9ceb95e883",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S052",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "82017ba5b9a4be02a355f80682ff01850080a599cd4c6fb0b6ea52d7f19a4152",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S053",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "524aff989bc11ed9054f674b9a1f270c70329460cc0395cec52b500d0b378007",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S054",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "453a9e87691429057ca8b015a32c6ef6d43cd4427da8c8c2b839fbeea15da15a",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S055",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "176329b1b664a6658fdf1cc94f5073d829a5cd27bc2e5652f96d2c8665c9854f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S056",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "143502289d8127f4c5a92597075cb36dd47126ba227f1a1e7ee2d800af8af64c",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S057",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "36c9deb8cfde39496119c5194cc1873d52c5641204f1656f9d42a2a2c79dbd10",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S058",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "5e1f7ecfca3d94a9edc1234bb8c80a0b4eb3b7810663597dc5a0d83af1616974",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S059",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "ca17010b6b028a5ce201e5f8c40e2596ee269754673d830aefe63c6c3a762de7",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S060",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "25e3a1bac43a48039598991eef337ed0c529566f94810e6ddd7fd3c596298977",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S061",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "bf4d88123de6d75d7f7135f34b9db74252b2f69d274c2823de571fe1f7fff763",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S062",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "3b340255717b4d14355855c03a11856baaa9c2aa45b62cb29138d0e53cc37f28",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S063",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "f575df6fec5aee59d54a37ba2b616b78b5e81037dc5be3b9877b8e741b441eb8",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S064",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "2c4b91416b29f7ebeae1fd446faa16620ed54d93fc04401680db53d7093bc5a6",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S065",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "48c1067af21aad44a9136c8a3706e9c10acff0b433817de897051c55887b473e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S066",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "7cd55f1566693cc7256d7701b05421ebfaeda4d1c573150ceed2c50ae716765a",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S067",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "ccedbbfb5431a1ce55f49e409c106c36a0f4361dbb12632846db0d8496ff7652",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S068",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "a2bf6f43991c2d30b6ad6bf02abe106661a6178fe60ab2c0ef3dce1ad6fd7d82",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S069",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "c13ab5456e80def71fa9e9d38ccd99d9c6dbaf7ba26cbbf8dec4fc09ddaf62ed",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S070",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "821b7df6451bb129f61d82bc3f45f6da941541c8a1d8c9b979bba758d8289b6d",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S071",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "6160b40f42b5723245d6166f47e63d736e3bc25d02bf94ba893043054a6731c3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S072",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "d16467c10c827f85cf67c2307699cf5a9a3f5d185505d5c220bfcf58a1eb056e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S073",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "69a868ddfae98470f2425d4b17002558b02016570da4fe4a0d43a04d5ac51140",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S074",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "bf09cf7aa95279c91b10db58a9b8da7228e6164db8ea123f60bd52ae2ebe3096",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S075",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "aaaee0f60851cefca31afd66bd1b5b9fc0085557fe6590b63849830bacdc9d1b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S076",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "8bf2b13a6c6cd0061ae1db51b2e49675301a1b1ebe4ea572ad5eb3cbd6c3138b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S077",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "fe7732da68c42d361e5fe35964099f861da76b8df0e20042b6f2aa4bedc09353",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S078",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "e994c5fe69baec709ab292732e87b64a555bded4f3b0d3d88fa0e1ddc9ad50c9",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S079",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "a6bf8a118417e516b5520e7c1a7a37c71019a323aeac3862243e978175956008",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S080",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "1f55d38d4f2ded41878a3fefde7118ededf0b116cf4fa660cde9b91eb6fc574b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S081",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "f95f69e015b60607ae756987fab34cf5fbfae36520e83e1e68378709d704e7ad",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S082",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "3bd3c73dcbd51595d8a8cd5def678da1a1eb215d5512c003ef875ad433bc8184",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S083",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "34cdd5974dd12110ac4d107d0bebc4f2efeb420461d9c69ee85ae392d9efb0f2",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S084",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "bae4169b9873e79e1802fb8fecade6c8e6baad64300ffd46b1453d6847fa52c3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S085",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "f6a4631a555a00df2f3dd670491c47c1d1f343853cbaa11eb9279425c47b474b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S086",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "adc3eb9ef40593a676bfd7f951b44c6333c282308383942196696e164f6ad286",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S087",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "89bf62d3aceecf82adb7d38330817ea81b7c0682a56449b3f421d5b570f772d9",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S088",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "4b27ae46db9e65a213dabe109b6fde07031f036fc2dea41f5bf499cdbe6b78b0",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S089",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "78b5cc29acc827fa0428c35eb48ec51e1d263cd875a72f02cdb2ff45a4bc0961",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S090",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "0bb1ca4f799fb3672a895e22876e7ddfe7b9639db9a5c61ff1c3dcae0d7a0c24",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S091",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "3bbaca4e7f4c06283d8e5c3cf9910f35223a6849652fe51d9d8a712458259fae",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S092",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "3f2a9006251f184364bec064c46cb387bc8f029de741e35dba117edb52474179",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S093",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "ebebe1b05960078d475539899829cb8c242c5296411eba24d383b2520978850a",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S094",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "78e6cc0e4618c11cc3d1d74bd7eb1ddf6c794de691735d126be28ad610f85c59",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S095",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "6d776fd0bf758d098e0a58748fbb3c2b795aa262dcb9419d57b3d316a8ff0ad6",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S096",
+        "role_order": [
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "14fda77ea166a1224f64a193e68e5e8631e8a16d89c2c87e5abffd76bc562048",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S097",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "326b7f545ef8548e09bbe716c37a4aa3b8afe342ea44a847174e7d6152bb4608",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S098",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "5562e46262a51e075c72dc81f3acd5ad6827510eaa2caf25b96bb2ab496b19b3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S099",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "5b4e97fae5611a3c445ca325a914fb28682b944953b9a62165d9bfae5cfa41f4",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S100",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "47484d0e8df0b557fce3a278693e5663fb89633c0fc6dbe53a885365b2089789",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S101",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "3220fc788f4a9b39833c81f12650ff48b229dd5632995358e3c9ac76ba4b4b69",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S102",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "76a2b2648357b60b07cb282f675332efd5af5cfacf09626c24829bc4677be004",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S103",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "32f5c0c95733860f8f82cc212738c657c941fd589d436234730d4699e91a6b6b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S104",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "c195a0656d8d737b56a82dc8bf8ad5f52ea1a60e8ed59f136446cae28a994125",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S105",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "2ba20132da0f7fa6e255fd92510b0d22322e2c07c6ddec6078fa405a5834b11b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S106",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "bf7a3b64e542a71c19c50a88627939e23686e0f3015e4de1496579cf6af68a09",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S107",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "5c32d41482741b2787b6ba3cb672b3b65cd6f901daa43661bc3541403904b13e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S108",
+        "role_order": [
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "e42c778a764c324b68d10f33b6e108d207fbfa7444be80f2cd500c4728996c9c",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S109",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "adb09fbd0857cfaa8bec7f942cbe229a58e2a8975ca4c95f4d7fe38e30492aa2",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S110",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "c54a8e095e4fe23ff150232ee386361221a021ccf04da4fcdd536ebc03a42b13",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S111",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "a6658bd971c86518d1dbceb08ad16c502cb270505f245dc2629bde57b9acef3f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S112",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "116421a14dc36a8ab1b070cfdeae439444e291d9181e5d8c2920d959d851f8c1",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S113",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "30c678452f6ba5652ac7ec5984bb2bd1f5d96966dec51cc78fdcf79a4fe14f00",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S114",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "a782f3e210cda2cbe655797f35b45bc02fc9ba4bbbe6a76cd579ab7aed22af6a",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S115",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "7fc60d730a6bf93b07784767d7ae2687417fe1b940403d0e286420a6b2e2962e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S116",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "8243829f2a6136c6e8e230216e08de1850f3257bede6ec683e45835e9fb90fae",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S117",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "13c04cc18289233fdfe265b5e767a1c7a0f98359e059c722275a108a56df3adf",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S118",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "bd0aed76520b0f598fe93a9fdd8da546ff7df906337dd4802e8208ae5a637e00",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S119",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "45141f4f2b682577231f2840a3d0d818dc75cb7b0d68b08f69871da9ba3eae89",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S120",
+        "role_order": [
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "4531e3769f96f4a88d3c537cbadc91dfc7a6003efdb43462cb077e544808a0a9",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S121",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "293a0c38d94433c935de9b5780f0ddc765070867f01ddf37dc0f8d8809f8a5b7",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S122",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "9844879d44c8dbb8f83cc6e09f7e5fcfc48e8f0eab82b635f8edd2066966b5ce",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S123",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "c2927e4200e2133a6fd12dc4cc83d722cacff2d278f68696827431e0c9ed06d0",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S124",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "5ae6125770dcedf22ce609e7f76f40a1e4c405788de27b72b6b08b695299da23",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S125",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "9c42e17cef4842cac49743da66d018b6935f20f278143e54ca9777a46c843e16",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S126",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "6fa5fa87828ce86d43fa135d860556e49fbbe80062e0734667b53e3b4ee3a907",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S127",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "2a9e0f7c644c50e634f354c1e6151d187e586a488cb26291d51bb8fe2d09a8a9",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S128",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "9c36204d4c9e51643c0bd4801cfa1734db7a935c1c46d1a0a18ef80cc5cdbb81",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S129",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "3a1e0c010bf82d11e21c18940543d6b89b26691487ced0648461ad9cee103cea",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S130",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "012e7be0b0da894326f4ca117b69ed57f85f174c07926617cf2abd4cc5ba5066",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S131",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "262c8fe0429694e6fea7f039fdd7fdc3bfc9e2e01ae1624bffc8344c9accbc06",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S132",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "1fc42588fa338c6c6f9c8ef78cbf956c7b4b0ea17fd961e2f54fd9a6ba8b065a",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S133",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "9f57e8e4f539b94c84088cf40499a455d3d631156db4d831f09c670ce2e7390c",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S134",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "cc7d33cd9615faf8d7d23ecb89b08653a46c13429177e4bacba7612915442932",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S135",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "e1918d5e541aa9d32374b08e9e2bae3a501fcc1c3981543f3c97552a2377a582",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S136",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "744c1378cbae8dea72a6e4b786f6ee435b6dc64b3c1ec6aec231bf819f39290f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S137",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "d9b60437574eb33293f006c852217c6de4c1fc10512d67a5aab35f5467663686",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S138",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "ba945d295fd9d86c252429acce2d5d2e9b00c982514c5a016913f2df8ba67af3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S139",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "cd535acced00c4e6c6ec817efd8ddcea746e764d5ef7e80398bbc631b1a52a9b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S140",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "1c6e2d0fec194453d96bb46263e3f0d275d423b3fbfd3d527f012ea0a505d898",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S141",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "13c6a1ed773024f37c430544be00d9efe9802afda426bfff55772f558d5ccdde",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S142",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "466e822b18486225e96579c3ee8e2b7659078f7149797467eb953372ce5696fb",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S143",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "e223b103fdae7a96c0ae285256be2b6061004c752ed36aa91c1d101692058b7b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S144",
+        "role_order": [
+          "privacy_agent",
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "612f28f5f4ab6edde9e69b7ccd49774ae051a46e80f14fbd734c3edb9611b841",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S145",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "4e5a5a0e76baa7cbceb9fd5fde0b6f188f7e68c84f49cafae5c463c9b4202d2d",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S146",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "b8b3469ae98b1a48ee22449b4cba89d916f353f6e4644df4cfeb8c38605adadc",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S147",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "9840038487dbbebbdf3cdf8d34e11fd97512c9be511d2db2d05603c7561d515b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S148",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "bef255f570342363bb2fe59797eb8069178ee048f6ba2262124346df97d116d1",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S149",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "7f8f1aa5ee842f17a861ed604c2900ceca9ad280e64b59f92aedc10768a78e71",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S150",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "0e46cc5b4a90c3ba2c1cd9c671754910757e117149cf58619b6cda1f4f8e9491",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S151",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "3bf71c84118f41daac00834e990e28830fbf431cfa9fc6374e946c53e1f9a8c4",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S152",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "33a54c72f09d16db8df9412e1eec2a6eff6bcbddb31b2b06be156c819483dd98",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S153",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "8075b0ddce2644f3323dda71943e25e8a8ae43d8276278bee1e7c07e1c781407",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S154",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "497579cbb3e2c67323d9f9ac4f573c3e964d63c4990be253a0456b702c4b342b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S155",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "bc6d5907c9ca1fa982dba271e84a6a3a359801f7f0076e6bddfdaa1eed4a1cd9",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S156",
+        "role_order": [
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "24dcd9222ca338c753d5ba310330721af0e62c142ddd55d2c13c8d8e711fd1ac",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S157",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "5f1c2c17b09bed3a01a3298a8a111022c5b1ecf78cd6b442f1f8d56f273a6e72",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S158",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "0c3d6a53d1f65d3995650d2db5058809b93212057e92d0c59b6c6054645e5cd3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S159",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "4327e852ffcd9af7701b1f150d75695563e351afb271480ff1cfe60152e44b34",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S160",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "70a5da32032648b082fa40dc7992f4788ed47d43fa5aaed8a00019b915b7e186",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S161",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "3ce92e156fc6879434a68b672101250413d554a3c5c06bbe5a91d5735dc6b8e0",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S162",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "5fa8f632b83613e54652309fd924bea3b1e8e9df9f868df43eed5dea7f8e5b87",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S163",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "e29f9456d84b29ac6bb582dd85ed0b296586e1a501a44aaf38371bb06be0440e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S164",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "1a07ab58a6dedf69daaae9bf9df3480de7f4e1367337764e486e8a3be88db77a",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S165",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "2e2c88ce8b55721b732349fcab1e799d0ac8e88a64fb26491b26e2862829ff47",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S166",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "db597342bac9c2c26461309f83b9587404c13519c4134088dc2d21d09cd0f88b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S167",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "e0045c044ad640cd3309e73b32fb09469010777d4447313917c81449f88e7d2f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S168",
+        "role_order": [
+          "research_irb_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "27caa7e0972f7696a26a90e4743e83308297c8fd02f32d1d5460e5607213a752",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S169",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "4820adf260b20cdd6a38b8e37a6900eb5153cb352df6a503503f66bac6f273b0",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S170",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "1685e728df1585440b83a3f5a4845ac9363ffde48d23be19dd1dc7d83b46913e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S171",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "eb1639157257a9adf48ce0b273c67eaa3435312ff5524fcf769ab898c404a991",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S172",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "3bd3d22b30d35cd48500c54ee7ecb86856a6a9a686de6e49a90517fea84314e0",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S173",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "ce47c48368d15605c66bd220feeabd16eaddfb23a990e474c837b9d5c6f5f704",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S174",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "92eefcff5c867dc4ba15b8f67edb052a90e1135c1b8f6268929487a17e3fe4f3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S175",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "0b28e036734aa0f91a67141742054f5c9ace3d67c06cd2167a609399849d4d60",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S176",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "ee5f0d46f77da53f0096acf4dcc00d93131632e5c3aec1f4b68fbe0c8b874bc3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S177",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "8105b89b3f78216fd0d3933d51edf1221b7c598a7e80369ac328dc444cefdfd9",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S178",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "cdf3019f64d785b01a585a9b012ff8277cb6806f21d2d12427f4f44f32df1ecc",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S179",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "4ee57a7f1674f586117f17dae5f96847cbe6b8a3d8465fcce26f882441b777d4",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S180",
+        "role_order": [
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "5cf99380758b7b9d7592f9a2e9a19325d5fd1eef46962d36f3c669fb5ff0641f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S181",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "4beb38b2603f5209f190df37a38790d6da942d4e7c5ed71d9fd0c966c36eed1f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S182",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "12234b51c23fcc4662d922308c5b0921201f03a40a19c7d6b4b912d5a9fddb03",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S183",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "f6acfedc2bed5b551074376c429a79fa7b19ca88bef8f26b2ea31a3cd7c1f404",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S184",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "e32a2b8780be857eea993b931ece70e4535ce258e00d1cb6e32cdea5c49d6c31",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S185",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "fc3424fb092fe5060986c2003a499192487fd594b072cfb0115cc81f4afc5a8d",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S186",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "a993a41234130292fa9324bad7333479eecbfc45d0b7ebde2c1248ed66f63d68",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S187",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "6e3fb7348b04ef8d3f18f16c239faeb81822f4d0debdfe10c2ebf65ca696e8c5",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S188",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "c72006df9cfc2753f250916a5de63fc61053da9449a214fa09756ccab62c12ff",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S189",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "1af0c24dcd2b97829d801f251c9ec7f5db34896899ff4a1d01f79de5e9e5e91f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S190",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "57d9233911c67cd511eece57203893d921eda040c8879411f4570b11bca1080d",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S191",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "ef2b5e1665aa9f81cb82c6e0bcb30a8b16835eaf92dd9516d5885ed8692b0c40",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S192",
+        "role_order": [
+          "research_irb_agent",
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "d4fdfdf1320302624e41996435fed66f0fc5d233c3916b8e512bb5f2381b45f3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S193",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "06edd4f6a4332e4060179c893f73770c2e5e2fa60be1d2f166a0307e567cce2b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S194",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "34f36072ce7f29f0fdd54853a20abd2d55bf9b3c3fa0b60e599c6155bb0c121f",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S195",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "fa9a52a070816b4410e4fbab095b50e5f3b3eb1178ebafa8c94e3d505e701efa",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S196",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "cf26e9e87d61b398243e6d8e6b3b248addecf5fb57c9107b34b19210c8e2372d",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S197",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "bc383b775c76956be2f13435d8033e480800b7f60cbc8974ac7ffd181351a835",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S198",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "86559aafe300b767ee51d469a9ae0ec6ed7f70156a0f04f1bafadaabdd79484b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S199",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "fa3dc1b81c3dea612db477b1824b080f85a1149bce8a80569f4215f4200ef5da",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S200",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "ecdcd381a69de36385cec6345bd2113390b29c4e7dbbac7deef155922a50ead6",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S201",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "93e2c1839cdec095350b6ab9a3f71c9c0d258143c46d7adeb273e2e8a6302eb5",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S202",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "32cd95da4f38f649694750b7dee372bc03f6ce322cc22948b3f29e03c4b1d738",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S203",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "31fd675535eed1d7bfc4f606fcbe3e0011a541e36f34bc89e78dc7d1b3f8b3c2",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S204",
+        "role_order": [
+          "regulator_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "4a6519d9f790e0eef7eb998ff2732ac1379cbd85f3aa1dbe23924792cde1fb46",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S205",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "f61ff40cd83c5d51e15ba3aa60970d49be5d12ea9cd951bfc0185671863c33e4",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S206",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "ce06fce3ff130a6b9fc28e0a07e662c7e74b8c73b521d89e6649cce4eff79544",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S207",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "9ca41807d2c20c1071602646bdd44e085665251358cbe1d7967f21d74d940e4b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S208",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "cad38dfed71fd3ecbc8119c1f7ff4f7a4c9db6af63569e5ee6204e7beb47faf5",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S209",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "c2be8da4b09edbc856382995a91866efd0fdaa90fb7245d3944fd4ad262354ae",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S210",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "821886896d44bf7d1ca1ab3ce4b89da63442a8c562d5aba8d30056c6eba6697c",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S211",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "268755acfd8f1865c34f747ae5bd98148f451303effb80c62f1c3a18fa2d201e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S212",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "f00c9f69f4b1d09d820f2dbd3c53111a18b3ab376a976725b46a8f3b15357787",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S213",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "bd906ece0076c79fca69679dfeba4a43165e31ec450c29e60ad91d66a445f79b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S214",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "3ef4fa3d97fa0de93b90f0b2063c30d9b11581db4675384cd4473d3e7f5f196d",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S215",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "6401006297497848e0b5831cecf2845d53aac25dd04856bac1ebc0ad7b960a46",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S216",
+        "role_order": [
+          "regulator_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "2c65090aaa1b85e8cf0d1a341fcdc1e803ac508d53972eba84be942e82536fb3",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S217",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "65b2835df19114d3cd7370f642e29c121621e2b3dc29c0011343762c56ab3210",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S218",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "7835dfbcd511fc5dc87c205dc2a36fe109fc55c7dff52b5179eb58199cfc53ea",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S219",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "33396cef21e592e217c4e644b9e671d07a09c615aa9da86b441880b5be34793e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S220",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "7f21b283985ef42df8ca450df1095280251bf4d0254d6b05dcf4a1c934e4ff65",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S221",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "67186515d9fb0c90e84be5a9e5244a4deef50d058ee3c160945629a1d2ff773b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S222",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "research_irb_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "d6899c7c589ab809016664d1a00cd001e261d74cc657ff2474cf926ef39241e1",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S223",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "578b6ecae35851ca52cea7d79b0a8bf0a9a40f243a27171fe16eae852a883462",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S224",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "17c5b1353af7dcc1091b346bd8d5b97adb80e8259aaeb423d6e80af2d6f577c5",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S225",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "e4eda2dc923f2f49c28ae3c5d62d87b207c62e2230ca15db03cd8edc53ee13a5",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S226",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "93c6f1da5ab5017942650e91abb62726cd10eccf6b7712c8eca07120925e0d4e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S227",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "6baead406de29566be047280cd0fca8b2d67da9ebdc49d049bc95b144bd10352",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S228",
+        "role_order": [
+          "regulator_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "c77e1024acbaa822fae49adbf85e372c90aa35417297675f4b43c2800b07911b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S229",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "4b4257e88ed2842edcb076dd76628f95ea4c977e88efca03b8eb69254263edd8",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S230",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "cc92d6ded2bc066547ebe89eca4d26a5d1cee84330e8dd28c571fcf8457457f9",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S231",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "5b9512dd9256feeda4641d2a60e7b53368c085925f3910f3f2526ef5f6b0f708",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S232",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "47745a98370ac50853ce7dd641c479f8b981c1f74ca33138066a28812aff8093",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S233",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "99b439d9067fcd01a08eaff821dacc5a3ebe40a871d11a1a2e4372fc2caae11b",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S234",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "c4140cea4a68f5b30fdc49a44b4756484d1a97dfe6dc0dd4b2e7f9d20a28ef13",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S235",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "948b7aaf2d23239d3a10471ad3ba9944982e7a63b752093160c04f51a3b20154",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S236",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "ce5dfdd961f4ef2068876d5158bb10e24b849108a70232d0391c35df5875a5c2",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S237",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "ae12e3fb97ab4ac8138eb7865e25a7c24bd633d34ad73e43d25d8da52ba13e9e",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S238",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "7a159585f4efce23564d42eb0ee8944223b52a5fc9eb93c41637366e762773fa",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S239",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "29bee09855f472792c8f78750a8f9280cc39264eccac142edb79d7d7b6c88d36",
+        "equivalent_template_count": 1
+      },
+      {
+        "schedule_id": "WF05-S240",
+        "role_order": [
+          "regulator_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "f0d9f4e6322e5acea81af9ba3a894323297f6cf489d0d30385720b9f622baf46",
+        "equivalent_template_count": 1
+      }
+    ],
+    "WF06": [
+      {
+        "schedule_id": "WF06-S001",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "668f228ce6b0cbc82dc4b3327a4beffe93f4f097e9aa7686f93175e215562a0d",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S002",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "36ac9fa48d7f1f9105ec281d1867cd36c34aac1b6a07e7f8de1b98af34f1b0c2",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S003",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "55d03b0008b44b507cdfad377a1495ecce1d16752f908864ed21893c3faec241",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S004",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "f145d5ddb6d87984a7b8ecc540852f1d6312e782b75c9737f96997911da86a3f",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S005",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "301cd4a6c01dd8decd15c26f4677a2ae5b706fc9db5d950dafd347013930fdb9",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S006",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "8563a34300cccd32655bb0ccfa4904978c88a7021bcdf7c476990ebf8bdad946",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S007",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "3ca80e908117d00584916a0b2dd6c4475e0a6329cecc714660c7321f919d83ae",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S008",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "246039aebc1eb035207e4bb6e1b97a601ebe6ca232bd57be24f4225c840fa27b",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S009",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "dbe7aa1cd0874cb534a8d0cd04e76dee594b4a2c7fd21e2b9566e46553f6cb90",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S010",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "2797bc18451bc8b14facb6e1c788b0e5db74b755d6e68f9c855843bb44168401",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S011",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "6373434c5c28325142628db0d9670cf456af863739a66654985843186180a0f5",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF06-S012",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "8f8856377273f6bf60b5e2bae37f2dee9a179360439aacd25a1c8736caae691c",
+        "equivalent_template_count": 20
+      }
+    ],
+    "WF07": [
+      {
+        "schedule_id": "WF07-S001",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "d12713d9a19c4c4bdd045e61ec4c44b532045cbb6fcb8b1c211bcb11e5e04df7",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S002",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "bf3e92e6b6dc30da58509b28cb80b42adf69fd4e23d82aba4597e4a49de96c70",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S003",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "631bb0028784c2edf49dae0005f71becd677c48c71ebcd943ecfd8d75496648b",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S004",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "217933efe76380d6283be60b9cfe316fc4d2933d8af295d2bb20a2bff32303f0",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S005",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "e413a6e364c0be967e24207e2f7a8cc075a666451a731c8eac4495401c433779",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S006",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "27c4539a8eb0c09d2503972eaaafad917ac9655e551bf71e9d2dd13b1961730c",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S007",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "b83e732ffb88f425537d5c27c9b86d464042dde6a87c95529789e62ff9d3e728",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S008",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "ed93342ae3973e7abc44adf75034994532e1e0969e0cb021a12142a3100c6866",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S009",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "8c76a674ef95aa205076b9f83639b09c7210c2ba13c03c8417c54bef055dc27c",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S010",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "8c31a25b6bd6fe4c9baf7c14bd9f8ea9138502a447218fe2caaf343bb6286811",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S011",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "d29a6dad75010954afb6f849d15a89e14597dee721bb7b598dfb1fbeacd1cedb",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF07-S012",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "956ed97316e02e6f59e7939d7848ed48882fcfa33c436a35b80b51b184c29270",
+        "equivalent_template_count": 20
+      }
+    ],
+    "WF08": [
+      {
+        "schedule_id": "WF08-S001",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "d12713d9a19c4c4bdd045e61ec4c44b532045cbb6fcb8b1c211bcb11e5e04df7",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S002",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "bf3e92e6b6dc30da58509b28cb80b42adf69fd4e23d82aba4597e4a49de96c70",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S003",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "631bb0028784c2edf49dae0005f71becd677c48c71ebcd943ecfd8d75496648b",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S004",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "217933efe76380d6283be60b9cfe316fc4d2933d8af295d2bb20a2bff32303f0",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S005",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "e413a6e364c0be967e24207e2f7a8cc075a666451a731c8eac4495401c433779",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S006",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "27c4539a8eb0c09d2503972eaaafad917ac9655e551bf71e9d2dd13b1961730c",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S007",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "b83e732ffb88f425537d5c27c9b86d464042dde6a87c95529789e62ff9d3e728",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S008",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "ed93342ae3973e7abc44adf75034994532e1e0969e0cb021a12142a3100c6866",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S009",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "8c76a674ef95aa205076b9f83639b09c7210c2ba13c03c8417c54bef055dc27c",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S010",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "8c31a25b6bd6fe4c9baf7c14bd9f8ea9138502a447218fe2caaf343bb6286811",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S011",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "d29a6dad75010954afb6f849d15a89e14597dee721bb7b598dfb1fbeacd1cedb",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF08-S012",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "956ed97316e02e6f59e7939d7848ed48882fcfa33c436a35b80b51b184c29270",
+        "equivalent_template_count": 20
+      }
+    ],
+    "WF09": [
+      {
+        "schedule_id": "WF09-S001",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "d12713d9a19c4c4bdd045e61ec4c44b532045cbb6fcb8b1c211bcb11e5e04df7",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S002",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "bf3e92e6b6dc30da58509b28cb80b42adf69fd4e23d82aba4597e4a49de96c70",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S003",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "631bb0028784c2edf49dae0005f71becd677c48c71ebcd943ecfd8d75496648b",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S004",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "217933efe76380d6283be60b9cfe316fc4d2933d8af295d2bb20a2bff32303f0",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S005",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "e413a6e364c0be967e24207e2f7a8cc075a666451a731c8eac4495401c433779",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S006",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "27c4539a8eb0c09d2503972eaaafad917ac9655e551bf71e9d2dd13b1961730c",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S007",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "b83e732ffb88f425537d5c27c9b86d464042dde6a87c95529789e62ff9d3e728",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S008",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "ed93342ae3973e7abc44adf75034994532e1e0969e0cb021a12142a3100c6866",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S009",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "8c76a674ef95aa205076b9f83639b09c7210c2ba13c03c8417c54bef055dc27c",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S010",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "8c31a25b6bd6fe4c9baf7c14bd9f8ea9138502a447218fe2caaf343bb6286811",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S011",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "d29a6dad75010954afb6f849d15a89e14597dee721bb7b598dfb1fbeacd1cedb",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF09-S012",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "956ed97316e02e6f59e7939d7848ed48882fcfa33c436a35b80b51b184c29270",
+        "equivalent_template_count": 20
+      }
+    ],
+    "WF10": [
+      {
+        "schedule_id": "WF10-S001",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "668f228ce6b0cbc82dc4b3327a4beffe93f4f097e9aa7686f93175e215562a0d",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S002",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "36ac9fa48d7f1f9105ec281d1867cd36c34aac1b6a07e7f8de1b98af34f1b0c2",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S003",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "55d03b0008b44b507cdfad377a1495ecce1d16752f908864ed21893c3faec241",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S004",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "f145d5ddb6d87984a7b8ecc540852f1d6312e782b75c9737f96997911da86a3f",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S005",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "301cd4a6c01dd8decd15c26f4677a2ae5b706fc9db5d950dafd347013930fdb9",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S006",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "8563a34300cccd32655bb0ccfa4904978c88a7021bcdf7c476990ebf8bdad946",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S007",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "3ca80e908117d00584916a0b2dd6c4475e0a6329cecc714660c7321f919d83ae",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S008",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "246039aebc1eb035207e4bb6e1b97a601ebe6ca232bd57be24f4225c840fa27b",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S009",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "dbe7aa1cd0874cb534a8d0cd04e76dee594b4a2c7fd21e2b9566e46553f6cb90",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S010",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "2797bc18451bc8b14facb6e1c788b0e5db74b755d6e68f9c855843bb44168401",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S011",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "6373434c5c28325142628db0d9670cf456af863739a66654985843186180a0f5",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF10-S012",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "8f8856377273f6bf60b5e2bae37f2dee9a179360439aacd25a1c8736caae691c",
+        "equivalent_template_count": 20
+      }
+    ],
+    "WF11": [
+      {
+        "schedule_id": "WF11-S001",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "9e2b022c7fd4b265190f176e3ba567da849cc8393617e2082cdc33bb85df9118",
+        "equivalent_template_count": 40
+      },
+      {
+        "schedule_id": "WF11-S002",
+        "role_order": [
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "68ce81c33516fed92b79de9bfb290b742bffe3c4559ce45b8677f62a4c316d34",
+        "equivalent_template_count": 40
+      },
+      {
+        "schedule_id": "WF11-S003",
+        "role_order": [
+          "cyber_network_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "66448660ad9dd2b341d342f49b71d75e20e27780652dd3fc83d34ab670becb44",
+        "equivalent_template_count": 40
+      },
+      {
+        "schedule_id": "WF11-S004",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "0d0a9561d1bb2216c2758ca90c2bc9b5b4431b7ab9fd6a12056a9c119fbfdc3c",
+        "equivalent_template_count": 40
+      },
+      {
+        "schedule_id": "WF11-S005",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "hospital_agent",
+          "cyber_network_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "1d5a6e390247f2230fcc79c03d1d8408cf09e0e9fa2644fc5ec99d05e7bdf3d0",
+        "equivalent_template_count": 40
+      },
+      {
+        "schedule_id": "WF11-S006",
+        "role_order": [
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent",
+          "cyber_network_agent",
+          "hospital_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "8b5d94fe0df8c4afd6854784475f80ee3fbf158c3e5654c9ffe6c5ea92640ea1",
+        "equivalent_template_count": 40
+      }
+    ],
+    "WF12": [
+      {
+        "schedule_id": "WF12-S001",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "1629a994c4f90bca4638bde7aabc3c4f26d26bb56b1b917b3e673f0f56daeeea",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S002",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "b9de6b8440c3302f13e29864f9df50ec3216720bb7a3887a46681d051bd7ede0",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S003",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "47b36564e873062b9e83573493d22e80576f109a7426c16842eb2cb0a2290e19",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S004",
+        "role_order": [
+          "hospital_agent",
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "0880f1a194b9986ed4e152aa123db29b38ad1cd3db25e42263006d94aba57778",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S005",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "9f533977aea18c1a2447ba49d70cedbce249496de454a2ee543eb88ce35ef44a",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S006",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "research_irb_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "7d532a731a921908ef45f2e4c117f49532a20b65a67256f3e097c6d0a844cb4c",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S007",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "e70e4241731e62f3583e77adf8f3622f69e4df7d614bb57dc927e17041677d5e",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S008",
+        "role_order": [
+          "cyber_network_agent",
+          "privacy_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "3dca8dfe93b81bff0239aa8ccbc6c69c190feb08c72202c2f1e467ee8a211435",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S009",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "15afb3fa94b51af3580edcc2b7dbb4f909851318c5e481771ac27adae9f1b125",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S010",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "hospital_agent",
+          "privacy_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "9556d134fc39621ffc332e6fe16d061a864cf334203352716d7ae9fb780b0c3c",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S011",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": false,
+        "order_signature_sha256": "6943f9587ec6d1dad0061049dd32580c56280c74b957aa1d74eff0e2edd11e5a",
+        "equivalent_template_count": 20
+      },
+      {
+        "schedule_id": "WF12-S012",
+        "role_order": [
+          "cyber_network_agent",
+          "research_irb_agent",
+          "privacy_agent",
+          "hospital_agent",
+          "regulator_agent"
+        ],
+        "release_first": true,
+        "order_signature_sha256": "e786985d2f0c15da4e4a9a52a8277526297efdf1fdad383bb7381af3df2991ef",
+        "equivalent_template_count": 20
+      }
+    ]
+  }
+}

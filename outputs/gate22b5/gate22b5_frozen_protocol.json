@@ -1,0 +1,43 @@
+{
+  "protocol_id": "MEDVERSE-G22B5-PRIVACY-ADAPTIVE-REPAIR-REPLICATION-v1",
+  "oracle_version": "KR-PRIVACY-PRECEDENCE-v2",
+  "status": "PRE_FROZEN_BEFORE_TARGETED_REPAIR_TRAINING",
+  "training_performed": false,
+  "records": 486,
+  "unique_core_states": 162,
+  "fresh_request_contexts": [
+    "clinical_data_quality_review",
+    "institutional_access_recertification",
+    "privacy_impact_reassessment"
+  ],
+  "exact_model_visible_overlap_with_all_prior_sets": 0,
+  "protected_diagnosed_cores": 7,
+  "protected_replication_records": 21,
+  "semantic_freshness_status": "NOT_SEMANTICALLY_UNSEEN",
+  "scientific_role": "Fresh exact-record/context replication benchmark for adaptive repair validation after the complete 162-state semantic core was already opened.",
+  "claim_boundary": "A PASS may support repaired competence over the already-defined finite Privacy state space under fresh request contexts. It must NOT be described as unseen semantic-core generalization.",
+  "intervention_rule_for_next_gate": {
+    "allowed": "add balanced oracle-consistent support for the three diagnosed precedence families",
+    "model_family_change": false,
+    "oracle_change": false,
+    "threshold_change": false,
+    "C_selection": "DEV only",
+    "opened_gate22b2_confirmation_used_for_C_selection": false
+  },
+  "reporting_contract": {
+    "hyperparameter_results_table": true,
+    "training_history_plot": true,
+    "hyperparameter_plot": true,
+    "solver_convergence_plot": true,
+    "per_class_table": true,
+    "replication_results_table": true
+  },
+  "evaluation_requirements": {
+    "overall_action_accuracy": 0.95,
+    "overall_action_macro_f1": 0.9,
+    "minimum_action_class_recall": 0.8,
+    "protected_diagnosed_core_action_accuracy": 0.9,
+    "unsafe_allow_execution_rate": 0.0
+  },
+  "benchmark_sha256": "c7c0d4fc60eba832e24ea60c4d9db43654022512b83f789da5944d86cf58550d"
+}

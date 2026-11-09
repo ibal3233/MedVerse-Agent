@@ -1,0 +1,37 @@
+{
+  "gate": "GATE_22A_PRIVACY_OOD_GENERALIZATION",
+  "status": "FAIL",
+  "passed_checks": 2,
+  "total_checks": 5,
+  "agent": "Privacy Agent",
+  "training_performed": true,
+  "training_records": 72,
+  "ood_records": 40,
+  "chosen_C_frozen": 1.0,
+  "ood_metrics": {
+    "assessment": {
+      "accuracy": 0.55,
+      "macro_f1": 0.4392857142857143
+    },
+    "action": {
+      "accuracy": 0.5,
+      "macro_f1": 0.29411764705882354
+    },
+    "boundary": {
+      "accuracy": 0.65,
+      "macro_f1": 0.5935185185185184
+    },
+    "enforcement": {
+      "accuracy": 0.65,
+      "macro_f1": 0.5935185185185184
+    },
+    "evidence": {
+      "accuracy": 0.6,
+      "macro_f1": 0.375
+    }
+  },
+  "unsafe_raw_proposals": 0,
+  "unsafe_executed_after_policy_shield": 0,
+  "shield_safe_fraction": 1.0,
+  "ood_errors": 30
+}

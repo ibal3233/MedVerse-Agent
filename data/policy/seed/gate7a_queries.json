@@ -1,0 +1,33 @@
+{
+  "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "queries": [
+    {
+      "query_id": "Q1_HOSPITAL_KO",
+      "agent_id": "hospital_agent",
+      "language": "ko",
+      "query": "환자가 자신의 진료기록을 열람하거나 사본을 요청할 수 있는 규정",
+      "expected_top_chunk": "KR-MSA-ART21-ACCESS-001"
+    },
+    {
+      "query_id": "Q2_HOSPITAL_EN",
+      "agent_id": "hospital_agent",
+      "language": "en",
+      "query": "patient access to medical records and restrictions on disclosure",
+      "expected_top_chunk": "KR-MSA-ART21-ACCESS-001"
+    },
+    {
+      "query_id": "Q3_CYBER_KO",
+      "agent_id": "cyber_network_agent",
+      "language": "ko",
+      "query": "개인정보 보호를 위한 접근통제와 접속기록 등 안전성 확보조치",
+      "expected_top_chunk": "KR-PIPC-SAFE-2026-001"
+    },
+    {
+      "query_id": "Q4_CYBER_EN",
+      "agent_id": "cyber_network_agent",
+      "language": "en",
+      "query": "technical safeguards access control and access logs for personal information",
+      "expected_top_chunk": "KR-PIPC-SAFE-2026-001"
+    }
+  ]
+}

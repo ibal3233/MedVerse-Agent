@@ -1,0 +1,88 @@
+{
+  "gate": "GATE_23A_RESEARCH_IRB_DISTRIBUTION_DIAGNOSIS",
+  "training_changed": false,
+  "scientific_intervention_performed": false,
+  "original_train_records": 54,
+  "augmentation_records": 33,
+  "combined_records": 87,
+  "original_action_counts": {
+    "ALLOW_AUTHORIZED_RESEARCH_PROCESSING": 9,
+    "BLOCK_RESEARCH_PROCESSING": 18,
+    "REQUEST_IRB_REVIEW": 18,
+    "PRESERVE_RESEARCH_AUDIT_LOG": 9
+  },
+  "augmentation_action_counts": {
+    "BLOCK_RESEARCH_PROCESSING": 13,
+    "REQUEST_IRB_REVIEW": 20
+  },
+  "combined_action_counts": {
+    "ALLOW_AUTHORIZED_RESEARCH_PROCESSING": 9,
+    "BLOCK_RESEARCH_PROCESSING": 31,
+    "REQUEST_IRB_REVIEW": 38,
+    "PRESERVE_RESEARCH_AUDIT_LOG": 9
+  },
+  "original_assessment_counts": {
+    "RESEARCH_PROCESSING_AUTHORIZED": 18,
+    "RESEARCH_PROCESSING_NOT_AUTHORIZED": 18,
+    "RESEARCH_AUTHORIZATION_UNKNOWN": 9,
+    "RESEARCH_REVIEW_REQUIRED": 9
+  },
+  "augmentation_assessment_counts": {
+    "RESEARCH_PROCESSING_NOT_AUTHORIZED": 13,
+    "RESEARCH_AUTHORIZATION_UNKNOWN": 19,
+    "RESEARCH_REVIEW_REQUIRED": 1
+  },
+  "augmentation_missing_original_action_classes": [
+    "ALLOW_AUTHORIZED_RESEARCH_PROCESSING",
+    "PRESERVE_RESEARCH_AUDIT_LOG"
+  ],
+  "c_sensitivity": [
+    {
+      "C": 0.1,
+      "base_dev_action_accuracy": 1.0,
+      "base_dev_action_macro_f1": 1.0,
+      "base_test_action_accuracy": 1.0,
+      "base_test_action_macro_f1": 1.0,
+      "aug_dev_action_accuracy": 0.6666666666666666,
+      "aug_dev_action_macro_f1": 0.41666666666666663,
+      "aug_test_action_accuracy": 0.6666666666666666,
+      "aug_test_action_macro_f1": 0.41666666666666663,
+      "aug_ood_action_accuracy": 1.0,
+      "aug_ood_action_macro_f1": 1.0,
+      "aug_ood_assessment_accuracy": 0.75
+    },
+    {
+      "C": 1.0,
+      "base_dev_action_accuracy": 1.0,
+      "base_dev_action_macro_f1": 1.0,
+      "base_test_action_accuracy": 1.0,
+      "base_test_action_macro_f1": 1.0,
+      "aug_dev_action_accuracy": 1.0,
+      "aug_dev_action_macro_f1": 1.0,
+      "aug_test_action_accuracy": 1.0,
+      "aug_test_action_macro_f1": 1.0,
+      "aug_ood_action_accuracy": 0.8333333333333334,
+      "aug_ood_action_macro_f1": 0.46875,
+      "aug_ood_assessment_accuracy": 0.8333333333333334
+    },
+    {
+      "C": 10.0,
+      "base_dev_action_accuracy": 1.0,
+      "base_dev_action_macro_f1": 1.0,
+      "base_test_action_accuracy": 1.0,
+      "base_test_action_macro_f1": 1.0,
+      "aug_dev_action_accuracy": 1.0,
+      "aug_dev_action_macro_f1": 1.0,
+      "aug_test_action_accuracy": 1.0,
+      "aug_test_action_macro_f1": 1.0,
+      "aug_ood_action_accuracy": 0.8333333333333334,
+      "aug_ood_action_macro_f1": 0.46875,
+      "aug_ood_assessment_accuracy": 0.8333333333333334
+    }
+  ],
+  "diagnostic_classification": "augmentation_induced_action_class_distribution_shift_plus_preaugmentation_hyperparameter_selection_instability",
+  "primary_mechanism": "The compositional augmentation contains only BLOCK_RESEARCH_PROCESSING and REQUEST_IRB_REVIEW targets. It adds no ALLOW_AUTHORIZED_RESEARCH_PROCESSING or PRESERVE_RESEARCH_AUDIT_LOG examples, shifting the action distribution toward restrictive classes.",
+  "selection_order_issue": "C was selected on the pre-augmentation train/dev problem and then reused after the training distribution changed. The pre-augmentation tie selected C=0.1 by the smaller-C tie-break, but C=0.1 is no longer adequate after augmentation.",
+  "model_capacity_conclusion": "The evidence does not justify changing the model family: C=1 and C=10 recover perfect ID action performance after augmentation, showing that the same model family can represent the original action boundary.",
+  "next_hypothesis": "A balanced compositional augmentation that preserves support for all institutional action classes, followed by dev-only hyperparameter selection on the post-augmentation training distribution, should reduce the ID-OOD tradeoff."
+}

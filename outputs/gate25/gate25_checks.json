@@ -1,0 +1,108 @@
+[
+  {
+    "check": "gate19_validated_or_dependency_fallback",
+    "pass": true,
+    "observed": {
+      "runtime_status": "HOLD",
+      "runtime_reason": "sentence-transformers is required. Install with: pip install sentence-transformers",
+      "frozen_status": "PASS",
+      "mode": "FROZEN_PASS_FALLBACK_AFTER_DEPENDENCY_HOLD"
+    },
+    "expected": "fresh PASS or dependency-HOLD with frozen PASS"
+  },
+  {
+    "check": "gate20_validated_or_dependency_fallback",
+    "pass": true,
+    "observed": {
+      "runtime_status": "HOLD",
+      "runtime_reason": "sentence-transformers is required. Install with: pip install sentence-transformers",
+      "frozen_status": "PASS",
+      "mode": "FROZEN_PASS_FALLBACK_AFTER_DEPENDENCY_HOLD"
+    },
+    "expected": "fresh PASS or dependency-HOLD with frozen PASS"
+  },
+  {
+    "check": "S1_S4_all_present",
+    "pass": true,
+    "observed": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "expected": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ]
+  },
+  {
+    "check": "all_five_agents_exercised",
+    "pass": true,
+    "observed": [
+      "cyber_network_agent",
+      "hospital_agent",
+      "privacy_agent",
+      "regulator_agent",
+      "research_irb_agent"
+    ],
+    "expected": 5
+  },
+  {
+    "check": "privacy_closed",
+    "pass": true,
+    "observed": "14/14",
+    "expected": "PASS"
+  },
+  {
+    "check": "cyber_closed",
+    "pass": true,
+    "observed": "12/12",
+    "expected": "PASS"
+  },
+  {
+    "check": "judge_metrics_created",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "video_capture_plan_created",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "demo_assets_collected",
+    "pass": true,
+    "observed": {
+      "copied": 15,
+      "requested": 18
+    },
+    "expected": ">=10"
+  },
+  {
+    "check": "artifact_hash_manifest_created",
+    "pass": true,
+    "observed": {
+      "outputs/gate22b6/privacy_agent_action_repaired_model.joblib": "3bc0376b1091436d6acc92654c2f5bfd55aca815880fd8a84124d40736b21d8c",
+      "outputs/gate24c/cyber_network_repaired_model.joblib": "c38ddc360e5d503d86c229e90239838f42aaea1d8fd64843dfef5e8136e525d8",
+      "outputs/gate22b6/gate22b6_status.json": "5bf970d6393fdf0affdcb7b356aaa392e76d2d0cb627cc0bf5680c35d1fdf375",
+      "outputs/gate24c/gate24c_status.json": "96b57d338515cabb35af3958ca5df0488f3f49e7e45cd4647e0c057514974cf4",
+      "data/evaluation/gate19_end_to_end_cases.json": "042795ea659999e3cf6f1b3f6d72cef62acd6295266ec51f38eab073fe92fea6",
+      "data/evaluation/gate20_ui_expectations.json": "119cfd9f0fb4ec2dc6ff00a2a18202073709b8dfd91a085bf9c88a2aec6a5a48"
+    },
+    "expected": "all key artifacts hashed"
+  },
+  {
+    "check": "no_new_learning_or_thresholds",
+    "pass": true,
+    "observed": {
+      "training": false,
+      "new_benchmark": false,
+      "new_threshold": false
+    },
+    "expected": true
+  }
+]

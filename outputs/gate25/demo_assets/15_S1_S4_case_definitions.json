@@ -1,0 +1,219 @@
+{
+  "dataset_id": "MEDVERSE-G19-E2E-v1",
+  "description": "Controlled S1-S4 end-to-end benchmark fixtures. These are system-state evaluation cases, not clinical diagnosis records.",
+  "cases": [
+    {
+      "scenario_id": "S1",
+      "name": "When the Digital Twin Cannot Be Trusted",
+      "dt_updates": [
+        {
+          "domain": "clinical",
+          "payload": {
+            "SpO2": 78.0,
+            "heart_rate": 122.0
+          },
+          "t": 10.0,
+          "source_type": "wearable",
+          "source_id": "S1-clinical"
+        },
+        {
+          "domain": "network",
+          "payload": {
+            "packet_loss": 0.27,
+            "rtt_ms": 840.0,
+            "jitter_ms": 180.0
+          },
+          "t": 11.0,
+          "source_type": "network_telemetry",
+          "source_id": "S1-network"
+        },
+        {
+          "domain": "security",
+          "payload": {
+            "certificate_status": "mismatch",
+            "session_origin": "abnormal"
+          },
+          "t": 12.0,
+          "source_type": "security_telemetry",
+          "source_id": "S1-security"
+        }
+      ],
+      "agents": [
+        "hospital_agent",
+        "cyber_network_agent"
+      ],
+      "policy_queries": {
+        "hospital_agent": "medical record clinical care provider access patient safety",
+        "cyber_network_agent": "pseudonymized medical data security safeguards access control integrity audit"
+      },
+      "boundary_action": {
+        "hospital_agent": "VERIFY_MEASUREMENT",
+        "cyber_network_agent": "VERIFY_DEVICE_IDENTITY"
+      },
+      "boundary_facts": {
+        "hospital_agent": {},
+        "cyber_network_agent": {}
+      },
+      "coordinator_context": {},
+      "expected_dt_validity": "UNVERIFIED",
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_final_outcome": "COMPLEMENTARY_RISK"
+    },
+    {
+      "scenario_id": "S2",
+      "name": "Care vs Research Consent",
+      "dt_updates": [
+        {
+          "domain": "consent",
+          "payload": {
+            "care_use_allowed": true,
+            "research_use_allowed": false,
+            "research_consent_status": "withdrawn"
+          },
+          "t": 20.0,
+          "source_type": "consent_registry",
+          "source_id": "S2-consent"
+        },
+        {
+          "domain": "research",
+          "payload": {
+            "participant_consent_status": "withdrawn"
+          },
+          "t": 21.0,
+          "source_type": "research_registry",
+          "source_id": "S2-research"
+        }
+      ],
+      "agents": [
+        "privacy_agent",
+        "research_irb_agent"
+      ],
+      "policy_queries": {
+        "privacy_agent": "care use remains allowed while research authorization is withdrawn privacy purpose limitation",
+        "research_irb_agent": "research participant consent withdrawn IRB authorization research processing"
+      },
+      "boundary_action": {
+        "privacy_agent": "PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent": "BLOCK_RESEARCH_PROCESSING"
+      },
+      "boundary_facts": {
+        "privacy_agent": {},
+        "research_irb_agent": {
+          "research_consent": "withdrawn"
+        }
+      },
+      "coordinator_context": {
+        "all_agents_agree": true
+      },
+      "expected_dt_validity": "VALID",
+      "expected_coordination_state": "AGREEMENT",
+      "expected_final_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED"
+    },
+    {
+      "scenario_id": "S3",
+      "name": "Unverified DT plus High-Impact AI",
+      "dt_updates": [
+        {
+          "domain": "ai_state",
+          "payload": {
+            "decision_impact": "high",
+            "requested_action": "automated_high_impact"
+          },
+          "t": 30.0,
+          "source_type": "ai_control_plane",
+          "source_id": "S3-ai"
+        },
+        {
+          "domain": "security",
+          "payload": {
+            "certificate_status": "mismatch",
+            "session_origin": "abnormal"
+          },
+          "t": 31.0,
+          "source_type": "security_telemetry",
+          "source_id": "S3-security"
+        }
+      ],
+      "agents": [
+        "regulator_agent"
+      ],
+      "policy_queries": {
+        "regulator_agent": "high impact AI safety human oversight validated evidence risk management"
+      },
+      "boundary_action": {
+        "regulator_agent": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      },
+      "boundary_facts": {
+        "regulator_agent": {
+          "decision_impact": "high",
+          "dt_validity": "UNVERIFIED"
+        }
+      },
+      "coordinator_context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_targets": [
+          "HUMAN_AI_OVERSIGHT"
+        ]
+      },
+      "expected_dt_validity": "UNVERIFIED",
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_final_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED"
+    },
+    {
+      "scenario_id": "S4",
+      "name": "Unauthorized Disclosure",
+      "dt_updates": [
+        {
+          "domain": "clinical",
+          "payload": {
+            "SpO2": 82.0,
+            "heart_rate": 124.0
+          },
+          "t": 40.0,
+          "source_type": "wearable",
+          "source_id": "S4-clinical"
+        },
+        {
+          "domain": "consent",
+          "payload": {
+            "disclosure_authorized": false,
+            "minimum_necessary": false,
+            "declared_purpose": "unspecified"
+          },
+          "t": 41.0,
+          "source_type": "privacy_request",
+          "source_id": "S4-disclosure"
+        }
+      ],
+      "agents": [
+        "hospital_agent",
+        "privacy_agent"
+      ],
+      "policy_queries": {
+        "hospital_agent": "urgent clinical care patient measurement verification and provider duty",
+        "privacy_agent": "external disclosure unspecified purpose full patient record minimum necessary third party"
+      },
+      "boundary_action": {
+        "hospital_agent": "CONTACT_PATIENT",
+        "privacy_agent": "DENY_UNAUTHORIZED_DISCLOSURE"
+      },
+      "boundary_facts": {
+        "hospital_agent": {},
+        "privacy_agent": {
+          "disclosure_authorized": false,
+          "minimum_necessary": false,
+          "purpose_declared": false
+        }
+      },
+      "coordinator_context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "expected_dt_validity": "VALID",
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_final_outcome": "DISCLOSURE_BLOCKED"
+    }
+  ]
+}

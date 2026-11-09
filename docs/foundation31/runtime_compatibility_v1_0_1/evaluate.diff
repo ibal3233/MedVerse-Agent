@@ -1,0 +1,18 @@
+--- before/foundation31/evaluate.py
++++ after/foundation31/evaluate.py
+@@ -6,6 +6,7 @@
+ from copy import deepcopy
+ from .common import ROOT,DATA,OUT,CORPUS,MODEL,REVISION,ROLES,read,write,filehash,digest
+ from .tests import run_checks
++from .runtime_support import next_dependency
+ from .retrieval import EvidenceService
+ from .digital_twin import ReleasedDigitalTwin
+ from .session import FoundationSession
+@@ -184,5 +185,6 @@
+        'training_performed':False,'tuning_performed':False,'new_clinical_observations':False,
+        'commitment_controller_changed':False,'c01_c02_progressive_limitations':'RETAINED_UNCHANGED',
+        'model_revision':REVISION,'clinical_legal_review':'PENDING',
+-       'next_dependency':'Execute dense path locally, then implement frozen-design Gate32 commitment controller; current gate does NOT repair eager commits.'}
++       'next_dependency':next_dependency(retrieval['dense']),
++       'runtime_compatibility_patch':'1.0.1'}
+     write(dest/'status.json',s);return s,dest

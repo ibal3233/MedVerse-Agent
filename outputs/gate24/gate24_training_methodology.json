@@ -1,0 +1,62 @@
+{
+  "agent": "Cyber / Network Agent",
+  "dataset": "data/learning/gate21a/cyber_network_agent.csv",
+  "records": {
+    "total": 90,
+    "train": 54,
+    "dev": 18,
+    "test": 18
+  },
+  "actual_split_groups": {
+    "train": [
+      "cyber_network_agent::telemetry_security::g0",
+      "cyber_network_agent::telemetry_security::g1",
+      "cyber_network_agent::telemetry_security::g2"
+    ],
+    "dev": [
+      "cyber_network_agent::telemetry_security::g3"
+    ],
+    "test": [
+      "cyber_network_agent::telemetry_security::g4"
+    ],
+    "groups_crossing_partitions": {}
+  },
+  "features": [
+    "certificate_status",
+    "packet_loss",
+    "rtt_ms",
+    "jitter_ms",
+    "session_origin when present"
+  ],
+  "feature_rationale": "Only Cyber/Network mandate-relevant telemetry and identity/session signals are used. Split/group identifiers are not model features.",
+  "targets": [
+    "target_assessment",
+    "target_action"
+  ],
+  "constant_outputs_not_treated_as_learning_evidence": {
+    "target_boundary_status": "COMPLIANT",
+    "target_enforcement": "PERMIT",
+    "target_evidence_request": "empty"
+  },
+  "model_family": "multinomial_logistic_regression",
+  "hyperparameter_grid": [
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0
+  ],
+  "selection_rule": "DEV action macro-F1 primary, then action accuracy, assessment macro-F1, smaller C",
+  "test_used_for_selection": false,
+  "training_history_definition": "Because LBFGS logistic regression is not trained in reportable epochs, training history is represented by a cumulative group-wise learning curve, train-vs-dev hyperparameter path, and solver iteration diagnostics.",
+  "overfitting_controls": [
+    "disjoint split_group partitions",
+    "DEV-only hyperparameter selection",
+    "TEST opened after C selection",
+    "train and dev curves both reported",
+    "raw history CSV preserved"
+  ],
+  "patient_data": false
+}

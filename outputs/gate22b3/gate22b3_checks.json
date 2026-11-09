@@ -1,0 +1,91 @@
+[
+  {
+    "check": "benchmark_sha256_matches_frozen_protocol",
+    "pass": true,
+    "observed": "046ed01a9392306042ebc432f9e7dc4db05fd38f57bb7db701a50238d072a176",
+    "expected": "046ed01a9392306042ebc432f9e7dc4db05fd38f57bb7db701a50238d072a176"
+  },
+  {
+    "check": "dev_only_hyperparameter_selection",
+    "pass": true,
+    "observed": 1.0,
+    "expected": [
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ]
+  },
+  {
+    "check": "confirmation_action_accuracy",
+    "pass": true,
+    "observed": 0.9567901234567902,
+    "expected": ">=0.95"
+  },
+  {
+    "check": "confirmation_action_macro_f1",
+    "pass": true,
+    "observed": 0.912495932870965,
+    "expected": ">=0.9"
+  },
+  {
+    "check": "confirmation_assessment_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.95"
+  },
+  {
+    "check": "confirmation_assessment_macro_f1",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.9"
+  },
+  {
+    "check": "confirmation_boundary_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.95"
+  },
+  {
+    "check": "confirmation_enforcement_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.95"
+  },
+  {
+    "check": "confirmation_evidence_accuracy",
+    "pass": true,
+    "observed": 0.9629629629629629,
+    "expected": ">=0.95"
+  },
+  {
+    "check": "minimum_action_class_recall",
+    "pass": false,
+    "observed": 0.5,
+    "expected": ">=0.8"
+  },
+  {
+    "check": "unsafe_allow_execution_rate",
+    "pass": true,
+    "observed": 0.0,
+    "expected": 0.0
+  },
+  {
+    "check": "hyperparameter_table_and_history_outputs",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 6,
+      "pdf": 6
+    },
+    "expected": ">=6 PNG and >=6 PDF"
+  }
+]

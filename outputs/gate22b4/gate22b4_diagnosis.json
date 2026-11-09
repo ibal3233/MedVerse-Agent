@@ -1,0 +1,37 @@
+{
+  "gate": "GATE_22B4_PRIVACY_CONFIRMATION_ERROR_DIAGNOSIS",
+  "training_performed": false,
+  "hyperparameter_retuning_performed": false,
+  "confirmation_records": 486,
+  "confirmation_action_errors": 21,
+  "error_pairs": {
+    "DENY_UNAUTHORIZED_DISCLOSURE -> REQUEST_ADDITIONAL_AUTHORIZATION": 12,
+    "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY -> REQUEST_ADDITIONAL_AUTHORIZATION": 6,
+    "REQUEST_ADDITIONAL_AUTHORIZATION -> DENY_UNAUTHORIZED_DISCLOSURE": 3
+  },
+  "error_families": {
+    "authorization_denial_precedence_over_purpose": 12,
+    "minimum_necessary_precedence_over_purpose": 6,
+    "missing_evidence_precedence_over_authorization_denial": 3
+  },
+  "unique_error_policy_cores": 7,
+  "zero_support_error_cores": 2,
+  "low_or_zero_support_error_cores": 7,
+  "all_error_cores_repeat_across_all_three_fresh_contexts": true,
+  "combined_training_action_support": {
+    "ALLOW_AUTHORIZED_DISCLOSURE": 9,
+    "DENY_UNAUTHORIZED_DISCLOSURE": 132,
+    "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY": 10,
+    "REQUEST_ADDITIONAL_AUTHORIZATION": 49,
+    "PRESERVE_PRIVACY_AUDIT_LOG": 9
+  },
+  "diagnostic_classification": "sparse_precedence_interaction_support_with_minority_action_coverage_limitation_not_hyperparameter_failure",
+  "interpretation": [
+    "All 21 action errors fall into three policy-precedence families.",
+    "Every failing policy core repeats under all three fresh request contexts, so the residual errors are core-policy/precedence errors rather than request-context-specific failures.",
+    "All seven unique failing policy cores have at most one combined-training example; two have zero exact core support.",
+    "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY is a minority training action and its failed cases specifically require minimum-necessary=False to dominate purpose=False.",
+    "The confirmation benchmark has now been opened and may be used only for diagnosis, not for C selection or final confirmation after repair."
+  ],
+  "authorized_next_intervention": "Add balanced, oracle-consistent training support for the three diagnosed precedence families while keeping the model family and adopted oracle unchanged; then evaluate on a newly frozen confirmation benchmark."
+}

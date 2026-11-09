@@ -1,0 +1,29 @@
+{
+  "gate": "GATE_24C_CYBER_REPAIRED_PROSPECTIVE_EVALUATION",
+  "model_family": "multinomial_logistic_regression",
+  "authorized_preprocessing": {
+    "numeric_standardization": "packet_loss, rtt_ms, jitter_ms; statistics fit on TRAIN only",
+    "missingness": "absent session_origin encoded explicitly as __MISSING__"
+  },
+  "train_records": 54,
+  "dev_records": 18,
+  "opened_g4_records_not_used_for_selection": 18,
+  "prospective_records": 72,
+  "chosen_C": 0.3,
+  "hyperparameter_grid": [
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0
+  ],
+  "hyperparameter_selection": "Gate-21A DEV only",
+  "gate24_g4_status": "DIAGNOSTIC_ONLY_NOT_USED",
+  "gate24b_used_for_selection": false,
+  "training_history_type": "group-wise cumulative data-growth history; no fabricated epochs",
+  "sklearn_version": "1.8.0",
+  "artifact_portability_note": "Model artifact was freshly trained in the current runtime. Serialized sklearn artifacts should be re-created from source data when runtime versions differ.",
+  "claim_boundary": "Synthetic prospective generator-shift benchmark derived from frozen scenario semantics; not external network telemetry or clinical data."
+}

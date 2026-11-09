@@ -1,0 +1,73 @@
+[
+  {
+    "check": "gate21a_source_semantics_reconstructed",
+    "pass": true,
+    "observed": 8,
+    "expected": 8
+  },
+  {
+    "check": "observed_oracle_compatibility_checked",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "split_algorithm_audited",
+    "pass": true,
+    "observed": {
+      "group_crossing": 0,
+      "train_dev_model_visible_overlap": 8,
+      "train_test_model_visible_overlap": 8
+    },
+    "expected": "group-disjoint with semantic-overlap quantified"
+  },
+  {
+    "check": "ood_oracle_classification_complete",
+    "pass": true,
+    "observed": {
+      "undefined_by_train_oracle": 40
+    },
+    "expected": 40
+  },
+  {
+    "check": "exact_and_interaction_coverage_audited",
+    "pass": true,
+    "observed": {
+      "exact_ood_core_seen": 0,
+      "coverage_rows": 20
+    },
+    "expected": "exact, pair and triple coverage reported"
+  },
+  {
+    "check": "gate22a_error_partition_recomputed_without_retraining",
+    "pass": true,
+    "observed": {
+      "prediction_artifact": true,
+      "partition": {
+        "undefined_by_train_oracle": {
+          "n": 40,
+          "action_accuracy": 0.5,
+          "assessment_accuracy": 0.55,
+          "action_errors": 20,
+          "assessment_errors": 18
+        }
+      }
+    },
+    "expected": "40 existing prediction rows partitioned"
+  },
+  {
+    "check": "no_learner_label_threshold_change",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4
+    },
+    "expected": ">=4 PNG and >=4 PDF"
+  }
+]

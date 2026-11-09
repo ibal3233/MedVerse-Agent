@@ -1,0 +1,40 @@
+{
+  "gate": "GATE_24B_CYBER_PROSPECTIVE_BENCHMARK_FREEZE",
+  "status": "PASS",
+  "passed_checks": 9,
+  "total_checks": 9,
+  "training_performed": false,
+  "protocol_id": "MEDVERSE-G24B-CYBER-PROSPECTIVE-GROUPS-v1",
+  "prospective_groups": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "prospective_records": 72,
+  "records_per_group": {
+    "5": 18,
+    "6": 18,
+    "7": 18,
+    "8": 18
+  },
+  "action_classes": [
+    "ISOLATE_SUSPECT_SESSION",
+    "MARK_TELEMETRY_UNVERIFIED",
+    "PRESERVE_TECHNICAL_LOGS",
+    "REQUEST_ALTERNATIVE_CHANNEL",
+    "VERIFY_DEVICE_IDENTITY"
+  ],
+  "assessment_classes": [
+    "DEVICE_IDENTITY_INTEGRITY_UNCERTAIN",
+    "TELEMETRY_RELIABILITY_DEGRADED",
+    "TELEMETRY_TRUST_ACCEPTABLE"
+  ],
+  "exact_feature_overlap_with_gate21a": 0,
+  "benchmark_sha256": "ebe2bb97f71e52a853822e612e396817c1d0a66e6525eb0a0190907936ff59ee",
+  "opened_gate24_test_status": "DIAGNOSTIC_ONLY",
+  "new_benchmark_status": "PRE_FROZEN_BEFORE_REPAIR_TRAINING",
+  "training_history_required_in_gate24c": true,
+  "figures_directory": "outputs/gate24b/figures",
+  "next_dependency": "Gate 24C: apply TRAIN-fitted scaling + explicit session_origin missing category, DEV-only C selection, retain training-history plots, then evaluate once on frozen g5-g8."
+}

@@ -1,0 +1,532 @@
+{
+  "registry_version": "1.0",
+  "purpose": "Persistent promotion registry for diagnostic gates. This file is carried across cumulative packages and is not dependent on transient outputs/ directories from previous extracted snapshots.",
+  "promoted_gates": {
+    "GATE_0": {
+      "status": "FROZEN"
+    },
+    "GATE_1": {
+      "status": "PASS",
+      "checks": "24/24"
+    },
+    "GATE_2": {
+      "status": "PASS",
+      "checks": "14/14"
+    },
+    "GATE_3": {
+      "status": "PASS",
+      "checks": "12/12"
+    },
+    "GATE_4": {
+      "status": "PASS",
+      "checks": "14/14"
+    },
+    "GATE_5": {
+      "status": "PASS",
+      "checks": "12/12"
+    },
+    "GATE_6": {
+      "status": "PASS",
+      "checks": "12/12"
+    },
+    "GATE_7A": {
+      "status": "PASS",
+      "checks": "16/16"
+    },
+    "GATE_7B": {
+      "status": "PASS",
+      "checks": "12/12"
+    },
+    "GATE_8": {
+      "status": "PASS",
+      "checks": "9/9"
+    },
+    "GATE_9": {
+      "status": "PASS",
+      "checks": "13/13",
+      "post_patch_regression": "14/14 PASS"
+    },
+    "GATE_10": {
+      "status": "PASS",
+      "checks": "10/10",
+      "matrix_version": "1.0",
+      "scenario_families": 4,
+      "perturbation_axes": 6,
+      "claims_mapped": 3,
+      "final_results_generated": false
+    },
+    "GATE_11A": {
+      "status": "PASS",
+      "checks": "8/8",
+      "scenario_family": "S1_COMPLEMENTARY_RISK",
+      "variants": 5,
+      "repetitions": 10,
+      "raw_rows": 150,
+      "full_gate10_matrix_final_results_generated": false
+    },
+    "GATE_11B": {
+      "status": "PASS",
+      "checks": "16/16",
+      "scenario_families": [
+        "S2_CARE_VS_RESEARCH",
+        "S3_STALE_DT_AI_RECOMMENDATION",
+        "S4_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "new_agents": [
+        "privacy_agent",
+        "research_irb_agent",
+        "regulator_agent"
+      ],
+      "final_benchmark_results_generated": false
+    },
+    "GATE_11C": {
+      "status": "PASS",
+      "checks": "9/9",
+      "raw_rows": 90,
+      "operational_final_results_generated": true,
+      "policy_grounding_final_results_generated": false,
+      "full_gate10_operational_coverage": true,
+      "full_gate10_policy_grounding_coverage": false
+    },
+    "GATE_12": {
+      "status": "PASS",
+      "checks": "16/16",
+      "kb_version": "0.3",
+      "new_agents_grounded": [
+        "privacy_agent",
+        "research_irb_agent",
+        "regulator_agent"
+      ],
+      "authoritative_new_records": 6,
+      "policy_grounding_final_results_generated": false
+    },
+    "GATE_13": {
+      "status": "PASS",
+      "checks": "12/12",
+      "grounding_cases": 6,
+      "scenario_families": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "overall_PGA": 1.0,
+      "full_gate10_operational_coverage": true,
+      "full_gate10_policy_grounding_coverage": true,
+      "full_gate10_experimental_coverage": true
+    },
+    "GATE_14": {
+      "status": "PASS",
+      "checks": "12/12",
+      "held_checks": 0,
+      "failed_checks": 0,
+      "ncc_external_dependency_present": true,
+      "dt_state_domains": [
+        "clinical",
+        "patient_context",
+        "network",
+        "security",
+        "consent",
+        "research",
+        "ai_state"
+      ],
+      "dt_quality_dimensions": [
+        "freshness",
+        "integrity",
+        "completeness",
+        "provenance",
+        "uncertainty"
+      ]
+    },
+    "GATE_16": {
+      "status": "PASS",
+      "checks": "8/8",
+      "candidate_records": 33,
+      "health_guideline_chunks": 10,
+      "full_2026_pseudonymized_guideline_present": true,
+      "corpus_id": "MEDVERSE-KR-POLICY-CORPUS",
+      "candidate_version": "0.4"
+    },
+    "GATE_17": {
+      "status": "PASS",
+      "checks": "32/32",
+      "kb_version": "0.4-candidate-g17",
+      "deployment_jurisdiction": "KR",
+      "retrieval_queries": 8,
+      "semantic_top3_accuracy": 1.0,
+      "policy_boundary_cases": 6,
+      "policy_boundary_accuracy": 1.0,
+      "wrong_jurisdiction_acceptance_rate": 0.0,
+      "agent_partition_leakage_rate": 0.0,
+      "full_2026_guideline_operational_chunks_added": 11
+    },
+    "GATE_18": {
+      "status": "PASS",
+      "checks": "35/35",
+      "harmonization_cases": 7,
+      "harmonization_accuracy": 1.0,
+      "coordination_states_validated": [
+        "AGREEMENT",
+        "COMPLEMENTARY",
+        "CONDITIONAL_HARMONIZATION",
+        "HUMAN_AUTHORITY_REQUIRED",
+        "INSTITUTIONAL_CONFLICT",
+        "INSUFFICIENT_EVIDENCE",
+        "POLICY_CONFLICT"
+      ],
+      "policy_invalid_actions_executed": 0,
+      "raw_cross_agent_evidence_leakage_detected": false
+    },
+    "GATE_19": {
+      "status": "PASS",
+      "checks": "35/35",
+      "dataset_id": "MEDVERSE-G19-E2E-v1",
+      "scenario_count": 4,
+      "scenario_outcome_accuracy": 1.0,
+      "scenarios": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "institutional_agents_exercised": [
+        "cyber_network_agent",
+        "hospital_agent",
+        "privacy_agent",
+        "regulator_agent",
+        "research_irb_agent"
+      ],
+      "patient_level_inference_from_population_data": false,
+      "deployment_jurisdiction": "KR"
+    },
+    "GATE_20": {
+      "status": "PASS",
+      "checks": "27/27",
+      "ui_contract_id": "MEDVERSE-G20-UI-CONTRACT-v1",
+      "scientific_logic_changed": false,
+      "gate19_outcomes_preserved": true,
+      "scenarios_visible": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    "GATE_21": {
+      "status": "PASS",
+      "checks": "14/14",
+      "dataset_id": "MEDVERSE-G21-INSTITUTIONAL-LEARNING-v1",
+      "total_records": 44,
+      "training_performed": false,
+      "note": "Structural dataset freeze passed; Gate 21A strengthens learning adequacy before training."
+    },
+    "GATE_21A": {
+      "status": "PASS",
+      "checks": "10/10",
+      "dataset_id": "MEDVERSE-G21A-INSTITUTIONAL-LEARNING-v1",
+      "total_records": 480,
+      "split_counts": {
+        "train": 288,
+        "dev": 96,
+        "test": 96
+      },
+      "training_performed": false
+    },
+    "GATE_22": {
+      "status": "PASS",
+      "checks": "7/7",
+      "agent": "Privacy Agent",
+      "training_performed": true,
+      "model_family": "multinomial_logistic_regression",
+      "chosen_C": 1.0,
+      "test_action_accuracy": 1.0,
+      "test_action_macro_f1": 1.0,
+      "unsafe_executed_after_policy_shield": 0
+    },
+    "GATE_22B": {
+      "status": "PASS",
+      "checks": "5/5",
+      "diagnostic_classification": "compositional_generalization_and_rule_precedence_limitation",
+      "id_action_accuracy": 1.0,
+      "ood_action_accuracy": 0.5,
+      "unsafe_executed_after_policy_shield": 0,
+      "framework_authority": "PROVISIONAL_PENDING_GATE_22B1"
+    },
+    "GATE_22C": {
+      "status": "PASS",
+      "checks": "7/7",
+      "agent": "Privacy Agent",
+      "intervention": "targeted_compositional_coverage",
+      "model_family_changed": false,
+      "C": 1.0,
+      "original_training_records": 72,
+      "augmentation_records": 137,
+      "combined_training_records": 209,
+      "ood_training_overlap": 0,
+      "ood_action_accuracy_before": 0.5,
+      "ood_action_accuracy_after": 0.9,
+      "ood_action_macro_f1_after": 0.8343079922027291,
+      "unsafe_executed_after_policy_shield": 0,
+      "framework_authority": "PROVISIONAL_PENDING_GATE_22B1"
+    },
+    "GATE_23A": {
+      "status": "PASS",
+      "checks": "6/6",
+      "diagnostic_classification": "augmentation_induced_action_class_distribution_shift_plus_preaugmentation_hyperparameter_selection_instability",
+      "model_family_change_justified": false,
+      "framework_authority": "PROVISIONAL_PENDING_GATE_22B1"
+    },
+    "GATE_23C": {
+      "status": "PASS",
+      "checks": "6/6",
+      "diagnostic_classification": "residual_rule_precedence_representation_limitation_plus_incomplete_research_irb_shield_semantics",
+      "selected_C": 0.3,
+      "ood_action_errors": 6,
+      "legacy_policy_inconsistent_permits": 2,
+      "reference_policy_inconsistent_permits": 0
+    },
+    "GATE_23E": {
+      "status": "PASS",
+      "checks": "6/6",
+      "diagnostic_classification": "unsupported_higher_order_interaction_activation_and_opened_ood_benchmark_support_gap",
+      "critical_feature_combined_training_support": 0,
+      "critical_feature_ood_support": 4,
+      "errors_on_critical_interaction": 4,
+      "model_capacity_failure_established": false,
+      "current_ood_benchmark_status": "OPENED_DIAGNOSTIC_BENCHMARK"
+    },
+    "GATE_23F": {
+      "status": "PASS",
+      "checks": "8/8",
+      "training_performed": false,
+      "protocol_id": "MEDVERSE-G23F-RESEARCH-IRB-COMBINATORIAL-v2",
+      "factorial_states": 48,
+      "outer_folds": 4,
+      "states_per_fold": 12,
+      "benchmark_sha256": "52112275b302101f7031a66ceffde38d1dc59b69233c750bfc771c29ccefbaba",
+      "interaction_coverage_violations": 0,
+      "current_ood_v1_status": "DIAGNOSTIC_ONLY",
+      "new_protocol_status": "PRE_FROZEN_BEFORE_REPAIR_TRAINING"
+    },
+    "GATE_23G": {
+      "status": "PASS",
+      "checks": "8/8",
+      "protocol_id": "MEDVERSE-G23F-RESEARCH-IRB-COMBINATORIAL-v2",
+      "factorial_states_tested": 48,
+      "pooled_action_accuracy": 1.0,
+      "pooled_action_macro_f1": 1.0,
+      "pooled_assessment_accuracy": 0.9583333333333334,
+      "policy_inconsistent_execution_rate": 0.0,
+      "claim_boundary": "synthetic policy-grounded prospective combinatorial benchmark"
+    },
+    "GATE_24A": {
+      "status": "PASS",
+      "checks": "7/7",
+      "diagnostic_classification": "preprocessing_representation_instability_with_numeric_scale_sensitivity_and_implicit_missingness_encoding_plus_dev_plateau_selection_instability",
+      "baseline_test_action_accuracy": 0.8333333333333334,
+      "baseline_test_assessment_accuracy": 0.8333333333333334,
+      "scale_only_test_action_accuracy": 1.0,
+      "scale_only_test_assessment_accuracy": 1.0,
+      "explicit_missing_test_action_accuracy": 1.0,
+      "explicit_missing_test_assessment_accuracy": 0.8333333333333334,
+      "combined_test_action_accuracy": 1.0,
+      "combined_test_assessment_accuracy": 1.0,
+      "production_model_changed": false,
+      "gate24_test_status": "OPENED_DIAGNOSTIC_GROUP"
+    },
+    "GATE_22B1": {
+      "status": "PASS",
+      "checks": "8/8",
+      "training_performed": false,
+      "observed_gate21a_gate22a_oracle_conflicts": 0,
+      "gate22a_ood_classification": {
+        "undefined_by_train_oracle": 40
+      },
+      "unique_model_visible_privacy_signatures": 8,
+      "train_dev_model_visible_overlap": 8,
+      "train_test_model_visible_overlap": 8,
+      "ood_exact_core_signatures_seen_in_train": 0,
+      "root_cause_classification": "train_oracle_underspecification_plus_semantic_split_leakage_plus_compositional_coverage_gap"
+    },
+    "GATE_22B2": {
+      "status": "PASS",
+      "checks": "11/11",
+      "training_performed": false,
+      "protocol_id": "MEDVERSE-G22B2-PRIVACY-CONFIRMATION-v2",
+      "oracle_version": "KR-PRIVACY-PRECEDENCE-v2",
+      "prospective_records": 486,
+      "unique_core_states": 162,
+      "exact_model_visible_overlap_with_prior_sets": 0,
+      "benchmark_sha256": "046ed01a9392306042ebc432f9e7dc4db05fd38f57bb7db701a50238d072a176"
+    },
+    "GATE_22B4": {
+      "status": "PASS",
+      "checks": "7/7",
+      "training_performed": false,
+      "confirmation_action_errors": 21,
+      "unique_error_policy_cores": 7,
+      "zero_support_error_cores": 2,
+      "low_or_zero_support_error_cores": 7,
+      "diagnostic_classification": "sparse_precedence_interaction_support_with_minority_action_coverage_limitation_not_hyperparameter_failure"
+    },
+    "GATE_22B5": {
+      "status": "PASS",
+      "checks": "10/10",
+      "training_performed": false,
+      "protocol_id": "MEDVERSE-G22B5-PRIVACY-ADAPTIVE-REPAIR-REPLICATION-v1",
+      "replication_records": 486,
+      "unique_core_states": 162,
+      "protected_diagnosed_cores": 7,
+      "protected_replication_records": 21,
+      "semantic_freshness_status": "NOT_SEMANTICALLY_UNSEEN",
+      "benchmark_sha256": "c7c0d4fc60eba832e24ea60c4d9db43654022512b83f789da5944d86cf58550d"
+    },
+    "GATE_22B6": {
+      "status": "PASS",
+      "checks": "14/14",
+      "agent": "Privacy Agent",
+      "intervention_scope": "ACTION_HEAD_ONLY",
+      "chosen_action_C": 0.3,
+      "replication_action_accuracy": 1.0,
+      "replication_action_macro_f1": 1.0,
+      "minimum_action_class_recall": 1.0,
+      "protected_diagnosed_core_action_accuracy": 1.0,
+      "unsafe_allow_execution_rate": 0.0,
+      "claim_boundary": "Validated over the already-defined finite synthetic Privacy state space under fresh request contexts; not unseen semantic-core generalization."
+    },
+    "GATE_25": {
+      "status": "PASS",
+      "checks": "11/11",
+      "experiment_status": "COMPLETE_READY_FOR_DEMO",
+      "training_performed": false,
+      "new_benchmark_created": false,
+      "note": "User-authoritative local execution confirmed Gate25 PASS before the bounded Gate26 architectural baseline extension."
+    }
+  },
+  "diagnostic_gates": {
+    "GATE_22A": {
+      "status": "FAIL",
+      "classification": "scientific_generalization_failure",
+      "agent": "Privacy Agent",
+      "ood_records": 40,
+      "ood_action_accuracy": 0.5,
+      "ood_action_macro_f1": 0.29411764705882354,
+      "ood_assessment_accuracy": 0.55,
+      "unsafe_executed_after_policy_shield": 0,
+      "interpretation": "Strong in-distribution performance does not transfer to unseen combinations; hard policy shield preserves execution safety."
+    },
+    "GATE_23": {
+      "status": "FAIL",
+      "classification": "augmentation_distribution_shift_and_model_selection_instability",
+      "agent": "Research / IRB Agent",
+      "chosen_C": 0.1,
+      "id_action_accuracy": 0.6666666666666666,
+      "ood_action_accuracy": 1.0,
+      "ood_assessment_accuracy": 0.75,
+      "unsafe_executed_after_policy_shield": 0
+    },
+    "GATE_23B": {
+      "status": "FAIL",
+      "classification": "residual_rule_precedence_limitation_plus_incomplete_research_irb_shield_semantics",
+      "id_action_accuracy": 1.0,
+      "ood_action_accuracy": 0.75,
+      "ood_action_macro_f1": 0.45,
+      "reported_unsafe_executions_legacy_metric": 0,
+      "note": "Legacy unsafe metric covered erroneous ALLOW actions only; Gate 23C audits all action types against the frozen institutional oracle."
+    },
+    "GATE_23D": {
+      "status": "FAIL",
+      "classification": "residual_ood_classwise_failure_under_explicit_precedence_representation",
+      "passed_checks": "7/8",
+      "id_action_accuracy": 1.0,
+      "ood_action_accuracy": 0.8333333333333334,
+      "ood_action_macro_f1": 0.46875,
+      "ood_action_errors": 4,
+      "policy_inconsistent_executions": 0,
+      "model_family_changed": false
+    },
+    "GATE_24": {
+      "status": "FAIL",
+      "checks": "5/8",
+      "chosen_C": 0.3,
+      "test_action_accuracy": 0.8333333333333334,
+      "test_action_macro_f1": 0.76,
+      "test_assessment_accuracy": 0.8333333333333334,
+      "split_group_leakage_count": 0,
+      "training_history_final_train_action_macro_f1": 1.0,
+      "training_history_final_dev_action_macro_f1": 1.0
+    },
+    "GATE_22B3": {
+      "status": "FAIL",
+      "checks": "12/13",
+      "chosen_C": 1.0,
+      "confirmation_action_accuracy": 0.9567901234567902,
+      "confirmation_action_macro_f1": 0.912495932870965,
+      "confirmation_assessment_accuracy": 1.0,
+      "minimum_action_class_recall": 0.5,
+      "confirmation_action_errors": 21,
+      "unsafe_allow_execution_rate": 0.0,
+      "confirmation_benchmark_status_after_run": "OPENED_DIAGNOSTIC_AFTER_FIRST_CONFIRMATION"
+    }
+  },
+  "frozen_learning_principles": {
+    "compositional_coverage_v1": {
+      "status": "FROZEN",
+      "description": "Before increasing model complexity, add targeted interaction-rich training coverage generated from the same institutional oracle while excluding all OOD evaluation signatures."
+    },
+    "safety_metric_v2": {
+      "status": "FROZEN",
+      "metric": "policy_inconsistent_execution_rate",
+      "scope": "all institutional action classes",
+      "note": "Future learning gates must evaluate policy-inconsistent execution across all actions, not only invalid ALLOW proposals."
+    },
+    "training_history_reporting_v1": {
+      "status": "FROZEN",
+      "non_iterative_models": [
+        "group-wise/data-growth learning curve",
+        "train-vs-dev hyperparameter path",
+        "solver/convergence iteration diagnostic"
+      ],
+      "iterative_models": [
+        "raw per-epoch/per-episode loss or return",
+        "validation metric history",
+        "early-stopping marker where applicable"
+      ],
+      "rule": "Do not invent epoch-wise histories for non-epoch solvers."
+    },
+    "hyperparameter_reporting_table_v1": {
+      "status": "FROZEN",
+      "rule": "Every learning gate must save a machine-readable hyperparameter selection table. Selection tables may contain TRAIN/DEV metrics only; TEST/OOD metrics must be reported separately."
+    }
+  },
+  "methodology_status": {
+    "cross_agent_learning_methodology": {
+      "status": "HOLD_PENDING_GATE_22B1_AUDIT",
+      "reason": "Gate 22C and later agent-learning gates were executed before auditing Gate-21A Privacy oracle semantics, split leakage, and combinatorial coverage."
+    },
+    "privacy_precedence_semantics": {
+      "status": "ADOPTED_PENDING_FRESH_CONFIRMATION",
+      "version": "KR-PRIVACY-PRECEDENCE-v2",
+      "basis": "Gate-22A precedence oracle, verified by Gate-22B.1 to be compatible with all eight Gate-21A Privacy templates actually observed.",
+      "important_boundary": "This adoption explicitly extends semantics beyond what Gate-21A alone defined; it is not described as a rule inferred from Gate-21A."
+    },
+    "privacy_post_confirmation_repair": {
+      "status": "ADAPTIVE_REPAIR_PROTOCOL_REQUIRED",
+      "semantic_state_space_status": "FULL_162_CORE_SPACE_ALREADY_OPENED",
+      "claim_boundary": "No new benchmark inside the unchanged 5-variable schema can be called semantically unseen. Further confirmation may establish fresh-record/context replication after repair, not unseen-core generalization."
+    },
+    "gate26_baseline_comparison": {
+      "status": "BOUNDED_EXTENSION",
+      "purpose": "Isolate the architectural value of institutional asymmetry, policy filtering, consensus, and MedVerse harmonization without new training.",
+      "stop_rule": "Gate26 does not authorize learner retraining or baseline-specific tuning. After Gate26, return to report/demo production."
+    }
+  },
+  "reproducibility_notes": {
+    "sklearn_model_persistence": {
+      "observed_user_environment": "scikit-learn 1.9.0",
+      "loaded_artifact_version": "scikit-learn 1.8.0",
+      "status": "WARNING_RECORDED",
+      "mitigation": "Gate24C retrains from source data and does not depend on prior serialized scikit-learn Cyber estimators."
+    }
+  }
+}

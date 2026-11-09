@@ -1,0 +1,4617 @@
+{
+  "dataset_id": "MEDVERSE-G26-ARCH-BASELINES-v1",
+  "scientific_role": "Architecture-only coordination ablation. Institutional proposals and ground-truth workflow requirements are held constant across B1-B5.",
+  "cases": [
+    {
+      "case_id": "G26-AGRE-00",
+      "archetype": "AGREEMENT",
+      "variant": 0,
+      "expected_coordination_state": "AGREEMENT",
+      "expected_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "PRESERVE_PRIVACY_AUDIT_LOG",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "research_use_allowed",
+            "consent_status"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "BLOCK_RESEARCH_PROCESSING",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 3,
+          "local_fields": [
+            "research_consent_status",
+            "irb_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "allowed_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "all_agents_agree": true
+      },
+      "all_sensitive_fields": [
+        "agreement_context_0_0",
+        "agreement_context_0_1",
+        "consent_status",
+        "irb_status",
+        "research_consent_status",
+        "research_use_allowed"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "65ca900c045f473e070edd5b1ca75364383fdb7c81744435ba6808f73c04d177"
+    },
+    {
+      "case_id": "G26-AGRE-01",
+      "archetype": "AGREEMENT",
+      "variant": 1,
+      "expected_coordination_state": "AGREEMENT",
+      "expected_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "PRESERVE_PRIVACY_AUDIT_LOG",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "research_use_allowed",
+            "consent_status"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "BLOCK_RESEARCH_PROCESSING",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 3,
+          "local_fields": [
+            "research_consent_status",
+            "irb_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "allowed_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "all_agents_agree": true
+      },
+      "all_sensitive_fields": [
+        "agreement_context_1_0",
+        "agreement_context_1_1",
+        "agreement_context_1_2",
+        "consent_status",
+        "irb_status",
+        "research_consent_status",
+        "research_use_allowed"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "0b9458eba912481e3cc9db5745468b3945661657e2e4554d89869fafc9ef0b8b"
+    },
+    {
+      "case_id": "G26-AGRE-02",
+      "archetype": "AGREEMENT",
+      "variant": 2,
+      "expected_coordination_state": "AGREEMENT",
+      "expected_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "PRESERVE_PRIVACY_AUDIT_LOG",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "research_use_allowed",
+            "consent_status"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "BLOCK_RESEARCH_PROCESSING",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 3,
+          "local_fields": [
+            "research_consent_status",
+            "irb_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "allowed_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "all_agents_agree": true
+      },
+      "all_sensitive_fields": [
+        "agreement_context_2_0",
+        "agreement_context_2_1",
+        "agreement_context_2_2",
+        "agreement_context_2_3",
+        "consent_status",
+        "irb_status",
+        "research_consent_status",
+        "research_use_allowed"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "a2a0cb258babe965099567687a7b538e1c88b6b55a6b450e34f04668ba5b6d19"
+    },
+    {
+      "case_id": "G26-AGRE-03",
+      "archetype": "AGREEMENT",
+      "variant": 3,
+      "expected_coordination_state": "AGREEMENT",
+      "expected_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "PRESERVE_PRIVACY_AUDIT_LOG",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "research_use_allowed",
+            "consent_status"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "BLOCK_RESEARCH_PROCESSING",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 3,
+          "local_fields": [
+            "research_consent_status",
+            "irb_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "allowed_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "all_agents_agree": true
+      },
+      "all_sensitive_fields": [
+        "agreement_context_3_0",
+        "agreement_context_3_1",
+        "agreement_context_3_2",
+        "agreement_context_3_3",
+        "agreement_context_3_4",
+        "consent_status",
+        "irb_status",
+        "research_consent_status",
+        "research_use_allowed"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "0f9f7fc78f6c172408a885a8ffe2fd6190241736f68d3146a8551be75943ef28"
+    },
+    {
+      "case_id": "G26-AGRE-04",
+      "archetype": "AGREEMENT",
+      "variant": 4,
+      "expected_coordination_state": "AGREEMENT",
+      "expected_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "PRESERVE_PRIVACY_AUDIT_LOG",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "research_use_allowed",
+            "consent_status"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "BLOCK_RESEARCH_PROCESSING",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 3,
+          "local_fields": [
+            "research_consent_status",
+            "irb_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "allowed_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "all_agents_agree": true
+      },
+      "all_sensitive_fields": [
+        "agreement_context_4_0",
+        "agreement_context_4_1",
+        "consent_status",
+        "irb_status",
+        "research_consent_status",
+        "research_use_allowed"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "900e4491082ebe2fb6b8ac1ed58508ad5c628c0cb9cfaea57c07332c2b4f989e"
+    },
+    {
+      "case_id": "G26-AGRE-05",
+      "archetype": "AGREEMENT",
+      "variant": 5,
+      "expected_coordination_state": "AGREEMENT",
+      "expected_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "PRESERVE_PRIVACY_AUDIT_LOG",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "research_use_allowed",
+            "consent_status"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "BLOCK_RESEARCH_PROCESSING",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 3,
+          "local_fields": [
+            "research_consent_status",
+            "irb_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "allowed_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "all_agents_agree": true
+      },
+      "all_sensitive_fields": [
+        "agreement_context_5_0",
+        "agreement_context_5_1",
+        "agreement_context_5_2",
+        "consent_status",
+        "irb_status",
+        "research_consent_status",
+        "research_use_allowed"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "2f5a121a68b81a689cb763b776e76db40021625cee1c779ee2481e6d9cca065c"
+    },
+    {
+      "case_id": "G26-AGRE-06",
+      "archetype": "AGREEMENT",
+      "variant": 6,
+      "expected_coordination_state": "AGREEMENT",
+      "expected_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "PRESERVE_PRIVACY_AUDIT_LOG",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "research_use_allowed",
+            "consent_status"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "BLOCK_RESEARCH_PROCESSING",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 3,
+          "local_fields": [
+            "research_consent_status",
+            "irb_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "allowed_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "all_agents_agree": true
+      },
+      "all_sensitive_fields": [
+        "agreement_context_6_0",
+        "agreement_context_6_1",
+        "agreement_context_6_2",
+        "agreement_context_6_3",
+        "consent_status",
+        "irb_status",
+        "research_consent_status",
+        "research_use_allowed"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "7671cf0dd62507268f9134fe48010eff8a33cff0ed2f3b29e89c3ab1e1b671e6"
+    },
+    {
+      "case_id": "G26-AGRE-07",
+      "archetype": "AGREEMENT",
+      "variant": 7,
+      "expected_coordination_state": "AGREEMENT",
+      "expected_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "PRESERVE_PRIVACY_AUDIT_LOG",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "research_use_allowed",
+            "consent_status"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "BLOCK_RESEARCH_PROCESSING",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 3,
+          "local_fields": [
+            "research_consent_status",
+            "irb_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "allowed_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "all_agents_agree": true
+      },
+      "all_sensitive_fields": [
+        "agreement_context_7_0",
+        "agreement_context_7_1",
+        "agreement_context_7_2",
+        "agreement_context_7_3",
+        "agreement_context_7_4",
+        "consent_status",
+        "irb_status",
+        "research_consent_status",
+        "research_use_allowed"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "f0b1ed33c71b30c740a67c496020aef3c06126a3f47a8dd7b76c97d3d77d6c05"
+    },
+    {
+      "case_id": "G26-AGRE-08",
+      "archetype": "AGREEMENT",
+      "variant": 8,
+      "expected_coordination_state": "AGREEMENT",
+      "expected_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "PRESERVE_PRIVACY_AUDIT_LOG",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "research_use_allowed",
+            "consent_status"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "BLOCK_RESEARCH_PROCESSING",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 3,
+          "local_fields": [
+            "research_consent_status",
+            "irb_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "allowed_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "all_agents_agree": true
+      },
+      "all_sensitive_fields": [
+        "agreement_context_8_0",
+        "agreement_context_8_1",
+        "consent_status",
+        "irb_status",
+        "research_consent_status",
+        "research_use_allowed"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "012d1fcc6e75e175e998bc6d41a0525ac0b8d187e4f7e6aaf5251e2c21b02906"
+    },
+    {
+      "case_id": "G26-AGRE-09",
+      "archetype": "AGREEMENT",
+      "variant": 9,
+      "expected_coordination_state": "AGREEMENT",
+      "expected_outcome": "CARE_CONTINUES_RESEARCH_RESTRICTED",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "PRESERVE_PRIVACY_AUDIT_LOG",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "research_use_allowed",
+            "consent_status"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "BLOCK_RESEARCH_PROCESSING",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 3,
+          "local_fields": [
+            "research_consent_status",
+            "irb_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "allowed_actions": [
+        "privacy_agent::PRESERVE_PRIVACY_AUDIT_LOG",
+        "research_irb_agent::BLOCK_RESEARCH_PROCESSING"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "all_agents_agree": true
+      },
+      "all_sensitive_fields": [
+        "agreement_context_9_0",
+        "agreement_context_9_1",
+        "agreement_context_9_2",
+        "consent_status",
+        "irb_status",
+        "research_consent_status",
+        "research_use_allowed"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "40066403dc6f0d4d2f11b30fc1c9c094b2b62404688f94dae38dcf5ccaad636f"
+    },
+    {
+      "case_id": "G26-COMP-00",
+      "archetype": "COMPLEMENTARY",
+      "variant": 0,
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_outcome": "COMPLEMENTARY_RISK",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "SpO2",
+            "heart_rate",
+            "clinical_priority"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "certificate_status",
+            "packet_loss",
+            "telemetry_trust"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "complementary_risk": true
+      },
+      "all_sensitive_fields": [
+        "SpO2",
+        "certificate_status",
+        "clinical_priority",
+        "complementary_context_0_0",
+        "complementary_context_0_1",
+        "heart_rate",
+        "packet_loss",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "8716b7a9b14cb6009b1f7b0d62bf277e43de013f62463b6999475e753b8538f2"
+    },
+    {
+      "case_id": "G26-COMP-01",
+      "archetype": "COMPLEMENTARY",
+      "variant": 1,
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_outcome": "COMPLEMENTARY_RISK",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "SpO2",
+            "heart_rate",
+            "clinical_priority"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "certificate_status",
+            "packet_loss",
+            "telemetry_trust"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "complementary_risk": true
+      },
+      "all_sensitive_fields": [
+        "SpO2",
+        "certificate_status",
+        "clinical_priority",
+        "complementary_context_1_0",
+        "complementary_context_1_1",
+        "complementary_context_1_2",
+        "heart_rate",
+        "packet_loss",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "9b5c1f3165c23d5130a39faa8a0b0b14103c5934a07c1a6885a4bd36efdea031"
+    },
+    {
+      "case_id": "G26-COMP-02",
+      "archetype": "COMPLEMENTARY",
+      "variant": 2,
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_outcome": "COMPLEMENTARY_RISK",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "SpO2",
+            "heart_rate",
+            "clinical_priority"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "certificate_status",
+            "packet_loss",
+            "telemetry_trust"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "complementary_risk": true
+      },
+      "all_sensitive_fields": [
+        "SpO2",
+        "certificate_status",
+        "clinical_priority",
+        "complementary_context_2_0",
+        "complementary_context_2_1",
+        "complementary_context_2_2",
+        "complementary_context_2_3",
+        "heart_rate",
+        "packet_loss",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "7dcdec6b4144440c382c972e9a10ab86ed0e14fb7e3e14cd8c65d150ef9e9b78"
+    },
+    {
+      "case_id": "G26-COMP-03",
+      "archetype": "COMPLEMENTARY",
+      "variant": 3,
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_outcome": "COMPLEMENTARY_RISK",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "SpO2",
+            "heart_rate",
+            "clinical_priority"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "certificate_status",
+            "packet_loss",
+            "telemetry_trust"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "complementary_risk": true
+      },
+      "all_sensitive_fields": [
+        "SpO2",
+        "certificate_status",
+        "clinical_priority",
+        "complementary_context_3_0",
+        "complementary_context_3_1",
+        "complementary_context_3_2",
+        "complementary_context_3_3",
+        "complementary_context_3_4",
+        "heart_rate",
+        "packet_loss",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "f612789e46a342235254ac9c5dc954498081906c9bc3d66af750de1a63162b08"
+    },
+    {
+      "case_id": "G26-COMP-04",
+      "archetype": "COMPLEMENTARY",
+      "variant": 4,
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_outcome": "COMPLEMENTARY_RISK",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "SpO2",
+            "heart_rate",
+            "clinical_priority"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "certificate_status",
+            "packet_loss",
+            "telemetry_trust"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "complementary_risk": true
+      },
+      "all_sensitive_fields": [
+        "SpO2",
+        "certificate_status",
+        "clinical_priority",
+        "complementary_context_4_0",
+        "complementary_context_4_1",
+        "heart_rate",
+        "packet_loss",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "8daa74e1835a7381da898bba14f4654e8a2a73e1b8c6fa1b52da8577621cf170"
+    },
+    {
+      "case_id": "G26-COMP-05",
+      "archetype": "COMPLEMENTARY",
+      "variant": 5,
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_outcome": "COMPLEMENTARY_RISK",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "SpO2",
+            "heart_rate",
+            "clinical_priority"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "certificate_status",
+            "packet_loss",
+            "telemetry_trust"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "complementary_risk": true
+      },
+      "all_sensitive_fields": [
+        "SpO2",
+        "certificate_status",
+        "clinical_priority",
+        "complementary_context_5_0",
+        "complementary_context_5_1",
+        "complementary_context_5_2",
+        "heart_rate",
+        "packet_loss",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "31962f62eba023eda2773db988a958557163086e93fe4b897671efca0379ec90"
+    },
+    {
+      "case_id": "G26-COMP-06",
+      "archetype": "COMPLEMENTARY",
+      "variant": 6,
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_outcome": "COMPLEMENTARY_RISK",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "SpO2",
+            "heart_rate",
+            "clinical_priority"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "certificate_status",
+            "packet_loss",
+            "telemetry_trust"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "complementary_risk": true
+      },
+      "all_sensitive_fields": [
+        "SpO2",
+        "certificate_status",
+        "clinical_priority",
+        "complementary_context_6_0",
+        "complementary_context_6_1",
+        "complementary_context_6_2",
+        "complementary_context_6_3",
+        "heart_rate",
+        "packet_loss",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "4d38b83d9f1c9374544a550d415e978f7dbc2c4254d5f89917981ae7b069324a"
+    },
+    {
+      "case_id": "G26-COMP-07",
+      "archetype": "COMPLEMENTARY",
+      "variant": 7,
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_outcome": "COMPLEMENTARY_RISK",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "SpO2",
+            "heart_rate",
+            "clinical_priority"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "certificate_status",
+            "packet_loss",
+            "telemetry_trust"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "complementary_risk": true
+      },
+      "all_sensitive_fields": [
+        "SpO2",
+        "certificate_status",
+        "clinical_priority",
+        "complementary_context_7_0",
+        "complementary_context_7_1",
+        "complementary_context_7_2",
+        "complementary_context_7_3",
+        "complementary_context_7_4",
+        "heart_rate",
+        "packet_loss",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "f13bd68240b4f67be871417c11da0d923653e2563c6949378a5caf1b474ce44c"
+    },
+    {
+      "case_id": "G26-COMP-08",
+      "archetype": "COMPLEMENTARY",
+      "variant": 8,
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_outcome": "COMPLEMENTARY_RISK",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "SpO2",
+            "heart_rate",
+            "clinical_priority"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "certificate_status",
+            "packet_loss",
+            "telemetry_trust"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "complementary_risk": true
+      },
+      "all_sensitive_fields": [
+        "SpO2",
+        "certificate_status",
+        "clinical_priority",
+        "complementary_context_8_0",
+        "complementary_context_8_1",
+        "heart_rate",
+        "packet_loss",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "458c2ecaacbfd3b0e16c6b46b72ede0f57715a3c3b843d261ed5b00f86201827"
+    },
+    {
+      "case_id": "G26-COMP-09",
+      "archetype": "COMPLEMENTARY",
+      "variant": 9,
+      "expected_coordination_state": "COMPLEMENTARY",
+      "expected_outcome": "COMPLEMENTARY_RISK",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "SpO2",
+            "heart_rate",
+            "clinical_priority"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "certificate_status",
+            "packet_loss",
+            "telemetry_trust"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY",
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "complementary_risk": true
+      },
+      "all_sensitive_fields": [
+        "SpO2",
+        "certificate_status",
+        "clinical_priority",
+        "complementary_context_9_0",
+        "complementary_context_9_1",
+        "complementary_context_9_2",
+        "heart_rate",
+        "packet_loss",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "1f7c41f04038799d5d3bbfd74d2ec83c88ec8bdea5f0abae44b486204b18fcb8"
+    },
+    {
+      "case_id": "G26-COND-00",
+      "archetype": "CONDITIONAL_HARMONIZATION",
+      "variant": 0,
+      "expected_coordination_state": "CONDITIONAL_HARMONIZATION",
+      "expected_outcome": "TRUST_CONDITIONED_CLINICAL_WORKFLOW",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "USE_VERIFIED_DT_MEASUREMENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_priority",
+            "dt_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "telemetry_trust",
+            "certificate_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "dependency": "TRUST_BEFORE_DT_USE",
+        "telemetry_trust": "UNVERIFIED",
+        "clinical_priority": "URGENT"
+      },
+      "all_sensitive_fields": [
+        "certificate_status",
+        "clinical_priority",
+        "conditional_harmonization_context_0_0",
+        "conditional_harmonization_context_0_1",
+        "dt_measurement",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "2648137240cd0e0b39e1c18b8683ca84f060cda5ac64a5a8e626ae45c7ed4acb"
+    },
+    {
+      "case_id": "G26-COND-01",
+      "archetype": "CONDITIONAL_HARMONIZATION",
+      "variant": 1,
+      "expected_coordination_state": "CONDITIONAL_HARMONIZATION",
+      "expected_outcome": "TRUST_CONDITIONED_CLINICAL_WORKFLOW",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "USE_VERIFIED_DT_MEASUREMENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_priority",
+            "dt_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "telemetry_trust",
+            "certificate_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "dependency": "TRUST_BEFORE_DT_USE",
+        "telemetry_trust": "UNVERIFIED",
+        "clinical_priority": "URGENT"
+      },
+      "all_sensitive_fields": [
+        "certificate_status",
+        "clinical_priority",
+        "conditional_harmonization_context_1_0",
+        "conditional_harmonization_context_1_1",
+        "conditional_harmonization_context_1_2",
+        "dt_measurement",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "e9a0de8c7d75a19f8cdc3c5a11b1abb237a11bc780caddf51fa328e7fb06dbf3"
+    },
+    {
+      "case_id": "G26-COND-02",
+      "archetype": "CONDITIONAL_HARMONIZATION",
+      "variant": 2,
+      "expected_coordination_state": "CONDITIONAL_HARMONIZATION",
+      "expected_outcome": "TRUST_CONDITIONED_CLINICAL_WORKFLOW",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "USE_VERIFIED_DT_MEASUREMENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_priority",
+            "dt_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "telemetry_trust",
+            "certificate_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "dependency": "TRUST_BEFORE_DT_USE",
+        "telemetry_trust": "UNVERIFIED",
+        "clinical_priority": "URGENT"
+      },
+      "all_sensitive_fields": [
+        "certificate_status",
+        "clinical_priority",
+        "conditional_harmonization_context_2_0",
+        "conditional_harmonization_context_2_1",
+        "conditional_harmonization_context_2_2",
+        "conditional_harmonization_context_2_3",
+        "dt_measurement",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "9ac6c1f9a4da1494027d4e611930bd7957c51482c31216d804d4bbc968a695de"
+    },
+    {
+      "case_id": "G26-COND-03",
+      "archetype": "CONDITIONAL_HARMONIZATION",
+      "variant": 3,
+      "expected_coordination_state": "CONDITIONAL_HARMONIZATION",
+      "expected_outcome": "TRUST_CONDITIONED_CLINICAL_WORKFLOW",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "USE_VERIFIED_DT_MEASUREMENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_priority",
+            "dt_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "telemetry_trust",
+            "certificate_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "dependency": "TRUST_BEFORE_DT_USE",
+        "telemetry_trust": "UNVERIFIED",
+        "clinical_priority": "URGENT"
+      },
+      "all_sensitive_fields": [
+        "certificate_status",
+        "clinical_priority",
+        "conditional_harmonization_context_3_0",
+        "conditional_harmonization_context_3_1",
+        "conditional_harmonization_context_3_2",
+        "conditional_harmonization_context_3_3",
+        "conditional_harmonization_context_3_4",
+        "dt_measurement",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "716b7bc55f41bea7b2ba04a43e1d0715d78ac9967b1f003926c65ef6c2466636"
+    },
+    {
+      "case_id": "G26-COND-04",
+      "archetype": "CONDITIONAL_HARMONIZATION",
+      "variant": 4,
+      "expected_coordination_state": "CONDITIONAL_HARMONIZATION",
+      "expected_outcome": "TRUST_CONDITIONED_CLINICAL_WORKFLOW",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "USE_VERIFIED_DT_MEASUREMENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_priority",
+            "dt_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "telemetry_trust",
+            "certificate_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "dependency": "TRUST_BEFORE_DT_USE",
+        "telemetry_trust": "UNVERIFIED",
+        "clinical_priority": "URGENT"
+      },
+      "all_sensitive_fields": [
+        "certificate_status",
+        "clinical_priority",
+        "conditional_harmonization_context_4_0",
+        "conditional_harmonization_context_4_1",
+        "dt_measurement",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "0b3322163665830b990e8b3ed2b28bd33598aac178265fae5a407eeb58de6fb5"
+    },
+    {
+      "case_id": "G26-COND-05",
+      "archetype": "CONDITIONAL_HARMONIZATION",
+      "variant": 5,
+      "expected_coordination_state": "CONDITIONAL_HARMONIZATION",
+      "expected_outcome": "TRUST_CONDITIONED_CLINICAL_WORKFLOW",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "USE_VERIFIED_DT_MEASUREMENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_priority",
+            "dt_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "telemetry_trust",
+            "certificate_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "dependency": "TRUST_BEFORE_DT_USE",
+        "telemetry_trust": "UNVERIFIED",
+        "clinical_priority": "URGENT"
+      },
+      "all_sensitive_fields": [
+        "certificate_status",
+        "clinical_priority",
+        "conditional_harmonization_context_5_0",
+        "conditional_harmonization_context_5_1",
+        "conditional_harmonization_context_5_2",
+        "dt_measurement",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "2667da2ff3cdfa7dd4e9edfd46ed7b4b7ef1ff8c0e549c742ffb7b1a2b01069a"
+    },
+    {
+      "case_id": "G26-COND-06",
+      "archetype": "CONDITIONAL_HARMONIZATION",
+      "variant": 6,
+      "expected_coordination_state": "CONDITIONAL_HARMONIZATION",
+      "expected_outcome": "TRUST_CONDITIONED_CLINICAL_WORKFLOW",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "USE_VERIFIED_DT_MEASUREMENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_priority",
+            "dt_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "telemetry_trust",
+            "certificate_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "dependency": "TRUST_BEFORE_DT_USE",
+        "telemetry_trust": "UNVERIFIED",
+        "clinical_priority": "URGENT"
+      },
+      "all_sensitive_fields": [
+        "certificate_status",
+        "clinical_priority",
+        "conditional_harmonization_context_6_0",
+        "conditional_harmonization_context_6_1",
+        "conditional_harmonization_context_6_2",
+        "conditional_harmonization_context_6_3",
+        "dt_measurement",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "06f09fb4e8c994519a35b3fce0fd5ae86da797cbe16be40bca7533066043e273"
+    },
+    {
+      "case_id": "G26-COND-07",
+      "archetype": "CONDITIONAL_HARMONIZATION",
+      "variant": 7,
+      "expected_coordination_state": "CONDITIONAL_HARMONIZATION",
+      "expected_outcome": "TRUST_CONDITIONED_CLINICAL_WORKFLOW",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "USE_VERIFIED_DT_MEASUREMENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_priority",
+            "dt_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "telemetry_trust",
+            "certificate_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "dependency": "TRUST_BEFORE_DT_USE",
+        "telemetry_trust": "UNVERIFIED",
+        "clinical_priority": "URGENT"
+      },
+      "all_sensitive_fields": [
+        "certificate_status",
+        "clinical_priority",
+        "conditional_harmonization_context_7_0",
+        "conditional_harmonization_context_7_1",
+        "conditional_harmonization_context_7_2",
+        "conditional_harmonization_context_7_3",
+        "conditional_harmonization_context_7_4",
+        "dt_measurement",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "757d2efc01c6626f3e2a5340b55ab002af3a241e5e1ef23c8147b0b51ac43fb6"
+    },
+    {
+      "case_id": "G26-COND-08",
+      "archetype": "CONDITIONAL_HARMONIZATION",
+      "variant": 8,
+      "expected_coordination_state": "CONDITIONAL_HARMONIZATION",
+      "expected_outcome": "TRUST_CONDITIONED_CLINICAL_WORKFLOW",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "USE_VERIFIED_DT_MEASUREMENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_priority",
+            "dt_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "telemetry_trust",
+            "certificate_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "dependency": "TRUST_BEFORE_DT_USE",
+        "telemetry_trust": "UNVERIFIED",
+        "clinical_priority": "URGENT"
+      },
+      "all_sensitive_fields": [
+        "certificate_status",
+        "clinical_priority",
+        "conditional_harmonization_context_8_0",
+        "conditional_harmonization_context_8_1",
+        "dt_measurement",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "5fed6f459d7c611662a32ba99e7a2957eca7058296a331d7ef6730dd3ce61f20"
+    },
+    {
+      "case_id": "G26-COND-09",
+      "archetype": "CONDITIONAL_HARMONIZATION",
+      "variant": 9,
+      "expected_coordination_state": "CONDITIONAL_HARMONIZATION",
+      "expected_outcome": "TRUST_CONDITIONED_CLINICAL_WORKFLOW",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "USE_VERIFIED_DT_MEASUREMENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_priority",
+            "dt_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "telemetry_trust",
+            "certificate_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "cyber_network_agent::VERIFY_DEVICE_IDENTITY_OR_TRUSTED_CHANNEL",
+        "hospital_agent::USE_VERIFIED_DT_MEASUREMENT"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [
+        "telemetry_trust",
+        "clinical_priority"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "dependency": "TRUST_BEFORE_DT_USE",
+        "telemetry_trust": "UNVERIFIED",
+        "clinical_priority": "URGENT"
+      },
+      "all_sensitive_fields": [
+        "certificate_status",
+        "clinical_priority",
+        "conditional_harmonization_context_9_0",
+        "conditional_harmonization_context_9_1",
+        "conditional_harmonization_context_9_2",
+        "dt_measurement",
+        "telemetry_trust"
+      ],
+      "required_shared_fields": [
+        "clinical_priority",
+        "telemetry_trust"
+      ],
+      "content_sha256": "5f8dd706e2956ecd2e1d287374cf4f4215df1f21f2226f50a672a42a2b451aa6"
+    },
+    {
+      "case_id": "G26-HUMA-00",
+      "archetype": "HUMAN_AUTHORITY_REQUIRED",
+      "variant": 0,
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "positions": [
+        {
+          "agent_id": "regulator_agent",
+          "action": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": true,
+          "priority": 5,
+          "local_fields": [
+            "decision_impact",
+            "dt_validity",
+            "oversight_requirement"
+          ]
+        }
+      ],
+      "required_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "allowed_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": true,
+      "context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_target": "HUMAN_AI_OVERSIGHT"
+      },
+      "all_sensitive_fields": [
+        "decision_impact",
+        "dt_validity",
+        "human_authority_required_context_0_0",
+        "human_authority_required_context_0_1",
+        "oversight_requirement"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "c4cea03c12bce87b9760ee4c26d9b58d30df24581358e559522e604a50cb2600"
+    },
+    {
+      "case_id": "G26-HUMA-01",
+      "archetype": "HUMAN_AUTHORITY_REQUIRED",
+      "variant": 1,
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "positions": [
+        {
+          "agent_id": "regulator_agent",
+          "action": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": true,
+          "priority": 5,
+          "local_fields": [
+            "decision_impact",
+            "dt_validity",
+            "oversight_requirement"
+          ]
+        }
+      ],
+      "required_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "allowed_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": true,
+      "context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_target": "HUMAN_AI_OVERSIGHT"
+      },
+      "all_sensitive_fields": [
+        "decision_impact",
+        "dt_validity",
+        "human_authority_required_context_1_0",
+        "human_authority_required_context_1_1",
+        "human_authority_required_context_1_2",
+        "oversight_requirement"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "97731e79e6c68e0b65981742c4ddd1aca3f7e523abbf9f573b29b6b7c92e0022"
+    },
+    {
+      "case_id": "G26-HUMA-02",
+      "archetype": "HUMAN_AUTHORITY_REQUIRED",
+      "variant": 2,
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "positions": [
+        {
+          "agent_id": "regulator_agent",
+          "action": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": true,
+          "priority": 5,
+          "local_fields": [
+            "decision_impact",
+            "dt_validity",
+            "oversight_requirement"
+          ]
+        }
+      ],
+      "required_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "allowed_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": true,
+      "context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_target": "HUMAN_AI_OVERSIGHT"
+      },
+      "all_sensitive_fields": [
+        "decision_impact",
+        "dt_validity",
+        "human_authority_required_context_2_0",
+        "human_authority_required_context_2_1",
+        "human_authority_required_context_2_2",
+        "human_authority_required_context_2_3",
+        "oversight_requirement"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "476e210a8523e4ac95b251d7615e595e237caedb380609448a82e795ab391fb7"
+    },
+    {
+      "case_id": "G26-HUMA-03",
+      "archetype": "HUMAN_AUTHORITY_REQUIRED",
+      "variant": 3,
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "positions": [
+        {
+          "agent_id": "regulator_agent",
+          "action": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": true,
+          "priority": 5,
+          "local_fields": [
+            "decision_impact",
+            "dt_validity",
+            "oversight_requirement"
+          ]
+        }
+      ],
+      "required_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "allowed_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": true,
+      "context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_target": "HUMAN_AI_OVERSIGHT"
+      },
+      "all_sensitive_fields": [
+        "decision_impact",
+        "dt_validity",
+        "human_authority_required_context_3_0",
+        "human_authority_required_context_3_1",
+        "human_authority_required_context_3_2",
+        "human_authority_required_context_3_3",
+        "human_authority_required_context_3_4",
+        "oversight_requirement"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "58a75685ab8b98f1b4c0a34e043e8465335be092213f6c45377f1067682263b5"
+    },
+    {
+      "case_id": "G26-HUMA-04",
+      "archetype": "HUMAN_AUTHORITY_REQUIRED",
+      "variant": 4,
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "positions": [
+        {
+          "agent_id": "regulator_agent",
+          "action": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": true,
+          "priority": 5,
+          "local_fields": [
+            "decision_impact",
+            "dt_validity",
+            "oversight_requirement"
+          ]
+        }
+      ],
+      "required_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "allowed_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": true,
+      "context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_target": "HUMAN_AI_OVERSIGHT"
+      },
+      "all_sensitive_fields": [
+        "decision_impact",
+        "dt_validity",
+        "human_authority_required_context_4_0",
+        "human_authority_required_context_4_1",
+        "oversight_requirement"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "6e71cc381798d6ac4efd5ffa235b18bb589bd7135c7c99243c30fdcde444147c"
+    },
+    {
+      "case_id": "G26-HUMA-05",
+      "archetype": "HUMAN_AUTHORITY_REQUIRED",
+      "variant": 5,
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "positions": [
+        {
+          "agent_id": "regulator_agent",
+          "action": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": true,
+          "priority": 5,
+          "local_fields": [
+            "decision_impact",
+            "dt_validity",
+            "oversight_requirement"
+          ]
+        }
+      ],
+      "required_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "allowed_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": true,
+      "context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_target": "HUMAN_AI_OVERSIGHT"
+      },
+      "all_sensitive_fields": [
+        "decision_impact",
+        "dt_validity",
+        "human_authority_required_context_5_0",
+        "human_authority_required_context_5_1",
+        "human_authority_required_context_5_2",
+        "oversight_requirement"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "6146bf32c0b9db6ad52f202d207c91843cd967b57238af40dcd15f105ec8703e"
+    },
+    {
+      "case_id": "G26-HUMA-06",
+      "archetype": "HUMAN_AUTHORITY_REQUIRED",
+      "variant": 6,
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "positions": [
+        {
+          "agent_id": "regulator_agent",
+          "action": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": true,
+          "priority": 5,
+          "local_fields": [
+            "decision_impact",
+            "dt_validity",
+            "oversight_requirement"
+          ]
+        }
+      ],
+      "required_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "allowed_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": true,
+      "context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_target": "HUMAN_AI_OVERSIGHT"
+      },
+      "all_sensitive_fields": [
+        "decision_impact",
+        "dt_validity",
+        "human_authority_required_context_6_0",
+        "human_authority_required_context_6_1",
+        "human_authority_required_context_6_2",
+        "human_authority_required_context_6_3",
+        "oversight_requirement"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "14cf31072780887811597628ada78178a2f6ff1f8f6e422988fb6c40959245b5"
+    },
+    {
+      "case_id": "G26-HUMA-07",
+      "archetype": "HUMAN_AUTHORITY_REQUIRED",
+      "variant": 7,
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "positions": [
+        {
+          "agent_id": "regulator_agent",
+          "action": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": true,
+          "priority": 5,
+          "local_fields": [
+            "decision_impact",
+            "dt_validity",
+            "oversight_requirement"
+          ]
+        }
+      ],
+      "required_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "allowed_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": true,
+      "context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_target": "HUMAN_AI_OVERSIGHT"
+      },
+      "all_sensitive_fields": [
+        "decision_impact",
+        "dt_validity",
+        "human_authority_required_context_7_0",
+        "human_authority_required_context_7_1",
+        "human_authority_required_context_7_2",
+        "human_authority_required_context_7_3",
+        "human_authority_required_context_7_4",
+        "oversight_requirement"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "107487ab98ef994fc85975729c38683d330f34bf5ac032bba955aecded4fa67d"
+    },
+    {
+      "case_id": "G26-HUMA-08",
+      "archetype": "HUMAN_AUTHORITY_REQUIRED",
+      "variant": 8,
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "positions": [
+        {
+          "agent_id": "regulator_agent",
+          "action": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": true,
+          "priority": 5,
+          "local_fields": [
+            "decision_impact",
+            "dt_validity",
+            "oversight_requirement"
+          ]
+        }
+      ],
+      "required_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "allowed_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": true,
+      "context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_target": "HUMAN_AI_OVERSIGHT"
+      },
+      "all_sensitive_fields": [
+        "decision_impact",
+        "dt_validity",
+        "human_authority_required_context_8_0",
+        "human_authority_required_context_8_1",
+        "oversight_requirement"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "09be872dd94590cced177dbbe2fbf1c78afa79d0d457d80fed7102d71d2c4e96"
+    },
+    {
+      "case_id": "G26-HUMA-09",
+      "archetype": "HUMAN_AUTHORITY_REQUIRED",
+      "variant": 9,
+      "expected_coordination_state": "HUMAN_AUTHORITY_REQUIRED",
+      "expected_outcome": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+      "positions": [
+        {
+          "agent_id": "regulator_agent",
+          "action": "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": true,
+          "priority": 5,
+          "local_fields": [
+            "decision_impact",
+            "dt_validity",
+            "oversight_requirement"
+          ]
+        }
+      ],
+      "required_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "allowed_actions": [
+        "regulator_agent::BLOCK_AUTOMATED_HIGH_IMPACT_ACTION"
+      ],
+      "forbidden_actions": [],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": true,
+      "context": {
+        "human_authority_required": true,
+        "machine_resolvable": false,
+        "escalation_target": "HUMAN_AI_OVERSIGHT"
+      },
+      "all_sensitive_fields": [
+        "decision_impact",
+        "dt_validity",
+        "human_authority_required_context_9_0",
+        "human_authority_required_context_9_1",
+        "human_authority_required_context_9_2",
+        "oversight_requirement"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "68e21bab36faf034352c1b839a2f7aa77858cf92dd4e2a7fbe4bb02bac699eb3"
+    },
+    {
+      "case_id": "G26-INST-00",
+      "archetype": "INSTITUTIONAL_CONFLICT",
+      "variant": 0,
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_outcome": "DISCLOSURE_BLOCKED_CARE_PRESERVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "CONTACT_PATIENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_need",
+            "contact_required"
+          ]
+        },
+        {
+          "agent_id": "privacy_agent",
+          "action": "DENY_UNAUTHORIZED_DISCLOSURE",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "disclosure_authorized",
+            "minimum_necessary",
+            "purpose_declared"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "allowed_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "forbidden_actions": [
+        "hospital_agent::DISCLOSE_FULL_RECORD"
+      ],
+      "required_messages": [
+        "minimum_necessary_scope"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "all_sensitive_fields": [
+        "clinical_need",
+        "contact_required",
+        "disclosure_authorized",
+        "institutional_conflict_context_0_0",
+        "institutional_conflict_context_0_1",
+        "minimum_necessary",
+        "purpose_declared"
+      ],
+      "required_shared_fields": [
+        "minimum_necessary_scope"
+      ],
+      "content_sha256": "b0078047ba342fe6161e38c765bdc20d01d0cf0c1662a919fd62499b9d48f579"
+    },
+    {
+      "case_id": "G26-INST-01",
+      "archetype": "INSTITUTIONAL_CONFLICT",
+      "variant": 1,
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_outcome": "DISCLOSURE_BLOCKED_CARE_PRESERVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "CONTACT_PATIENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_need",
+            "contact_required"
+          ]
+        },
+        {
+          "agent_id": "privacy_agent",
+          "action": "DENY_UNAUTHORIZED_DISCLOSURE",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "disclosure_authorized",
+            "minimum_necessary",
+            "purpose_declared"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "allowed_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "forbidden_actions": [
+        "hospital_agent::DISCLOSE_FULL_RECORD"
+      ],
+      "required_messages": [
+        "minimum_necessary_scope"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "all_sensitive_fields": [
+        "clinical_need",
+        "contact_required",
+        "disclosure_authorized",
+        "institutional_conflict_context_1_0",
+        "institutional_conflict_context_1_1",
+        "institutional_conflict_context_1_2",
+        "minimum_necessary",
+        "purpose_declared"
+      ],
+      "required_shared_fields": [
+        "minimum_necessary_scope"
+      ],
+      "content_sha256": "7f164fb53dba9b27d8b5240b15a1ac25f702c5c4e322163659d78dd857e1b408"
+    },
+    {
+      "case_id": "G26-INST-02",
+      "archetype": "INSTITUTIONAL_CONFLICT",
+      "variant": 2,
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_outcome": "DISCLOSURE_BLOCKED_CARE_PRESERVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "CONTACT_PATIENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_need",
+            "contact_required"
+          ]
+        },
+        {
+          "agent_id": "privacy_agent",
+          "action": "DENY_UNAUTHORIZED_DISCLOSURE",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "disclosure_authorized",
+            "minimum_necessary",
+            "purpose_declared"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "allowed_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "forbidden_actions": [
+        "hospital_agent::DISCLOSE_FULL_RECORD"
+      ],
+      "required_messages": [
+        "minimum_necessary_scope"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "all_sensitive_fields": [
+        "clinical_need",
+        "contact_required",
+        "disclosure_authorized",
+        "institutional_conflict_context_2_0",
+        "institutional_conflict_context_2_1",
+        "institutional_conflict_context_2_2",
+        "institutional_conflict_context_2_3",
+        "minimum_necessary",
+        "purpose_declared"
+      ],
+      "required_shared_fields": [
+        "minimum_necessary_scope"
+      ],
+      "content_sha256": "e2f1f4b1f8e5865bbab86de83951a0d35a11f907be7cc5d6f69e15b8a7c150f4"
+    },
+    {
+      "case_id": "G26-INST-03",
+      "archetype": "INSTITUTIONAL_CONFLICT",
+      "variant": 3,
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_outcome": "DISCLOSURE_BLOCKED_CARE_PRESERVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "CONTACT_PATIENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_need",
+            "contact_required"
+          ]
+        },
+        {
+          "agent_id": "privacy_agent",
+          "action": "DENY_UNAUTHORIZED_DISCLOSURE",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "disclosure_authorized",
+            "minimum_necessary",
+            "purpose_declared"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "allowed_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "forbidden_actions": [
+        "hospital_agent::DISCLOSE_FULL_RECORD"
+      ],
+      "required_messages": [
+        "minimum_necessary_scope"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "all_sensitive_fields": [
+        "clinical_need",
+        "contact_required",
+        "disclosure_authorized",
+        "institutional_conflict_context_3_0",
+        "institutional_conflict_context_3_1",
+        "institutional_conflict_context_3_2",
+        "institutional_conflict_context_3_3",
+        "institutional_conflict_context_3_4",
+        "minimum_necessary",
+        "purpose_declared"
+      ],
+      "required_shared_fields": [
+        "minimum_necessary_scope"
+      ],
+      "content_sha256": "2579a1813696010cd7ad7bba4c8c4b6c4f84bcdcac709739b2f3e1bfd774cd19"
+    },
+    {
+      "case_id": "G26-INST-04",
+      "archetype": "INSTITUTIONAL_CONFLICT",
+      "variant": 4,
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_outcome": "DISCLOSURE_BLOCKED_CARE_PRESERVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "CONTACT_PATIENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_need",
+            "contact_required"
+          ]
+        },
+        {
+          "agent_id": "privacy_agent",
+          "action": "DENY_UNAUTHORIZED_DISCLOSURE",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "disclosure_authorized",
+            "minimum_necessary",
+            "purpose_declared"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "allowed_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "forbidden_actions": [
+        "hospital_agent::DISCLOSE_FULL_RECORD"
+      ],
+      "required_messages": [
+        "minimum_necessary_scope"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "all_sensitive_fields": [
+        "clinical_need",
+        "contact_required",
+        "disclosure_authorized",
+        "institutional_conflict_context_4_0",
+        "institutional_conflict_context_4_1",
+        "minimum_necessary",
+        "purpose_declared"
+      ],
+      "required_shared_fields": [
+        "minimum_necessary_scope"
+      ],
+      "content_sha256": "5fd218e12bad1157e028231cedf8bcf564fe768fd3f6cc0c978beddcb925ed26"
+    },
+    {
+      "case_id": "G26-INST-05",
+      "archetype": "INSTITUTIONAL_CONFLICT",
+      "variant": 5,
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_outcome": "DISCLOSURE_BLOCKED_CARE_PRESERVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "CONTACT_PATIENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_need",
+            "contact_required"
+          ]
+        },
+        {
+          "agent_id": "privacy_agent",
+          "action": "DENY_UNAUTHORIZED_DISCLOSURE",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "disclosure_authorized",
+            "minimum_necessary",
+            "purpose_declared"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "allowed_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "forbidden_actions": [
+        "hospital_agent::DISCLOSE_FULL_RECORD"
+      ],
+      "required_messages": [
+        "minimum_necessary_scope"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "all_sensitive_fields": [
+        "clinical_need",
+        "contact_required",
+        "disclosure_authorized",
+        "institutional_conflict_context_5_0",
+        "institutional_conflict_context_5_1",
+        "institutional_conflict_context_5_2",
+        "minimum_necessary",
+        "purpose_declared"
+      ],
+      "required_shared_fields": [
+        "minimum_necessary_scope"
+      ],
+      "content_sha256": "0899a7ed40b77870569679126e49b34879b27888d69f33e58f882bf4ef56c640"
+    },
+    {
+      "case_id": "G26-INST-06",
+      "archetype": "INSTITUTIONAL_CONFLICT",
+      "variant": 6,
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_outcome": "DISCLOSURE_BLOCKED_CARE_PRESERVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "CONTACT_PATIENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_need",
+            "contact_required"
+          ]
+        },
+        {
+          "agent_id": "privacy_agent",
+          "action": "DENY_UNAUTHORIZED_DISCLOSURE",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "disclosure_authorized",
+            "minimum_necessary",
+            "purpose_declared"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "allowed_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "forbidden_actions": [
+        "hospital_agent::DISCLOSE_FULL_RECORD"
+      ],
+      "required_messages": [
+        "minimum_necessary_scope"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "all_sensitive_fields": [
+        "clinical_need",
+        "contact_required",
+        "disclosure_authorized",
+        "institutional_conflict_context_6_0",
+        "institutional_conflict_context_6_1",
+        "institutional_conflict_context_6_2",
+        "institutional_conflict_context_6_3",
+        "minimum_necessary",
+        "purpose_declared"
+      ],
+      "required_shared_fields": [
+        "minimum_necessary_scope"
+      ],
+      "content_sha256": "19999e92fafcb7811d56f65b957a329b61990c6a2a30af69d1d6f267ffc6868b"
+    },
+    {
+      "case_id": "G26-INST-07",
+      "archetype": "INSTITUTIONAL_CONFLICT",
+      "variant": 7,
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_outcome": "DISCLOSURE_BLOCKED_CARE_PRESERVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "CONTACT_PATIENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_need",
+            "contact_required"
+          ]
+        },
+        {
+          "agent_id": "privacy_agent",
+          "action": "DENY_UNAUTHORIZED_DISCLOSURE",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "disclosure_authorized",
+            "minimum_necessary",
+            "purpose_declared"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "allowed_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "forbidden_actions": [
+        "hospital_agent::DISCLOSE_FULL_RECORD"
+      ],
+      "required_messages": [
+        "minimum_necessary_scope"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "all_sensitive_fields": [
+        "clinical_need",
+        "contact_required",
+        "disclosure_authorized",
+        "institutional_conflict_context_7_0",
+        "institutional_conflict_context_7_1",
+        "institutional_conflict_context_7_2",
+        "institutional_conflict_context_7_3",
+        "institutional_conflict_context_7_4",
+        "minimum_necessary",
+        "purpose_declared"
+      ],
+      "required_shared_fields": [
+        "minimum_necessary_scope"
+      ],
+      "content_sha256": "c681ac146507c468477b3e141787778b9e7a1be704da65349b6be724ece35f88"
+    },
+    {
+      "case_id": "G26-INST-08",
+      "archetype": "INSTITUTIONAL_CONFLICT",
+      "variant": 8,
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_outcome": "DISCLOSURE_BLOCKED_CARE_PRESERVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "CONTACT_PATIENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_need",
+            "contact_required"
+          ]
+        },
+        {
+          "agent_id": "privacy_agent",
+          "action": "DENY_UNAUTHORIZED_DISCLOSURE",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "disclosure_authorized",
+            "minimum_necessary",
+            "purpose_declared"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "allowed_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "forbidden_actions": [
+        "hospital_agent::DISCLOSE_FULL_RECORD"
+      ],
+      "required_messages": [
+        "minimum_necessary_scope"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "all_sensitive_fields": [
+        "clinical_need",
+        "contact_required",
+        "disclosure_authorized",
+        "institutional_conflict_context_8_0",
+        "institutional_conflict_context_8_1",
+        "minimum_necessary",
+        "purpose_declared"
+      ],
+      "required_shared_fields": [
+        "minimum_necessary_scope"
+      ],
+      "content_sha256": "9309e9e1d31d45b14d30e5bba1ad4099f14a85e135bef73d369b8e6175405412"
+    },
+    {
+      "case_id": "G26-INST-09",
+      "archetype": "INSTITUTIONAL_CONFLICT",
+      "variant": 9,
+      "expected_coordination_state": "INSTITUTIONAL_CONFLICT",
+      "expected_outcome": "DISCLOSURE_BLOCKED_CARE_PRESERVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "CONTACT_PATIENT",
+          "intent": "CONTINUE",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "clinical_need",
+            "contact_required"
+          ]
+        },
+        {
+          "agent_id": "privacy_agent",
+          "action": "DENY_UNAUTHORIZED_DISCLOSURE",
+          "intent": "RESTRICT",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "disclosure_authorized",
+            "minimum_necessary",
+            "purpose_declared"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "allowed_actions": [
+        "hospital_agent::CONTACT_PATIENT",
+        "hospital_agent::REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA",
+        "privacy_agent::DENY_UNAUTHORIZED_DISCLOSURE"
+      ],
+      "forbidden_actions": [
+        "hospital_agent::DISCLOSE_FULL_RECORD"
+      ],
+      "required_messages": [
+        "minimum_necessary_scope"
+      ],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "institutional_conflict": "CARE_VS_DISCLOSURE",
+        "alternative_available": true,
+        "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+      },
+      "all_sensitive_fields": [
+        "clinical_need",
+        "contact_required",
+        "disclosure_authorized",
+        "institutional_conflict_context_9_0",
+        "institutional_conflict_context_9_1",
+        "institutional_conflict_context_9_2",
+        "minimum_necessary",
+        "purpose_declared"
+      ],
+      "required_shared_fields": [
+        "minimum_necessary_scope"
+      ],
+      "content_sha256": "7e8a3a08345c125d3c9db602b7a8b712e17ca578b389c576496f53cb11520762"
+    },
+    {
+      "case_id": "G26-INSU-00",
+      "archetype": "INSUFFICIENT_EVIDENCE",
+      "variant": 0,
+      "expected_coordination_state": "INSUFFICIENT_EVIDENCE",
+      "expected_outcome": "MORE_EVIDENCE_REQUIRED_BEFORE_DISCLOSURE",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "ALLOW_AUTHORIZED_DISCLOSURE",
+          "intent": "ALLOW",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": false,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "authorization_status",
+            "purpose",
+            "minimum_necessary"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "PRESERVE_RESEARCH_AUDIT_LOG",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "irb_status",
+            "consent_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "allowed_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "forbidden_actions": [
+        "privacy_agent::ALLOW_AUTHORIZED_DISCLOSURE"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [
+        "AUTHORIZED_EVIDENCE"
+      ],
+      "expected_escalation": false,
+      "context": {
+        "evidence_missing": true
+      },
+      "all_sensitive_fields": [
+        "authorization_status",
+        "consent_status",
+        "insufficient_evidence_context_0_0",
+        "insufficient_evidence_context_0_1",
+        "irb_status",
+        "minimum_necessary",
+        "purpose"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "a5ea1ef80dc2136205b90093a7bc5f1df330d5423f35d5f5d48035ead8b78e40"
+    },
+    {
+      "case_id": "G26-INSU-01",
+      "archetype": "INSUFFICIENT_EVIDENCE",
+      "variant": 1,
+      "expected_coordination_state": "INSUFFICIENT_EVIDENCE",
+      "expected_outcome": "MORE_EVIDENCE_REQUIRED_BEFORE_DISCLOSURE",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "ALLOW_AUTHORIZED_DISCLOSURE",
+          "intent": "ALLOW",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": false,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "authorization_status",
+            "purpose",
+            "minimum_necessary"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "PRESERVE_RESEARCH_AUDIT_LOG",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "irb_status",
+            "consent_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "allowed_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "forbidden_actions": [
+        "privacy_agent::ALLOW_AUTHORIZED_DISCLOSURE"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [
+        "AUTHORIZED_EVIDENCE"
+      ],
+      "expected_escalation": false,
+      "context": {
+        "evidence_missing": true
+      },
+      "all_sensitive_fields": [
+        "authorization_status",
+        "consent_status",
+        "insufficient_evidence_context_1_0",
+        "insufficient_evidence_context_1_1",
+        "insufficient_evidence_context_1_2",
+        "irb_status",
+        "minimum_necessary",
+        "purpose"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "0509f50d619f99cba31ac14a0d4c14e5f6ef3c369e7323863eaf50b887ca1d49"
+    },
+    {
+      "case_id": "G26-INSU-02",
+      "archetype": "INSUFFICIENT_EVIDENCE",
+      "variant": 2,
+      "expected_coordination_state": "INSUFFICIENT_EVIDENCE",
+      "expected_outcome": "MORE_EVIDENCE_REQUIRED_BEFORE_DISCLOSURE",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "ALLOW_AUTHORIZED_DISCLOSURE",
+          "intent": "ALLOW",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": false,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "authorization_status",
+            "purpose",
+            "minimum_necessary"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "PRESERVE_RESEARCH_AUDIT_LOG",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "irb_status",
+            "consent_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "allowed_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "forbidden_actions": [
+        "privacy_agent::ALLOW_AUTHORIZED_DISCLOSURE"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [
+        "AUTHORIZED_EVIDENCE"
+      ],
+      "expected_escalation": false,
+      "context": {
+        "evidence_missing": true
+      },
+      "all_sensitive_fields": [
+        "authorization_status",
+        "consent_status",
+        "insufficient_evidence_context_2_0",
+        "insufficient_evidence_context_2_1",
+        "insufficient_evidence_context_2_2",
+        "insufficient_evidence_context_2_3",
+        "irb_status",
+        "minimum_necessary",
+        "purpose"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "087c3dfc6c736f6908f5eb6ef59ddd38e1517ca8a6a7bee797a1de6293b98317"
+    },
+    {
+      "case_id": "G26-INSU-03",
+      "archetype": "INSUFFICIENT_EVIDENCE",
+      "variant": 3,
+      "expected_coordination_state": "INSUFFICIENT_EVIDENCE",
+      "expected_outcome": "MORE_EVIDENCE_REQUIRED_BEFORE_DISCLOSURE",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "ALLOW_AUTHORIZED_DISCLOSURE",
+          "intent": "ALLOW",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": false,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "authorization_status",
+            "purpose",
+            "minimum_necessary"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "PRESERVE_RESEARCH_AUDIT_LOG",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "irb_status",
+            "consent_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "allowed_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "forbidden_actions": [
+        "privacy_agent::ALLOW_AUTHORIZED_DISCLOSURE"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [
+        "AUTHORIZED_EVIDENCE"
+      ],
+      "expected_escalation": false,
+      "context": {
+        "evidence_missing": true
+      },
+      "all_sensitive_fields": [
+        "authorization_status",
+        "consent_status",
+        "insufficient_evidence_context_3_0",
+        "insufficient_evidence_context_3_1",
+        "insufficient_evidence_context_3_2",
+        "insufficient_evidence_context_3_3",
+        "insufficient_evidence_context_3_4",
+        "irb_status",
+        "minimum_necessary",
+        "purpose"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "655b6429e4010fc5a6e31491ea8342a96b8ff07ca216d59c9023550c277e3daa"
+    },
+    {
+      "case_id": "G26-INSU-04",
+      "archetype": "INSUFFICIENT_EVIDENCE",
+      "variant": 4,
+      "expected_coordination_state": "INSUFFICIENT_EVIDENCE",
+      "expected_outcome": "MORE_EVIDENCE_REQUIRED_BEFORE_DISCLOSURE",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "ALLOW_AUTHORIZED_DISCLOSURE",
+          "intent": "ALLOW",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": false,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "authorization_status",
+            "purpose",
+            "minimum_necessary"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "PRESERVE_RESEARCH_AUDIT_LOG",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "irb_status",
+            "consent_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "allowed_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "forbidden_actions": [
+        "privacy_agent::ALLOW_AUTHORIZED_DISCLOSURE"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [
+        "AUTHORIZED_EVIDENCE"
+      ],
+      "expected_escalation": false,
+      "context": {
+        "evidence_missing": true
+      },
+      "all_sensitive_fields": [
+        "authorization_status",
+        "consent_status",
+        "insufficient_evidence_context_4_0",
+        "insufficient_evidence_context_4_1",
+        "irb_status",
+        "minimum_necessary",
+        "purpose"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "77dc4db17aab743b9aeba63d32fbfa7a334a61374ab5c13d0e3ce4cf6bf102b2"
+    },
+    {
+      "case_id": "G26-INSU-05",
+      "archetype": "INSUFFICIENT_EVIDENCE",
+      "variant": 5,
+      "expected_coordination_state": "INSUFFICIENT_EVIDENCE",
+      "expected_outcome": "MORE_EVIDENCE_REQUIRED_BEFORE_DISCLOSURE",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "ALLOW_AUTHORIZED_DISCLOSURE",
+          "intent": "ALLOW",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": false,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "authorization_status",
+            "purpose",
+            "minimum_necessary"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "PRESERVE_RESEARCH_AUDIT_LOG",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "irb_status",
+            "consent_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "allowed_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "forbidden_actions": [
+        "privacy_agent::ALLOW_AUTHORIZED_DISCLOSURE"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [
+        "AUTHORIZED_EVIDENCE"
+      ],
+      "expected_escalation": false,
+      "context": {
+        "evidence_missing": true
+      },
+      "all_sensitive_fields": [
+        "authorization_status",
+        "consent_status",
+        "insufficient_evidence_context_5_0",
+        "insufficient_evidence_context_5_1",
+        "insufficient_evidence_context_5_2",
+        "irb_status",
+        "minimum_necessary",
+        "purpose"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "c9f1f494be3649f43d40277e01792c20d80cf48ef8cd44bf683035eb884a7aad"
+    },
+    {
+      "case_id": "G26-INSU-06",
+      "archetype": "INSUFFICIENT_EVIDENCE",
+      "variant": 6,
+      "expected_coordination_state": "INSUFFICIENT_EVIDENCE",
+      "expected_outcome": "MORE_EVIDENCE_REQUIRED_BEFORE_DISCLOSURE",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "ALLOW_AUTHORIZED_DISCLOSURE",
+          "intent": "ALLOW",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": false,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "authorization_status",
+            "purpose",
+            "minimum_necessary"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "PRESERVE_RESEARCH_AUDIT_LOG",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "irb_status",
+            "consent_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "allowed_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "forbidden_actions": [
+        "privacy_agent::ALLOW_AUTHORIZED_DISCLOSURE"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [
+        "AUTHORIZED_EVIDENCE"
+      ],
+      "expected_escalation": false,
+      "context": {
+        "evidence_missing": true
+      },
+      "all_sensitive_fields": [
+        "authorization_status",
+        "consent_status",
+        "insufficient_evidence_context_6_0",
+        "insufficient_evidence_context_6_1",
+        "insufficient_evidence_context_6_2",
+        "insufficient_evidence_context_6_3",
+        "irb_status",
+        "minimum_necessary",
+        "purpose"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "2f41a55e5723eb529bf930135410100c439317687545a6be3f78fb2663cd35c1"
+    },
+    {
+      "case_id": "G26-INSU-07",
+      "archetype": "INSUFFICIENT_EVIDENCE",
+      "variant": 7,
+      "expected_coordination_state": "INSUFFICIENT_EVIDENCE",
+      "expected_outcome": "MORE_EVIDENCE_REQUIRED_BEFORE_DISCLOSURE",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "ALLOW_AUTHORIZED_DISCLOSURE",
+          "intent": "ALLOW",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": false,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "authorization_status",
+            "purpose",
+            "minimum_necessary"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "PRESERVE_RESEARCH_AUDIT_LOG",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "irb_status",
+            "consent_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "allowed_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "forbidden_actions": [
+        "privacy_agent::ALLOW_AUTHORIZED_DISCLOSURE"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [
+        "AUTHORIZED_EVIDENCE"
+      ],
+      "expected_escalation": false,
+      "context": {
+        "evidence_missing": true
+      },
+      "all_sensitive_fields": [
+        "authorization_status",
+        "consent_status",
+        "insufficient_evidence_context_7_0",
+        "insufficient_evidence_context_7_1",
+        "insufficient_evidence_context_7_2",
+        "insufficient_evidence_context_7_3",
+        "insufficient_evidence_context_7_4",
+        "irb_status",
+        "minimum_necessary",
+        "purpose"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "a781e37787194cac6c45d73cf4195417c5ff4429a23247b03fb72f4c304d1735"
+    },
+    {
+      "case_id": "G26-INSU-08",
+      "archetype": "INSUFFICIENT_EVIDENCE",
+      "variant": 8,
+      "expected_coordination_state": "INSUFFICIENT_EVIDENCE",
+      "expected_outcome": "MORE_EVIDENCE_REQUIRED_BEFORE_DISCLOSURE",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "ALLOW_AUTHORIZED_DISCLOSURE",
+          "intent": "ALLOW",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": false,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "authorization_status",
+            "purpose",
+            "minimum_necessary"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "PRESERVE_RESEARCH_AUDIT_LOG",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "irb_status",
+            "consent_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "allowed_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "forbidden_actions": [
+        "privacy_agent::ALLOW_AUTHORIZED_DISCLOSURE"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [
+        "AUTHORIZED_EVIDENCE"
+      ],
+      "expected_escalation": false,
+      "context": {
+        "evidence_missing": true
+      },
+      "all_sensitive_fields": [
+        "authorization_status",
+        "consent_status",
+        "insufficient_evidence_context_8_0",
+        "insufficient_evidence_context_8_1",
+        "irb_status",
+        "minimum_necessary",
+        "purpose"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "a73ff5eb8badb2744b2b1beb7ab3bbe4d69f976b04ef3714222f69fddfff28ee"
+    },
+    {
+      "case_id": "G26-INSU-09",
+      "archetype": "INSUFFICIENT_EVIDENCE",
+      "variant": 9,
+      "expected_coordination_state": "INSUFFICIENT_EVIDENCE",
+      "expected_outcome": "MORE_EVIDENCE_REQUIRED_BEFORE_DISCLOSURE",
+      "positions": [
+        {
+          "agent_id": "privacy_agent",
+          "action": "ALLOW_AUTHORIZED_DISCLOSURE",
+          "intent": "ALLOW",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": false,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "authorization_status",
+            "purpose",
+            "minimum_necessary"
+          ]
+        },
+        {
+          "agent_id": "research_irb_agent",
+          "action": "PRESERVE_RESEARCH_AUDIT_LOG",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 2,
+          "local_fields": [
+            "irb_status",
+            "consent_status"
+          ]
+        }
+      ],
+      "required_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "allowed_actions": [
+        "research_irb_agent::PRESERVE_RESEARCH_AUDIT_LOG"
+      ],
+      "forbidden_actions": [
+        "privacy_agent::ALLOW_AUTHORIZED_DISCLOSURE"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [
+        "AUTHORIZED_EVIDENCE"
+      ],
+      "expected_escalation": false,
+      "context": {
+        "evidence_missing": true
+      },
+      "all_sensitive_fields": [
+        "authorization_status",
+        "consent_status",
+        "insufficient_evidence_context_9_0",
+        "insufficient_evidence_context_9_1",
+        "insufficient_evidence_context_9_2",
+        "irb_status",
+        "minimum_necessary",
+        "purpose"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "64f7109a935d1a83872f4201c9d7989e06318487b4edf810a5501414dc79f952"
+    },
+    {
+      "case_id": "G26-POLI-00",
+      "archetype": "POLICY_CONFLICT",
+      "variant": 0,
+      "expected_coordination_state": "POLICY_CONFLICT",
+      "expected_outcome": "INVALID_INSTITUTIONAL_ACTION_REMOVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "clinical_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "MODIFY_CLINICAL_TREATMENT",
+          "intent": "CONTINUE",
+          "policy_valid": false,
+          "mandate_valid": false,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "network_state",
+            "security_alert"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [
+        "cyber_network_agent::MODIFY_CLINICAL_TREATMENT"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "invalid_peer_action": true
+      },
+      "all_sensitive_fields": [
+        "clinical_measurement",
+        "network_state",
+        "policy_conflict_context_0_0",
+        "policy_conflict_context_0_1",
+        "security_alert"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "4cf8761389620e6203423af5c8cd42cc903093b1d8835520c82580da6d6fd90c"
+    },
+    {
+      "case_id": "G26-POLI-01",
+      "archetype": "POLICY_CONFLICT",
+      "variant": 1,
+      "expected_coordination_state": "POLICY_CONFLICT",
+      "expected_outcome": "INVALID_INSTITUTIONAL_ACTION_REMOVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "clinical_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "MODIFY_CLINICAL_TREATMENT",
+          "intent": "CONTINUE",
+          "policy_valid": false,
+          "mandate_valid": false,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "network_state",
+            "security_alert"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [
+        "cyber_network_agent::MODIFY_CLINICAL_TREATMENT"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "invalid_peer_action": true
+      },
+      "all_sensitive_fields": [
+        "clinical_measurement",
+        "network_state",
+        "policy_conflict_context_1_0",
+        "policy_conflict_context_1_1",
+        "policy_conflict_context_1_2",
+        "security_alert"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "afd83aa64621bda4326c67fba47d515ccbe9fe00782b024266f230922b873187"
+    },
+    {
+      "case_id": "G26-POLI-02",
+      "archetype": "POLICY_CONFLICT",
+      "variant": 2,
+      "expected_coordination_state": "POLICY_CONFLICT",
+      "expected_outcome": "INVALID_INSTITUTIONAL_ACTION_REMOVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "clinical_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "MODIFY_CLINICAL_TREATMENT",
+          "intent": "CONTINUE",
+          "policy_valid": false,
+          "mandate_valid": false,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "network_state",
+            "security_alert"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [
+        "cyber_network_agent::MODIFY_CLINICAL_TREATMENT"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "invalid_peer_action": true
+      },
+      "all_sensitive_fields": [
+        "clinical_measurement",
+        "network_state",
+        "policy_conflict_context_2_0",
+        "policy_conflict_context_2_1",
+        "policy_conflict_context_2_2",
+        "policy_conflict_context_2_3",
+        "security_alert"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "e6f825ebcd5c6d0d57348768699ceb11354a1f329868eef4040038177cfdde0d"
+    },
+    {
+      "case_id": "G26-POLI-03",
+      "archetype": "POLICY_CONFLICT",
+      "variant": 3,
+      "expected_coordination_state": "POLICY_CONFLICT",
+      "expected_outcome": "INVALID_INSTITUTIONAL_ACTION_REMOVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "clinical_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "MODIFY_CLINICAL_TREATMENT",
+          "intent": "CONTINUE",
+          "policy_valid": false,
+          "mandate_valid": false,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "network_state",
+            "security_alert"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [
+        "cyber_network_agent::MODIFY_CLINICAL_TREATMENT"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "invalid_peer_action": true
+      },
+      "all_sensitive_fields": [
+        "clinical_measurement",
+        "network_state",
+        "policy_conflict_context_3_0",
+        "policy_conflict_context_3_1",
+        "policy_conflict_context_3_2",
+        "policy_conflict_context_3_3",
+        "policy_conflict_context_3_4",
+        "security_alert"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "a1465e9a3359b48b44ef928ca012f9dd45a2ccbfbb4903ad3db49adc6b58b5e1"
+    },
+    {
+      "case_id": "G26-POLI-04",
+      "archetype": "POLICY_CONFLICT",
+      "variant": 4,
+      "expected_coordination_state": "POLICY_CONFLICT",
+      "expected_outcome": "INVALID_INSTITUTIONAL_ACTION_REMOVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "clinical_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "MODIFY_CLINICAL_TREATMENT",
+          "intent": "CONTINUE",
+          "policy_valid": false,
+          "mandate_valid": false,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "network_state",
+            "security_alert"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [
+        "cyber_network_agent::MODIFY_CLINICAL_TREATMENT"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "invalid_peer_action": true
+      },
+      "all_sensitive_fields": [
+        "clinical_measurement",
+        "network_state",
+        "policy_conflict_context_4_0",
+        "policy_conflict_context_4_1",
+        "security_alert"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "c9212cc70c8923e7167e53bbe891a1744027b82f96bc69e7d730bb2e740eac79"
+    },
+    {
+      "case_id": "G26-POLI-05",
+      "archetype": "POLICY_CONFLICT",
+      "variant": 5,
+      "expected_coordination_state": "POLICY_CONFLICT",
+      "expected_outcome": "INVALID_INSTITUTIONAL_ACTION_REMOVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "clinical_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "MODIFY_CLINICAL_TREATMENT",
+          "intent": "CONTINUE",
+          "policy_valid": false,
+          "mandate_valid": false,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "network_state",
+            "security_alert"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [
+        "cyber_network_agent::MODIFY_CLINICAL_TREATMENT"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "invalid_peer_action": true
+      },
+      "all_sensitive_fields": [
+        "clinical_measurement",
+        "network_state",
+        "policy_conflict_context_5_0",
+        "policy_conflict_context_5_1",
+        "policy_conflict_context_5_2",
+        "security_alert"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "8f85385081c0b8b4124a06cd92800b881e130ab7bb097ecf5e66040e1f57cf8a"
+    },
+    {
+      "case_id": "G26-POLI-06",
+      "archetype": "POLICY_CONFLICT",
+      "variant": 6,
+      "expected_coordination_state": "POLICY_CONFLICT",
+      "expected_outcome": "INVALID_INSTITUTIONAL_ACTION_REMOVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "clinical_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "MODIFY_CLINICAL_TREATMENT",
+          "intent": "CONTINUE",
+          "policy_valid": false,
+          "mandate_valid": false,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "network_state",
+            "security_alert"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [
+        "cyber_network_agent::MODIFY_CLINICAL_TREATMENT"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "invalid_peer_action": true
+      },
+      "all_sensitive_fields": [
+        "clinical_measurement",
+        "network_state",
+        "policy_conflict_context_6_0",
+        "policy_conflict_context_6_1",
+        "policy_conflict_context_6_2",
+        "policy_conflict_context_6_3",
+        "security_alert"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "b7affb0882ee90f0003679a2048d71b40ff56db11d1e948443eface00fa168ba"
+    },
+    {
+      "case_id": "G26-POLI-07",
+      "archetype": "POLICY_CONFLICT",
+      "variant": 7,
+      "expected_coordination_state": "POLICY_CONFLICT",
+      "expected_outcome": "INVALID_INSTITUTIONAL_ACTION_REMOVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "clinical_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "MODIFY_CLINICAL_TREATMENT",
+          "intent": "CONTINUE",
+          "policy_valid": false,
+          "mandate_valid": false,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "network_state",
+            "security_alert"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [
+        "cyber_network_agent::MODIFY_CLINICAL_TREATMENT"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "invalid_peer_action": true
+      },
+      "all_sensitive_fields": [
+        "clinical_measurement",
+        "network_state",
+        "policy_conflict_context_7_0",
+        "policy_conflict_context_7_1",
+        "policy_conflict_context_7_2",
+        "policy_conflict_context_7_3",
+        "policy_conflict_context_7_4",
+        "security_alert"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "1f98db3cfde5c0f1ff96caa14480df3ef199f7b6ec4a99e84023f7bd0130d5bc"
+    },
+    {
+      "case_id": "G26-POLI-08",
+      "archetype": "POLICY_CONFLICT",
+      "variant": 8,
+      "expected_coordination_state": "POLICY_CONFLICT",
+      "expected_outcome": "INVALID_INSTITUTIONAL_ACTION_REMOVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "clinical_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "MODIFY_CLINICAL_TREATMENT",
+          "intent": "CONTINUE",
+          "policy_valid": false,
+          "mandate_valid": false,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "network_state",
+            "security_alert"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [
+        "cyber_network_agent::MODIFY_CLINICAL_TREATMENT"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "invalid_peer_action": true
+      },
+      "all_sensitive_fields": [
+        "clinical_measurement",
+        "network_state",
+        "policy_conflict_context_8_0",
+        "policy_conflict_context_8_1",
+        "security_alert"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "39ccd679f3b1b2c07dc8be6f61e142d6b71e7b676a2077d37b7edbb5addcb2d1"
+    },
+    {
+      "case_id": "G26-POLI-09",
+      "archetype": "POLICY_CONFLICT",
+      "variant": 9,
+      "expected_coordination_state": "POLICY_CONFLICT",
+      "expected_outcome": "INVALID_INSTITUTIONAL_ACTION_REMOVED",
+      "positions": [
+        {
+          "agent_id": "hospital_agent",
+          "action": "VERIFY_MEASUREMENT",
+          "intent": "VERIFY",
+          "policy_valid": true,
+          "mandate_valid": true,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 4,
+          "local_fields": [
+            "clinical_measurement"
+          ]
+        },
+        {
+          "agent_id": "cyber_network_agent",
+          "action": "MODIFY_CLINICAL_TREATMENT",
+          "intent": "CONTINUE",
+          "policy_valid": false,
+          "mandate_valid": false,
+          "evidence_sufficient": true,
+          "human_authority_required": false,
+          "priority": 5,
+          "local_fields": [
+            "network_state",
+            "security_alert"
+          ]
+        }
+      ],
+      "required_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "allowed_actions": [
+        "hospital_agent::VERIFY_MEASUREMENT"
+      ],
+      "forbidden_actions": [
+        "cyber_network_agent::MODIFY_CLINICAL_TREATMENT"
+      ],
+      "required_messages": [],
+      "required_evidence_requests": [],
+      "expected_escalation": false,
+      "context": {
+        "invalid_peer_action": true
+      },
+      "all_sensitive_fields": [
+        "clinical_measurement",
+        "network_state",
+        "policy_conflict_context_9_0",
+        "policy_conflict_context_9_1",
+        "policy_conflict_context_9_2",
+        "security_alert"
+      ],
+      "required_shared_fields": [],
+      "content_sha256": "38ba5f2f2cbb8bbc9f4fd15cbc5a487c9e4792d068b9401f2b1b3ae6f662c9f0"
+    }
+  ]
+}

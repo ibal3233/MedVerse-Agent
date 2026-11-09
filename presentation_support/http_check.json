@@ -1,0 +1,65 @@
+{
+  "kind": "presentation-only route check; not a new scientific gate",
+  "backend_tested": "bm25",
+  "source_files_verified_by_existing_freeze": 1328,
+  "checks": [
+    {
+      "path": "/api33/health",
+      "status": 200,
+      "bytes": 238
+    },
+    {
+      "path": "/api31/health",
+      "status": 200,
+      "bytes": 375
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 8964
+    },
+    {
+      "path": "/foundation",
+      "status": 200,
+      "bytes": 7761
+    },
+    {
+      "path": "/presentation",
+      "status": 200,
+      "bytes": 6615
+    },
+    {
+      "path": "/presentation/local_status.json",
+      "status": 200,
+      "bytes": 145
+    },
+    {
+      "path": "/presentation/manifest.json",
+      "status": 200,
+      "bytes": 1879
+    },
+    {
+      "path": "/presentation/sensor_replay.json",
+      "status": 200,
+      "bytes": 2137
+    },
+    {
+      "path": "/presentation/dt_freshness.png",
+      "status": 200,
+      "bytes": 241931
+    },
+    {
+      "path": "/api33/results",
+      "status": 200,
+      "bytes": 4310
+    },
+    {
+      "path": "disallowed gallery path",
+      "status": 404
+    }
+  ],
+  "result": "PASS",
+  "native_browser_test": "not run in this command",
+  "dense_model": "not loaded or measured",
+  "prior_controller_outputs": "not recomputed or changed"
+}

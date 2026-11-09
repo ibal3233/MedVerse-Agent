@@ -1,0 +1,155 @@
+{
+  "gate": "GATE_23G_RESEARCH_IRB_PROSPECTIVE_COMBINATORIAL_EVALUATION",
+  "status": "PASS",
+  "passed_checks": 8,
+  "total_checks": 8,
+  "protocol_id": "MEDVERSE-G23F-RESEARCH-IRB-COMBINATORIAL-v2",
+  "benchmark_sha256": "52112275b302101f7031a66ceffde38d1dc59b69233c750bfc771c29ccefbaba",
+  "model_family": "multinomial_logistic_regression",
+  "outer_folds": 4,
+  "factorial_states_tested": 48,
+  "fold_summaries": [
+    {
+      "fold": 0,
+      "chosen_C": 0.3,
+      "train_records": 90,
+      "base_train_records": 54,
+      "factorial_train_records": 36,
+      "dev_records": 18,
+      "id_test_records": 18,
+      "outer_test_records": 12,
+      "id_action_accuracy": 1.0,
+      "id_action_macro_f1": 1.0,
+      "outer_action_accuracy": 1.0,
+      "outer_action_macro_f1": 1.0,
+      "outer_assessment_accuracy": 1.0,
+      "outer_assessment_macro_f1": 1.0,
+      "outer_boundary_accuracy": 1.0,
+      "outer_enforcement_accuracy": 1.0,
+      "outer_evidence_accuracy": 1.0
+    },
+    {
+      "fold": 1,
+      "chosen_C": 0.1,
+      "train_records": 90,
+      "base_train_records": 54,
+      "factorial_train_records": 36,
+      "dev_records": 18,
+      "id_test_records": 18,
+      "outer_test_records": 12,
+      "id_action_accuracy": 1.0,
+      "id_action_macro_f1": 1.0,
+      "outer_action_accuracy": 1.0,
+      "outer_action_macro_f1": 1.0,
+      "outer_assessment_accuracy": 0.9166666666666666,
+      "outer_assessment_macro_f1": 0.6666666666666666,
+      "outer_boundary_accuracy": 1.0,
+      "outer_enforcement_accuracy": 1.0,
+      "outer_evidence_accuracy": 1.0
+    },
+    {
+      "fold": 2,
+      "chosen_C": 0.1,
+      "train_records": 90,
+      "base_train_records": 54,
+      "factorial_train_records": 36,
+      "dev_records": 18,
+      "id_test_records": 18,
+      "outer_test_records": 12,
+      "id_action_accuracy": 1.0,
+      "id_action_macro_f1": 1.0,
+      "outer_action_accuracy": 1.0,
+      "outer_action_macro_f1": 1.0,
+      "outer_assessment_accuracy": 0.9166666666666666,
+      "outer_assessment_macro_f1": 0.6666666666666666,
+      "outer_boundary_accuracy": 1.0,
+      "outer_enforcement_accuracy": 1.0,
+      "outer_evidence_accuracy": 1.0
+    },
+    {
+      "fold": 3,
+      "chosen_C": 0.3,
+      "train_records": 90,
+      "base_train_records": 54,
+      "factorial_train_records": 36,
+      "dev_records": 18,
+      "id_test_records": 18,
+      "outer_test_records": 12,
+      "id_action_accuracy": 1.0,
+      "id_action_macro_f1": 1.0,
+      "outer_action_accuracy": 1.0,
+      "outer_action_macro_f1": 1.0,
+      "outer_assessment_accuracy": 1.0,
+      "outer_assessment_macro_f1": 1.0,
+      "outer_boundary_accuracy": 1.0,
+      "outer_enforcement_accuracy": 1.0,
+      "outer_evidence_accuracy": 1.0
+    }
+  ],
+  "pooled_metrics": {
+    "assessment": {
+      "accuracy": 0.9583333333333334,
+      "macro_f1": 0.8666666666666667
+    },
+    "action": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  },
+  "action_class_metrics": [
+    {
+      "class": "ALLOW_AUTHORIZED_RESEARCH_PROCESSING",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 1
+    },
+    {
+      "class": "BLOCK_RESEARCH_PROCESSING",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 16
+    },
+    {
+      "class": "PRESERVE_RESEARCH_AUDIT_LOG",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 1
+    },
+    {
+      "class": "REQUEST_IRB_REVIEW",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    }
+  ],
+  "generalization_gap_by_fold": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0
+  },
+  "policy_inconsistent_proposals": 0,
+  "policy_inconsistent_executions": 0,
+  "policy_inconsistent_execution_rate": 0.0,
+  "shield_blocks": 0,
+  "shield_escalations": 24,
+  "current_ood_v1_status": "DIAGNOSTIC_ONLY",
+  "figures_directory": "outputs/gate23g/figures",
+  "next_dependency": "If PASS, freeze Research/IRB learner and proceed to Cyber/Network Agent. If FAIL, diagnose fold/class-specific residual error without changing the frozen prospective protocol."
+}

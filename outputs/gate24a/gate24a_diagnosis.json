@@ -1,0 +1,41 @@
+{
+  "gate": "GATE_24A_CYBER_PREPROCESSING_DIAGNOSIS",
+  "training_changed": false,
+  "production_model_changed": false,
+  "baseline_C": 0.3,
+  "baseline_test": {
+    "action_accuracy": 0.8333333333333334,
+    "action_macro_f1": 0.76,
+    "assessment_accuracy": 0.8333333333333334,
+    "assessment_macro_f1": 0.6
+  },
+  "diagnostic_findings": {
+    "numeric_scaling_counterfactual": {
+      "action_test_accuracy": 1.0,
+      "assessment_test_accuracy": 1.0
+    },
+    "explicit_missing_session_origin_counterfactual": {
+      "action_test_accuracy": 1.0,
+      "assessment_test_accuracy": 0.8333333333333334
+    },
+    "combined_preprocessing_counterfactual": {
+      "action_test_accuracy": 1.0,
+      "assessment_test_accuracy": 1.0
+    },
+    "regularization_plateau": {
+      "C_0_3_dev_action_accuracy": 1.0,
+      "C_0_3_test_action_accuracy": 0.8333333333333334,
+      "C_1_dev_action_accuracy": 1.0,
+      "C_1_test_action_accuracy": 1.0
+    }
+  },
+  "diagnostic_classification": "preprocessing_representation_instability_with_numeric_scale_sensitivity_and_implicit_missingness_encoding_plus_dev_plateau_selection_instability",
+  "interpretation": [
+    "All three ISOLATE_SUSPECT_SESSION test cases are misclassified as PRESERVE_TECHNICAL_LOGS under the baseline.",
+    "Encoding absent session_origin explicitly fixes the action error at fixed C=0.3 but does not fix assessment.",
+    "Scaling numeric telemetry features fixes both action and assessment at fixed C=0.3.",
+    "Under the baseline representation, C>=1 recovers test action performance while assessment remains unchanged, so action and assessment have different failure mechanisms.",
+    "The held-out test has now been opened diagnostically; no future hyperparameter/preprocessing selection should claim unbiased confirmation on this same group."
+  ],
+  "next_step": "Pre-freeze a fresh Cyber/Network prospective group/threshold benchmark, then test the minimal preprocessing intervention: train-fitted numeric standardization plus explicit missing-category encoding, with the model family unchanged."
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "check": "critical_interaction_zero_training_support",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "critical_interaction_present_in_ood",
+    "pass": true,
+    "observed": 4,
+    "expected": 4
+  },
+  {
+    "check": "all_gate23d_errors_localized_to_critical_interaction",
+    "pass": true,
+    "observed": {
+      "critical": 4,
+      "other": 0
+    },
+    "expected": {
+      "critical": 4,
+      "other": 0
+    }
+  },
+  {
+    "check": "no_training_or_tuning_change",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "future_evaluation_contract_created",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "publication_outputs_created",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4
+    },
+    "expected": ">=4 PNG and >=4 PDF"
+  }
+]

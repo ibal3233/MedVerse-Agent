@@ -1,0 +1,1 @@
+Presentation-only amendment after first render. Preserves the previous figure source and manifest. Only the figures.py hash changes; no data, algorithm, test, source interpretation, or metric changed. Replot into a new directory, not over the existing output.

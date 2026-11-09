@@ -1,0 +1,121 @@
+{
+  "gate": "GATE_28_COORDINATION_MECHANISM",
+  "stage": "all",
+  "run_id": "20261103T035936_964985Z",
+  "training_performed": false,
+  "original_artifacts_changed": false,
+  "engineering_integrity": "PASS",
+  "evaluation_independence": "Known modeled families; new scheduling perturbations. Not external confirmation.",
+  "saved_classifiers_loaded": false,
+  "clinical_validation": "NOT_ESTABLISHED",
+  "legal_review": "PENDING",
+  "native_equivalence": {
+    "families_checked": 12,
+    "equal_behavior": 12,
+    "cycle_strategy_branch_literals": [
+      "DENY_ALL",
+      "LOCAL_FILTER"
+    ],
+    "conclusion": "Native MEDVERSE and STATEFUL_FILTER use the same scheduling path; the tie is structural."
+  },
+  "strategy_summary": [
+    {
+      "strategy": "SNAPSHOT_ONCE",
+      "semantic_families": 8,
+      "effective_family_schedule_runs": 318,
+      "completed_runs": 66,
+      "pooled_completion_fraction": 0.20754716981132076,
+      "macro_family_completion_fraction": 0.75,
+      "families_robust_to_all_schedules": 6,
+      "total_validation_calls": 11808,
+      "mean_validation_calls_per_workflow": 37.132075471698116,
+      "max_rounds_per_event": 1,
+      "total_invariant_violations": 0,
+      "all_audit_chains_valid": true
+    },
+    {
+      "strategy": "SEQUENTIAL_ONCE",
+      "semantic_families": 8,
+      "effective_family_schedule_runs": 318,
+      "completed_runs": 192,
+      "pooled_completion_fraction": 0.6037735849056604,
+      "macro_family_completion_fraction": 0.875,
+      "families_robust_to_all_schedules": 6,
+      "total_validation_calls": 11934,
+      "mean_validation_calls_per_workflow": 37.528301886792455,
+      "max_rounds_per_event": 1,
+      "total_invariant_violations": 0,
+      "all_audit_chains_valid": true
+    },
+    {
+      "strategy": "STATEFUL_FIXED_POINT",
+      "semantic_families": 8,
+      "effective_family_schedule_runs": 318,
+      "completed_runs": 318,
+      "pooled_completion_fraction": 1.0,
+      "macro_family_completion_fraction": 1.0,
+      "families_robust_to_all_schedules": 8,
+      "total_validation_calls": 12186,
+      "mean_validation_calls_per_workflow": 38.320754716981135,
+      "max_rounds_per_event": 2,
+      "total_invariant_violations": 0,
+      "all_audit_chains_valid": true
+    },
+    {
+      "strategy": "DEPENDENCY_ORDERED",
+      "semantic_families": 8,
+      "effective_family_schedule_runs": 318,
+      "completed_runs": 318,
+      "pooled_completion_fraction": 1.0,
+      "macro_family_completion_fraction": 1.0,
+      "families_robust_to_all_schedules": 8,
+      "total_validation_calls": 12060,
+      "mean_validation_calls_per_workflow": 37.924528301886795,
+      "max_rounds_per_event": 1,
+      "total_invariant_violations": 0,
+      "all_audit_chains_valid": true
+    },
+    {
+      "strategy": "DEPENDENCY_EDGES_REMOVED",
+      "semantic_families": 8,
+      "effective_family_schedule_runs": 318,
+      "completed_runs": 192,
+      "pooled_completion_fraction": 0.6037735849056604,
+      "macro_family_completion_fraction": 0.875,
+      "families_robust_to_all_schedules": 6,
+      "total_validation_calls": 11934,
+      "mean_validation_calls_per_workflow": 37.528301886792455,
+      "max_rounds_per_event": 1,
+      "total_invariant_violations": 0,
+      "all_audit_chains_valid": true
+    }
+  ],
+  "hypotheses": {
+    "H1_graph_improves_order_robust_completion_over_single_pass": {
+      "supported_descriptively": true,
+      "macro_difference": 0.125
+    },
+    "H2_graph_strictly_improves_completion_over_fair_fixed_point": {
+      "supported_descriptively": false,
+      "paired_completion_differences": 0,
+      "interpretation": "A tie is a valid scientific result; no stronger baseline is weakened."
+    },
+    "H3_graph_reduces_validator_calls_at_equal_completion": {
+      "supported_descriptively": true,
+      "calls_saved": 126,
+      "relative_call_reduction": 0.010339734121122546
+    },
+    "H4_removing_only_edges_reproduces_single_pass_behavior": {
+      "supported_descriptively": true
+    }
+  },
+  "all_comparators_preserved_execution_invariants": true,
+  "all_audit_chains_valid": true,
+  "effective_family_schedule_pairs": 318,
+  "total_workflow_executions": 1590,
+  "unique_semantic_families": 8,
+  "timing_claim": "Single-run durations are descriptive only; operation counts are the primary efficiency metric.",
+  "deterministic_checks_passed": 16,
+  "deterministic_checks_total": 16,
+  "mechanism_claim": "Dependency-aware scheduling is isolated from local authorization. Results do not establish unique institutional harmonization beyond an equivalent stateful scheduler, alternative-workflow synthesis, new legal reasoning, or trained-agent generalization."
+}

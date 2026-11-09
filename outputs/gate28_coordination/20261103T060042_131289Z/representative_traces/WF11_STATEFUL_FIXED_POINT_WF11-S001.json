@@ -1,0 +1,1823 @@
+{
+  "result": {
+    "family_id": "WF11",
+    "schedule_id": "WF11-S001",
+    "strategy": "STATEFUL_FIXED_POINT",
+    "historical_split": "CONFIRMATION_ALREADY_SEEN",
+    "role_order": [
+      "hospital_agent",
+      "cyber_network_agent",
+      "privacy_agent",
+      "research_irb_agent",
+      "regulator_agent"
+    ],
+    "release_first": false,
+    "events": 4,
+    "workflow_complete": true,
+    "clinical_review_requirement_met": true,
+    "telemetry_flag_requirement_met": true,
+    "release_requirement_met": true,
+    "release_required": false,
+    "required_release_deadline_cursor": null,
+    "first_release_cursor": null,
+    "committed_actions": 3,
+    "research_releases": 0,
+    "forbidden_outcomes": 0,
+    "payload_errors": 0,
+    "owner_errors": 0,
+    "prerequisite_order_errors": 0,
+    "duplicate_releases": 0,
+    "proposal_lineage_errors": 0,
+    "total_invariant_violations": 0,
+    "audit_chain_valid": true,
+    "validation_calls": 18,
+    "total_rounds": 4,
+    "max_rounds_per_event": 1,
+    "proposal_count": 10,
+    "descriptive_single_run_ms": 4.793368,
+    "effect_set_sha256": "3f806ba007e3114b8b6503bead768f9706cea43ce2d33bc278b0a700a37b0a39"
+  },
+  "input_events": [
+    {
+      "kind": "clinical",
+      "payload": {
+        "episode_code": "MODELED-ONC-042",
+        "fever_reported": true,
+        "symptom_band": "reported_concern",
+        "reported_at": "21:15",
+        "display_temperature": "38.4 °C (modeled)"
+      },
+      "title": "Patient reports a concern",
+      "id": "WF11-E1"
+    },
+    {
+      "kind": "telemetry",
+      "payload": {
+        "validity": "UNVERIFIED",
+        "source": "modeled wearable session",
+        "freshness": "delayed",
+        "reason": "Device provenance not established"
+      },
+      "title": "Telemetry cannot be trusted",
+      "id": "WF11-E2"
+    },
+    {
+      "kind": "dt_request",
+      "payload": {},
+      "title": "Dt Request",
+      "id": "WF11-E3"
+    },
+    {
+      "kind": "oversight",
+      "payload": {
+        "high_impact_requested": true,
+        "classification_evidence": "unresolved"
+      },
+      "title": "Human oversight requested",
+      "id": "WF11-E4"
+    }
+  ],
+  "schedule": {
+    "schedule_id": "WF11-S001",
+    "role_order": [
+      "hospital_agent",
+      "cyber_network_agent",
+      "privacy_agent",
+      "research_irb_agent",
+      "regulator_agent"
+    ],
+    "release_first": false,
+    "order_signature_sha256": "9e2b022c7fd4b265190f176e3ba567da849cc8393617e2082cdc33bb85df9118",
+    "equivalent_template_count": 40
+  },
+  "cycles": [
+    {
+      "proposal_count": 1,
+      "rounds": 1,
+      "validation_calls": 2,
+      "attempts": [
+        {
+          "event_id": "WF11-E1",
+          "cursor": 1,
+          "round": 1,
+          "proposal_id": "P00001",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "PERMIT",
+          "final_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "committed": true,
+          "effect_sequence": 1
+        }
+      ],
+      "arrival_ids": [
+        "P00001"
+      ],
+      "planned_ids": [
+        "P00001"
+      ]
+    },
+    {
+      "proposal_count": 2,
+      "rounds": 1,
+      "validation_calls": 4,
+      "attempts": [
+        {
+          "event_id": "WF11-E2",
+          "cursor": 2,
+          "round": 1,
+          "proposal_id": "P00002",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "NOOP",
+          "final_reason": "ALREADY_COMMITTED",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF11-E2",
+          "cursor": 2,
+          "round": 1,
+          "proposal_id": "P00003",
+          "owner": "cyber_network_agent",
+          "action": "FLAG_TELEMETRY",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "PERMIT",
+          "final_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "committed": true,
+          "effect_sequence": 2
+        }
+      ],
+      "arrival_ids": [
+        "P00002",
+        "P00003"
+      ],
+      "planned_ids": [
+        "P00002",
+        "P00003"
+      ]
+    },
+    {
+      "proposal_count": 3,
+      "rounds": 1,
+      "validation_calls": 5,
+      "attempts": [
+        {
+          "event_id": "WF11-E3",
+          "cursor": 3,
+          "round": 1,
+          "proposal_id": "P00004",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "NOOP",
+          "final_reason": "ALREADY_COMMITTED",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF11-E3",
+          "cursor": 3,
+          "round": 1,
+          "proposal_id": "P00005",
+          "owner": "hospital_agent",
+          "action": "USE_DT_SUMMARY",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "REQUEST_EVIDENCE",
+          "pre_reason": "DT_NOT_VALID",
+          "final_status": "REQUEST_EVIDENCE",
+          "final_reason": "DT_NOT_VALID",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF11-E3",
+          "cursor": 3,
+          "round": 1,
+          "proposal_id": "P00006",
+          "owner": "cyber_network_agent",
+          "action": "FLAG_TELEMETRY",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "NOOP",
+          "final_reason": "ALREADY_COMMITTED",
+          "committed": false,
+          "effect_sequence": null
+        }
+      ],
+      "arrival_ids": [
+        "P00004",
+        "P00005",
+        "P00006"
+      ],
+      "planned_ids": [
+        "P00004",
+        "P00005",
+        "P00006"
+      ]
+    },
+    {
+      "proposal_count": 4,
+      "rounds": 1,
+      "validation_calls": 7,
+      "attempts": [
+        {
+          "event_id": "WF11-E4",
+          "cursor": 4,
+          "round": 1,
+          "proposal_id": "P00007",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "NOOP",
+          "final_reason": "ALREADY_COMMITTED",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF11-E4",
+          "cursor": 4,
+          "round": 1,
+          "proposal_id": "P00008",
+          "owner": "hospital_agent",
+          "action": "USE_DT_SUMMARY",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "REQUEST_EVIDENCE",
+          "pre_reason": "DT_NOT_VALID",
+          "final_status": "REQUEST_EVIDENCE",
+          "final_reason": "DT_NOT_VALID",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF11-E4",
+          "cursor": 4,
+          "round": 1,
+          "proposal_id": "P00009",
+          "owner": "cyber_network_agent",
+          "action": "FLAG_TELEMETRY",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "NOOP",
+          "final_reason": "ALREADY_COMMITTED",
+          "committed": false,
+          "effect_sequence": null
+        },
+        {
+          "event_id": "WF11-E4",
+          "cursor": 4,
+          "round": 1,
+          "proposal_id": "P00010",
+          "owner": "regulator_agent",
+          "action": "REQUEST_OVERSIGHT_REVIEW",
+          "request_id": "",
+          "authorization_epoch": 0,
+          "pre_status": "PERMIT",
+          "pre_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "final_status": "PERMIT",
+          "final_reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "committed": true,
+          "effect_sequence": 3
+        }
+      ],
+      "arrival_ids": [
+        "P00007",
+        "P00008",
+        "P00009",
+        "P00010"
+      ],
+      "planned_ids": [
+        "P00007",
+        "P00008",
+        "P00009",
+        "P00010"
+      ]
+    }
+  ],
+  "trace": {
+    "state": {
+      "revision": 4,
+      "cursor": 4,
+      "event_id": "WF11-E4",
+      "clinical": {
+        "episode_code": "MODELED-ONC-042",
+        "fever_reported": true,
+        "symptom_band": "reported_concern",
+        "reported_at": "21:15",
+        "display_temperature": "38.4 °C (modeled)"
+      },
+      "telemetry": {
+        "validity": "UNVERIFIED",
+        "source": "modeled wearable session",
+        "freshness": "delayed",
+        "reason": "Device provenance not established"
+      },
+      "dt_request": true,
+      "request": null,
+      "authorization_epoch": 0,
+      "oversight": {
+        "high_impact_requested": true,
+        "classification_evidence": "unresolved"
+      },
+      "unavailable_sources": [],
+      "jurisdiction": "KR"
+    },
+    "role_views": {
+      "hospital_agent": {
+        "institution": "hospital_agent",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "cursor": 4,
+        "telemetry": {
+          "validity": "UNVERIFIED",
+          "source": "modeled wearable session",
+          "freshness": "delayed",
+          "reason": "Device provenance not established"
+        },
+        "clinical": {
+          "episode_code": "MODELED-ONC-042",
+          "fever_reported": true,
+          "symptom_band": "reported_concern",
+          "reported_at": "21:15",
+          "display_temperature": "38.4 °C (modeled)"
+        },
+        "dt_request": true
+      },
+      "cyber_network_agent": {
+        "institution": "cyber_network_agent",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "cursor": 4,
+        "telemetry": {
+          "validity": "UNVERIFIED",
+          "source": "modeled wearable session",
+          "freshness": "delayed",
+          "reason": "Device provenance not established"
+        }
+      },
+      "privacy_agent": {
+        "institution": "privacy_agent",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "cursor": 4,
+        "privacy_ticket": {
+          "present": false,
+          "valid": false
+        },
+        "request": null,
+        "authorization_epoch": 0
+      },
+      "research_irb_agent": {
+        "institution": "research_irb_agent",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "cursor": 4,
+        "research_ticket": {
+          "present": false,
+          "valid": false
+        },
+        "request": null,
+        "authorization_epoch": 0
+      },
+      "regulator_agent": {
+        "institution": "regulator_agent",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "cursor": 4,
+        "oversight": {
+          "high_impact_requested": true,
+          "classification_evidence": "unresolved"
+        }
+      }
+    },
+    "events": [
+      {
+        "id": "WF11-E1",
+        "kind": "clinical",
+        "title": "Patient reports a concern",
+        "payload": {
+          "episode_code": "MODELED-ONC-042",
+          "fever_reported": true,
+          "symptom_band": "reported_concern",
+          "reported_at": "21:15",
+          "display_temperature": "38.4 °C (modeled)"
+        }
+      },
+      {
+        "id": "WF11-E2",
+        "kind": "telemetry",
+        "title": "Telemetry cannot be trusted",
+        "payload": {
+          "validity": "UNVERIFIED",
+          "source": "modeled wearable session",
+          "freshness": "delayed",
+          "reason": "Device provenance not established"
+        }
+      },
+      {
+        "id": "WF11-E3",
+        "kind": "dt_request",
+        "title": "Dt Request",
+        "payload": {}
+      },
+      {
+        "id": "WF11-E4",
+        "kind": "oversight",
+        "title": "Human oversight requested",
+        "payload": {
+          "high_impact_requested": true,
+          "classification_evidence": "unresolved"
+        }
+      }
+    ],
+    "cycle": {},
+    "effects": [
+      {
+        "sequence": 1,
+        "action": "REQUEST_CLINICAL_REVIEW",
+        "owner": "hospital_agent",
+        "event_id": "WF11-E1",
+        "cursor": 1,
+        "request_id": "",
+        "authorization_epoch": 0,
+        "proposal_id": "P00001",
+        "payload": {},
+        "simulation_only": true
+      },
+      {
+        "sequence": 2,
+        "action": "FLAG_TELEMETRY",
+        "owner": "cyber_network_agent",
+        "event_id": "WF11-E2",
+        "cursor": 2,
+        "request_id": "",
+        "authorization_epoch": 0,
+        "proposal_id": "P00003",
+        "payload": {},
+        "simulation_only": true
+      },
+      {
+        "sequence": 3,
+        "action": "REQUEST_OVERSIGHT_REVIEW",
+        "owner": "regulator_agent",
+        "event_id": "WF11-E4",
+        "cursor": 4,
+        "request_id": "",
+        "authorization_epoch": 0,
+        "proposal_id": "P00010",
+        "payload": {},
+        "simulation_only": true
+      }
+    ],
+    "receipts": [
+      {
+        "receipt_id": "R00001",
+        "event_id": "WF11-E1",
+        "owner": "hospital_agent",
+        "proposal": {
+          "proposal_id": "P00001",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF11-E1",
+          "state_revision": 1,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [],
+        "effect": {
+          "sequence": 1,
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "owner": "hospital_agent",
+          "event_id": "WF11-E1",
+          "cursor": 1,
+          "request_id": "",
+          "authorization_epoch": 0,
+          "proposal_id": "P00001",
+          "payload": {},
+          "simulation_only": true
+        },
+        "current_revision": 1,
+        "current_authorization_epoch": 0
+      },
+      {
+        "receipt_id": "R00002",
+        "event_id": "WF11-E2",
+        "owner": "hospital_agent",
+        "proposal": {
+          "proposal_id": "P00002",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF11-E2",
+          "state_revision": 2,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "NOOP",
+          "reason": "ALREADY_COMMITTED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [],
+        "effect": null,
+        "current_revision": 2,
+        "current_authorization_epoch": 0
+      },
+      {
+        "receipt_id": "R00003",
+        "event_id": "WF11-E2",
+        "owner": "cyber_network_agent",
+        "proposal": {
+          "proposal_id": "P00003",
+          "owner": "cyber_network_agent",
+          "action": "FLAG_TELEMETRY",
+          "event_id": "WF11-E2",
+          "state_revision": 2,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "reason": "Preserve the stream-integrity distinction; do not suppress an independent patient report.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [
+          {
+            "policy_id": "KR-PIPC-SAFE-2026-001",
+            "record_sha256": "2b9d68effb808b69cae47da3aa141213fe03ab9ac4a0eaf3878803afc1e83b1d",
+            "official_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000281400",
+            "effective_date": "2026-07-01",
+            "interpretation_review": "PENDING_INDEPENDENT_REVIEW"
+          }
+        ],
+        "effect": {
+          "sequence": 2,
+          "action": "FLAG_TELEMETRY",
+          "owner": "cyber_network_agent",
+          "event_id": "WF11-E2",
+          "cursor": 2,
+          "request_id": "",
+          "authorization_epoch": 0,
+          "proposal_id": "P00003",
+          "payload": {},
+          "simulation_only": true
+        },
+        "current_revision": 2,
+        "current_authorization_epoch": 0
+      },
+      {
+        "receipt_id": "R00004",
+        "event_id": "WF11-E3",
+        "owner": "hospital_agent",
+        "proposal": {
+          "proposal_id": "P00004",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF11-E3",
+          "state_revision": 3,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "NOOP",
+          "reason": "ALREADY_COMMITTED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [],
+        "effect": null,
+        "current_revision": 3,
+        "current_authorization_epoch": 0
+      },
+      {
+        "receipt_id": "R00005",
+        "event_id": "WF11-E3",
+        "owner": "hospital_agent",
+        "proposal": {
+          "proposal_id": "P00005",
+          "owner": "hospital_agent",
+          "action": "USE_DT_SUMMARY",
+          "event_id": "WF11-E3",
+          "state_revision": 3,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "reason": "Request to display a trusted DT summary; unverified streams cannot support it.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "REQUEST_EVIDENCE",
+          "reason": "DT_NOT_VALID",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "REQUEST_EVIDENCE",
+          "reason": "DT_NOT_VALID",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "effect": null,
+        "current_revision": 3,
+        "current_authorization_epoch": 0,
+        "scheduler_round": 1
+      },
+      {
+        "receipt_id": "R00006",
+        "event_id": "WF11-E3",
+        "owner": "cyber_network_agent",
+        "proposal": {
+          "proposal_id": "P00006",
+          "owner": "cyber_network_agent",
+          "action": "FLAG_TELEMETRY",
+          "event_id": "WF11-E3",
+          "state_revision": 3,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "reason": "Preserve the stream-integrity distinction; do not suppress an independent patient report.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "NOOP",
+          "reason": "ALREADY_COMMITTED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [
+          {
+            "policy_id": "KR-PIPC-SAFE-2026-001",
+            "record_sha256": "2b9d68effb808b69cae47da3aa141213fe03ab9ac4a0eaf3878803afc1e83b1d",
+            "official_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000281400",
+            "effective_date": "2026-07-01",
+            "interpretation_review": "PENDING_INDEPENDENT_REVIEW"
+          }
+        ],
+        "effect": null,
+        "current_revision": 3,
+        "current_authorization_epoch": 0
+      },
+      {
+        "receipt_id": "R00007",
+        "event_id": "WF11-E4",
+        "owner": "hospital_agent",
+        "proposal": {
+          "proposal_id": "P00007",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF11-E4",
+          "state_revision": 4,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "NOOP",
+          "reason": "ALREADY_COMMITTED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [],
+        "effect": null,
+        "current_revision": 4,
+        "current_authorization_epoch": 0
+      },
+      {
+        "receipt_id": "R00008",
+        "event_id": "WF11-E4",
+        "owner": "hospital_agent",
+        "proposal": {
+          "proposal_id": "P00008",
+          "owner": "hospital_agent",
+          "action": "USE_DT_SUMMARY",
+          "event_id": "WF11-E4",
+          "state_revision": 4,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "reason": "Request to display a trusted DT summary; unverified streams cannot support it.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "REQUEST_EVIDENCE",
+          "reason": "DT_NOT_VALID",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "REQUEST_EVIDENCE",
+          "reason": "DT_NOT_VALID",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "effect": null,
+        "current_revision": 4,
+        "current_authorization_epoch": 0,
+        "scheduler_round": 1
+      },
+      {
+        "receipt_id": "R00009",
+        "event_id": "WF11-E4",
+        "owner": "cyber_network_agent",
+        "proposal": {
+          "proposal_id": "P00009",
+          "owner": "cyber_network_agent",
+          "action": "FLAG_TELEMETRY",
+          "event_id": "WF11-E4",
+          "state_revision": 4,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "reason": "Preserve the stream-integrity distinction; do not suppress an independent patient report.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "NOOP",
+          "reason": "ALREADY_COMMITTED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [
+          {
+            "policy_id": "KR-PIPC-SAFE-2026-001",
+            "record_sha256": "2b9d68effb808b69cae47da3aa141213fe03ab9ac4a0eaf3878803afc1e83b1d",
+            "official_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000281400",
+            "effective_date": "2026-07-01",
+            "interpretation_review": "PENDING_INDEPENDENT_REVIEW"
+          }
+        ],
+        "effect": null,
+        "current_revision": 4,
+        "current_authorization_epoch": 0
+      },
+      {
+        "receipt_id": "R00010",
+        "event_id": "WF11-E4",
+        "owner": "regulator_agent",
+        "proposal": {
+          "proposal_id": "P00010",
+          "owner": "regulator_agent",
+          "action": "REQUEST_OVERSIGHT_REVIEW",
+          "event_id": "WF11-E4",
+          "state_revision": 4,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-AI-ACT-ART34-HIGHIMPACT-DUTIES-001"
+          ],
+          "reason": "Simulated oversight role requests human classification; it issues no government approval.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "preflight": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "final_validation": {
+          "status": "PERMIT",
+          "reason": "MODELED_PRECONDITIONS_SATISFIED",
+          "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+          "simulation_only": true,
+          "legal_certification": false
+        },
+        "policy_evidence": [
+          {
+            "policy_id": "KR-AI-ACT-ART34-HIGHIMPACT-DUTIES-001",
+            "record_sha256": "f1ba53ce147e6e1962d395542ea03965b874d1f3644ca19008f7e8ba8a31b0fc",
+            "official_url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031809455",
+            "effective_date": "2026-07-21",
+            "interpretation_review": "PENDING_INDEPENDENT_REVIEW"
+          }
+        ],
+        "effect": {
+          "sequence": 3,
+          "action": "REQUEST_OVERSIGHT_REVIEW",
+          "owner": "regulator_agent",
+          "event_id": "WF11-E4",
+          "cursor": 4,
+          "request_id": "",
+          "authorization_epoch": 0,
+          "proposal_id": "P00010",
+          "payload": {},
+          "simulation_only": true
+        },
+        "current_revision": 4,
+        "current_authorization_epoch": 0
+      }
+    ],
+    "audit": [
+      {
+        "seq": 1,
+        "kind": "EVENT_RELEASED",
+        "event_id": "WF11-E1",
+        "revision": 1,
+        "payload": {
+          "kind": "clinical",
+          "publisher": "local_scenario_operator",
+          "simulation_only": true
+        },
+        "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "hash": "0807ae132fb3917a17c2aa47736bac95ddcb22acd3fc4ec6005e879813c63f0e"
+      },
+      {
+        "seq": 2,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF11-E1",
+        "revision": 1,
+        "payload": {
+          "proposal_id": "P00001",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF11-E1",
+          "state_revision": 1,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "0807ae132fb3917a17c2aa47736bac95ddcb22acd3fc4ec6005e879813c63f0e",
+        "hash": "858a3d3a64935e1797092e2e1b4062fb8da9f776f8d8c869fe4e97a4ec5d489f"
+      },
+      {
+        "seq": 3,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF11-E1",
+        "revision": 1,
+        "payload": {
+          "receipt_id": "R00001",
+          "event_id": "WF11-E1",
+          "owner": "hospital_agent",
+          "proposal": {
+            "proposal_id": "P00001",
+            "owner": "hospital_agent",
+            "action": "REQUEST_CLINICAL_REVIEW",
+            "event_id": "WF11-E1",
+            "state_revision": 1,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [],
+            "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [],
+          "effect": {
+            "sequence": 1,
+            "action": "REQUEST_CLINICAL_REVIEW",
+            "owner": "hospital_agent",
+            "event_id": "WF11-E1",
+            "cursor": 1,
+            "request_id": "",
+            "authorization_epoch": 0,
+            "proposal_id": "P00001",
+            "payload": {},
+            "simulation_only": true
+          },
+          "current_revision": 1,
+          "current_authorization_epoch": 0
+        },
+        "previous_hash": "858a3d3a64935e1797092e2e1b4062fb8da9f776f8d8c869fe4e97a4ec5d489f",
+        "hash": "39fcf352a6d9a446dbbb2802d63497148e106a6fe5682c2b25048600fc9b0bc4"
+      },
+      {
+        "seq": 4,
+        "kind": "COORDINATION_SCHEDULER",
+        "event_id": "WF11-E1",
+        "revision": 1,
+        "payload": {
+          "strategy": "STATEFUL_FIXED_POINT",
+          "arrival_ids": [
+            "P00001"
+          ],
+          "execution_order_ids": [
+            "P00001"
+          ],
+          "rounds": 1,
+          "coordinator_is_institution": false
+        },
+        "previous_hash": "39fcf352a6d9a446dbbb2802d63497148e106a6fe5682c2b25048600fc9b0bc4",
+        "hash": "0b6a609d8bb8678779547872c989fed4a8a514918651d7bb68543f0aa7bda97d"
+      },
+      {
+        "seq": 5,
+        "kind": "EVENT_RELEASED",
+        "event_id": "WF11-E2",
+        "revision": 2,
+        "payload": {
+          "kind": "telemetry",
+          "publisher": "local_scenario_operator",
+          "simulation_only": true
+        },
+        "previous_hash": "0b6a609d8bb8678779547872c989fed4a8a514918651d7bb68543f0aa7bda97d",
+        "hash": "e90d3980a55362a06972824b9f6b7fb0a633ec42d74eb331da331f56c19d1f93"
+      },
+      {
+        "seq": 6,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF11-E2",
+        "revision": 2,
+        "payload": {
+          "proposal_id": "P00002",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF11-E2",
+          "state_revision": 2,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "e90d3980a55362a06972824b9f6b7fb0a633ec42d74eb331da331f56c19d1f93",
+        "hash": "33fbb1fd9e114b0617047bccfa5e12a5b2591f9e6885df92d7517f17c306ba8e"
+      },
+      {
+        "seq": 7,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF11-E2",
+        "revision": 2,
+        "payload": {
+          "proposal_id": "P00003",
+          "owner": "cyber_network_agent",
+          "action": "FLAG_TELEMETRY",
+          "event_id": "WF11-E2",
+          "state_revision": 2,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "reason": "Preserve the stream-integrity distinction; do not suppress an independent patient report.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "33fbb1fd9e114b0617047bccfa5e12a5b2591f9e6885df92d7517f17c306ba8e",
+        "hash": "df635a4cd7df09e12f3fc990fa3db85a4e19af448752b797f976b3121284ca17"
+      },
+      {
+        "seq": 8,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF11-E2",
+        "revision": 2,
+        "payload": {
+          "receipt_id": "R00002",
+          "event_id": "WF11-E2",
+          "owner": "hospital_agent",
+          "proposal": {
+            "proposal_id": "P00002",
+            "owner": "hospital_agent",
+            "action": "REQUEST_CLINICAL_REVIEW",
+            "event_id": "WF11-E2",
+            "state_revision": 2,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [],
+            "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "NOOP",
+            "reason": "ALREADY_COMMITTED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [],
+          "effect": null,
+          "current_revision": 2,
+          "current_authorization_epoch": 0
+        },
+        "previous_hash": "df635a4cd7df09e12f3fc990fa3db85a4e19af448752b797f976b3121284ca17",
+        "hash": "b5e88db7fa36d69132a0b5c819ef6e324908c0b74b004d78656d0e61f81b1f1b"
+      },
+      {
+        "seq": 9,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF11-E2",
+        "revision": 2,
+        "payload": {
+          "receipt_id": "R00003",
+          "event_id": "WF11-E2",
+          "owner": "cyber_network_agent",
+          "proposal": {
+            "proposal_id": "P00003",
+            "owner": "cyber_network_agent",
+            "action": "FLAG_TELEMETRY",
+            "event_id": "WF11-E2",
+            "state_revision": 2,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [
+              "KR-PIPC-SAFE-2026-001"
+            ],
+            "reason": "Preserve the stream-integrity distinction; do not suppress an independent patient report.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [
+            {
+              "policy_id": "KR-PIPC-SAFE-2026-001",
+              "record_sha256": "2b9d68effb808b69cae47da3aa141213fe03ab9ac4a0eaf3878803afc1e83b1d",
+              "official_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000281400",
+              "effective_date": "2026-07-01",
+              "interpretation_review": "PENDING_INDEPENDENT_REVIEW"
+            }
+          ],
+          "effect": {
+            "sequence": 2,
+            "action": "FLAG_TELEMETRY",
+            "owner": "cyber_network_agent",
+            "event_id": "WF11-E2",
+            "cursor": 2,
+            "request_id": "",
+            "authorization_epoch": 0,
+            "proposal_id": "P00003",
+            "payload": {},
+            "simulation_only": true
+          },
+          "current_revision": 2,
+          "current_authorization_epoch": 0
+        },
+        "previous_hash": "b5e88db7fa36d69132a0b5c819ef6e324908c0b74b004d78656d0e61f81b1f1b",
+        "hash": "7a98d63fa7c2de656678aa6a5a23814d3128c766fe05f3e6cf50ec92f779b4d3"
+      },
+      {
+        "seq": 10,
+        "kind": "COORDINATION_SCHEDULER",
+        "event_id": "WF11-E2",
+        "revision": 2,
+        "payload": {
+          "strategy": "STATEFUL_FIXED_POINT",
+          "arrival_ids": [
+            "P00002",
+            "P00003"
+          ],
+          "execution_order_ids": [
+            "P00002",
+            "P00003"
+          ],
+          "rounds": 1,
+          "coordinator_is_institution": false
+        },
+        "previous_hash": "7a98d63fa7c2de656678aa6a5a23814d3128c766fe05f3e6cf50ec92f779b4d3",
+        "hash": "11d9a6d465224b7ae1d76f7258ac3a4aa802a1ed360e628642b07907e130a384"
+      },
+      {
+        "seq": 11,
+        "kind": "EVENT_RELEASED",
+        "event_id": "WF11-E3",
+        "revision": 3,
+        "payload": {
+          "kind": "dt_request",
+          "publisher": "local_scenario_operator",
+          "simulation_only": true
+        },
+        "previous_hash": "11d9a6d465224b7ae1d76f7258ac3a4aa802a1ed360e628642b07907e130a384",
+        "hash": "fef900e306cbf3b9eab61c552d5791f2940dfb6d37fc828d8e4f6b3d2c8f8895"
+      },
+      {
+        "seq": 12,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF11-E3",
+        "revision": 3,
+        "payload": {
+          "proposal_id": "P00004",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF11-E3",
+          "state_revision": 3,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "fef900e306cbf3b9eab61c552d5791f2940dfb6d37fc828d8e4f6b3d2c8f8895",
+        "hash": "e71f925129f882182b11343b6f8dfa3fffe7c30750637f7c54658b1f5cb7458c"
+      },
+      {
+        "seq": 13,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF11-E3",
+        "revision": 3,
+        "payload": {
+          "proposal_id": "P00005",
+          "owner": "hospital_agent",
+          "action": "USE_DT_SUMMARY",
+          "event_id": "WF11-E3",
+          "state_revision": 3,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "reason": "Request to display a trusted DT summary; unverified streams cannot support it.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "e71f925129f882182b11343b6f8dfa3fffe7c30750637f7c54658b1f5cb7458c",
+        "hash": "c33c5dcb9d4a9e58f71c319a883b236491085a19a55986605d097a7a975af5c1"
+      },
+      {
+        "seq": 14,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF11-E3",
+        "revision": 3,
+        "payload": {
+          "proposal_id": "P00006",
+          "owner": "cyber_network_agent",
+          "action": "FLAG_TELEMETRY",
+          "event_id": "WF11-E3",
+          "state_revision": 3,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "reason": "Preserve the stream-integrity distinction; do not suppress an independent patient report.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "c33c5dcb9d4a9e58f71c319a883b236491085a19a55986605d097a7a975af5c1",
+        "hash": "fc505cf0894d44aa54dc8f079842cdb6ca414da5677b837a65fc676d586fa942"
+      },
+      {
+        "seq": 15,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF11-E3",
+        "revision": 3,
+        "payload": {
+          "receipt_id": "R00004",
+          "event_id": "WF11-E3",
+          "owner": "hospital_agent",
+          "proposal": {
+            "proposal_id": "P00004",
+            "owner": "hospital_agent",
+            "action": "REQUEST_CLINICAL_REVIEW",
+            "event_id": "WF11-E3",
+            "state_revision": 3,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [],
+            "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "NOOP",
+            "reason": "ALREADY_COMMITTED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [],
+          "effect": null,
+          "current_revision": 3,
+          "current_authorization_epoch": 0
+        },
+        "previous_hash": "fc505cf0894d44aa54dc8f079842cdb6ca414da5677b837a65fc676d586fa942",
+        "hash": "93eb13ba74f7806ba3ccb15782d8b52c3c7704b23200022990a09ef822f8c9f9"
+      },
+      {
+        "seq": 16,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF11-E3",
+        "revision": 3,
+        "payload": {
+          "receipt_id": "R00005",
+          "event_id": "WF11-E3",
+          "owner": "hospital_agent",
+          "proposal": {
+            "proposal_id": "P00005",
+            "owner": "hospital_agent",
+            "action": "USE_DT_SUMMARY",
+            "event_id": "WF11-E3",
+            "state_revision": 3,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [
+              "KR-MSA-ART23-EMR-001"
+            ],
+            "reason": "Request to display a trusted DT summary; unverified streams cannot support it.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "REQUEST_EVIDENCE",
+            "reason": "DT_NOT_VALID",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "REQUEST_EVIDENCE",
+            "reason": "DT_NOT_VALID",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "effect": null,
+          "current_revision": 3,
+          "current_authorization_epoch": 0,
+          "scheduler_round": 1
+        },
+        "previous_hash": "93eb13ba74f7806ba3ccb15782d8b52c3c7704b23200022990a09ef822f8c9f9",
+        "hash": "173fbc0261c12d94227e95cf61fab81087a1b402269abccd5c8f57b78292528d"
+      },
+      {
+        "seq": 17,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF11-E3",
+        "revision": 3,
+        "payload": {
+          "receipt_id": "R00006",
+          "event_id": "WF11-E3",
+          "owner": "cyber_network_agent",
+          "proposal": {
+            "proposal_id": "P00006",
+            "owner": "cyber_network_agent",
+            "action": "FLAG_TELEMETRY",
+            "event_id": "WF11-E3",
+            "state_revision": 3,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [
+              "KR-PIPC-SAFE-2026-001"
+            ],
+            "reason": "Preserve the stream-integrity distinction; do not suppress an independent patient report.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "NOOP",
+            "reason": "ALREADY_COMMITTED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [
+            {
+              "policy_id": "KR-PIPC-SAFE-2026-001",
+              "record_sha256": "2b9d68effb808b69cae47da3aa141213fe03ab9ac4a0eaf3878803afc1e83b1d",
+              "official_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000281400",
+              "effective_date": "2026-07-01",
+              "interpretation_review": "PENDING_INDEPENDENT_REVIEW"
+            }
+          ],
+          "effect": null,
+          "current_revision": 3,
+          "current_authorization_epoch": 0
+        },
+        "previous_hash": "173fbc0261c12d94227e95cf61fab81087a1b402269abccd5c8f57b78292528d",
+        "hash": "5162480e5b49826806ef2eaca222a94cdc50b1eb01a6723ba51c6316bdc4228d"
+      },
+      {
+        "seq": 18,
+        "kind": "COORDINATION_SCHEDULER",
+        "event_id": "WF11-E3",
+        "revision": 3,
+        "payload": {
+          "strategy": "STATEFUL_FIXED_POINT",
+          "arrival_ids": [
+            "P00004",
+            "P00005",
+            "P00006"
+          ],
+          "execution_order_ids": [
+            "P00004",
+            "P00005",
+            "P00006"
+          ],
+          "rounds": 1,
+          "coordinator_is_institution": false
+        },
+        "previous_hash": "5162480e5b49826806ef2eaca222a94cdc50b1eb01a6723ba51c6316bdc4228d",
+        "hash": "a19f4213e6c2d138c24ef3eb406865175f6f13d65d3646359bf2fc1db2c759b6"
+      },
+      {
+        "seq": 19,
+        "kind": "EVENT_RELEASED",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "payload": {
+          "kind": "oversight",
+          "publisher": "local_scenario_operator",
+          "simulation_only": true
+        },
+        "previous_hash": "a19f4213e6c2d138c24ef3eb406865175f6f13d65d3646359bf2fc1db2c759b6",
+        "hash": "e024126b29965ae4f6d3372fb57bc4452b5bf211a5a01441fc556ee01d77bc0b"
+      },
+      {
+        "seq": 20,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "payload": {
+          "proposal_id": "P00007",
+          "owner": "hospital_agent",
+          "action": "REQUEST_CLINICAL_REVIEW",
+          "event_id": "WF11-E4",
+          "state_revision": 4,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [],
+          "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "e024126b29965ae4f6d3372fb57bc4452b5bf211a5a01441fc556ee01d77bc0b",
+        "hash": "4d249351ee40b456a45c68b8364d8f68b446cda3c80b565bb8cd3dbb9f3afe27"
+      },
+      {
+        "seq": 21,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "payload": {
+          "proposal_id": "P00008",
+          "owner": "hospital_agent",
+          "action": "USE_DT_SUMMARY",
+          "event_id": "WF11-E4",
+          "state_revision": 4,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-MSA-ART23-EMR-001"
+          ],
+          "reason": "Request to display a trusted DT summary; unverified streams cannot support it.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "4d249351ee40b456a45c68b8364d8f68b446cda3c80b565bb8cd3dbb9f3afe27",
+        "hash": "7fc82409c5ba0d6fcc9841d4b2baeb7715d26407f578cf4d2b86d8338c5ae00c"
+      },
+      {
+        "seq": 22,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "payload": {
+          "proposal_id": "P00009",
+          "owner": "cyber_network_agent",
+          "action": "FLAG_TELEMETRY",
+          "event_id": "WF11-E4",
+          "state_revision": 4,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-PIPC-SAFE-2026-001"
+          ],
+          "reason": "Preserve the stream-integrity distinction; do not suppress an independent patient report.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "7fc82409c5ba0d6fcc9841d4b2baeb7715d26407f578cf4d2b86d8338c5ae00c",
+        "hash": "871b543a4ffa93af5b16fa9b1c7e84ff17f09a18f51826f46e976aa0007934d6"
+      },
+      {
+        "seq": 23,
+        "kind": "AGENT_PROPOSAL",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "payload": {
+          "proposal_id": "P00010",
+          "owner": "regulator_agent",
+          "action": "REQUEST_OVERSIGHT_REVIEW",
+          "event_id": "WF11-E4",
+          "state_revision": 4,
+          "authorization_epoch": 0,
+          "request_id": "",
+          "fields": [],
+          "policy_ids": [
+            "KR-AI-ACT-ART34-HIGHIMPACT-DUTIES-001"
+          ],
+          "reason": "Simulated oversight role requests human classification; it issues no government approval.",
+          "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+        },
+        "previous_hash": "871b543a4ffa93af5b16fa9b1c7e84ff17f09a18f51826f46e976aa0007934d6",
+        "hash": "c1382d3f317b694d92d08b50cbef6dd2d9ce91d08d98e92a0265df11ee866f42"
+      },
+      {
+        "seq": 24,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "payload": {
+          "receipt_id": "R00007",
+          "event_id": "WF11-E4",
+          "owner": "hospital_agent",
+          "proposal": {
+            "proposal_id": "P00007",
+            "owner": "hospital_agent",
+            "action": "REQUEST_CLINICAL_REVIEW",
+            "event_id": "WF11-E4",
+            "state_revision": 4,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [],
+            "reason": "Patient-reported concern: request professional review; no diagnosis or treatment automation.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "NOOP",
+            "reason": "ALREADY_COMMITTED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [],
+          "effect": null,
+          "current_revision": 4,
+          "current_authorization_epoch": 0
+        },
+        "previous_hash": "c1382d3f317b694d92d08b50cbef6dd2d9ce91d08d98e92a0265df11ee866f42",
+        "hash": "44a633dbfdc12591b30055f6eed4ea59cfa99431520852037751bb7d2302e493"
+      },
+      {
+        "seq": 25,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "payload": {
+          "receipt_id": "R00008",
+          "event_id": "WF11-E4",
+          "owner": "hospital_agent",
+          "proposal": {
+            "proposal_id": "P00008",
+            "owner": "hospital_agent",
+            "action": "USE_DT_SUMMARY",
+            "event_id": "WF11-E4",
+            "state_revision": 4,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [
+              "KR-MSA-ART23-EMR-001"
+            ],
+            "reason": "Request to display a trusted DT summary; unverified streams cannot support it.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "REQUEST_EVIDENCE",
+            "reason": "DT_NOT_VALID",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "REQUEST_EVIDENCE",
+            "reason": "DT_NOT_VALID",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "effect": null,
+          "current_revision": 4,
+          "current_authorization_epoch": 0,
+          "scheduler_round": 1
+        },
+        "previous_hash": "44a633dbfdc12591b30055f6eed4ea59cfa99431520852037751bb7d2302e493",
+        "hash": "7d893badad3107b7bb7753fbb704c8cf68476c7ddbd53ac1d523136b18657cff"
+      },
+      {
+        "seq": 26,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "payload": {
+          "receipt_id": "R00009",
+          "event_id": "WF11-E4",
+          "owner": "cyber_network_agent",
+          "proposal": {
+            "proposal_id": "P00009",
+            "owner": "cyber_network_agent",
+            "action": "FLAG_TELEMETRY",
+            "event_id": "WF11-E4",
+            "state_revision": 4,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [
+              "KR-PIPC-SAFE-2026-001"
+            ],
+            "reason": "Preserve the stream-integrity distinction; do not suppress an independent patient report.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "NOOP",
+            "reason": "ALREADY_COMMITTED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [
+            {
+              "policy_id": "KR-PIPC-SAFE-2026-001",
+              "record_sha256": "2b9d68effb808b69cae47da3aa141213fe03ab9ac4a0eaf3878803afc1e83b1d",
+              "official_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000281400",
+              "effective_date": "2026-07-01",
+              "interpretation_review": "PENDING_INDEPENDENT_REVIEW"
+            }
+          ],
+          "effect": null,
+          "current_revision": 4,
+          "current_authorization_epoch": 0
+        },
+        "previous_hash": "7d893badad3107b7bb7753fbb704c8cf68476c7ddbd53ac1d523136b18657cff",
+        "hash": "6f8720e536d321e91ffd25844d03020ba7a066ec5efa83a396d37614a61c4a5c"
+      },
+      {
+        "seq": 27,
+        "kind": "EXECUTION_RECEIPT",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "payload": {
+          "receipt_id": "R00010",
+          "event_id": "WF11-E4",
+          "owner": "regulator_agent",
+          "proposal": {
+            "proposal_id": "P00010",
+            "owner": "regulator_agent",
+            "action": "REQUEST_OVERSIGHT_REVIEW",
+            "event_id": "WF11-E4",
+            "state_revision": 4,
+            "authorization_epoch": 0,
+            "request_id": "",
+            "fields": [],
+            "policy_ids": [
+              "KR-AI-ACT-ART34-HIGHIMPACT-DUTIES-001"
+            ],
+            "reason": "Simulated oversight role requests human classification; it issues no government approval.",
+            "origin": "INSTITUTIONAL_RULE_PROPOSAL"
+          },
+          "preflight": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "final_validation": {
+            "status": "PERMIT",
+            "reason": "MODELED_PRECONDITIONS_SATISFIED",
+            "rule_scope": "MODELED_INSTITUTIONAL_RULE",
+            "simulation_only": true,
+            "legal_certification": false
+          },
+          "policy_evidence": [
+            {
+              "policy_id": "KR-AI-ACT-ART34-HIGHIMPACT-DUTIES-001",
+              "record_sha256": "f1ba53ce147e6e1962d395542ea03965b874d1f3644ca19008f7e8ba8a31b0fc",
+              "official_url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031809455",
+              "effective_date": "2026-07-21",
+              "interpretation_review": "PENDING_INDEPENDENT_REVIEW"
+            }
+          ],
+          "effect": {
+            "sequence": 3,
+            "action": "REQUEST_OVERSIGHT_REVIEW",
+            "owner": "regulator_agent",
+            "event_id": "WF11-E4",
+            "cursor": 4,
+            "request_id": "",
+            "authorization_epoch": 0,
+            "proposal_id": "P00010",
+            "payload": {},
+            "simulation_only": true
+          },
+          "current_revision": 4,
+          "current_authorization_epoch": 0
+        },
+        "previous_hash": "6f8720e536d321e91ffd25844d03020ba7a066ec5efa83a396d37614a61c4a5c",
+        "hash": "25ddf269f47e70ec4e31db9e1408871133829e7eda3f8421930a1fbaad6606b0"
+      },
+      {
+        "seq": 28,
+        "kind": "COORDINATION_SCHEDULER",
+        "event_id": "WF11-E4",
+        "revision": 4,
+        "payload": {
+          "strategy": "STATEFUL_FIXED_POINT",
+          "arrival_ids": [
+            "P00007",
+            "P00008",
+            "P00009",
+            "P00010"
+          ],
+          "execution_order_ids": [
+            "P00007",
+            "P00008",
+            "P00009",
+            "P00010"
+          ],
+          "rounds": 1,
+          "coordinator_is_institution": false
+        },
+        "previous_hash": "25ddf269f47e70ec4e31db9e1408871133829e7eda3f8421930a1fbaad6606b0",
+        "hash": "e5b795f7f122575ce20e2867ceaacf5aa69544e40d22423f12398ba6b6582921"
+      }
+    ],
+    "audit_chain_valid": true,
+    "strategy": "MEDVERSE",
+    "mode": "MODELED_SANDBOX",
+    "agent_backend": "deterministic_institutional_model_v1",
+    "retrieval_backend": "lexical_bilingual_bm25_v1",
+    "legal_review_status": "PENDING",
+    "clinical_review_status": "PENDING",
+    "strict_deployment_enabled": false
+  }
+}

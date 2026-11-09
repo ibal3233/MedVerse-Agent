@@ -1,0 +1,75 @@
+{
+  "gate": "GATE_23D_RESEARCH_IRB_PRECEDENCE_REPRESENTATION",
+  "status": "FAIL",
+  "passed_checks": 7,
+  "total_checks": 8,
+  "agent": "Research / IRB Agent",
+  "model_family": "multinomial_logistic_regression",
+  "model_family_changed": false,
+  "chosen_C": 0.3,
+  "original_train_records": 54,
+  "compositional_augmentation_records": 33,
+  "class_preserving_replay_records": 47,
+  "combined_training_records": 134,
+  "dev_records": 18,
+  "id_test_records": 18,
+  "ood_records": 24,
+  "ood_overlap": 0,
+  "id_metrics": {
+    "assessment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "action": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "boundary": {
+      "accuracy": 0.9444444444444444,
+      "macro_f1": 0.8838709677419355
+    },
+    "enforcement": {
+      "accuracy": 0.9444444444444444,
+      "macro_f1": 0.8838709677419355
+    },
+    "evidence": {
+      "accuracy": 0.9444444444444444,
+      "macro_f1": 0.8838709677419355
+    }
+  },
+  "ood_metrics": {
+    "assessment": {
+      "accuracy": 0.8333333333333334,
+      "macro_f1": 0.6666666666666666
+    },
+    "action": {
+      "accuracy": 0.8333333333333334,
+      "macro_f1": 0.46875
+    },
+    "boundary": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "enforcement": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "evidence": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  },
+  "ood_action_errors": 4,
+  "ood_error_pairs": {
+    "REQUEST_IRB_REVIEW -> ALLOW_AUTHORIZED_RESEARCH_PROCESSING": 2,
+    "REQUEST_IRB_REVIEW -> PRESERVE_RESEARCH_AUDIT_LOG": 2
+  },
+  "policy_inconsistent_proposals": 4,
+  "policy_inconsistent_executions": 0,
+  "shield_blocks": 4,
+  "shield_escalations": 10,
+  "policy_inconsistent_execution_rate": 0.0,
+  "model_path": "outputs/gate23d/research_irb_agent_precedence_model.joblib",
+  "figures_directory": "outputs/gate23d/figures",
+  "next_dependency": "If PASS, freeze Research/IRB learner and proceed to Cyber/Network Agent. If FAIL, diagnose residual model-capacity or representation limitations before changing model family."
+}

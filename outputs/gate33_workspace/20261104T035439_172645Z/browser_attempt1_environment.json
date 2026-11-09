@@ -1,0 +1,13 @@
+{
+  "native_navigation": false,
+  "transport": "INLINE_ASSETS_TEST_FETCH_BRIDGE_TO_REAL_HTTP",
+  "checks": [],
+  "console_errors": [],
+  "native_download": "NOT_TESTED",
+  "external_clinical_actions": false,
+  "native_navigation_error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:44473/\nCall log:\n  - navigating to \"http://127.0.0.1:44473/\", waiting until \"networkidle\"\n",
+  "status": "ERROR",
+  "reason": "Error: Page.goto: Navigation to \"about:blank\" is interrupted by another navigation to \"chrome-error://chromewebdata/\"\nCall log:\n  - navigating to \"about:blank\", waiting until \"load\"\n",
+  "checks_passed": 0,
+  "checks_total": 0
+}

@@ -1,0 +1,130 @@
+{
+  "outcomes_examined": false,
+  "changes": [
+    {
+      "family": "D02",
+      "from": "DEVELOPMENT",
+      "to": "CONFIRMATION",
+      "reason": "reserve whole shared dependency skeleton before execution"
+    },
+    {
+      "family": "D03",
+      "from": "DEVELOPMENT",
+      "to": "CONFIRMATION",
+      "reason": "reserve whole shared dependency skeleton before execution"
+    }
+  ],
+  "audit": {
+    "record_count": 18,
+    "duplicate_input_records": 0,
+    "structural_group_count": 14,
+    "cross_split_structural_groups": [],
+    "shared_policy_and_action_primitives": true,
+    "external_independent_authorship": false,
+    "limitation": "Fingerprints group tested dependency skeletons; they do not prove all semantic overlap absent.",
+    "groups": [
+      {
+        "signature": "e6628b538cdca87888eb077e6b23f217fa719e0e1cf30b2180bc4dc7cb508105",
+        "families": [
+          "D01"
+        ],
+        "split": "DEVELOPMENT"
+      },
+      {
+        "signature": "3e7c56144bd974444b0422f98cbefa9ccb1bc7b822d74d40da906424b85b595e",
+        "families": [
+          "D02",
+          "C04"
+        ],
+        "split": "CONFIRMATION"
+      },
+      {
+        "signature": "a039f17dee3ea2f42a182087a9e90e83877491b35f8f045b05dfccf1aa709a0a",
+        "families": [
+          "D03",
+          "C06",
+          "C07"
+        ],
+        "split": "CONFIRMATION"
+      },
+      {
+        "signature": "eb806e1d3bd9369d32e0eced96bc725eeb0beb1f0357eccee31a9d7aecaac29d",
+        "families": [
+          "D04"
+        ],
+        "split": "DEVELOPMENT"
+      },
+      {
+        "signature": "3b4b673c1bfc13cb408c42dc53cceaed582fbdc8faacedcac52950138c3633cd",
+        "families": [
+          "D05",
+          "D06"
+        ],
+        "split": "DEVELOPMENT"
+      },
+      {
+        "signature": "8ec8b2d3a3afb3084f04c70c870fe7fb30dcb9fe70f9e905204cefe6e857d916",
+        "families": [
+          "C01"
+        ],
+        "split": "CONFIRMATION"
+      },
+      {
+        "signature": "4f75d5394b2148c1d15f884222db077aae6fa43afd3d25338d558d128ed7683c",
+        "families": [
+          "C02"
+        ],
+        "split": "CONFIRMATION"
+      },
+      {
+        "signature": "3458f3e07b9a891ba4d41719fbe997f16995421a6058b66fae55c8fd36888292",
+        "families": [
+          "C03"
+        ],
+        "split": "CONFIRMATION"
+      },
+      {
+        "signature": "2ff5769afb350667211241e022904b6a26e757d5b790c92cc3d50c2c17323b10",
+        "families": [
+          "C05"
+        ],
+        "split": "CONFIRMATION"
+      },
+      {
+        "signature": "d0955ff02d1eda71e44f5d9a3b97d7158c9130fcbaea19ccbca307afe17e0d92",
+        "families": [
+          "C08"
+        ],
+        "split": "CONFIRMATION"
+      },
+      {
+        "signature": "f51b8efd9df7781c504dac286757b88b90584e32f984b1a273f3c7ba67d59f96",
+        "families": [
+          "C09"
+        ],
+        "split": "CONFIRMATION"
+      },
+      {
+        "signature": "92cda22c8c381ca69a1c603eb9ce75fecbe2b0d68b8032664e7ca2dbbc857260",
+        "families": [
+          "C10"
+        ],
+        "split": "CONFIRMATION"
+      },
+      {
+        "signature": "94bdeb3149d78ee4b3b941c0edfcc7a2e7e4c36190c4f23001b2614b6c575c4b",
+        "families": [
+          "C11"
+        ],
+        "split": "CONFIRMATION"
+      },
+      {
+        "signature": "31dd7d713554041b022e62867a557852187cee9a0b0cce11d5095b59a45d6b0c",
+        "families": [
+          "C12"
+        ],
+        "split": "CONFIRMATION"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "gate": "GATE_22B5_PRIVACY_REPAIR_REPLICATION_BENCHMARK_FREEZE",
+  "status": "PASS",
+  "passed_checks": 10,
+  "total_checks": 10,
+  "training_performed": false,
+  "protocol_id": "MEDVERSE-G22B5-PRIVACY-ADAPTIVE-REPAIR-REPLICATION-v1",
+  "oracle_version": "KR-PRIVACY-PRECEDENCE-v2",
+  "replication_records": 486,
+  "unique_core_states": 162,
+  "fresh_contexts": [
+    "clinical_data_quality_review",
+    "institutional_access_recertification",
+    "privacy_impact_reassessment"
+  ],
+  "exact_model_visible_overlap_with_all_prior_sets": 0,
+  "protected_diagnosed_cores": 7,
+  "protected_replication_records": 21,
+  "semantic_freshness_status": "NOT_SEMANTICALLY_UNSEEN",
+  "benchmark_sha256": "c7c0d4fc60eba832e24ea60c4d9db43654022512b83f789da5944d86cf58550d",
+  "hyperparameter_table_required_in_next_gate": true,
+  "training_history_required_in_next_gate": true,
+  "opened_gate22b2_confirmation_status": "DIAGNOSTIC_ONLY",
+  "figures_directory": "outputs/gate22b5/figures",
+  "next_dependency": "Gate 22B.6: add balanced oracle-consistent support for the three diagnosed precedence families, reselect C using DEV only, retain hyperparameter/training-history tables and plots, then evaluate once on the frozen Gate-22B.5 replication benchmark."
+}

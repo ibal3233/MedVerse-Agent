@@ -1,0 +1,27 @@
+{
+  "agent_id": "regulator_agent",
+  "institutional_role": "Health and AI Safety Oversight",
+  "allowed_event_types": [
+    "DT_VALIDITY_ALERT",
+    "HIGH_IMPACT_AI_REQUEST"
+  ],
+  "allowed_observation_fields": [
+    "dt_validity",
+    "dt_age_seconds",
+    "integrity_status",
+    "decision_impact",
+    "requested_action"
+  ],
+  "allowed_actions": [
+    "BLOCK_AUTOMATED_HIGH_IMPACT_ACTION",
+    "REQUIRE_FRESH_DT_VERIFICATION",
+    "REQUEST_HUMAN_OVERSIGHT",
+    "PRESERVE_REGULATORY_AUDIT_LOG"
+  ],
+  "forbidden_action_classes": [
+    "direct_clinical_diagnosis",
+    "research_enrollment",
+    "network_isolation",
+    "raw_data_disclosure"
+  ]
+}

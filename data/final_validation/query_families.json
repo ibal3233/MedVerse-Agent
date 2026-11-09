@@ -1,0 +1,449 @@
+{
+  "dataset_id": "FINAL-KB-01-v1",
+  "records": [
+    {
+      "family_id": "HOS-01",
+      "role": "hospital_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-MSA-ART21-ACCESS-001"
+      ],
+      "en": "Which provision concerns a patient asking for a copy of their medical record?",
+      "ko": "환자가 진료기록 사본을 요청하는 경우 어떤 규정이 관련되는가?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "HOS-02",
+      "role": "hospital_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-MSA-ART23-EMR-001"
+      ],
+      "en": "Find the duties relevant to electronic medical record integrity and preservation.",
+      "ko": "전자의무기록의 무결성과 보존에 관한 의무를 찾아 주세요.",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "HOS-03",
+      "role": "hospital_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-HMDUG-2025-SCOPE-001"
+      ],
+      "en": "Where is the scope and legal basis for using health and medical data explained?",
+      "ko": "보건의료데이터 활용의 적용 범위와 법적 근거는 어디에 있는가?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "HOS-04",
+      "role": "hospital_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-HMDUG-2025-AI-SCENARIO-001",
+        "KR-PIPCG-2026-AI-RESEARCH-001"
+      ],
+      "en": "Which guidance illustrates AI scientific research with medical data?",
+      "ko": "의료데이터를 이용한 인공지능 과학적 연구 사례에 관한 지침은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "HOS-05",
+      "role": "hospital_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-MSA-ART21-ACCESS-001"
+      ],
+      "en": "May an unrelated third party inspect a patient chart without an applicable exception?",
+      "ko": "관련 없는 제3자가 예외 사유 없이 환자의 진료기록을 열람할 수 있는가?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "HOS-06",
+      "role": "hospital_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-MSA-ART23-EMR-001"
+      ],
+      "en": "Which healthcare provision addresses alteration of electronic records and access logs?",
+      "ko": "전자의무기록 변조와 접속기록에 관련된 의료법 조항은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "HOS-07",
+      "role": "hospital_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-PIPCG-2026-UNSTRUCTURED-AI-001"
+      ],
+      "en": "Find guidance for unstructured healthcare images and AI data preparation.",
+      "ko": "의료 영상 등 비정형 데이터의 가명처리 및 AI 데이터 준비 지침은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "HOS-08",
+      "role": "hospital_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-HMDUG-2025-AI-SCENARIO-001",
+        "KR-PIPCG-2026-AI-RESEARCH-001"
+      ],
+      "en": "What evidence discusses medical information reuse for AI development?",
+      "ko": "인공지능 개발을 위한 의료정보 재사용을 다루는 근거는?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "CYB-01",
+      "role": "cyber_network_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-PIPC-SAFE-2026-001"
+      ],
+      "en": "Find technical and organizational security safeguards for personal information systems.",
+      "ko": "개인정보처리시스템의 기술적 관리적 안전성 확보조치를 찾아 주세요.",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "CYB-02",
+      "role": "cyber_network_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-MSA-ART23-EMR-001"
+      ],
+      "en": "What protects electronic patient records against unauthorized alteration?",
+      "ko": "전자의무기록의 무단 변조 방지를 뒷받침하는 조항은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "CYB-03",
+      "role": "cyber_network_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-PIPA-ART28-4-SAFEGUARDS-001"
+      ],
+      "en": "What safeguards govern pseudonymized information and identifying additional information?",
+      "ko": "가명정보 및 추가정보의 안전조치에 관한 의무는?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "CYB-04",
+      "role": "cyber_network_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-PIPA-DECREE29-5-PSEUDONYM-SAFETY-001"
+      ],
+      "en": "Locate the decree on pseudonymization safety measures and processing records.",
+      "ko": "가명정보의 안전성 확보 및 처리 기록에 관한 시행령은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "CYB-05",
+      "role": "cyber_network_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-HMDUG-2025-ACCESS-001"
+      ],
+      "en": "Which health-data guidance concerns access authorization and technical security?",
+      "ko": "보건의료데이터 접근권한과 기술적 안전조치에 관한 지침은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "CYB-06",
+      "role": "cyber_network_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-HMDUG-2025-RISK-ENV-001",
+        "KR-PIPCG-2026-RISK-LEVEL-001"
+      ],
+      "en": "Find environment-dependent re-identification risk classification guidance.",
+      "ko": "처리환경에 따른 재식별 위험도 분류 지침을 찾아 주세요.",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "CYB-07",
+      "role": "cyber_network_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-PIPCG-2026-SAFEGUARDS-001"
+      ],
+      "en": "Which guidance describes safe management of pseudonymized records?",
+      "ko": "가명정보의 안전한 관리에 관한 가이드라인은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "CYB-08",
+      "role": "cyber_network_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-PIPCG-2026-UNSTRUCTURED-AI-001"
+      ],
+      "en": "What guidance discusses privacy protection for unstructured health data used in AI?",
+      "ko": "AI에 쓰이는 비정형 보건의료데이터 보호 지침은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "PRI-01",
+      "role": "privacy_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-PIPA-ART17-DISCLOSURE-001"
+      ],
+      "en": "What provision governs providing personal information to another party?",
+      "ko": "개인정보를 제3자에게 제공하는 경우 적용되는 조항은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "PRI-02",
+      "role": "privacy_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-PIPA-ART18-PURPOSE-001"
+      ],
+      "en": "Which rule concerns processing outside the original purpose?",
+      "ko": "당초 목적을 벗어난 개인정보 이용을 제한하는 규정은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "PRI-03",
+      "role": "privacy_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-PIPA-ART28-2-PSEUDONYM-001"
+      ],
+      "en": "What provision allows specified scientific research with pseudonymized information?",
+      "ko": "과학적 연구 목적의 가명정보 처리를 규정하는 조항은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "PRI-04",
+      "role": "privacy_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-PIPA-ART28-3-COMBINATION-001"
+      ],
+      "en": "Who may combine pseudonymized datasets held by different controllers?",
+      "ko": "서로 다른 개인정보처리자의 가명정보 결합은 누가 수행하는가?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "PRI-05",
+      "role": "privacy_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-PIPA-ART28-5-REIDENTIFICATION-001"
+      ],
+      "en": "What must happen if a person becomes identifiable during pseudonymized processing?",
+      "ko": "가명정보 처리 중 개인이 식별되면 어떻게 해야 하는가?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "PRI-06",
+      "role": "privacy_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-PIPA-ART28-4-SAFEGUARDS-001"
+      ],
+      "en": "Locate the duty to safeguard pseudonymized information and maintain processing records.",
+      "ko": "가명정보의 안전조치 및 처리 기록 보존 의무를 찾아 주세요.",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "PRI-07",
+      "role": "privacy_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-HMDUG-2025-IRB-DRB-001"
+      ],
+      "en": "How do health-data guidelines distinguish IRB and data review board responsibilities?",
+      "ko": "보건의료데이터 지침에서 IRB와 DRB의 역할은 어떻게 구분되는가?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "PRI-08",
+      "role": "privacy_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-PIPCG-2026-ADEQUACY-001"
+      ],
+      "en": "What does risk-based adequacy review involve before data release?",
+      "ko": "데이터 제공 전 위험도에 따른 적정성 검토는 무엇인가?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "RES-01",
+      "role": "research_irb_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-BIOETHICS-ART10-IRB-001"
+      ],
+      "en": "What is the institutional committee mandate for research ethics review?",
+      "ko": "연구윤리 심의를 위한 기관위원회의 임무는 무엇인가?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "RES-02",
+      "role": "research_irb_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-BIOETHICS-ART16-CONSENT-001"
+      ],
+      "en": "What are the consent requirements for human-subject research?",
+      "ko": "인간대상연구의 동의 요건은 무엇인가?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "RES-03",
+      "role": "research_irb_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-BIOETHICS-ART37-WITHDRAWAL-001"
+      ],
+      "en": "Find consent and withdrawal conditions for research involving human-derived material.",
+      "ko": "인체유래물연구의 동의와 철회 조건을 찾아 주세요.",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "RES-04",
+      "role": "research_irb_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-PIPA-ART28-2-PSEUDONYM-001"
+      ],
+      "en": "Which law addresses pseudonymized processing for scientific research?",
+      "ko": "과학적 연구를 위한 가명정보 처리에 관한 법률은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "RES-05",
+      "role": "research_irb_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-MDA-ART10-CLINICALTRIAL-001"
+      ],
+      "en": "What provision governs approval of investigational medical-device trials?",
+      "ko": "의료기기 임상시험계획 승인에 관한 조항은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "RES-06",
+      "role": "research_irb_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-HMDUG-2025-IRB-DRB-001"
+      ],
+      "en": "Which health-data guide coordinates ethical and data-access review?",
+      "ko": "연구윤리 심의와 데이터 접근 심의를 조정하는 보건의료 지침은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "RES-07",
+      "role": "research_irb_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-PIPCG-2026-EXPANDABLE-PURPOSE-001"
+      ],
+      "en": "Find guidance on describing expandable purpose in AI research data processing.",
+      "ko": "AI 연구 데이터 처리의 확장 가능한 목적 설명에 관한 지침은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "RES-08",
+      "role": "research_irb_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-PIPA-ART28-3-COMBINATION-001"
+      ],
+      "en": "What restrictions apply to combining two institutions pseudonymized research datasets?",
+      "ko": "두 기관의 가명 연구데이터 결합에는 어떤 제한이 적용되는가?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "REG-01",
+      "role": "regulator_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-DMPA-ART2-DIGITALDEVICE-001"
+      ],
+      "en": "Find the legal definition and scope of digital medical products.",
+      "ko": "디지털의료제품의 법적 정의와 범위를 찾아 주세요.",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "REG-02",
+      "role": "regulator_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-DMPA-RULE14-SAFETY-001"
+      ],
+      "en": "Which rule covers digital medical-device clinical-trial plan approval documents?",
+      "ko": "디지털의료기기 임상시험계획 승인 신청 자료에 관한 규칙은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "REG-03",
+      "role": "regulator_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-AI-ACT-ART27-ETHICS-001"
+      ],
+      "en": "What provision addresses AI ethical principles?",
+      "ko": "인공지능 윤리원칙에 관한 조항은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "REG-04",
+      "role": "regulator_agent",
+      "split": "DEV",
+      "expected_any": [
+        "KR-AI-ACT-ART32-SAFETY-001"
+      ],
+      "en": "Which AI Act clause concerns safety obligations?",
+      "ko": "인공지능기본법에서 안전성 확보 의무를 다루는 조항은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "REG-05",
+      "role": "regulator_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-AI-ACT-ART33-HIGHIMPACT-001"
+      ],
+      "en": "Which provision addresses identifying high-impact AI?",
+      "ko": "고영향 인공지능 해당 여부의 확인에 관한 조항은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "REG-06",
+      "role": "regulator_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-AI-ACT-ART34-HIGHIMPACT-DUTIES-001"
+      ],
+      "en": "What duties concern human oversight and documentation for high-impact AI?",
+      "ko": "고영향 인공지능의 인간 감독과 문서화 의무는?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "REG-07",
+      "role": "regulator_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-AI-ACT-ART35-IMPACTASSESS-001"
+      ],
+      "en": "Locate the provision for high-impact AI impact assessment.",
+      "ko": "고영향 인공지능 영향평가에 관한 조항을 찾아 주세요.",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    },
+    {
+      "family_id": "REG-08",
+      "role": "regulator_agent",
+      "split": "CONFIRMATION",
+      "expected_any": [
+        "KR-MDA-ART10-CLINICALTRIAL-001"
+      ],
+      "en": "Which law concerns participant protection in medical-device clinical trials?",
+      "ko": "의료기기 임상시험 참여자 보호에 관한 법률 조항은?",
+      "oracle_origin": "developer-authored obligation/query specification; no external expert adjudication"
+    }
+  ],
+  "independence_note": "40 intent families / 80 language variants; no learning or ranker selection uses confirmation. Source overlap across partitions is intentional; not unseen-policy generalization."
+}

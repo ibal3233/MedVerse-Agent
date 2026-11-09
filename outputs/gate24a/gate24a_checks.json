@@ -1,0 +1,92 @@
+[
+  {
+    "check": "baseline_failure_reproduced",
+    "pass": true,
+    "observed": {
+      "action": 0.8333333333333334,
+      "assessment": 0.8333333333333334
+    },
+    "expected": 0.8333333333333334
+  },
+  {
+    "check": "action_missingness_sensitivity_detected",
+    "pass": true,
+    "observed": {
+      "baseline": 0.8333333333333334,
+      "explicit_missing": 1.0
+    },
+    "expected": "explicit missing-category encoding improves action"
+  },
+  {
+    "check": "numeric_scaling_sensitivity_detected",
+    "pass": true,
+    "observed": {
+      "action_baseline": 0.8333333333333334,
+      "action_scaled": 1.0,
+      "assessment_baseline": 0.8333333333333334,
+      "assessment_scaled": 1.0
+    },
+    "expected": "scaling improves both outputs"
+  },
+  {
+    "check": "dev_plateau_selection_instability_detected",
+    "pass": true,
+    "observed": {
+      "C0.3_dev": 1.0,
+      "C0.3_test": 0.8333333333333334,
+      "C1_dev": 1.0,
+      "C1_test": 1.0
+    },
+    "expected": "same DEV optimum but different diagnostic TEST behavior"
+  },
+  {
+    "check": "regularization_alone_cannot_jointly_fix_outputs",
+    "pass": true,
+    "observed": {
+      "0.01": {
+        "test_action_accuracy": 0.6666666666666666,
+        "test_assessment_accuracy": 1.0
+      },
+      "0.03": {
+        "test_action_accuracy": 0.6666666666666666,
+        "test_assessment_accuracy": 0.8888888888888888
+      },
+      "0.1": {
+        "test_action_accuracy": 0.7777777777777778,
+        "test_assessment_accuracy": 0.8333333333333334
+      },
+      "0.3": {
+        "test_action_accuracy": 0.8333333333333334,
+        "test_assessment_accuracy": 0.8333333333333334
+      },
+      "1.0": {
+        "test_action_accuracy": 1.0,
+        "test_assessment_accuracy": 0.8333333333333334
+      },
+      "3.0": {
+        "test_action_accuracy": 1.0,
+        "test_assessment_accuracy": 0.8333333333333334
+      },
+      "10.0": {
+        "test_action_accuracy": 1.0,
+        "test_assessment_accuracy": 0.8333333333333334
+      }
+    },
+    "expected": "no baseline C simultaneously achieves >=0.90 action and >=0.90 assessment on the opened diagnostic test group"
+  },
+  {
+    "check": "no_production_intervention",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4
+    },
+    "expected": ">=4 PNG and >=4 PDF"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "manifest_version": "0.1",
+  "sources": [
+    {
+      "source_id": "KR_NCC_CANCER_INCIDENCE_20260120",
+      "role": "population_grounding",
+      "title": "국립암센터_암발생 통계 정보_20260120",
+      "provider": "National Cancer Center, Republic of Korea",
+      "official_url": "https://www.data.go.kr/data/3039563/fileData.do",
+      "format": "CSV",
+      "reported_rows": 37050,
+      "reported_year_range": [
+        1999,
+        2023
+      ],
+      "reported_license_scope": "No restriction on scope of use",
+      "local_path": "data/external/ncc_cancer_incidence.csv",
+      "required_columns_ko": [
+        "발생연도",
+        "성별",
+        "국제질병분류",
+        "암종",
+        "연령군",
+        "발생자수",
+        "조발생률"
+      ],
+      "required": false,
+      "reason_optional_during_gate1a": "External public file must be downloaded from its authoritative portal; the repository does not fabricate or silently substitute it."
+    }
+  ]
+}

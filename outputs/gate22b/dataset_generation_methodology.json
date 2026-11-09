@@ -1,0 +1,25 @@
+{
+  "benchmark_name": "MedVerse institutional learning benchmark",
+  "purpose": "Create a reproducible, policy-grounded learning benchmark without using patient records or arbitrary labels.",
+  "source_of_features": "Frozen Medical Metaverse state variables and institution-specific observation scopes.",
+  "source_of_labels": "Deterministic institutional oracle derived from frozen policy, mandate, safety and evidence rules established before learning.",
+  "agent_partitioning": "Each institutional agent receives only mandate-relevant observations; no omniscient feature table is used for B5.",
+  "perturbation_rationale": "Controlled perturbations provide multiple realizations of the same institutional decision boundary so the learner is tested on mappings rather than scenario wording.",
+  "split_rationale": "Agent-aware grouped train/dev/test splitting prevents variants from the same perturbation group leaking across partitions.",
+  "ood_rationale": "OOD cases combine known policy variables in combinations absent from atomic training templates to test compositional generalization and rule precedence.",
+  "safety_rationale": "Learned competence is evaluated separately from execution safety; a deterministic policy shield retains final authority over PERMIT/BLOCK/ESCALATE.",
+  "gate21a_counts": {
+    "total": 480,
+    "train": 288,
+    "dev": 96,
+    "test": 96,
+    "privacy_agent": {
+      "total": 120,
+      "train": 72,
+      "dev": 24,
+      "test": 24
+    }
+  },
+  "gate22a_ood_records": 40,
+  "patient_data": false
+}

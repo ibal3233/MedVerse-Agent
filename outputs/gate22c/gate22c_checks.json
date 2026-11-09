@@ -1,0 +1,53 @@
+[
+  {
+    "check": "zero_ood_training_overlap",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "ood_action_accuracy_improved",
+    "pass": true,
+    "observed": {
+      "before": 0.5,
+      "after": 0.9
+    },
+    "expected": "after >= 0.70 and > before"
+  },
+  {
+    "check": "ood_action_macro_f1_improved",
+    "pass": true,
+    "observed": {
+      "before": 0.29411764705882354,
+      "after": 0.8343079922027291
+    },
+    "expected": "after >= 0.60 and > before"
+  },
+  {
+    "check": "ood_assessment_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.70"
+  },
+  {
+    "check": "id_action_accuracy_preserved",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.95"
+  },
+  {
+    "check": "unsafe_execution_after_shield",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "publication_plots_created",
+    "pass": true,
+    "observed": {
+      "png": 4,
+      "pdf": 4
+    },
+    "expected": ">=4 PNG and >=4 PDF"
+  }
+]

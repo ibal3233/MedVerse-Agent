@@ -1,0 +1,30 @@
+{
+  "action": {
+    "DENY_UNAUTHORIZED_DISCLOSURE": 348,
+    "REQUEST_ADDITIONAL_AUTHORIZATION": 120,
+    "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY": 12,
+    "PRESERVE_PRIVACY_AUDIT_LOG": 3,
+    "ALLOW_AUTHORIZED_DISCLOSURE": 3
+  },
+  "assessment": {
+    "FOREIGN_POLICY_NOT_GOVERNING_AUTHORITY": 324,
+    "DISCLOSURE_AUTHORIZATION_UNKNOWN": 114,
+    "UNAUTHORIZED_OR_EXCESSIVE_DISCLOSURE_REQUEST": 42,
+    "AUTHORIZED_MINIMUM_NECESSARY_DISCLOSURE": 6
+  },
+  "boundary": {
+    "WRONG_JURISDICTION": 324,
+    "INSUFFICIENT_EVIDENCE": 114,
+    "COMPLIANT": 48
+  },
+  "enforcement": {
+    "BLOCK": 324,
+    "ESCALATE": 114,
+    "PERMIT": 48
+  },
+  "context": {
+    "institutional_quality_review": 162,
+    "cross_institutional_referral": 162,
+    "data_governance_audit": 162
+  }
+}

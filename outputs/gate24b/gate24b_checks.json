@@ -1,0 +1,110 @@
+[
+  {
+    "check": "expected_record_count",
+    "pass": true,
+    "observed": 72,
+    "expected": 72
+  },
+  {
+    "check": "balanced_future_groups",
+    "pass": true,
+    "observed": {
+      "5": 18,
+      "6": 18,
+      "7": 18,
+      "8": 18
+    },
+    "expected": "18 per group"
+  },
+  {
+    "check": "all_action_classes_present_each_group",
+    "pass": true,
+    "observed": {
+      "5": {
+        "PRESERVE_TECHNICAL_LOGS": 6,
+        "MARK_TELEMETRY_UNVERIFIED": 3,
+        "VERIFY_DEVICE_IDENTITY": 3,
+        "ISOLATE_SUSPECT_SESSION": 3,
+        "REQUEST_ALTERNATIVE_CHANNEL": 3
+      },
+      "6": {
+        "PRESERVE_TECHNICAL_LOGS": 6,
+        "MARK_TELEMETRY_UNVERIFIED": 3,
+        "VERIFY_DEVICE_IDENTITY": 3,
+        "ISOLATE_SUSPECT_SESSION": 3,
+        "REQUEST_ALTERNATIVE_CHANNEL": 3
+      },
+      "7": {
+        "PRESERVE_TECHNICAL_LOGS": 6,
+        "MARK_TELEMETRY_UNVERIFIED": 3,
+        "VERIFY_DEVICE_IDENTITY": 3,
+        "ISOLATE_SUSPECT_SESSION": 3,
+        "REQUEST_ALTERNATIVE_CHANNEL": 3
+      },
+      "8": {
+        "PRESERVE_TECHNICAL_LOGS": 6,
+        "MARK_TELEMETRY_UNVERIFIED": 3,
+        "VERIFY_DEVICE_IDENTITY": 3,
+        "ISOLATE_SUSPECT_SESSION": 3,
+        "REQUEST_ALTERNATIVE_CHANNEL": 3
+      }
+    },
+    "expected": [
+      "ISOLATE_SUSPECT_SESSION",
+      "MARK_TELEMETRY_UNVERIFIED",
+      "PRESERVE_TECHNICAL_LOGS",
+      "REQUEST_ALTERNATIVE_CHANNEL",
+      "VERIFY_DEVICE_IDENTITY"
+    ]
+  },
+  {
+    "check": "all_assessment_classes_present",
+    "pass": true,
+    "observed": [
+      "DEVICE_IDENTITY_INTEGRITY_UNCERTAIN",
+      "TELEMETRY_RELIABILITY_DEGRADED",
+      "TELEMETRY_TRUST_ACCEPTABLE"
+    ],
+    "expected": [
+      "DEVICE_IDENTITY_INTEGRITY_UNCERTAIN",
+      "TELEMETRY_RELIABILITY_DEGRADED",
+      "TELEMETRY_TRUST_ACCEPTABLE"
+    ]
+  },
+  {
+    "check": "no_exact_feature_reuse",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "unique_record_ids",
+    "pass": true,
+    "observed": 72,
+    "expected": 72
+  },
+  {
+    "check": "benchmark_hash_recorded",
+    "pass": true,
+    "observed": "ebe2bb97f71e52a853822e612e396817c1d0a66e6525eb0a0190907936ff59ee",
+    "expected": "SHA256"
+  },
+  {
+    "check": "protocol_frozen_before_training",
+    "pass": true,
+    "observed": {
+      "status": "PRE_FROZEN_BEFORE_PREPROCESSING_REPAIR_TRAINING",
+      "training_performed": false
+    },
+    "expected": "pre-frozen, no training"
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 5,
+      "pdf": 5
+    },
+    "expected": ">=5 PNG and >=5 PDF"
+  }
+]

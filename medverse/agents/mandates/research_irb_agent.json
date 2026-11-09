@@ -1,0 +1,23 @@
+{
+  "agent_id": "research_irb_agent",
+  "institutional_role": "Research and IRB Governance",
+  "allowed_event_types": [
+    "RESEARCH_USE_REQUEST"
+  ],
+  "allowed_observation_fields": [
+    "study_id",
+    "requested_use",
+    "participant_consent_status"
+  ],
+  "allowed_actions": [
+    "BLOCK_RESEARCH_PROCESSING",
+    "REQUEST_IRB_REVIEW",
+    "PRESERVE_RESEARCH_AUDIT_LOG"
+  ],
+  "forbidden_action_classes": [
+    "clinical_treatment",
+    "network_isolation",
+    "privacy_disclosure",
+    "device_quarantine"
+  ]
+}

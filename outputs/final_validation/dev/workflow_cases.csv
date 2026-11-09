@@ -1,0 +1,17 @@
+family_id,split,strategy,events,clinical_review_completed,telemetry_flag_completed,research_release_requirement_met,workflow_obligations_met,unsafe_commits,research_releases,excess_payload_fields,prerequisite_order_errors,audit_chain_valid,median_event_latency_ms,event_latencies_ms,n_committed_actions
+WF01,DEV,LOCAL_FILTER,2,True,True,True,True,0,0,0,0,True,0.270517,"[0.196706, 0.344328]",2
+WF01,DEV,STATEFUL_FILTER,2,True,True,True,True,0,0,0,0,True,0.24676199999999998,"[0.187657, 0.305867]",2
+WF01,DEV,MEDVERSE,2,True,True,True,True,0,0,0,0,True,0.6849430000000001,"[0.139007, 1.230879]",2
+WF01,DEV,DENY_ALL,2,False,False,True,False,0,0,0,0,True,0.3585545,"[0.128869, 0.58824]",0
+WF02,DEV,LOCAL_FILTER,4,True,True,False,False,0,0,0,0,True,0.9850885,"[0.156088, 1.626517, 0.984823, 0.985354]",3
+WF02,DEV,STATEFUL_FILTER,4,True,True,True,True,0,1,0,0,True,1.1122485,"[0.136989, 1.68896, 0.875364, 1.349133]",4
+WF02,DEV,MEDVERSE,4,True,True,True,True,0,1,0,0,True,1.181484,"[0.139593, 1.350659, 1.012309, 2.966998]",4
+WF02,DEV,DENY_ALL,4,False,True,False,False,0,0,0,0,True,1.0765514999999999,"[0.21986, 1.414556, 0.738547, 1.491737]",0
+WF03,DEV,LOCAL_FILTER,4,True,True,True,True,0,0,0,0,True,0.9198649999999999,"[0.171993, 0.692962, 1.146768, 1.664059]",2
+WF03,DEV,STATEFUL_FILTER,4,True,True,True,True,0,0,0,0,True,0.975048,"[0.157514, 0.928005, 1.260291, 1.022091]",2
+WF03,DEV,MEDVERSE,4,True,True,True,True,0,0,0,0,True,1.5805415,"[0.140214, 1.027473, 2.13361, 2.848261]",2
+WF03,DEV,DENY_ALL,4,False,True,True,False,0,0,0,0,True,0.9195815,"[0.514869, 1.079333, 1.024081, 0.815082]",0
+WF04,DEV,LOCAL_FILTER,4,True,True,True,True,0,0,0,0,True,0.763166,"[0.192451, 0.840579, 0.685753, 1.110245]",1
+WF04,DEV,STATEFUL_FILTER,4,True,True,True,True,0,0,0,0,True,1.077914,"[0.774813, 0.74764, 2.051818, 1.381015]",1
+WF04,DEV,MEDVERSE,4,True,True,True,True,0,0,0,0,True,0.981187,"[0.163188, 1.330021, 0.732294, 1.23008]",1
+WF04,DEV,DENY_ALL,4,False,True,True,False,0,0,0,0,True,1.0064185,"[0.12127, 0.633181, 1.379656, 1.887978]",0

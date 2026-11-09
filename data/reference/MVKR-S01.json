@@ -1,0 +1,47 @@
+{
+  "scenario_id": "MVKR-S01",
+  "title": "When the Digital Twin Cannot Be Trusted",
+  "country": "KR",
+  "domain": "Healthcare",
+  "environment": "Medical Metaverse",
+  "patient_ref": "DT-KR-001",
+  "events": [
+    {
+      "event_id": "E1",
+      "t": 1,
+      "event_type": "CLINICAL_ALARM",
+      "visible_to": [
+        "hospital_agent"
+      ],
+      "payload": {
+        "SpO2": 78,
+        "heart_rate": 122
+      }
+    },
+    {
+      "event_id": "E2",
+      "t": 2,
+      "event_type": "NETWORK_DEGRADATION",
+      "visible_to": [
+        "cyber_network_agent"
+      ],
+      "payload": {
+        "packet_loss": 0.27,
+        "rtt_ms": 840,
+        "jitter_ms": 180
+      }
+    },
+    {
+      "event_id": "E3",
+      "t": 3,
+      "event_type": "DEVICE_AUTH_ANOMALY",
+      "visible_to": [
+        "cyber_network_agent"
+      ],
+      "payload": {
+        "certificate_status": "mismatch",
+        "session_origin": "abnormal"
+      }
+    }
+  ]
+}

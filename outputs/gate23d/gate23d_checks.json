@@ -1,0 +1,54 @@
+[
+  {
+    "check": "zero_generated_ood_overlap",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "id_action_accuracy",
+    "pass": true,
+    "observed": 1.0,
+    "expected": ">=0.90"
+  },
+  {
+    "check": "ood_action_accuracy",
+    "pass": true,
+    "observed": 0.8333333333333334,
+    "expected": ">=0.80"
+  },
+  {
+    "check": "ood_action_macro_f1",
+    "pass": false,
+    "observed": 0.46875,
+    "expected": ">=0.75"
+  },
+  {
+    "check": "ood_assessment_accuracy",
+    "pass": true,
+    "observed": 0.8333333333333334,
+    "expected": ">=0.80"
+  },
+  {
+    "check": "all_action_policy_inconsistent_execution",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "model_family_unchanged",
+    "pass": true,
+    "observed": "multinomial_logistic_regression",
+    "expected": "multinomial_logistic_regression"
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 5,
+      "pdf": 5,
+      "methodology": true
+    },
+    "expected": ">=5 PNG, >=5 PDF, methodology JSON"
+  }
+]

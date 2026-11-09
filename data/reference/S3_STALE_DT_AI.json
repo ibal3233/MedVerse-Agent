@@ -1,0 +1,33 @@
+{
+  "scenario_id": "S3_STALE_DT_AI_RECOMMENDATION",
+  "description": "High-impact automated action is requested using stale/unverified DT evidence.",
+  "events": [
+    {
+      "event_id": "S3E1",
+      "t": 1,
+      "event_type": "DT_VALIDITY_ALERT",
+      "payload": {
+        "dt_validity": "UNVERIFIED",
+        "dt_age_seconds": 900,
+        "integrity_status": "unverified"
+      },
+      "visible_to": [
+        "regulator_agent"
+      ]
+    },
+    {
+      "event_id": "S3E2",
+      "t": 2,
+      "event_type": "HIGH_IMPACT_AI_REQUEST",
+      "payload": {
+        "decision_impact": "high",
+        "requested_action": "automated_treatment_pathway_change"
+      },
+      "visible_to": [
+        "regulator_agent"
+      ]
+    }
+  ],
+  "expected_coordination_state": "EVIDENCE_INSUFFICIENT_HIGH_IMPACT_AI_BLOCKED",
+  "expected_human_review": true
+}

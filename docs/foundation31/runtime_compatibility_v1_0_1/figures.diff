@@ -1,0 +1,39 @@
+--- before/foundation31/figures.py
++++ after/foundation31/figures.py
+@@ -4,11 +4,13 @@
+ from datetime import datetime,timezone
+ import csv,json,textwrap
+ from .common import read,write,digest
++from .runtime_support import configure_plotting,display_figures,next_dependency
+ 
+ def _csv(p):
+     with Path(p).open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+ 
+ def make_figures(run_dir,show=True,dpi=300):
++    display_info=configure_plotting(show)
+     import matplotlib.pyplot as plt
+     from matplotlib.backends.backend_pdf import PdfPages
+     r=Path(run_dir);s=read(r/'status.json')
+@@ -68,7 +70,7 @@
+         ('What the DT test establishes','Demonstration defaults are not observed data. New consent metadata cannot freshen older telemetry. Receiving-envelope metadata is not converted into unprovided patient measurements.'),
+         ('Language measurements','Known Korean/English question pairs are replayed with their original target labels. The diagrams show per-question ranks, not only aggregate recall. Corpus source dates are recorded metadata, not newly verified legal applicability.'),
+         ('What has NOT changed','Gate 30 action selection and commitment are preserved. The two C01/C02 progressive failures and capable-method ties remain. This checkpoint does not implement commit-versus-wait control or trained-agent inference.'),
+-        ('Next dependency','Execute the dense path locally where the pinned model is available. The Gate 32 commitment-control design is frozen, but its controller and new scenario/reference files are not implemented or evaluated in this release.'),
++        ('Next dependency',next_dependency(dr)),
+         ('Claim boundary','Local modeled engineering evidence. No clinical deployment, independent legal review, real authorization, general multilingual capability, or ITU conformance is established.')]
+     y=.81
+     for title,body in lines:
+@@ -91,10 +93,9 @@
+     from .evaluate import csv_write
+     csv_write(out/'compact_results.csv',compact)
+     (out/'compact_results.md').write_text('| Measure | Result |\n|---|---|\n'+'\n'.join(f'| {x["measure"]} | {x["result"]} |' for x in compact),encoding='utf-8')
+-    write(out/'presentation_manifest.json',{'source_run':s['run_id'],'status_sha256':digest(s),'files':paths,'dense_status':dr['status'],'data_changed':False})
+     print('Saved measured non-bar figures, PDF report and compact table:',out)
+     plt.close(summary)
+-    if show:plt.show()
+-    else:
+-        for fig in figures:plt.close(fig)
++    display_info=display_figures(figures,show,display_info)
++    write(out/'presentation_manifest.json',{'source_run':s['run_id'],'status_sha256':digest(s),'files':paths,'dense_status':dr['status'],'data_changed':False,'display':display_info,'compatibility_patch':'1.0.1'})
++    print('Plot display:',display_info['display_status'],'| Backend:',display_info['backend_after'])
+     return out

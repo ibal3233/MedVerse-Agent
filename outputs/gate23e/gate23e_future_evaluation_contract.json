@@ -1,0 +1,15 @@
+{
+  "current_gate23_ood_status": "OPENED_DIAGNOSTIC_BENCHMARK",
+  "may_be_used_for": [
+    "diagnosis",
+    "error localization",
+    "support analysis"
+  ],
+  "must_not_be_used_for": [
+    "hyperparameter selection",
+    "threshold selection",
+    "training followed by claims on the same benchmark"
+  ],
+  "final_generalization_requirement": "A fresh frozen holdout or pre-specified grouped/nested combinatorial evaluation must be created before any interaction-support repair is trained.",
+  "future_dataset_design_rule": "Every policy-relevant primitive and engineered interaction intended to be learned must have nonzero training support; OOD should withhold novel combinations, not all positive evidence for the governing interaction."
+}

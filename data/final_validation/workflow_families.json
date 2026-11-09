@@ -1,0 +1,670 @@
+{
+  "dataset_id": "FINAL-WF-01-v1",
+  "families": [
+    {
+      "family_id": "WF01",
+      "name": "Care continues despite untrusted telemetry",
+      "split": "DEV",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF01-E1"
+        },
+        {
+          "kind": "telemetry",
+          "payload": {
+            "validity": "UNVERIFIED",
+            "source": "modeled wearable session",
+            "freshness": "delayed",
+            "reason": "Device provenance not established"
+          },
+          "title": "Telemetry cannot be trusted",
+          "id": "WF01-E2"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF02",
+      "name": "Reviewed minimum-necessary research path",
+      "split": "DEV",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF02-E1"
+        },
+        {
+          "kind": "request",
+          "payload": {
+            "id": "REQ-ONC-001",
+            "purpose": "scientific_research",
+            "data_form": "pseudonymized",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "basis": "pseudonymized_research_reviewed",
+            "jurisdiction": "KR",
+            "consent": false
+          },
+          "title": "Request",
+          "id": "WF02-E2"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy"
+          },
+          "title": "Privacy review recorded (modeled)",
+          "id": "WF02-E3"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "research"
+          },
+          "title": "Research review recorded (modeled)",
+          "id": "WF02-E4"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF03",
+      "name": "Research approval is missing",
+      "split": "DEV",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF03-E1"
+        },
+        {
+          "kind": "request",
+          "payload": {
+            "id": "REQ-ONC-001",
+            "purpose": "scientific_research",
+            "data_form": "pseudonymized",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "basis": "pseudonymized_research_reviewed",
+            "jurisdiction": "KR",
+            "consent": false
+          },
+          "title": "Request",
+          "id": "WF03-E2"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy"
+          },
+          "title": "Privacy review recorded (modeled)",
+          "id": "WF03-E3"
+        },
+        {
+          "kind": "tick",
+          "payload": {},
+          "title": "Tick",
+          "id": "WF03-E4"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF04",
+      "name": "Identifiable export is outside modeled permission",
+      "split": "DEV",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF04-E1"
+        },
+        {
+          "kind": "request",
+          "payload": {
+            "id": "REQ-ONC-001",
+            "purpose": "scientific_research",
+            "data_form": "identified",
+            "fields": [
+              "full_record"
+            ],
+            "basis": "pseudonymized_research_reviewed",
+            "jurisdiction": "KR",
+            "consent": false
+          },
+          "title": "Request",
+          "id": "WF04-E2"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy"
+          },
+          "title": "Privacy review recorded (modeled)",
+          "id": "WF04-E3"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "research"
+          },
+          "title": "Research review recorded (modeled)",
+          "id": "WF04-E4"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF05",
+      "name": "Progressive oncology flagship",
+      "split": "CONFIRMATION",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF05-E1"
+        },
+        {
+          "kind": "telemetry",
+          "payload": {
+            "validity": "UNVERIFIED",
+            "source": "modeled wearable session",
+            "freshness": "delayed",
+            "reason": "Device provenance not established"
+          },
+          "title": "Telemetry cannot be trusted",
+          "id": "WF05-E2"
+        },
+        {
+          "kind": "request",
+          "payload": {
+            "id": "REQ-ONC-001",
+            "purpose": "scientific_research",
+            "data_form": "pseudonymized",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "basis": "pseudonymized_research_reviewed",
+            "jurisdiction": "KR",
+            "consent": false
+          },
+          "title": "Request",
+          "id": "WF05-E3"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy"
+          },
+          "title": "Privacy review recorded (modeled)",
+          "id": "WF05-E4"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "research"
+          },
+          "title": "Research review recorded (modeled)",
+          "id": "WF05-E5"
+        },
+        {
+          "kind": "oversight",
+          "payload": {
+            "high_impact_requested": true,
+            "classification_evidence": "unresolved"
+          },
+          "title": "Human oversight requested",
+          "id": "WF05-E6"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF06",
+      "name": "Revocation before the second required approval",
+      "split": "CONFIRMATION",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF06-E1"
+        },
+        {
+          "kind": "request",
+          "payload": {
+            "id": "REQ-ONC-001",
+            "purpose": "scientific_research",
+            "data_form": "pseudonymized",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "basis": "pseudonymized_research_reviewed",
+            "jurisdiction": "KR",
+            "consent": false
+          },
+          "title": "Request",
+          "id": "WF06-E2"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy"
+          },
+          "title": "Privacy review recorded (modeled)",
+          "id": "WF06-E3"
+        },
+        {
+          "kind": "revoke",
+          "payload": {},
+          "title": "Authorization revoked",
+          "id": "WF06-E4"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "research"
+          },
+          "title": "Research review recorded (modeled)",
+          "id": "WF06-E5"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF07",
+      "name": "Wrong institutional approval issuer",
+      "split": "CONFIRMATION",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF07-E1"
+        },
+        {
+          "kind": "request",
+          "payload": {
+            "id": "REQ-ONC-001",
+            "purpose": "scientific_research",
+            "data_form": "pseudonymized",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "basis": "pseudonymized_research_reviewed",
+            "jurisdiction": "KR",
+            "consent": false
+          },
+          "title": "Request",
+          "id": "WF07-E2"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy",
+            "issuer": "research_agent_claim"
+          },
+          "title": "Approval",
+          "id": "WF07-E3"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "research"
+          },
+          "title": "Research review recorded (modeled)",
+          "id": "WF07-E4"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF08",
+      "name": "Pseudonymized basis without blanket individual consent",
+      "split": "CONFIRMATION",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF08-E1"
+        },
+        {
+          "kind": "request",
+          "payload": {
+            "id": "REQ-ONC-001",
+            "purpose": "scientific_research",
+            "data_form": "pseudonymized",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "basis": "pseudonymized_research_reviewed",
+            "jurisdiction": "KR",
+            "consent": false
+          },
+          "title": "Request",
+          "id": "WF08-E2"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "research"
+          },
+          "title": "Research review recorded (modeled)",
+          "id": "WF08-E3"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy"
+          },
+          "title": "Privacy review recorded (modeled)",
+          "id": "WF08-E4"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF09",
+      "name": "Foreign authorization cannot replace Korean permission",
+      "split": "CONFIRMATION",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF09-E1"
+        },
+        {
+          "kind": "request",
+          "payload": {
+            "id": "REQ-ONC-001",
+            "purpose": "scientific_research",
+            "data_form": "pseudonymized",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "basis": "pseudonymized_research_reviewed",
+            "jurisdiction": "OTHER",
+            "consent": false
+          },
+          "title": "Request",
+          "id": "WF09-E2"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy"
+          },
+          "title": "Privacy review recorded (modeled)",
+          "id": "WF09-E3"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "research"
+          },
+          "title": "Research review recorded (modeled)",
+          "id": "WF09-E4"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF10",
+      "name": "Relevant policy evidence unavailable",
+      "split": "CONFIRMATION",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF10-E1"
+        },
+        {
+          "kind": "request",
+          "payload": {
+            "id": "REQ-ONC-001",
+            "purpose": "scientific_research",
+            "data_form": "pseudonymized",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "basis": "pseudonymized_research_reviewed",
+            "jurisdiction": "KR",
+            "consent": false
+          },
+          "title": "Request",
+          "id": "WF10-E2"
+        },
+        {
+          "kind": "source_status",
+          "payload": {
+            "unavailable": [
+              "KR-PIPA-ART28-2-PSEUDONYM-001"
+            ]
+          },
+          "title": "Source Status",
+          "id": "WF10-E3"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy"
+          },
+          "title": "Privacy review recorded (modeled)",
+          "id": "WF10-E4"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "research"
+          },
+          "title": "Research review recorded (modeled)",
+          "id": "WF10-E5"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF11",
+      "name": "Unverified DT cannot replace professional review",
+      "split": "CONFIRMATION",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF11-E1"
+        },
+        {
+          "kind": "telemetry",
+          "payload": {
+            "validity": "UNVERIFIED",
+            "source": "modeled wearable session",
+            "freshness": "delayed",
+            "reason": "Device provenance not established"
+          },
+          "title": "Telemetry cannot be trusted",
+          "id": "WF11-E2"
+        },
+        {
+          "kind": "dt_request",
+          "payload": {},
+          "title": "Dt Request",
+          "id": "WF11-E3"
+        },
+        {
+          "kind": "oversight",
+          "payload": {
+            "high_impact_requested": true,
+            "classification_evidence": "unresolved"
+          },
+          "title": "Human oversight requested",
+          "id": "WF11-E4"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    },
+    {
+      "family_id": "WF12",
+      "name": "Expired approval is renewed explicitly",
+      "split": "CONFIRMATION",
+      "events": [
+        {
+          "kind": "clinical",
+          "payload": {
+            "episode_code": "MODELED-ONC-042",
+            "fever_reported": true,
+            "symptom_band": "reported_concern",
+            "reported_at": "21:15",
+            "display_temperature": "38.4 °C (modeled)"
+          },
+          "title": "Patient reports a concern",
+          "id": "WF12-E1"
+        },
+        {
+          "kind": "request",
+          "payload": {
+            "id": "REQ-ONC-001",
+            "purpose": "scientific_research",
+            "data_form": "pseudonymized",
+            "fields": [
+              "episode_code",
+              "symptom_band",
+              "reported_at"
+            ],
+            "basis": "pseudonymized_research_reviewed",
+            "jurisdiction": "KR",
+            "consent": false
+          },
+          "title": "Request",
+          "id": "WF12-E2"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy",
+            "valid_for": 0
+          },
+          "title": "Approval",
+          "id": "WF12-E3"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "research"
+          },
+          "title": "Research review recorded (modeled)",
+          "id": "WF12-E4"
+        },
+        {
+          "kind": "tick",
+          "payload": {},
+          "title": "Tick",
+          "id": "WF12-E5"
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "kind": "privacy"
+          },
+          "title": "Privacy review recorded (modeled)",
+          "id": "WF12-E6"
+        }
+      ],
+      "model_scope": "scenario-derived institutional modeling; no patient data"
+    }
+  ]
+}

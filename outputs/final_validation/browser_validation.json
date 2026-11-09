@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "checks_passed": 18,
+  "checks_total": 18,
+  "checks": [
+    {
+      "check": "five_institution_cards",
+      "pass": true
+    },
+    {
+      "check": "initial_future_request_not_present",
+      "pass": true
+    },
+    {
+      "check": "research_request_is_held",
+      "pass": true
+    },
+    {
+      "check": "unverified_telemetry_visible",
+      "pass": true
+    },
+    {
+      "check": "research_view_excludes_clinical",
+      "pass": true
+    },
+    {
+      "check": "approved_minimized_view_released",
+      "pass": true
+    },
+    {
+      "check": "scenario_finishes_without_future_overrun",
+      "pass": true
+    },
+    {
+      "check": "receipt_actual_proposal_lineage",
+      "pass": true
+    },
+    {
+      "check": "receipt_has_official_source",
+      "pass": true
+    },
+    {
+      "check": "trace_export_readable",
+      "pass": true
+    },
+    {
+      "check": "korean_search_produces_results",
+      "pass": true
+    },
+    {
+      "check": "unknown_exact_citation_has_no_nearby_substitute",
+      "pass": true
+    },
+    {
+      "check": "results_are_measured_not_placeholder",
+      "pass": true
+    },
+    {
+      "check": "page_no_javascript_errors",
+      "pass": true
+    },
+    {
+      "check": "900px_layout_no_horizontal_overflow",
+      "pass": true
+    },
+    {
+      "check": "invalid_session_rejected",
+      "pass": true
+    },
+    {
+      "check": "cross_origin_mutation_rejected",
+      "pass": true
+    },
+    {
+      "check": "unknown_scenario_rejected",
+      "pass": true
+    }
+  ],
+  "javascript_errors": [],
+  "browser": "Managed headless Chromium / Playwright; offline actual UI assets with test-only HTTP fetch bridge",
+  "transport_limitation": "Direct localhost browser navigation blocked by environment policy (ERR_BLOCKED_BY_ADMINISTRATOR). Browser policy was not modified. Live backend API exercised through urllib bridge. Native download dispatch intercepted; generated Blob and exported JSON checked.",
+  "viewports": [
+    [
+      1600,
+      1050
+    ],
+    [
+      900,
+      1100
+    ]
+  ],
+  "scope": "Local UI functional smoke tests, not accessibility certification or production penetration testing"
+}

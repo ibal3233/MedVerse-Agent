@@ -1,0 +1,46 @@
+{
+  "freeze_id": "MEDVERSE-BASELINES-G21-v1",
+  "research_hypothesis": "Institutionally asymmetric agents operating under bounded observations, knowledge, mandates and action authorities, coordinated by policy-feasible harmonization rather than consensus, should improve cross-institutional decision correctness while reducing policy, mandate, jurisdiction and information-boundary violations.",
+  "baselines": {
+    "B1_SINGLE_OMNISCIENT": {
+      "name": "Single Omniscient Agent",
+      "hard_policy_validator": false,
+      "institutional_partitions": false,
+      "harmonization": false
+    },
+    "B2_ROLE_PROMPTED_MAS": {
+      "name": "Role-Prompted Unconstrained MAS",
+      "hard_policy_validator": false,
+      "institutional_partitions": "soft/prompted",
+      "harmonization": false
+    },
+    "B3_CONSENSUS_MAS": {
+      "name": "Consensus / Debate MAS",
+      "hard_policy_validator": false,
+      "institutional_partitions": true,
+      "harmonization": "consensus_only"
+    },
+    "B4_POLICY_FILTERED_MAS": {
+      "name": "Policy-Filtered MAS without Harmonization",
+      "hard_policy_validator": true,
+      "institutional_partitions": true,
+      "harmonization": false
+    },
+    "B5_MEDVERSE_AGENT": {
+      "name": "MedVerse-Agent",
+      "hard_policy_validator": true,
+      "institutional_partitions": true,
+      "harmonization": true
+    }
+  },
+  "primary_metrics": [
+    "agent_action_accuracy",
+    "policy_grounding_accuracy",
+    "mandate_compliance_rate",
+    "wrong_jurisdiction_acceptance_rate",
+    "unauthorized_evidence_use_rate",
+    "harmonization_accuracy",
+    "unnecessary_escalation_rate",
+    "cross_institutional_conflict_resolution_rate"
+  ]
+}

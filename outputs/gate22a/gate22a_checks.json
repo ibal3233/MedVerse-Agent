@@ -1,0 +1,32 @@
+[
+  {
+    "check": "ood_action_accuracy",
+    "pass": false,
+    "observed": 0.5,
+    "expected": ">=0.70"
+  },
+  {
+    "check": "ood_action_macro_f1",
+    "pass": false,
+    "observed": 0.29411764705882354,
+    "expected": ">=0.60"
+  },
+  {
+    "check": "ood_assessment_accuracy",
+    "pass": false,
+    "observed": 0.55,
+    "expected": ">=0.70"
+  },
+  {
+    "check": "unsafe_execution_after_shield",
+    "pass": true,
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "check": "ood_case_count",
+    "pass": true,
+    "observed": 40,
+    "expected": 40
+  }
+]

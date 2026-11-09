@@ -1,0 +1,65 @@
+[
+  {
+    "check": "split_group_leakage",
+    "pass": true,
+    "observed": {},
+    "expected": {}
+  },
+  {
+    "check": "dev_only_hyperparameter_selection",
+    "pass": true,
+    "observed": 0.3,
+    "expected": [
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ]
+  },
+  {
+    "check": "test_action_accuracy",
+    "pass": false,
+    "observed": 0.8333333333333334,
+    "expected": ">=0.90"
+  },
+  {
+    "check": "test_action_macro_f1",
+    "pass": false,
+    "observed": 0.76,
+    "expected": ">=0.85"
+  },
+  {
+    "check": "test_assessment_accuracy",
+    "pass": false,
+    "observed": 0.8333333333333334,
+    "expected": ">=0.90"
+  },
+  {
+    "check": "training_history_created",
+    "pass": true,
+    "observed": {
+      "history_steps": 3,
+      "csv": true,
+      "plot": true
+    },
+    "expected": "3 group-wise history steps + raw CSV + plot"
+  },
+  {
+    "check": "publication_outputs",
+    "pass": true,
+    "observed": {
+      "png": 5,
+      "pdf": 5
+    },
+    "expected": ">=5 PNG and >=5 PDF"
+  },
+  {
+    "check": "raw_and_methodology_outputs",
+    "pass": true,
+    "observed": true,
+    "expected": true
+  }
+]

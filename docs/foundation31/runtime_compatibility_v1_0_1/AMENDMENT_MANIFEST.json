@@ -1,0 +1,35 @@
+{
+  "version": "1.0.1-runtime-compatibility",
+  "changes": [
+    {
+      "path": "foundation31/retrieval.py",
+      "before_sha256": "93e613a6e96385ab2943b0bffba6f6eec569544bfb90967e5f169a47bf869728",
+      "after_sha256": "4b545ec9b2a29181a43d6153eff7f25778a09a81d1b3148163e53e399ca4b0cc"
+    },
+    {
+      "path": "foundation31/figures.py",
+      "before_sha256": "809647b319a18433fcca46fe8f33788047f81485f85b8bc5e21efe09f8c55713",
+      "after_sha256": "11c70710ed4434d5200e3fe103b41a8cc18a94275a9150e2f8f7d724918eaaee"
+    },
+    {
+      "path": "foundation31/evaluate.py",
+      "before_sha256": "d1f1b1352ef6a07f4b87116d0e13af953a9408cf0ecafa878f198baf94bab0db",
+      "after_sha256": "ed949af6f7a175e74bad04210c1d5229adc09f62a890b00999b65ad8cd32a89a"
+    }
+  ],
+  "added": [
+    {
+      "path": "foundation31/runtime_support.py",
+      "sha256": "612e3d4a8aff8b142ee00246dd6e552603152c601b26d91cb5a31a4d6bd51b7f"
+    },
+    {
+      "path": "foundation31/test_runtime_compatibility.py",
+      "sha256": "83b833fa82f7af250c5e7908f1e1d72c9aeb59f5d918710e77961f42d083abb9"
+    }
+  ],
+  "prior_freeze_sha256": "8f90e1b2d27bc09cb444193e9fd0d902f2d01a698b7eab6554396c8d30f0086d",
+  "amended_freeze_sha256": "52ebf80cf730380ef7a068a8647f0c5d8920ec2d63683e244174d633c3c630a0",
+  "prior_results_overwritten": false,
+  "original_runner_modified": false,
+  "corpus_or_model_tuning": false
+}

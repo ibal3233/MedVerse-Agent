@@ -1,0 +1,248 @@
+[
+  {
+    "case_id": "H1_S1_COMPLEMENTARY",
+    "expected_state": "COMPLEMENTARY",
+    "positions": [
+      {
+        "agent_id": "hospital_agent",
+        "assessment_code": "POSSIBLE_CRITICAL_CLINICAL_DETERIORATION",
+        "proposed_actions": [
+          "VERIFY_MEASUREMENT",
+          "CONTACT_PATIENT",
+          "REQUEST_HUMAN_CLINICAL_REVIEW"
+        ],
+        "boundary_status": "COMPLIANT",
+        "enforcement": "PERMIT",
+        "policy_ids": [
+          "KR-MSA-ART21-ACCESS-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": true,
+        "priority": "URGENT"
+      },
+      {
+        "agent_id": "cyber_network_agent",
+        "assessment_code": "DEVICE_IDENTITY_INTEGRITY_UNCERTAIN",
+        "proposed_actions": [
+          "VERIFY_DEVICE_IDENTITY",
+          "MARK_TELEMETRY_UNVERIFIED",
+          "PRESERVE_TECHNICAL_LOGS"
+        ],
+        "boundary_status": "COMPLIANT",
+        "enforcement": "PERMIT",
+        "policy_ids": [
+          "KR-PIPCG-2026-SAFEGUARDS-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": false,
+        "priority": "HIGH"
+      }
+    ],
+    "context": {}
+  },
+  {
+    "case_id": "H2_S1_CONDITIONAL",
+    "expected_state": "CONDITIONAL_HARMONIZATION",
+    "positions": [
+      {
+        "agent_id": "hospital_agent",
+        "assessment_code": "POSSIBLE_CRITICAL_CLINICAL_DETERIORATION",
+        "proposed_actions": [
+          "CONTACT_PATIENT",
+          "USE_INDEPENDENT_MEASUREMENT_CHANNEL"
+        ],
+        "boundary_status": "COMPLIANT",
+        "enforcement": "PERMIT",
+        "policy_ids": [
+          "KR-MSA-ART21-ACCESS-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": false,
+        "priority": "URGENT"
+      },
+      {
+        "agent_id": "cyber_network_agent",
+        "assessment_code": "DEVICE_IDENTITY_INTEGRITY_UNCERTAIN",
+        "proposed_actions": [
+          "VERIFY_DEVICE_IDENTITY",
+          "REQUEST_ALTERNATIVE_CHANNEL"
+        ],
+        "boundary_status": "COMPLIANT",
+        "enforcement": "PERMIT",
+        "policy_ids": [
+          "KR-PIPCG-2026-SAFEGUARDS-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": false,
+        "priority": "HIGH"
+      }
+    ],
+    "context": {
+      "telemetry_trust": "UNVERIFIED",
+      "clinical_priority": "URGENT",
+      "requires_trusted_measurement_before_dt_use": true
+    }
+  },
+  {
+    "case_id": "H3_S2_AGREEMENT",
+    "expected_state": "AGREEMENT",
+    "positions": [
+      {
+        "agent_id": "privacy_agent",
+        "assessment_code": "CARE_ALLOWED_RESEARCH_WITHDRAWN",
+        "proposed_actions": [
+          "PRESERVE_PRIVACY_AUDIT_LOG"
+        ],
+        "boundary_status": "COMPLIANT",
+        "enforcement": "PERMIT",
+        "policy_ids": [
+          "KR-PIPA-ART18-PURPOSE-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": false
+      },
+      {
+        "agent_id": "research_irb_agent",
+        "assessment_code": "RESEARCH_PROCESSING_NOT_AUTHORIZED",
+        "proposed_actions": [
+          "BLOCK_RESEARCH_PROCESSING",
+          "PRESERVE_RESEARCH_AUDIT_LOG"
+        ],
+        "boundary_status": "COMPLIANT",
+        "enforcement": "PERMIT",
+        "policy_ids": [
+          "KR-BIOETHICS-ART37-WITHDRAWAL-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": false
+      }
+    ],
+    "context": {
+      "all_agents_agree": true
+    }
+  },
+  {
+    "case_id": "H4_S4_INSTITUTIONAL_CONFLICT_RECONCILED",
+    "expected_state": "INSTITUTIONAL_CONFLICT",
+    "positions": [
+      {
+        "agent_id": "hospital_agent",
+        "assessment_code": "URGENT_EXTERNAL_COLLABORATION_REQUESTED",
+        "proposed_actions": [
+          "CONTACT_PATIENT"
+        ],
+        "boundary_status": "COMPLIANT",
+        "enforcement": "PERMIT",
+        "policy_ids": [
+          "KR-MSA-ART21-ACCESS-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": false
+      },
+      {
+        "agent_id": "privacy_agent",
+        "assessment_code": "UNAUTHORIZED_OR_EXCESSIVE_DISCLOSURE_REQUEST",
+        "proposed_actions": [
+          "LIMIT_DISCLOSURE_TO_MINIMUM_NECESSARY"
+        ],
+        "boundary_status": "COMPLIANT",
+        "enforcement": "PERMIT",
+        "policy_ids": [
+          "KR-PIPA-ART18-PURPOSE-001",
+          "KR-HMDUG-2025-PURPOSE-MIN-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": false
+      }
+    ],
+    "context": {
+      "institutional_conflict": "CARE_VS_DISCLOSURE",
+      "alternative_available": true,
+      "compliant_alternative": "REQUEST_MINIMUM_NECESSARY_CLINICAL_DATA"
+    }
+  },
+  {
+    "case_id": "H5_POLICY_CONFLICT_BLOCKED",
+    "expected_state": "POLICY_CONFLICT",
+    "positions": [
+      {
+        "agent_id": "privacy_agent",
+        "assessment_code": "DISCLOSURE_REQUEST",
+        "proposed_actions": [
+          "ALLOW_AUTHORIZED_DISCLOSURE"
+        ],
+        "boundary_status": "OUT_OF_POLICY",
+        "enforcement": "BLOCK",
+        "policy_ids": [
+          "KR-PIPA-ART18-PURPOSE-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": false
+      }
+    ],
+    "context": {}
+  },
+  {
+    "case_id": "H6_INSUFFICIENT_EVIDENCE",
+    "expected_state": "INSUFFICIENT_EVIDENCE",
+    "positions": [
+      {
+        "agent_id": "privacy_agent",
+        "assessment_code": "DISCLOSURE_AUTHORIZATION_UNKNOWN",
+        "proposed_actions": [],
+        "boundary_status": "INSUFFICIENT_EVIDENCE",
+        "enforcement": "ESCALATE",
+        "policy_ids": [],
+        "requested_evidence": [
+          "DISCLOSURE_AUTHORIZATION",
+          "DECLARED_PURPOSE"
+        ],
+        "human_review_required": false
+      }
+    ],
+    "context": {}
+  },
+  {
+    "case_id": "H7_HUMAN_AUTHORITY_REQUIRED",
+    "expected_state": "HUMAN_AUTHORITY_REQUIRED",
+    "positions": [
+      {
+        "agent_id": "hospital_agent",
+        "assessment_code": "POSSIBLE_CRITICAL_CLINICAL_DETERIORATION",
+        "proposed_actions": [
+          "REQUEST_HUMAN_CLINICAL_REVIEW"
+        ],
+        "boundary_status": "COMPLIANT",
+        "enforcement": "PERMIT",
+        "policy_ids": [
+          "KR-MSA-ART21-ACCESS-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": true,
+        "priority": "URGENT"
+      },
+      {
+        "agent_id": "regulator_agent",
+        "assessment_code": "HIGH_IMPACT_AI_REQUIRES_VALIDATED_EVIDENCE_AND_OVERSIGHT",
+        "proposed_actions": [
+          "REQUEST_HUMAN_OVERSIGHT"
+        ],
+        "boundary_status": "COMPLIANT",
+        "enforcement": "PERMIT",
+        "policy_ids": [
+          "KR-AI-ACT-ART34-HIGHIMPACT-DUTIES-001"
+        ],
+        "requested_evidence": [],
+        "human_review_required": true
+      }
+    ],
+    "context": {
+      "machine_resolvable": false,
+      "human_authority_required": true,
+      "escalation_targets": [
+        "AUTHORIZED_CLINICIAN",
+        "HUMAN_AI_OVERSIGHT"
+      ]
+    }
+  }
+]
