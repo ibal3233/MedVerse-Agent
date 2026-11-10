@@ -1,0 +1,134 @@
+{
+  "release": "Team MedVerse final sandbox candidate",
+  "created_utc": "2026-11-10T14:28:57.701930+00:00",
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "required_checks_pass": false,
+  "checks": [
+    {
+      "check": "required:README.md",
+      "pass": true
+    },
+    {
+      "check": "required:submission/TECHNICAL-REPORT.md",
+      "pass": true
+    },
+    {
+      "check": "required:submission/Team_MedVerse_Final_Report_RC4.pdf",
+      "pass": true
+    },
+    {
+      "check": "required:submission/Team_MedVerse_Final_Report_RC4.docx",
+      "pass": true
+    },
+    {
+      "check": "required:submission/demo/Team_MedVerse_Demo.mp4",
+      "pass": false
+    },
+    {
+      "check": "required:submission/demo/Team_MedVerse_Demo_Captions.srt",
+      "pass": false
+    },
+    {
+      "check": "required:docs/architecture/medverse_system_architecture.png",
+      "pass": true
+    },
+    {
+      "check": "required:docs/architecture/korean_policy_pipeline.png",
+      "pass": true
+    },
+    {
+      "check": "required:docs/knowledge_base/KOREAN_POLICY_KB.md",
+      "pass": true
+    },
+    {
+      "check": "required:docs/standards/ITU_AND_READINESS_MAPPING.md",
+      "pass": true
+    },
+    {
+      "check": "required:docs/evaluation/RESEARCH_QUESTIONS.md",
+      "pass": true
+    },
+    {
+      "check": "required:run_presenter_sandbox.py",
+      "pass": true
+    },
+    {
+      "check": "required:run_commitment_sandbox.py",
+      "pass": true
+    },
+    {
+      "check": "import:medverse.digital_twin",
+      "pass": true,
+      "detail": "imported"
+    },
+    {
+      "check": "import:foundation31.retrieval",
+      "pass": true,
+      "detail": "imported"
+    },
+    {
+      "check": "import:release33.server",
+      "pass": true,
+      "detail": "imported"
+    },
+    {
+      "check": "optional_ncc_csv_present",
+      "pass": false,
+      "required": false,
+      "detail": "Optional population context; absence does not block the sandbox."
+    }
+  ],
+  "key_files": {
+    "README.md": {
+      "sha256": "b514e282fb7716d7917c94b8b370acabd13bf133ab78f577d05a4254c17557b4",
+      "size_bytes": 10247
+    },
+    "submission/TECHNICAL-REPORT.md": {
+      "sha256": "b1fa35f3ecca4efd6803659fb5a02a5c072c5bd6e4841f29f6c2ed23d3ec510e",
+      "size_bytes": 15175
+    },
+    "submission/Team_MedVerse_Final_Report_RC4.pdf": {
+      "sha256": "f2bc52796f446c4c440568ef4b49a14f28b687960b1963720bbaed725fe6095c",
+      "size_bytes": 3234725
+    },
+    "submission/Team_MedVerse_Final_Report_RC4.docx": {
+      "sha256": "75d092c06ac174948ac4f596a52a76deee143020ed33a22291972a0afc98fe65",
+      "size_bytes": 4039498
+    },
+    "docs/architecture/medverse_system_architecture.png": {
+      "sha256": "43439c67f9893159083f288ac2824e74466dbbff6c3ebb9c5054246070cd55a2",
+      "size_bytes": 32273
+    },
+    "docs/architecture/korean_policy_pipeline.png": {
+      "sha256": "ed00c9b1cc7cb0289c5ac85650ad86af83f11cc87fc7aaff5f311e88b203c1ce",
+      "size_bytes": 55828
+    },
+    "docs/knowledge_base/KOREAN_POLICY_KB.md": {
+      "sha256": "4b494a5f29e708086000c7adeee34a6d55984385e99aa5e60e7c5a0cb1506e21",
+      "size_bytes": 2239
+    },
+    "docs/standards/ITU_AND_READINESS_MAPPING.md": {
+      "sha256": "221320b8d78b6ac41ddcec465193428c1a5c4f42886fb33850caa6197ca25159",
+      "size_bytes": 1742
+    },
+    "docs/evaluation/RESEARCH_QUESTIONS.md": {
+      "sha256": "d5c6bcda93287b92a48abedb702ddf48508c3b62b75d6301adc04c56652cdbfe",
+      "size_bytes": 1152
+    },
+    "run_presenter_sandbox.py": {
+      "sha256": "c49fc9c28af964abe50e579f9ee81a79dad705e6a0c32e002e1c54e6ec9a833e",
+      "size_bytes": 188
+    },
+    "run_commitment_sandbox.py": {
+      "sha256": "b3640dfec119bf269dbd6a55c89b2ae2f84d0ed7394dd60bc89265c2a89e71a1",
+      "size_bytes": 176
+    }
+  },
+  "manual_before_publication": [
+    "Create the final GitHub repository and tag v1.0-hackathon.",
+    "Insert the public GitHub URL into the final report header and regenerate the PDF if it still contains a placeholder.",
+    "Verify the sandbox and trace download in a native Windows/macOS browser.",
+    "Confirm redistribution permissions for any primary-source PDFs and optional NCC CSV before public upload."
+  ]
+}
