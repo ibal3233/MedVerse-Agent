@@ -1,0 +1,147 @@
+{
+  "release": "Team MedVerse final sandbox candidate",
+  "created_utc": "2026-11-10T11:03:42.707697+00:00",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "required_checks_pass": true,
+  "checks": [
+    {
+      "check": "required:README.md",
+      "pass": true
+    },
+    {
+      "check": "required:submission/TECHNICAL-REPORT.md",
+      "pass": true
+    },
+    {
+      "check": "required:submission/Team_MedVerse_Final_Report_FINAL_CROSS_REFERENCED.pdf",
+      "pass": true
+    },
+    {
+      "check": "required:submission/Team_MedVerse_Final_Report_FINAL_CROSS_REFERENCED.docx",
+      "pass": true
+    },
+    {
+      "check": "required:submission/demo/Team_MedVerse_Demo.mp4",
+      "pass": true
+    },
+    {
+      "check": "required:submission/demo/Team_MedVerse_Demo_Captions.srt",
+      "pass": true
+    },
+    {
+      "check": "required:docs/architecture/medverse_system_architecture.png",
+      "pass": true
+    },
+    {
+      "check": "required:docs/architecture/korean_policy_pipeline.png",
+      "pass": true
+    },
+    {
+      "check": "required:docs/knowledge_base/KOREAN_POLICY_KB.md",
+      "pass": true
+    },
+    {
+      "check": "required:docs/standards/ITU_AND_READINESS_MAPPING.md",
+      "pass": true
+    },
+    {
+      "check": "required:docs/evaluation/RESEARCH_QUESTIONS.md",
+      "pass": true
+    },
+    {
+      "check": "required:run_presenter_sandbox.py",
+      "pass": true
+    },
+    {
+      "check": "required:run_commitment_sandbox.py",
+      "pass": true
+    },
+    {
+      "check": "import:medverse.digital_twin",
+      "pass": true,
+      "detail": "imported"
+    },
+    {
+      "check": "import:foundation31.retrieval",
+      "pass": true,
+      "detail": "imported"
+    },
+    {
+      "check": "import:release33.server",
+      "pass": true,
+      "detail": "imported"
+    },
+    {
+      "check": "demo_video_under_50MiB",
+      "pass": true,
+      "size_bytes": 26630812
+    },
+    {
+      "check": "optional_ncc_csv_present",
+      "pass": false,
+      "required": false,
+      "detail": "Optional population context; absence does not block the sandbox."
+    }
+  ],
+  "key_files": {
+    "README.md": {
+      "sha256": "641128996cc535337ab043de7a570592d355eb08bb27b916c1c031f097834108",
+      "size_bytes": 12431
+    },
+    "submission/TECHNICAL-REPORT.md": {
+      "sha256": "a55ff20182b359fad5745b41ae90e7e2d4769cea58e013a6a1103ea76d454092",
+      "size_bytes": 14959
+    },
+    "submission/Team_MedVerse_Final_Report_FINAL_CROSS_REFERENCED.pdf": {
+      "sha256": "a4a33cb194f8379f2ee8b2a63de25f4fd86b3c1b3e389cd3fd1ce4f369ba03bc",
+      "size_bytes": 3063275
+    },
+    "submission/Team_MedVerse_Final_Report_FINAL_CROSS_REFERENCED.docx": {
+      "sha256": "b6a7a2c834b99618b45894c36acd2703eb40a3c2f7ae99cce7d56e4831f9a474",
+      "size_bytes": 4861109
+    },
+    "submission/demo/Team_MedVerse_Demo.mp4": {
+      "sha256": "20d70661e97bf1d883e68d6c2982aa5a5f246e6bc84525bb3f1af3495aed03ea",
+      "size_bytes": 26630812
+    },
+    "submission/demo/Team_MedVerse_Demo_Captions.srt": {
+      "sha256": "af72377d9a7bec602625ed5da3d14230aca11b3f195690775d01af4267bd976f",
+      "size_bytes": 9978
+    },
+    "docs/architecture/medverse_system_architecture.png": {
+      "sha256": "50bf4e9f7535906c517d043ef7d06e6cf8deede74beea6c2383e01c2ad6952a0",
+      "size_bytes": 40732
+    },
+    "docs/architecture/korean_policy_pipeline.png": {
+      "sha256": "b8614cba0e662b31eb215af1fe65325a4e84eb09b9a30685b24ada2caf30071f",
+      "size_bytes": 61114
+    },
+    "docs/knowledge_base/KOREAN_POLICY_KB.md": {
+      "sha256": "d50ed6eabea629e9d471f33845129b9319d2956dd42fe1aed82c51dabc2da5ff",
+      "size_bytes": 11127
+    },
+    "docs/standards/ITU_AND_READINESS_MAPPING.md": {
+      "sha256": "221320b8d78b6ac41ddcec465193428c1a5c4f42886fb33850caa6197ca25159",
+      "size_bytes": 1742
+    },
+    "docs/evaluation/RESEARCH_QUESTIONS.md": {
+      "sha256": "09adda3a4099cca07a35058b640bbec0ffacd284f6266179279bc15483ce265f",
+      "size_bytes": 1263
+    },
+    "run_presenter_sandbox.py": {
+      "sha256": "c49fc9c28af964abe50e579f9ee81a79dad705e6a0c32e002e1c54e6ec9a833e",
+      "size_bytes": 188
+    },
+    "run_commitment_sandbox.py": {
+      "sha256": "b3640dfec119bf269dbd6a55c89b2ae2f84d0ed7394dd60bc89265c2a89e71a1",
+      "size_bytes": 176
+    }
+  },
+  "manual_before_publication": [
+    "Create the final GitHub repository and tag v1.0-hackathon.",
+    "Insert the public GitHub URL into the final report header and regenerate the PDF if it still contains a placeholder.",
+    "Verify the sandbox and trace download in a native Windows/macOS browser.",
+    "Confirm redistribution permissions for any primary-source PDFs and optional NCC CSV before public upload."
+  ]
+}

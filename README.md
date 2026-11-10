@@ -9,14 +9,21 @@
 
 ## Submission shortcuts
 
-- 📄 **Final report + annex:** [`submission/Team_MedVerse_Final_Report_RC4.pdf`](submission/Team_MedVerse_Final_Report_RC4.pdf)
+- 📄 **Final report + annex:** [`submission/Team_MedVerse_Final_Report_FINAL.pdf`](submission/Team_MedVerse_Final_Report_FINAL.pdf)
+- 📘 **Knowledge Base submission guide:** [`submission/Team_MedVerse_Knowledge_Base_FINAL_Submission_Guide.pdf`](submission/Team_MedVerse_Knowledge_Base_FINAL_Submission_Guide.pdf)
 - 🧾 **GitHub technical report:** [`submission/TECHNICAL-REPORT.md`](submission/TECHNICAL-REPORT.md)
-- 🎥 **6:45 demo video:** [`submission/demo/Team_MedVerse_Demo.mp4`](submission/demo/Team_MedVerse_Demo.mp4)
-- 💬 **Demo captions:** [`submission/demo/Team_MedVerse_Demo_Captions.srt`](submission/demo/Team_MedVerse_Demo_Captions.srt)
-- 📚 **Korean policy corpus documentation:** [`docs/knowledge_base/`](docs/knowledge_base/)
+- 🎥 **Final demo video:** [Google Drive — final Team MedVerse demo](https://drive.google.com/file/d/1i_TQl7wTeNfRoaE91CMIxkhKumJ3jZ8J/view?usp=drive_link)
+- 📚 **Korean policy corpus and official source mapping:** [`docs/knowledge_base/KOREAN_POLICY_KB.md`](docs/knowledge_base/KOREAN_POLICY_KB.md)
 - 🌐 **ITU / standards mapping:** [`docs/standards/`](docs/standards/)
-- 📊 **Selected results:** [`docs/evaluation/`](docs/evaluation/)
+- 📊 **Final visual evidence gallery:** [`docs/evaluation/RESULTS_GALLERY.md`](docs/evaluation/RESULTS_GALLERY.md)
 - ▶️ **Quick demo:** see [Quick start](#quick-start)
+
+---
+
+## Final demo video
+
+▶ **Watch the final Team MedVerse demonstration:**  
+https://drive.google.com/file/d/1i_TQl7wTeNfRoaE91CMIxkhKumJ3jZ8J/view?usp=drive_link
 
 ---
 
@@ -47,6 +54,48 @@ The governing design principle is:
 ![Korean policy processing pipeline](docs/architecture/korean_policy_pipeline.png)
 
 Policy jurisdiction and institutional access are constrained **before** semantic similarity. Retrieval identifies evidence; it does not itself authorize execution.
+
+---
+
+## Results at a glance
+
+The figures below are the **cropped versions used in the final report**. Their explanatory notes are retained inside each image so that the evidence and its boundary can be read directly while scrolling. See the [complete results gallery](docs/evaluation/RESULTS_GALLERY.md) for all final-report plots.
+
+### Architectural coordination
+
+![Architectural coordination quality](docs/evaluation/architectural_coordination_quality.png)
+
+The main bounded result is B4→B5: independent policy filtering does not reproduce the complete encoded cross-institution workflow, whereas the full MedVerse reference architecture does so within the frozen benchmark.
+
+### Digital Twin evidence validity
+
+![Digital Twin freshness](docs/evaluation/digital_twin_freshness.png)
+
+Freshness is tracked at the level of required observed fields; unrelated consent or policy metadata must not make older telemetry appear current.
+
+### Korean / English policy retrieval
+
+![Bilingual policy retrieval](docs/evaluation/bilingual_retrieval.png)
+
+Policy retrieval is language- and backend-sensitive. Aggregate Recall@3 does not imply identical query-level rankings.
+
+### Bounded commitment under partial information
+
+![Commitment trade-off](docs/evaluation/commitment_tradeoff.png)
+
+Waiting can preserve a later authorized alternative, but it can also forfeit an earlier valid opportunity; the capable bounded-wait control ties MedVerse.
+
+### Inspectable commitment timing
+
+![Commitment timing](docs/evaluation/commitment_timeline.png)
+
+WAIT, PREPARE and COMMIT are explicit execution dispositions. Preparation never counts as care completion, disclosure or approval.
+
+### Institution-specific contributions
+
+![Institutional contributions](docs/evaluation/agent_contributions.png)
+
+These counts describe correlated decision opportunities and modeled effects, not per-agent predictive accuracy.
 
 ---
 
@@ -105,7 +154,7 @@ The current candidate corpus contains **44 curated policy records**, with **42 c
 - Health & Medical Data Utilization Guideline;
 - Pseudonymized Information Processing Guideline.
 
-Detailed mappings are in [`docs/knowledge_base/`](docs/knowledge_base/).
+The full Annex B1 corpus structure, clause-to-agent mapping, official source links and institutional scope are reproduced in [`docs/knowledge_base/KOREAN_POLICY_KB.md`](docs/knowledge_base/KOREAN_POLICY_KB.md).
 
 ### Retrieval
 

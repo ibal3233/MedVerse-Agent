@@ -17,7 +17,7 @@
 
 **The evidence.** The project contains component-level learning validation, a frozen B1–B5 architecture comparison, policy-retrieval tests, proposal-order studies, authorized-alternative selection, bounded commitment under partial information, and an inspectable HTTP/UI integration. Strong comparator ties and unfavorable cases are retained rather than tuned away.
 
-**Submission links.** [Final report](Team_MedVerse_Final_Report_RC4.pdf) · [Demo video](demo/Team_MedVerse_Demo.mp4) · [Captions](demo/Team_MedVerse_Demo_Captions.srt) · [Repository README](../README.md)
+**Submission links.** [Final report](Team_MedVerse_Final_Report_FINAL.pdf) · [Knowledge Base guide](Team_MedVerse_Knowledge_Base_FINAL_Submission_Guide.pdf) · [Demo video](https://drive.google.com/file/d/1i_TQl7wTeNfRoaE91CMIxkhKumJ3jZ8J/view?usp=drive_link) · [Repository README](../README.md)
 
 ---
 

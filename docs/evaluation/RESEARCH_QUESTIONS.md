@@ -1,5 +1,7 @@
 # Evaluation organized by research question
 
+> Final cropped figures and their report captions are available in the [Results Gallery](RESULTS_GALLERY.md).
+
 ## RQ1 — Evidence-grounded institutional decisions
 
 Evidence: audited Privacy/Cyber components; Digital Twin provenance/freshness; Korean/English policy retrieval.

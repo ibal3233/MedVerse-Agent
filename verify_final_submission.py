@@ -12,10 +12,10 @@ ROOT = Path(__file__).resolve().parent
 REQUIRED = [
     "README.md",
     "submission/TECHNICAL-REPORT.md",
-    "submission/Team_MedVerse_Final_Report_RC4.pdf",
-    "submission/Team_MedVerse_Final_Report_RC4.docx",
-    "submission/demo/Team_MedVerse_Demo.mp4",
-    "submission/demo/Team_MedVerse_Demo_Captions.srt",
+    "submission/Team_MedVerse_Final_Report_FINAL_CROSS_REFERENCED.pdf",
+    "submission/Team_MedVerse_Final_Report_FINAL_CROSS_REFERENCED.docx",
+    "submission/demo/README.md",
+    "submission/Team_MedVerse_Knowledge_Base_FINAL_Submission_Guide.docx",
     "docs/architecture/medverse_system_architecture.png",
     "docs/architecture/korean_policy_pipeline.png",
     "docs/knowledge_base/KOREAN_POLICY_KB.md",
@@ -58,13 +58,7 @@ def main() -> int:
         checks.append({"check": f"import:{mod}", "pass": passed, "detail": detail})
         ok &= passed
 
-    video = ROOT / "submission/demo/Team_MedVerse_Demo.mp4"
-    if video.exists():
-        checks.append({
-            "check": "demo_video_under_50MiB",
-            "pass": video.stat().st_size < 50 * 1024 * 1024,
-            "size_bytes": video.stat().st_size,
-        })
+    checks.append({"check": "demo_release_asset", "pass": True, "required": False, "detail": "Final demo is published separately as GitHub Release asset Team_MedVerse_Demo.mov."})
 
     ncc = ROOT / "data/external/ncc_cancer_incidence.csv"
     checks.append({

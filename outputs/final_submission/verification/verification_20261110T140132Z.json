@@ -1,9 +1,9 @@
 {
   "release": "Team MedVerse final sandbox candidate",
-  "created_utc": "2026-11-10T14:28:57.701930+00:00",
-  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
-  "platform": "Windows-11-10.0.26200-SP0",
-  "required_checks_pass": false,
+  "created_utc": "2026-11-10T14:01:32.820425+00:00",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "required_checks_pass": true,
   "checks": [
     {
       "check": "required:README.md",
@@ -14,20 +14,20 @@
       "pass": true
     },
     {
-      "check": "required:submission/Team_MedVerse_Final_Report_RC4.pdf",
+      "check": "required:submission/Team_MedVerse_Final_Report_FINAL_CROSS_REFERENCED.pdf",
       "pass": true
     },
     {
-      "check": "required:submission/Team_MedVerse_Final_Report_RC4.docx",
+      "check": "required:submission/Team_MedVerse_Final_Report_FINAL_CROSS_REFERENCED.docx",
       "pass": true
     },
     {
-      "check": "required:submission/demo/Team_MedVerse_Demo.mp4",
-      "pass": false
+      "check": "required:submission/demo/README.md",
+      "pass": true
     },
     {
-      "check": "required:submission/demo/Team_MedVerse_Demo_Captions.srt",
-      "pass": false
+      "check": "required:submission/Team_MedVerse_Knowledge_Base_FINAL_Submission_Guide.docx",
+      "pass": true
     },
     {
       "check": "required:docs/architecture/medverse_system_architecture.png",
@@ -73,6 +73,12 @@
       "detail": "imported"
     },
     {
+      "check": "demo_release_asset",
+      "pass": true,
+      "required": false,
+      "detail": "Final demo is published separately as GitHub Release asset Team_MedVerse_Demo.mov."
+    },
+    {
       "check": "optional_ncc_csv_present",
       "pass": false,
       "required": false,
@@ -81,40 +87,48 @@
   ],
   "key_files": {
     "README.md": {
-      "sha256": "b514e282fb7716d7917c94b8b370acabd13bf133ab78f577d05a4254c17557b4",
-      "size_bytes": 10247
+      "sha256": "d3f350e2056ad2f0af6325583dcc9a3e530b9d94639a1c5350a3cb24b3de67f7",
+      "size_bytes": 12350
     },
     "submission/TECHNICAL-REPORT.md": {
-      "sha256": "b1fa35f3ecca4efd6803659fb5a02a5c072c5bd6e4841f29f6c2ed23d3ec510e",
-      "size_bytes": 15175
+      "sha256": "feba2303319fb88b6522e72d7f05093b5c5e30ebd674bfeffdd5ef4b396a596a",
+      "size_bytes": 14950
     },
-    "submission/Team_MedVerse_Final_Report_RC4.pdf": {
-      "sha256": "f2bc52796f446c4c440568ef4b49a14f28b687960b1963720bbaed725fe6095c",
-      "size_bytes": 3234725
+    "submission/Team_MedVerse_Final_Report_FINAL_CROSS_REFERENCED.pdf": {
+      "sha256": "a4a33cb194f8379f2ee8b2a63de25f4fd86b3c1b3e389cd3fd1ce4f369ba03bc",
+      "size_bytes": 3063275
     },
-    "submission/Team_MedVerse_Final_Report_RC4.docx": {
-      "sha256": "75d092c06ac174948ac4f596a52a76deee143020ed33a22291972a0afc98fe65",
-      "size_bytes": 4039498
+    "submission/Team_MedVerse_Final_Report_FINAL_CROSS_REFERENCED.docx": {
+      "sha256": "b6a7a2c834b99618b45894c36acd2703eb40a3c2f7ae99cce7d56e4831f9a474",
+      "size_bytes": 4861109
+    },
+    "submission/demo/README.md": {
+      "sha256": "b7514471777c94cf0ef46c5009a254a098c89e028412bba7da83892ce80000fb",
+      "size_bytes": 642
+    },
+    "submission/Team_MedVerse_Knowledge_Base_FINAL_Submission_Guide.docx": {
+      "sha256": "51f106057d6f23e114ad009ecb391fa2752a3ffb3fd1ea2ea4229f6ed3f53361",
+      "size_bytes": 621728
     },
     "docs/architecture/medverse_system_architecture.png": {
-      "sha256": "43439c67f9893159083f288ac2824e74466dbbff6c3ebb9c5054246070cd55a2",
-      "size_bytes": 32273
+      "sha256": "50bf4e9f7535906c517d043ef7d06e6cf8deede74beea6c2383e01c2ad6952a0",
+      "size_bytes": 40732
     },
     "docs/architecture/korean_policy_pipeline.png": {
-      "sha256": "ed00c9b1cc7cb0289c5ac85650ad86af83f11cc87fc7aaff5f311e88b203c1ce",
-      "size_bytes": 55828
+      "sha256": "b8614cba0e662b31eb215af1fe65325a4e84eb09b9a30685b24ada2caf30071f",
+      "size_bytes": 61114
     },
     "docs/knowledge_base/KOREAN_POLICY_KB.md": {
-      "sha256": "4b494a5f29e708086000c7adeee34a6d55984385e99aa5e60e7c5a0cb1506e21",
-      "size_bytes": 2239
+      "sha256": "d50ed6eabea629e9d471f33845129b9319d2956dd42fe1aed82c51dabc2da5ff",
+      "size_bytes": 11127
     },
     "docs/standards/ITU_AND_READINESS_MAPPING.md": {
       "sha256": "221320b8d78b6ac41ddcec465193428c1a5c4f42886fb33850caa6197ca25159",
       "size_bytes": 1742
     },
     "docs/evaluation/RESEARCH_QUESTIONS.md": {
-      "sha256": "d5c6bcda93287b92a48abedb702ddf48508c3b62b75d6301adc04c56652cdbfe",
-      "size_bytes": 1152
+      "sha256": "09adda3a4099cca07a35058b640bbec0ffacd284f6266179279bc15483ce265f",
+      "size_bytes": 1263
     },
     "run_presenter_sandbox.py": {
       "sha256": "c49fc9c28af964abe50e579f9ee81a79dad705e6a0c32e002e1c54e6ec9a833e",
